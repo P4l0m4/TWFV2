@@ -1,10 +1,7 @@
-<script setup>
-const story = await useAsyncStoryblok('promotion', { version: 'draft' })
-</script>
+<script setup></script>
 
 <template>
   <header>
-    <StoryblokComponent v-if="story !== undefined" :blok="story.content" />
     <NavigationComponent />
   </header>
 </template>

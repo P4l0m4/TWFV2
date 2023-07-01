@@ -1,8 +1,6 @@
-@import 'transitions';
-
 @font-face {
-  font-family: 'Rubik';
-  src: url(@/assets/fonts/Rubik-VariableFont_wght.ttf) format('truetype');
+  font-family: 'Custom';
+  src: url(@/assets/fonts/Quicksand-VariableFont_wght.ttf) format('truetype');
   font-display: swap;
 }
 
@@ -21,7 +19,7 @@ html {
 
 body {
   background-color: $base-color;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Custom', sans-serif;
   color: $text-color;
 }
 
@@ -91,8 +89,12 @@ input[type='number'] {
   align-items: center;
   cursor: pointer;
   border-radius: $radius;
-  transition: transform 0.4s ease-in-out !important;
+  transition: transform 0.2s ease-in-out;
   text-shadow: black 0px 0px 1px;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-weight: 400;
 
   &:hover {
     transform: scale(1.04);
@@ -101,7 +103,8 @@ input[type='number'] {
 .button-primary {
   background-color: $text-color;
   color: $primary-color;
-  transition: opacity 0.2s;
+  transition: 0.2s ease;
+  position: relative;
 
   &:hover {
     -webkit-box-shadow: 0px 2px 4px 5px rgba(250, 255, 0, 0);
@@ -122,10 +125,12 @@ input[type='number'] {
   }
 }
 
-.icon {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+.scale-on-hover {
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.04);
+  }
 }
 
 //SCROLLBAR
@@ -207,9 +212,11 @@ details > summary::-webkit-details-marker /* Safari */ {
 }
 @keyframes slide-from-bottom {
   from {
-    transform: translate(20px);
+    transform: translateY(10px);
+    opacity: 0;
   }
   to {
-    transform: translate(0px);
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

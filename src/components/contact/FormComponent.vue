@@ -127,8 +127,7 @@ async function submit() {
       <div class="form__group__checkbox-container">
         <input id="rgpd" v-model.trim="state.rgpd" type="checkbox" class="form__group__input" />
         <label for="rgpd" class="form__group__checkbox-container__text">
-          Vous acceptez que les informations saisies dans ce formulaire soient transmises par mail à (nom de
-          l'entreprise).
+          Vous acceptez que les informations saisies dans ce formulaire soient transmises par mail à Tekila Web Factory.
         </label>
       </div>
       <div v-if="v$.rgpd.$dirty && v$.rgpd.sameAs.$invalid" class="form__error">Ce champ est requis</div>

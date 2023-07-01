@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import { getProductPages } from './src/utils/sitemap.js'
+// import { getProductPages } from './src/utils/sitemap.js'
 
 export default defineNuxtConfig({
   ssr: false,
@@ -8,9 +8,9 @@ export default defineNuxtConfig({
   css: ['@/styles/global.scss'],
   modules: [
     '@pinia/nuxt',
-    'nuxt-calendly',
-    'nuxt-simple-sitemap',
-    ['@storyblok/nuxt', { accessToken: 'HywsRInkperCxQGCRiQGhAtt' }],
+
+    // 'nuxt-simple-sitemap',
+    ['@storyblok/nuxt', { accessToken: 'p4gGIMh6R6U5xPOUYs5oCgtt' }],
     'nuxt-jsonld',
   ],
 
@@ -23,13 +23,13 @@ export default defineNuxtConfig({
       },
     },
   },
-  sitemap: {
-    sitemaps: true,
-    siteUrl: 'https://nuxt3-shopify-template.netlify.app',
-    urls: async () => {
-      return await getProductPages()
-    },
-  },
+  // sitemap: {
+  //   sitemaps: true,
+  //   siteUrl: 'https://nuxt3-shopify-template.netlify.app',
+  //   urls: async () => {
+  //     return await getProductPages()
+  //   },
+  // },
   vue: {
     compilerOptions: {
       isCustomElement: tag => ['swiper-container', 'swiper-slide'].includes(tag),

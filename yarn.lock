@@ -941,30 +941,6 @@
     unimport "^2.0.1"
     untyped "^1.2.2"
 
-"@nuxt/kit@^3.1.1":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.3.2.tgz#e3cd19c0f5cd0f124fff6f659a5f25002f808946"
-  integrity sha512-mHucMYuN/nVJp0p+L6ezzEls8Y1PerAXCJi01lS3Z5ozz+l2OusEfes8EBxWcy3x0C5465ignXCujQs3/LAvnQ==
-  dependencies:
-    "@nuxt/schema" "3.3.2"
-    c12 "^1.2.0"
-    consola "^2.15.3"
-    defu "^6.1.2"
-    globby "^13.1.3"
-    hash-sum "^2.0.0"
-    ignore "^5.2.4"
-    jiti "^1.18.2"
-    knitwork "^1.0.0"
-    lodash.template "^4.5.0"
-    mlly "^1.2.0"
-    pathe "^1.1.0"
-    pkg-types "^1.0.2"
-    scule "^1.0.0"
-    semver "^7.3.8"
-    unctx "^2.1.2"
-    unimport "^3.0.4"
-    untyped "^1.2.2"
-
 "@nuxt/kit@^3.4.2":
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.4.3.tgz#2ab6efb0a4db7b4e5f4d8d7d7e696fa30a6e8771"
@@ -1006,25 +982,6 @@
     std-env "^3.3.1"
     ufo "^1.0.1"
     unimport "^2.0.1"
-    untyped "^1.2.2"
-
-"@nuxt/schema@3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.3.2.tgz#c567dfaf099c65ae2fce4b5d1bcf43a94239a4c6"
-  integrity sha512-M2X/iwdX4hct31A7LA2+e41F91VZUXmwS5sZ03G49RnZdEXHMOKBO67e1d+5uxYmRD6eM/EyxWdPVgyLf6wocw==
-  dependencies:
-    c12 "^1.2.0"
-    create-require "^1.1.1"
-    defu "^6.1.2"
-    hookable "^5.5.0"
-    jiti "^1.18.2"
-    pathe "^1.1.0"
-    pkg-types "^1.0.2"
-    postcss-import-resolver "^2.0.0"
-    scule "^1.0.0"
-    std-env "^3.3.2"
-    ufo "^1.1.1"
-    unimport "^3.0.4"
     untyped "^1.2.2"
 
 "@nuxt/schema@3.4.0":
@@ -2149,10 +2106,10 @@ data-uri-to-buffer@^4.0.0:
   resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz#d8feb2b2881e6a4f58c2e08acfd0e2834e26222e"
   integrity sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==
 
-dayjs@^1.11.7:
-  version "1.11.7"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.7.tgz#4b296922642f70999544d1144a2c25730fce63e2"
-  integrity sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==
+dayjs@^1.11.8:
+  version "1.11.8"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.8.tgz#4282f139c8c19dd6d0c7bd571e30c2d0ba7698ea"
+  integrity sha512-LcgxzFoWMEPO7ggRv1Y2N31hUf2R0Vj7fuy/m+Bg1K8rr+KAs1AEy4y9jd5DXe8pbHgX+srkHNS7TH6Q6ZhYeQ==
 
 debug@2.6.9:
   version "2.6.9"
@@ -2841,11 +2798,6 @@ hookable@^5.4.2:
   version "5.4.2"
   resolved "https://registry.yarnpkg.com/hookable/-/hookable-5.4.2.tgz#6a1d3c4b3cb5b4262f99b3070ce0ee92c9c78049"
   integrity sha512-6rOvaUiNKy9lET1X0ECnyZ5O5kSV0PJbtA5yZUgdEF7fGJEVwSLSislltyt7nFwVVALYHQJtfGeAR2Y0A0uJkg==
-
-hookable@^5.5.0:
-  version "5.5.2"
-  resolved "https://registry.yarnpkg.com/hookable/-/hookable-5.5.2.tgz#e70b8ee4f6c9aaad75b152c3d9150a7ad15e0f07"
-  integrity sha512-9JZdvGuxXswyoT47M0xrg+IabnK76Ppc7qjf8JdFZu/IaCWflTHVf/ln/GzicraEnPONPIfxgk929rdYiOqv9w==
 
 hookable@^5.5.3:
   version "5.5.3"
@@ -3681,14 +3633,6 @@ nuxi@3.4.2:
   integrity sha512-kwKEbfS3EhiQX8BMwcAPgfWiFlV8gBa2dI0kPNYD3Egab5Vixs3P2h6dGq7RsEYZEJ6aU876J44ySF7l8bmDGg==
   optionalDependencies:
     fsevents "~2.3.2"
-
-nuxt-calendly@^0.1.14:
-  version "0.1.14"
-  resolved "https://registry.yarnpkg.com/nuxt-calendly/-/nuxt-calendly-0.1.14.tgz#82558a33b70b937f5086609bc49ac1e43a19a042"
-  integrity sha512-YK5yuIl7AWYURwXzl9TUqh877IJXsPljlXRoxBldgrKAKB8y/Sp108tCSDVllhniMiHVsPv9MRRzOivWo66tnQ==
-  dependencies:
-    "@nuxt/kit" "^3.1.1"
-    defu "^6.1.2"
 
 nuxt-jsonld@^2.0.8:
   version "2.0.8"
@@ -4550,11 +4494,6 @@ shebang-regex@^3.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
-shopify-buy@^2.18.0:
-  version "2.18.0"
-  resolved "https://registry.yarnpkg.com/shopify-buy/-/shopify-buy-2.18.0.tgz#8f0fde1ea29662a7dff4bcd69d0ee9e07a26ba77"
-  integrity sha512-UaK/oegLRoeAHCfuYj+fVPfsdB8g6LoFdBg9YkSULDlzgWCHVBYWp+g4/1hYS1EZe0SRXFRkksf/3ESwFS8Nig==
-
 signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3, signal-exit@^3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
@@ -4881,16 +4820,6 @@ unctx@^2.1.1:
     magic-string "^0.26.7"
     unplugin "^1.0.0"
 
-unctx@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/unctx/-/unctx-2.1.2.tgz#12d34c540ef4fbaffb2a3b38a0697e42b152d478"
-  integrity sha512-KK18aLRKe3OlbPyHbXAkIWSU3xK8GInomXfA7fzDMGFXQ1crX1UWrCzKesVXeUyHIayHUrnTvf87IPCKMyeKTg==
-  dependencies:
-    acorn "^8.8.2"
-    estree-walker "^3.0.3"
-    magic-string "^0.27.0"
-    unplugin "^1.0.1"
-
 unctx@^2.2.0, unctx@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/unctx/-/unctx-2.3.0.tgz#abb1eaf1f5417d9562b3c43a90aba259a869c96d"
@@ -4937,23 +4866,6 @@ unimport@^2.0.1:
     scule "^1.0.0"
     strip-literal "^1.0.0"
     unplugin "^1.0.1"
-
-unimport@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/unimport/-/unimport-3.0.4.tgz#b54d414b0f78673e76c9cbc2568b915c2d64b7c9"
-  integrity sha512-eoof/HLiNJcIkVpnqc7sJbzKSLx39J6xTaP7E4ElgVQKeq2t9fPTkvJKcA55IJTaRPkEkDq8kcc/IZPmrypnFg==
-  dependencies:
-    "@rollup/pluginutils" "^5.0.2"
-    escape-string-regexp "^5.0.0"
-    fast-glob "^3.2.12"
-    local-pkg "^0.4.3"
-    magic-string "^0.30.0"
-    mlly "^1.2.0"
-    pathe "^1.1.0"
-    pkg-types "^1.0.2"
-    scule "^1.0.0"
-    strip-literal "^1.0.1"
-    unplugin "^1.3.1"
 
 unimport@^3.0.6:
   version "3.0.6"

@@ -1,4 +1,5 @@
 $tablet-screen: 475px;
+$big-tablet-screen: 768px;
 $laptop-screen: 1080px;
 $desktop-screen: 1440px;
 $super-big-screen: 2550px;
@@ -8,14 +9,13 @@ $base-color: #f7f7f7;
 $primary-color: #fffdfa;
 $text-color: #333333;
 
-$promo-code-color: rgba(0, 99, 0, 1);
-$selected-color: rgba(0, 88, 7, 0.1);
-$selected-background-color: rgb(235, 252, 237);
-$selected-color-darker: #005807;
-$selected-background-color-darker: #559b5d;
+$text-color-faded: rgba(51, 51, 51, 0.8);
+$primary-color-faded: rgba(247, 247, 247, 0.8);
+$secondary-color: #3e2a1a;
+$secondary-color-faded: rgba(62, 42, 26, 0.6);
 
 //BORDERS
-$radius: 24px;
+$radius: 4px;
 
 //SHADOWS
 $shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);

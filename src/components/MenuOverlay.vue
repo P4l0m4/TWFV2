@@ -3,26 +3,24 @@ defineProps({ isMenuOpen: Boolean })
 const emit = defineEmits(['close'])
 </script>
 <template>
-  <Transition name="fade">
-    <div v-show="isMenuOpen" class="menu" @click="emit('close')">
-      <div class="menu__grid">
-        <NuxtLink class="menu__grid__link" to="/" exact
-          ><img src="@/assets/icons/home.svg" alt="" /><span>Accueil</span></NuxtLink
-        >
-        <NuxtLink class="menu__grid__link" to="/boutique" exact
-          ><img src="@/assets/icons/shop.svg" alt="" /><span>Boutique</span></NuxtLink
-        ><NuxtLink class="menu__grid__link" to="/contact" exact
-          ><img src="@/assets/icons/mail.svg" alt="" /><span>Contact</span></NuxtLink
-        ><NuxtLink class="menu__grid__link" to="/favoris" exact
-          ><img src="@/assets/icons/heart.svg" alt="" /><span>Favoris</span></NuxtLink
-        >
-      </div>
-    </div></Transition
-  >
+  <div v-show="isMenuOpen" class="menu" @click="emit('close')">
+    <div class="menu__grid">
+      <NuxtLink class="menu__grid__link" to="/" exact
+        ><img src="@/assets/icons/home.svg" alt="icone" /><span>Accueil</span></NuxtLink
+      ><NuxtLink class="menu__grid__link" to="/prestations" exact
+        ><img src="@/assets/icons/heart.svg" alt="icone" /><span>Prestations</span></NuxtLink
+      >
+      <NuxtLink class="menu__grid__link" to="/ressources" exact
+        ><img src="@/assets/icons/shop.svg" alt="icone" /><span>Ressources</span></NuxtLink
+      ><NuxtLink class="menu__grid__link" to="/a-propos" exact
+        ><img src="@/assets/icons/mail.svg" alt="icone" /><span>A propos</span></NuxtLink
+      >
+    </div>
+  </div>
 </template>
 <style scoped lang="scss">
 .router-link-exact-active {
-  background-color: $selected-color;
+  background-color: $secondary-color;
 }
 .menu {
   position: fixed;
@@ -33,6 +31,7 @@ const emit = defineEmits(['close'])
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fade 0.6s ease;
 
   &__grid {
     gap: 1rem;
@@ -50,7 +49,7 @@ const emit = defineEmits(['close'])
       padding: 1rem;
       background-color: $primary-color;
       border-radius: $radius;
-      width: 90px;
+      width: 110px;
       height: 90px;
       animation: slide-from-top 0.6s;
     }

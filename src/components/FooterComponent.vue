@@ -1,26 +1,10 @@
 <script setup>
-import { useInfoStore } from '@/stores/info'
-import { ref } from 'vue'
-
-// TESTING
-const infoStore = useInfoStore()
-await infoStore.getInfo()
-let info = infoStore.info
-
-//IN PROGRESS
 let year = new Date().getFullYear()
-
-const story = await useAsyncStoryblok('documents', { version: 'draft' })
-
-const showCookieModal = ref(false)
-setTimeout(() => {
-  showCookieModal.value = true
-}, 10000)
 </script>
 
 <template>
   <footer class="footer">
-    <!-- <CookiesSettings :cookie="story.content" v-if="showCookieModal" /> -->
+    <img src="@/assets/images/logo-light.svg" alt="logo tekila web factory" />
     <div class="footer__site-links">
       <nuxt-link to="/" class="footer__document">Accueil</nuxt-link>
       <nuxt-link to="/boutique" class="footer__document">Boutique</nuxt-link>
@@ -29,38 +13,42 @@ setTimeout(() => {
     </div>
 
     <div class="footer__others">
-      <span>©{{ info.name }} {{ year }}</span>
-      <StoryblokComponent v-if="story" :blok="story.content" />
+      <span>©Tekila Web Factory {{ year }}</span>
     </div>
 
     <div class="footer__icons">
       <a class="footer__icons__link" href="#" aria-label="lien vers la page facebook"
-        ><img class="footer__icons__link__icon" src="@/assets/icons/facebook.svg" alt="icon" /></a
+        ><img class="footer__icons__link__icon scale-on-hover" src="@/assets/icons/facebook.svg" alt="icon" /></a
       ><a class="footer__icons__link" href="#" aria-label="lien vers la page linkedin"
-        ><img class="footer__icons__link__icon" src="@/assets/icons/linkedin.svg" alt="icon" /></a
+        ><img class="footer__icons__link__icon scale-on-hover" src="@/assets/icons/linkedin.svg" alt="icon" /></a
       ><a class="footer__icons__link" href="#" aria-label="lien vers la page instagram"
-        ><img class="footer__icons__link__icon" src="@/assets/icons/instagram.svg" alt="icon"
+        ><img class="footer__icons__link__icon scale-on-hover" src="@/assets/icons/instagram.svg" alt="icon"
       /></a>
     </div>
   </footer>
 </template>
 <style lang="scss" scoped>
 .footer {
+  color: $primary-color;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
   width: 100%;
   position: relative;
-  padding: 1rem 1rem 4rem 1rem;
+  padding: 2rem 1rem 4rem 1rem;
   font-size: 0.75rem;
   flex-wrap: wrap;
-  background-color: $primary-color;
+  background-color: $text-color;
 
   &__site-links {
     display: flex;
     gap: 1rem;
     text-decoration: underline;
+
+    & a {
+      color: $primary-color;
+    }
   }
 
   &__others {
@@ -69,6 +57,7 @@ setTimeout(() => {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    color: $primary-color;
   }
 
   &__icons {
@@ -76,6 +65,8 @@ setTimeout(() => {
     gap: 0.5rem;
 
     &__link {
+      color: $primary-color;
+
       &__icon {
         width: 26px;
         height: 26px;
