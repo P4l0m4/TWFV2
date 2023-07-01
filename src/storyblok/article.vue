@@ -1,8 +1,7 @@
 <script setup>
 import { stringToSlug } from '@/utils/slugify.js'
+const dayjs = useDayjs()
 const props = defineProps({ blok: Object, tagSelected: String })
-import * as dayjs from 'dayjs'
-import 'dayjs/locale/fr'
 const date = dayjs(props.blok.date.toString()).locale('fr').format('DD MMMM YYYY')
 </script>
 <template>

@@ -12,7 +12,12 @@ export default defineNuxtConfig({
     // 'nuxt-simple-sitemap',
     ['@storyblok/nuxt', { accessToken: 'p4gGIMh6R6U5xPOUYs5oCgtt' }],
     'nuxt-jsonld',
+    'dayjs-nuxt',
   ],
+  dayjs: {
+    locales: ['fr'],
+    defaultLocale: 'fr',
+  },
 
   vite: {
     css: {
