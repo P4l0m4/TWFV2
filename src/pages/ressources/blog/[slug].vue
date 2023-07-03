@@ -1,5 +1,6 @@
 <script setup>
 import { stringToSlug } from '@/utils/slugify.js'
+import { ref } from 'vue'
 
 const route = useRoute()
 const articleSlug = route.params.slug
@@ -7,6 +8,15 @@ const articleSlug = route.params.slug
 const story = await useAsyncStoryblok('blog', { version: 'published' })
 
 const article = story.value.content.bloglist.find(a => stringToSlug(a.title) === articleSlug)
+
+const shareWord = ref('Partager')
+function copy() {
+  navigator.clipboard.writeText(window.location.origin + '/ressources/blog/' + articleSlug)
+  shareWord.value = 'Copié !'
+  setTimeout(() => {
+    shareWord.value = 'Partager'
+  }, 1000)
+}
 
 useHead(() => {
   return {
@@ -28,6 +38,14 @@ useHead(() => {
       <div class="article__header__txt">
         <h1 class="article__header__txt__title">{{ article.title }}</h1>
         <p class="article__header__txt__description">{{ article.description }}</p>
+      </div>
+      <div class="article__header__share">
+        <button class="article__header__share__plus" @click.prevent="copy">
+          <img class="article__header__share__plus__icon" src="@/assets/icons/share.svg" alt="icon" />
+          {{ shareWord }}
+        </button>
+        <div class="article__header__share__corner-left"></div>
+        <div class="article__header__share__corner-right"></div>
       </div>
     </section>
     <section class="article__part" v-for="section in article.sections" :key="section">
@@ -70,6 +88,7 @@ useHead(() => {
     align-items: center;
     gap: 2rem;
     flex-direction: column;
+    position: relative;
 
     @media (min-width: $big-tablet-screen) {
       flex-direction: row-reverse;
@@ -111,6 +130,67 @@ useHead(() => {
       @media (min-width: $big-tablet-screen) {
         height: 380px;
         width: 50%;
+      }
+    }
+
+    &__share {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      background-color: $base-color;
+      position: relative;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-radius: $radius 0 $radius 0;
+      transition: max-width 0.2s ease-in-out, width 0.2s ease-in-out;
+
+      &:hover {
+        width: 110px;
+        max-width: 110px;
+      }
+
+      &__plus {
+        display: flex;
+        padding: 0.5rem;
+        gap: 0.75rem;
+        align-items: center;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+
+        &:hover {
+          width: 110px;
+          max-width: 110px;
+        }
+
+        &__icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &__corner-left,
+      &__corner-right {
+        background-color: transparent;
+        height: 20px;
+        width: 20px;
+        box-shadow: 0 -10px 0 0 $base-color;
+        border-bottom-right-radius: $radius;
+        border-top-right-radius: $radius;
+        position: absolute;
+      }
+
+      &__corner-left {
+        bottom: 0;
+        left: -20px;
+        transform: rotate(90deg);
+      }
+      &__corner-right {
+        top: -20px;
+        right: 0;
+        transform: rotate(90deg);
       }
     }
   }
