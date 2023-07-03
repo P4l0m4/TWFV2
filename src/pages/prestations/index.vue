@@ -18,10 +18,10 @@ const breadcrumbs = [
     <div class="prestations__cards">
       <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-e-commerce">
         <img class="prestations__cards__card__img" src="@/assets/icons/shop-big.svg" alt="image" />
-        <h2 class="prestations__cards__card__title">Création de sites <br />e-commerce (comming soon)</h2>
+        <h2 class="prestations__cards__card__title">Création de <br />sites e-commerce</h2>
         <p class="prestations__cards__card__txt">
           Découvrez lorem ipsum dolor sit amet, consequitur elit, lorem ipsum dolor sit amet, consequitur elit rabaca
-          doloris estum quit separatur.
+          doloris estum quit separatur lorem ipsum dolor sit amet, consequitur architecturo.
         </p>
       </NuxtLink>
       <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-web">
@@ -55,6 +55,10 @@ const breadcrumbs = [
   &__title {
     font-size: 1.5rem;
     text-align: center;
+
+    @media (min-width: $big-tablet-screen) {
+      font-size: 2rem;
+    }
   }
 
   &__cards {

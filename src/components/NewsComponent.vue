@@ -26,7 +26,7 @@ const story = await useAsyncStoryblok('news', { version: 'published' })
     max-width: inherit;
   }
 
-  @media (min-width: 1238px) {
+  @media (min-width: 1271px) {
     width: 375px;
   }
 

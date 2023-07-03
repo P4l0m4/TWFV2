@@ -3,7 +3,7 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
 </script>
 <template>
   <div class="blog">
-    <h2>Découvrez nos derniers articles de blog</h2>
+    <h2>Nos derniers articles de blog</h2>
     <StoryblokComponent v-if="story" :blok="story.content" />
   </div>
 </template>
@@ -17,8 +17,9 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
   gap: 2rem;
   align-items: center;
 
-  @media (min-width: $tablet-screen) {
+  @media (min-width: $big-tablet-screen) {
     padding: 0 1rem;
+    align-items: flex-start;
   }
 }
 </style>

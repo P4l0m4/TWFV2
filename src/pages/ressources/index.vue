@@ -51,6 +51,10 @@ const breadcrumbs = [
   &__title {
     font-size: 1.5rem;
     text-align: center;
+
+    @media (min-width: $big-tablet-screen) {
+      font-size: 2rem;
+    }
   }
 
   &__cards {
