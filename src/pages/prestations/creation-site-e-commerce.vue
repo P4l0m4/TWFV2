@@ -53,7 +53,7 @@ useHead(() => {
     <div class="e-commerce__arguments">
       <div class="e-commerce__arguments__argument">
         <div class="e-commerce__arguments__argument__illustration">
-          <img class="e-commerce__arguments__argument__illustration__img" src="@/assets/icons/bag.svg" alt="" />
+          <img class="e-commerce__arguments__argument__illustration__img" src="@/assets/icons/bag.svg" alt="icone" />
           <span class="e-commerce__arguments__argument__illustration__data">x3</span>
           <span class="e-commerce__arguments__argument__illustration__txt">Conversions</span>
         </div>
@@ -65,41 +65,44 @@ useHead(() => {
       </div>
       <div class="e-commerce__arguments__argument">
         <div class="e-commerce__arguments__argument__illustration">
-          <img class="e-commerce__arguments__argument__illustration__img" src="@/assets/icons/bag.svg" alt="" />
-          <span class="e-commerce__arguments__argument__illustration__data">x3</span>
-          <span class="e-commerce__arguments__argument__illustration__txt">Conversions</span>
+          <img class="e-commerce__arguments__argument__illustration__img" src="@/assets/icons/phone.svg" alt="icone" />
+          <span class="e-commerce__arguments__argument__illustration__data">0,4s</span>
+          <span class="e-commerce__arguments__argument__illustration__txt">Secondes</span>
         </div>
         <div class="e-commerce__arguments__argument__txt">
-          <span class="e-commerce__arguments__argument__txt__description">Triplez vos conversions</span>
-          <span class="e-commerce__arguments__argument__txt__description">habituelles grâce à votre</span>
-          <span class="e-commerce__arguments__argument__txt__description">site web ultra optimisé</span>
+          <span class="e-commerce__arguments__argument__txt__description">Temps de chargement</span>
+          <span class="e-commerce__arguments__argument__txt__description">moyen de votre future</span>
+          <span class="e-commerce__arguments__argument__txt__description">page d’accueil</span>
         </div>
       </div>
       <div class="e-commerce__arguments__argument">
         <div class="e-commerce__arguments__argument__illustration">
-          <img class="e-commerce__arguments__argument__illustration__img" src="@/assets/icons/bag.svg" alt="" />
-          <span class="e-commerce__arguments__argument__illustration__data">x3</span>
-          <span class="e-commerce__arguments__argument__illustration__txt">Conversions</span>
+          <img class="e-commerce__arguments__argument__illustration__img" src="@/assets/icons/search.svg" alt="icone" />
+          <span class="e-commerce__arguments__argument__illustration__data">SEO ++</span>
+          <span class="e-commerce__arguments__argument__illustration__txt">Sur Google</span>
         </div>
         <div class="e-commerce__arguments__argument__txt">
-          <span class="e-commerce__arguments__argument__txt__description">Triplez vos conversions</span>
-          <span class="e-commerce__arguments__argument__txt__description">habituelles grâce à votre</span>
-          <span class="e-commerce__arguments__argument__txt__description">site web ultra optimisé</span>
+          <span class="e-commerce__arguments__argument__txt__description">Générez plus de traffic</span>
+          <span class="e-commerce__arguments__argument__txt__description">naturel avec votre site</span>
+          <span class="e-commerce__arguments__argument__txt__description">dopé au SEO technique</span>
         </div>
       </div>
     </div>
-    <div class="e-commerce__invitation">
-      <p class="e-commerce__invitation__title">On vous explique notre secret gratuitement</p>
-      <button class="button-primary">Prenez rendez-vous</button>
-    </div>
+
     <div class="e-commerce__pourquoi-nous">
       <span class="e-commerce__pourquoi-nous__title">Pourquoi nous ?</span>
       <p class="e-commerce__pourquoi-nous__subtitle">Parce qu’on sait ce qu’on fait <br />et on le fait bien.</p>
-      <img
-        class="e-commerce__pourquoi-nous__img"
-        src="@/assets/images/graphique.svg"
-        alt="graphique comparatif woocommerce"
-      />
+      <div class="e-commerce__pourquoi-nous__wrapper">
+        <div class="e-commerce__pourquoi-nous__wrapper__img">
+          <img src="@/assets/images/graphique.svg" alt="graphique comparatif woocommerce" />
+        </div>
+        <div class="e-commerce__pourquoi-nous__wrapper__invitation">
+          <p class="e-commerce__pourquoi-nous__wrapper__invitation__title">
+            On vous explique notre secret gratuitement
+          </p>
+          <a class="button-primary" href="https://nuxt3-shopify-template.netlify.app">Prenez rendez-vous</a>
+        </div>
+      </div>
     </div>
     <div class="e-commerce__promise">
       <div class="e-commerce__promise__data">
@@ -110,10 +113,9 @@ useHead(() => {
         </div>
       </div>
 
-      <div class="e-commerce__promise__button-section">
-        <button class="button-primary">Appellez-nous</button>
-        <p>Promis on répond vite</p>
-      </div>
+      <a class="e-commerce__promise__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
+        >Voir une démo</a
+      >
     </div>
   </div>
   <JsonldBreadcrumb :links="breadcrumbs" />
@@ -251,10 +253,11 @@ useHead(() => {
         }
         &__data {
           font-weight: 700;
+          font-size: 1.25rem;
         }
         &__txt {
           font-weight: 400;
-          font-size: 0.75rem;
+          font-size: 1rem;
         }
       }
       &__txt {
@@ -274,44 +277,77 @@ useHead(() => {
     }
   }
 
-  &__invitation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 2rem;
-    width: clamp(280px, 100%, 460px);
-    background-color: $primary-color;
-    border-radius: $radius;
-    box-shadow: $shadow;
-
-    &__title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-align: center;
-      line-height: 32px;
-    }
-
-    & button {
-      width: 100%;
-    }
-  }
-
   &__pourquoi-nous {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: clamp(280px, 100%, 460px);
+    width: clamp(343px, 100%, 800px);
     text-align: center;
 
     &__title {
       font-size: 1.5rem;
       font-weight: 700;
     }
-    &__img {
-      padding-top: 1rem;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
       width: 100%;
-      object-fit: cover;
+      padding-top: 1rem;
+
+      @media (min-width: $big-tablet-screen) {
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 0;
+      }
+
+      &__img {
+        width: fit-content;
+        object-fit: cover;
+        border-radius: $radius;
+        overflow: hidden;
+
+        & img {
+          width: 100%;
+          object-fit: cover;
+          height: 480px;
+        }
+      }
+
+      &__invitation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem;
+        width: clamp(343px, 100%, 460px);
+        background-color: $primary-color;
+        border-radius: $radius;
+        box-shadow: $shadow;
+
+        @media (min-width: $big-tablet-screen) {
+          align-self: stretch;
+          justify-content: center;
+          gap: 2rem;
+        }
+
+        &__title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          text-align: center;
+          line-height: 32px;
+
+          @media (min-width: $big-tablet-screen) {
+            font-size: 1.5rem;
+          }
+        }
+
+        & button {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -345,21 +381,9 @@ useHead(() => {
       }
     }
 
-    &__button-section {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: center;
+    &__button {
       width: 100%;
-
-      & button {
-        width: 100%;
-      }
-      & p {
-        font-size: 0.75rem;
-        font-weight: 400;
-        color: $text-color;
-      }
+      font-weight: 400;
     }
   }
 }

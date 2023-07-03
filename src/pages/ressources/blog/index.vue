@@ -139,6 +139,11 @@ useHead(() => {
         height: 360px;
         gap: 0;
         background-image: url('@/assets/images/gradient-background.svg');
+        transition: background-size 0.4s ease;
+
+        &:hover {
+          background-size: 60%;
+        }
       }
 
       &__txt {
@@ -169,6 +174,7 @@ useHead(() => {
         &__description {
           width: 100%;
           font-weight: 300;
+          text-align: justify;
         }
 
         &__button {

@@ -151,6 +151,7 @@ function copy() {
     font-weight: 400;
     color: $text-color;
     width: 320px;
+    text-align: justify;
 
     @media (min-width: $tablet-screen) {
       width: 343px;

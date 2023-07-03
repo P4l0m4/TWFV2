@@ -30,7 +30,13 @@ useHead(() => {
     <div class="index__headline">
       <h1 class="index__headline__title">💩<br />Votre site pue la merde ?</h1>
       <h2 class="index__headline__subtitle">On va régler ça.</h2>
-      <a target="_blank" href="https://nuxt3-shopify-template.netlify.app" class="button-primary">Voir une démo</a>
+      <a
+        class="index__headline__button button-primary"
+        target="_blank"
+        href="https://calendly.com/tekilawebfactory/30min"
+        >Prenez RDV avec nous</a
+      >
+      <span class="index__headline__under-button-txt">Promis on répond vite</span>
     </div>
 
     <BlogComponent />
@@ -65,9 +71,14 @@ useHead(() => {
       font-weight: 500;
     }
 
-    .button-primary {
+    &__button {
       margin-top: 1rem;
       width: 100%;
+    }
+
+    &__under-button-txt {
+      font-weight: 400;
+      font-size: 0.85rem;
     }
   }
 }

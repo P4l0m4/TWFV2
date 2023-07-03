@@ -40,14 +40,13 @@ setTimeout(() => {
 .v-leave-active {
   transition: opacity 0.5s ease;
 }
-
 .v-leave-to {
   opacity: 0;
 }
 .container {
   display: flex;
   flex-direction: column;
-  padding: 7rem 0 0 0;
+  padding: 4rem 0 0 0;
   gap: 2rem;
   align-items: center;
   margin: auto;
