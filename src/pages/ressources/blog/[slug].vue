@@ -89,6 +89,7 @@ useHead(() => {
         </section>
       </div>
     </div>
+    <BlogComponent />
   </article>
 </template>
 
