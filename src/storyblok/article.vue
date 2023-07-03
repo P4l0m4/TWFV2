@@ -49,7 +49,7 @@ function copy() {
   flex-direction: column;
   width: 320px;
   min-width: 320px;
-  height: 420px;
+  height: 428px;
   cursor: pointer;
   overflow: hidden;
   gap: 1rem;
