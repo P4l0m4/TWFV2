@@ -239,6 +239,7 @@ useHead(() => {
         border: 2px solid rgba(0, 0, 0, 0.06);
         cursor: pointer;
         transition: background-color 0.4s ease, color 0.4s ease;
+        color: $text-color;
 
         &--selected {
           background-color: $text-color;
