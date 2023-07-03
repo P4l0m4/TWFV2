@@ -28,7 +28,7 @@ useHead(() => {
 <template>
   <section class="index">
     <div class="index__headline">
-      <h1 class="index__headline__title">Votre site pue la merde ? 💩</h1>
+      <h1 class="index__headline__title">💩<br />Votre site pue la merde ?</h1>
       <h2 class="index__headline__subtitle">On va régler ça.</h2>
       <a target="_blank" href="https://nuxt3-shopify-template.netlify.app" class="button-primary">Voir une démo</a>
     </div>
@@ -54,6 +54,7 @@ useHead(() => {
     &__title {
       font-size: 1.5rem;
       font-weight: 700;
+      text-align: center;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 2rem;
