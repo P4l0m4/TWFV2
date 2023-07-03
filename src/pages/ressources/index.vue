@@ -16,14 +16,14 @@ const breadcrumbs = [
     <h1 class="ressources__title">Nos ressources à disposition pour vous aider</h1>
 
     <div class="ressources__cards">
-      <NuxtLink class="ressources__cards__card" to="/blog">
+      <NuxtLink class="ressources__cards__card" to="/ressources/blog">
         <img class="ressources__cards__card__img" src="@/assets/icons/document.svg" alt="image" />
         <h2 class="ressources__cards__card__title">Blog</h2>
         <p class="ressources__cards__card__txt">
           Découvrez nos derniers articles de blog pour vous aider à comprendre le monde du web et du développement
         </p>
       </NuxtLink>
-      <NuxtLink class="ressources__cards__card" to="/portfolio">
+      <NuxtLink class="ressources__cards__card" to="/ressources/portfolio">
         <img class="ressources__cards__card__img" src="@/assets/icons/dashboard.svg" alt="image" />
         <h2 class="ressources__cards__card__title">Portfolio (comming soon)</h2>
         <p class="ressources__cards__card__txt">
@@ -31,7 +31,7 @@ const breadcrumbs = [
           aliquid quam
         </p>
       </NuxtLink>
-      <NuxtLink class="ressources__cards__card" to="/tutoriels">
+      <NuxtLink class="ressources__cards__card" to="/ressources/tutoriels">
         <img class="ressources__cards__card__img" src="@/assets/icons/tutorial.svg" alt="image" />
         <h2 class="ressources__cards__card__title">Tutoriels (comming soon)</h2>
         <p class="ressources__cards__card__txt">
@@ -84,7 +84,7 @@ const breadcrumbs = [
       }
 
       &__img {
-        width: 42px;
+        width: fit-content;
         height: 50px;
         animation: slide-from-bottom 1.6s ease;
 

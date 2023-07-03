@@ -16,7 +16,7 @@ const breadcrumbs = [
     <h1 class="prestations__title">Nos prestations sur-mesure rien que pour vous</h1>
 
     <div class="prestations__cards">
-      <NuxtLink class="prestations__cards__card" to="/blog">
+      <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-e-commerce">
         <img class="prestations__cards__card__img" src="@/assets/icons/shop-big.svg" alt="image" />
         <h2 class="prestations__cards__card__title">Création de sites <br />e-commerce (comming soon)</h2>
         <p class="prestations__cards__card__txt">
@@ -24,16 +24,16 @@ const breadcrumbs = [
           doloris estum quit separatur.
         </p>
       </NuxtLink>
-      <NuxtLink class="prestations__cards__card" to="/portfolio">
-        <img class="prestations__cards__card__img" src="@/assets/icons/dashboard.svg" alt="image" />
+      <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-web">
+        <img class="prestations__cards__card__img" src="@/assets/icons/site-vitrine.svg" alt="image" />
         <h2 class="prestations__cards__card__title">Création de sites vitrine (comming soon)</h2>
         <p class="prestations__cards__card__txt">
           Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt provident sed tenetur nulla
           aliquid quam lorem ipsu dolor sit amet.
         </p>
       </NuxtLink>
-      <NuxtLink class="prestations__cards__card" to="/tutoriels">
-        <img class="prestations__cards__card__img" src="@/assets/icons/tutorial.svg" alt="image" />
+      <NuxtLink class="prestations__cards__card" to="/prestations/audit-optimisation-site-web">
+        <img class="prestations__cards__card__img" src="@/assets/icons/optimisation.svg" alt="image" />
         <h2 class="prestations__cards__card__title">Audits diagnostic <br />et conseils (comming soon)</h2>
         <p class="prestations__cards__card__txt">
           Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt provident sed tenetur nulla
@@ -86,7 +86,7 @@ const breadcrumbs = [
       }
 
       &__img {
-        width: 42px;
+        width: fit-content;
         height: 50px;
         animation: slide-from-bottom 1.6s ease;
 

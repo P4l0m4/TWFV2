@@ -4,12 +4,15 @@ let year = new Date().getFullYear()
 
 <template>
   <footer class="footer">
-    <img src="@/assets/images/logo-light.svg" alt="logo tekila web factory" />
+    <nuxt-link to="/"><img src="@/assets/images/logo-light.svg" alt="logo tekila web factory" /></nuxt-link>
     <div class="footer__site-links">
       <nuxt-link to="/" class="footer__document">Accueil</nuxt-link>
-      <nuxt-link to="/boutique" class="footer__document">Boutique</nuxt-link>
-      <nuxt-link to="/favoris" class="footer__document">Favoris</nuxt-link>
-      <nuxt-link to="/contact" class="footer__document">Contact</nuxt-link>
+      <nuxt-link to="/ressources/blog" class="footer__document">Blog</nuxt-link>
+      <nuxt-link to="/prestations/creation-site-web" class="footer__document">Création de site web</nuxt-link>
+      <nuxt-link to="/prestations/creation-site-e-commerce" class="footer__document"
+        >Création de site e-commerce</nuxt-link
+      >
+      <nuxt-link to="/a-propos" class="footer__document">Contact</nuxt-link>
     </div>
 
     <div class="footer__others">
