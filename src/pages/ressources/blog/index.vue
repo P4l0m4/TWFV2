@@ -39,7 +39,10 @@ useHead(() => {
 
       <section class="blog__article-of-the-day">
         <span class="blog__article-of-the-day__title">Article du jour</span>
-        <NuxtLink :to="'/blog/' + stringToSlug(articleOfTheDay.title)" class="blog__article-of-the-day__article">
+        <NuxtLink
+          :to="'/ressources/blog/' + stringToSlug(articleOfTheDay.title)"
+          class="blog__article-of-the-day__article"
+        >
           <img class="blog__article-of-the-day__article__img" :src="articleOfTheDay.headerimage[0].filename" />
 
           <div class="blog__article-of-the-day__article__txt">

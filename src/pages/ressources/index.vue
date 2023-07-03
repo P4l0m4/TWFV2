@@ -27,16 +27,14 @@ const breadcrumbs = [
         <img class="ressources__cards__card__img" src="@/assets/icons/dashboard.svg" alt="image" />
         <h2 class="ressources__cards__card__title">Portfolio (comming soon)</h2>
         <p class="ressources__cards__card__txt">
-          Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt provident sed tenetur nulla
-          aliquid quam
+          Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt
         </p>
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/tutoriels">
         <img class="ressources__cards__card__img" src="@/assets/icons/tutorial.svg" alt="image" />
         <h2 class="ressources__cards__card__title">Tutoriels (comming soon)</h2>
         <p class="ressources__cards__card__txt">
-          Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt provident sed tenetur nulla
-          aliquid quam
+          Lorem adipisicing aperiam architecto incidunt provident sed tenetur nulla aliquid quam
         </p>
       </NuxtLink>
     </div>
