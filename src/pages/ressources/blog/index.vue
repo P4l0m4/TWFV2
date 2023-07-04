@@ -116,7 +116,7 @@ useHead(() => {
     }
 
     &__title {
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.25rem;
 
       @media (min-width: $big-tablet-screen) {
@@ -163,7 +163,7 @@ useHead(() => {
 
         &__title {
           width: 100%;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 1.5rem;
 
           @media (min-width: $big-tablet-screen) {

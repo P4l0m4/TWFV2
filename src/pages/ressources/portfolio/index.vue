@@ -1,50 +1,138 @@
 <template>
   <section class="portfolio">
-    <NuxtLink to="/" class="portfolio__element">
-      <button class="portfolio__element__go"><img src="@/assets/icons/arrow.svg" alt="icone" /></button>
-    </NuxtLink>
+    <div class="portfolio__titles">
+      <h1>Notre portfolio</h1>
+      <h2>Des projets, des sites internet, du design Web</h2>
+    </div>
+    <div class="portfolio__elements">
+      <NuxtLink to="/" class="portfolio__elements__element"
+        ><span class="portfolio__elements__element__title">Title lorem ipsum</span>
+        <p class="portfolio__elements__element__subtitle">Subtitle lorem ipsum dolor sit amet</p>
+        <div class="portfolio__elements__element__share">
+          <button class="portfolio__elements__element__share__go">
+            <img class="portfolio__elements__element__share__go__icon" src="@/assets/icons/arrow.svg" alt="icon" />
+          </button>
+          <div class="portfolio__elements__element__share__corner-left"></div>
+          <div class="portfolio__elements__element__share__corner-right"></div></div
+      ></NuxtLink>
+    </div>
   </section>
 </template>
 <style scoped lang="scss">
 .portfolio {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
   padding: 1rem;
-  gap: 1rem;
-  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
 
-  &__element {
+  &__titles {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
-    background-color: black;
-    height: 360px;
-    border-radius: $radius;
-    width: clamp(343px, 100%, 660px);
-    background-size: cover;
-    cursor: pointer;
+    align-items: center;
 
-    @media (screen-width: $big-tablet-screen) {
-      height: 600px;
+    & h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+
+      @media (min-width: $big-tablet-screen) {
+        font-size: 2rem;
+      }
     }
+    & h2 {
+      font-weight: 500;
+      font-size: 1.25rem;
 
-    &__go {
+      @media (min-width: $big-tablet-screen) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__elements {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__element {
       display: flex;
-      padding: 0.5rem;
-      border-radius: 50%;
-      background-color: $primary-color;
-      width: fit-content;
-      margin-left: auto;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
+      background-color: black;
+      height: 360px;
+      border-radius: $radius;
+      width: clamp(343px, 100%, 400px);
+      background-size: cover;
       cursor: pointer;
+      position: relative;
 
-      &:hover img {
-        transform: rotate(90deg);
+      @media (screen-width: $big-tablet-screen) {
+        height: 600px;
       }
 
-      & img {
-        transform: rotate(45deg);
-        width: 20px;
-        transition: transform 0.2s ease;
+      &__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $primary-color;
+      }
+
+      &__subtitle {
+        font-weight: 400;
+        color: $primary-color;
+      }
+
+      &__share {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        background-color: $base-color;
+        position: relative;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0 $radius 0 $radius;
+
+        &__go {
+          display: flex;
+          padding: 0.5rem;
+          gap: 0.75rem;
+          align-items: center;
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+
+          &__icon {
+            width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+          }
+        }
+
+        &__corner-left,
+        &__corner-right {
+          background-color: transparent;
+          height: 20px;
+          width: 20px;
+          box-shadow: 0 -10px 0 0 $base-color;
+          border-bottom-right-radius: $radius;
+          border-top-right-radius: $radius;
+          position: absolute;
+        }
+
+        &__corner-left {
+          bottom: -20px;
+          right: 0px;
+        }
+        &__corner-right {
+          top: 0;
+          left: -20px;
+        }
       }
     }
   }
