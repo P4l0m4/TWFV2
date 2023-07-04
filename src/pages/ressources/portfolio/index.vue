@@ -56,6 +56,7 @@ const elements = story.value.content.elements
     & h2 {
       font-weight: 500;
       font-size: 1.25rem;
+      text-align: center;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 1.5rem;
