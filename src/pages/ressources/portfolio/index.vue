@@ -3,6 +3,19 @@ import { stringToSlug } from '@/utils/slugify.js'
 const story = await useAsyncStoryblok('portfolio', { version: 'published' })
 
 const elements = story.value.content.elements
+
+useHead(() => {
+  return {
+    title: 'Notre portfolio | Tekila Web Factory',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Découvrez notre portfolio de projets, de sites internet et de design Web.',
+      },
+    ],
+  }
+})
 </script>
 <template>
   <section class="portfolio">

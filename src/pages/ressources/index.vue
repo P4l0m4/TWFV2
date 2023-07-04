@@ -10,6 +10,20 @@ const breadcrumbs = [
     url: window.location.href,
   },
 ]
+
+useHead(() => {
+  return {
+    title: 'Ressources à votre disposition | Tekila Web Factory',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Découvrez nos derniers articles de blog pour vous aider à comprendre le monde du web et du développement.',
+      },
+    ],
+  }
+})
 </script>
 <template>
   <div class="ressources">
