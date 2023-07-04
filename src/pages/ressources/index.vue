@@ -25,7 +25,7 @@ const breadcrumbs = [
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/portfolio">
         <img class="ressources__cards__card__img" src="@/assets/icons/dashboard.svg" alt="image" />
-        <h2 class="ressources__cards__card__title">Portfolio (comming soon)</h2>
+        <h2 class="ressources__cards__card__title">Portfolio</h2>
         <p class="ressources__cards__card__txt">
           Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt
         </p>

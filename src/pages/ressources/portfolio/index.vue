@@ -1,3 +1,9 @@
+<script setup>
+import { stringToSlug } from '@/utils/slugify.js'
+const story = await useAsyncStoryblok('portfolio', { version: 'published' })
+
+const elements = story.value.content.elements
+</script>
 <template>
   <section class="portfolio">
     <div class="portfolio__titles">
@@ -5,9 +11,15 @@
       <h2>Des projets, des sites internet, du design Web</h2>
     </div>
     <div class="portfolio__elements">
-      <NuxtLink to="/" class="portfolio__elements__element"
-        ><span class="portfolio__elements__element__title">Title lorem ipsum</span>
-        <p class="portfolio__elements__element__subtitle">Subtitle lorem ipsum dolor sit amet</p>
+      <NuxtLink
+        :to="'/ressources/portfolio/' + stringToSlug(element.title)"
+        class="portfolio__elements__element"
+        v-for="element in elements"
+        :key="element"
+        :style="'background-image: url(' + element.headerimage[0].filename + ')'"
+      >
+        <span class="portfolio__elements__element__title">{{ element.title }}</span>
+        <p class="portfolio__elements__element__subtitle">{{ element.subtitle }}</p>
         <div class="portfolio__elements__element__share">
           <button class="portfolio__elements__element__share__go">
             <img class="portfolio__elements__element__share__go__icon" src="@/assets/icons/arrow.svg" alt="icon" />
@@ -53,21 +65,21 @@
 
   &__elements {
     width: 100%;
-    max-width: 800px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
 
     &__element {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
       padding: 1rem;
-      background-color: black;
       height: 360px;
       border-radius: $radius;
       width: clamp(343px, 100%, 400px);
       background-size: cover;
+      background-position: center;
       cursor: pointer;
       position: relative;
 
