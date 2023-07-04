@@ -16,6 +16,22 @@ useHead(() => {
     ],
   }
 })
+
+//JSONLD
+const breadcrumbs = [
+  {
+    name: 'Accueil',
+    url: window.location.origin,
+  },
+  {
+    name: 'Ressources',
+    url: window.location.href,
+  },
+  {
+    name: 'Portfolio',
+    url: window.location.href,
+  },
+]
 </script>
 <template>
   <section class="portfolio">
@@ -41,6 +57,7 @@ useHead(() => {
           <div class="portfolio__elements__element__share__corner-right"></div></div
       ></NuxtLink>
     </div>
+    <JsonldBreadcrumb :links="breadcrumbs" />
   </section>
 </template>
 <style scoped lang="scss">
