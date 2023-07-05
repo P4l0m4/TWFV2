@@ -6,11 +6,6 @@
   </div>
 </template>
 <style scoped lang="scss">
-@font-face {
-  font-family: 'Russo One';
-  src: url(@/assets/fonts/RussoOne-Regular.ttf) format('truetype');
-  font-display: swap;
-}
 .loader-background {
   display: flex;
   justify-content: center;

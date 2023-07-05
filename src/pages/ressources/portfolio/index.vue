@@ -25,7 +25,7 @@ const breadcrumbs = [
   },
   {
     name: 'Ressources',
-    url: window.location.href,
+    url: window.location.origin + '/ressources',
   },
   {
     name: 'Portfolio',

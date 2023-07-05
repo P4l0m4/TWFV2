@@ -13,13 +13,13 @@ const breadcrumbs = [
 
 useHead(() => {
   return {
-    title: 'Ressources à votre disposition | Tekila Web Factory',
+    title: 'Ressources gratuites autour de la création de site web',
     meta: [
       {
         hid: 'description',
         name: 'description',
         content:
-          'Découvrez nos derniers articles de blog pour vous aider à comprendre le monde du web et du développement.',
+          'Apprenez à créer et optimiser votre site web avec nos ressources gratuites. Référencez et augmentez la performance de votre site internet',
       },
     ],
   }

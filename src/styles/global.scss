@@ -3,6 +3,16 @@
   src: url(@/assets/fonts/Quicksand-VariableFont_wght.ttf) format('truetype');
   font-display: swap;
 }
+@font-face {
+  font-family: 'Russo One';
+  src: url(@/assets/fonts/RussoOne-Regular.ttf) format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Titles';
+  src: url(@/assets/fonts/Ahganirya.ttf) format('truetype');
+  font-display: swap;
+}
 
 *,
 :before,
