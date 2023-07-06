@@ -149,7 +149,11 @@ useHead(() => {
 
       &__title {
         font-weight: 800;
-        font-size: 2rem;
+        font-size: 1.5rem;
+
+        @media (min-width: $big-tablet-screen) {
+          font-size: 2rem;
+        }
       }
 
       &__description {
@@ -267,6 +271,8 @@ useHead(() => {
       flex-direction: column;
       gap: 0.75rem;
       width: 100%;
+      max-height: 200px;
+      overflow: scroll;
       position: fixed;
       inset: 0;
       background-color: $primary-color;
@@ -278,6 +284,8 @@ useHead(() => {
       box-shadow: $shadow;
 
       @media (min-width: $big-tablet-screen) {
+        max-height: inherit;
+        overflow: inherit;
         width: 400px;
         position: sticky;
         gap: 2rem;
@@ -315,6 +323,10 @@ useHead(() => {
 
         &__element {
           list-style: none;
+          font-size: 0.75rem;
+          @media (min-width: $big-tablet-screen) {
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -324,6 +336,10 @@ useHead(() => {
       flex-direction: column;
       gap: 2rem;
       width: 100%;
+
+      @media (min-width: $big-tablet-screen) {
+        gap: 4rem;
+      }
 
       &__part {
         display: flex;
@@ -406,6 +422,7 @@ useHead(() => {
   display: none;
   @media (min-width: $big-tablet-screen) {
     display: flex;
+    gap: 4rem;
   }
 }
 </style>

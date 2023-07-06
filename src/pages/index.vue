@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue'
 
-const str = 'Prenez rendez-vous avec nous'
+const str = 'Prenez rendez-vous avec nous °'
 
 onMounted(() => {
   const text = document.getElementById('text')
@@ -9,7 +9,7 @@ onMounted(() => {
     let span = document.createElement('span')
     span.innerText = str[i]
     text.appendChild(span)
-    span.style.transform = 'rotate(' + i * 12.5 + 'deg)'
+    span.style.transform = 'rotate(' + i * 11.7 + 'deg)'
     span.style.position = 'absolute'
     span.style.left = '50%'
     span.style.display = 'block'
@@ -57,6 +57,7 @@ useHead(() => {
             class="index__headline__titles__wrapper__circle"
             href="https://calendly.com/tekilawebfactory/30min"
             target="_blank"
+            aria-label="Prenez rendez-vous avec nous"
           >
             <p id="text"></p>
           </a>
@@ -99,11 +100,12 @@ useHead(() => {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 2rem;
 
       &__wrapper {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
         width: 100%;
         flex-direction: column;
 
@@ -123,13 +125,17 @@ useHead(() => {
           }
         }
         &__big-title {
-          font-size: 4rem;
-          font-family: 'andine';
+          font-size: 2rem;
+          font-family: 'Titles';
           font-weight: 800;
           text-transform: uppercase;
 
           @media (min-width: $big-tablet-screen) {
-            font-size: 7rem;
+            font-size: 4rem;
+          }
+
+          @media (min-width: $laptop-screen) {
+            font-size: 5rem;
           }
         }
 
