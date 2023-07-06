@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue'
 
-const str = 'Prenez RDV avec nous'
+const str = 'Prenez rendez-vous avec nous'
 
 onMounted(() => {
   const text = document.getElementById('text')
@@ -9,7 +9,7 @@ onMounted(() => {
     let span = document.createElement('span')
     span.innerText = str[i]
     text.appendChild(span)
-    span.style.transform = 'rotate(' + i * 17 + 'deg)'
+    span.style.transform = 'rotate(' + i * 12.5 + 'deg)'
     span.style.position = 'absolute'
     span.style.left = '50%'
     span.style.display = 'block'
@@ -17,6 +17,7 @@ onMounted(() => {
     span.style.textTransform = 'uppercase'
     span.style.color = '#333333'
     span.style.fontWeight = '800'
+    span.style.fontSize = '0.75rem'
   }
 })
 
