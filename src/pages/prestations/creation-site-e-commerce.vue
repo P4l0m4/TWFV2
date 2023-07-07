@@ -47,12 +47,12 @@ useHead(() => {
     </div>
     <div class="e-commerce__image-card">
       <div class="e-commerce__image-card__graph">
-        <img src="@/assets/images/logo.svg" />
+        <img src="@/assets/images/logo.svg" class="e-commerce__image-card__graph__logo" />
         <img
           class="e-commerce__image-card__graph__img"
           src="@/assets/images/graphique.svg"
           alt="creation site internet"
-        /><img src="@/assets/images/logo.svg" />
+        /><img src="@/assets/images/woocommerce.png" class="e-commerce__image-card__graph__logo" />
       </div>
     </div>
 
@@ -228,7 +228,11 @@ useHead(() => {
         flex-direction: row;
         gap: 4rem;
       }
-
+      &__logo {
+        width: 300px;
+        height: 100px;
+        object-fit: contain;
+      }
       &__img {
         width: 100%;
         height: 300px;

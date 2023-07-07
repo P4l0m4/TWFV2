@@ -64,7 +64,7 @@
           aria-label="Prenez rendez-vous avec nous"
           >Prendre RDV avec nous</a
         >
-        <button class="button-secondary">Commender un audit</button>
+        <button class="button-secondary">Commander un audit</button>
       </div>
     </div>
   </section>
