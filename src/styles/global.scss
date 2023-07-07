@@ -100,7 +100,7 @@ input[type='number'] {
   cursor: pointer;
   border-radius: calc($radius * 4);
   transition: transform 0.2s ease-in-out;
-  text-shadow: black 0px 0px 1px;
+  // text-shadow: black 0px 0px 1px;
   backface-visibility: hidden;
   transform: translateZ(0);
   -webkit-font-smoothing: subpixel-antialiased;
