@@ -39,14 +39,20 @@ useHead(() => {
         Triplez vos <br /><span class="e-commerce__banner__txt__bold">conversions</span> habituelles
       </p>
     </div>
-    <h3 class="e-commerce__h3">La qualité d'un dev, moins cher, plus rapide.</h3>
+    <div class="e-commerce__graph-headlines">
+      <h3 class="e-commerce__graph-headlines__title">Pourquoi nous ?</h3>
+      <p class="e-commerce__graph-headlines__subtitle">
+        Votre site est optimisé pour vous garantir un bon SEO et une expérience utilisateur agréable.
+      </p>
+    </div>
     <div class="e-commerce__image-card">
-      <img class="e-commerce__image-card__img" src="@/assets/images/placeholder.svg" alt="creation site internet" />
-      <div class="e-commerce__image-card__txt">
-        <h4 class="e-commerce__image-card__txt__title">Simple et efficace</h4>
-        <p class="e-commerce__image-card__txt__description">
-          Votre site est optimisé pour vous garantir un bon SEO et une expérience utilisateur agréable.
-        </p>
+      <div class="e-commerce__image-card__graph">
+        <img src="@/assets/images/logo.svg" />
+        <img
+          class="e-commerce__image-card__graph__img"
+          src="@/assets/images/graphique.svg"
+          alt="creation site internet"
+        /><img src="@/assets/images/logo.svg" />
       </div>
     </div>
 
@@ -89,13 +95,8 @@ useHead(() => {
       </div>
     </div>
 
-    <div class="e-commerce__pourquoi-nous">
-      <span class="e-commerce__pourquoi-nous__title">Pourquoi nous ?</span>
-      <p class="e-commerce__pourquoi-nous__subtitle">Parce qu’on sait ce qu’on fait <br />et on le fait bien.</p>
-      <div class="e-commerce__pourquoi-nous__wrapper">
-        <div class="e-commerce__pourquoi-nous__wrapper__img">
-          <img src="@/assets/images/graphique.svg" alt="graphique comparatif woocommerce" />
-        </div>
+    <!-- <div class="e-commerce__pourquoi-nous">
+      
         <div class="e-commerce__pourquoi-nous__wrapper__invitation">
           <p class="e-commerce__pourquoi-nous__wrapper__invitation__title">
             On vous explique notre secret gratuitement
@@ -103,7 +104,7 @@ useHead(() => {
           <a class="button-primary" href="https://nuxt3-shopify-template.netlify.app">Prenez rendez-vous</a>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="e-commerce__promise">
       <div class="e-commerce__promise__data">
         <span class="e-commerce__promise__data__title">4H</span>
@@ -183,12 +184,30 @@ useHead(() => {
     }
   }
 
-  &__h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
+  &__graph-headlines {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
     padding: 0 1rem;
-    text-align: center;
-    line-height: 40px;
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 0 1rem;
+      text-align: center;
+      line-height: 40px;
+
+      @media (min-width: $big-tablet-screen) {
+        font-size: 2rem;
+      }
+    }
+    &__subtitle {
+      text-align: center;
+      @media (min-width: $big-tablet-screen) {
+        font-size: 1.25rem;
+      }
+    }
   }
 
   &__image-card {
@@ -197,11 +216,24 @@ useHead(() => {
     width: clamp(280px, 100%, 800px);
     gap: 1rem;
 
-    &__img {
+    &__graph {
+      display: flex;
       width: 100%;
-      height: 300px;
-      object-fit: cover;
-      border-radius: $radius;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+      flex-direction: column;
+
+      @media (min-width: $laptop-screen) {
+        flex-direction: row;
+        gap: 4rem;
+      }
+
+      &__img {
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+      }
     }
 
     &__txt {
