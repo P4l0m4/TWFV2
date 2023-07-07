@@ -185,10 +185,11 @@ useHead(() => {
           width: 100%;
 
           @media (min-width: $big-tablet-screen) {
-            color: $text-color;
-            background-color: $primary-color;
-            margin-top: 1rem;
-            width: fit-content;
+            // color: $text-color;
+            // background-color: $primary-color;
+            // margin-top: 1rem;
+            // width: fit-content;
+            display: none;
           }
         }
       }

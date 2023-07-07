@@ -98,7 +98,7 @@ input[type='number'] {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-radius: $radius;
+  border-radius: calc($radius * 4);
   transition: transform 0.2s ease-in-out;
   text-shadow: black 0px 0px 1px;
   backface-visibility: hidden;
@@ -214,7 +214,7 @@ details > summary::-webkit-details-marker /* Safari */ {
 }
 @keyframes slide-from-top {
   from {
-    transform: translateY(-20px);
+    transform: translateY(-75px);
   }
   to {
     transform: translateY(0px);

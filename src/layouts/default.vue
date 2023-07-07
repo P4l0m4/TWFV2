@@ -19,7 +19,7 @@ setTimeout(() => {
 
 <template>
   <div class="container">
-    <Transition><LoaderAnimation v-if="loader" /></Transition>
+    <!-- <Transition><LoaderAnimation v-if="loader" /></Transition> -->
     <HeaderComponent />
     <main><slot /></main>
     <FooterComponent />

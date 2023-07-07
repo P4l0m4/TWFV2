@@ -20,8 +20,8 @@ const breadcrumbs = [
         <img class="prestations__cards__card__img" src="@/assets/icons/shop-big.svg" alt="image" />
         <h2 class="prestations__cards__card__title">Création de <br />sites e-commerce</h2>
         <p class="prestations__cards__card__txt">
-          Découvrez lorem ipsum dolor sit amet, consequitur elit, lorem ipsum dolor sit amet, consequitur elit rabaca
-          doloris estum quit separatur lorem ipsum dolor sit amet, consequitur architecturo.
+          Nous créons votre site internet e-commerce optimisé et clé en main adapté à vos besoins. Nos délais de
+          livraison sont rapides, nos sites web sont performants et toujours bien référencés.
         </p>
       </NuxtLink>
       <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-web">
@@ -34,10 +34,10 @@ const breadcrumbs = [
       </NuxtLink>
       <NuxtLink class="prestations__cards__card" to="/prestations/audit-optimisation-site-web">
         <img class="prestations__cards__card__img" src="@/assets/icons/optimisation.svg" alt="image" />
-        <h2 class="prestations__cards__card__title">Audits diagnostic <br />et conseils (comming soon)</h2>
+        <h2 class="prestations__cards__card__title">Audits diagnostic et conseils personnalisés</h2>
         <p class="prestations__cards__card__txt">
-          Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt provident sed tenetur nulla
-          aliquid quam lorem ipsum dolor sit amet.
+          Nous réalisons gratuitement un audit UX et SEO de votre site web pour vous aider à en tirer le meilleur parti
+          et à le transformer en véritable plateforme de conversion pour vos clients.
         </p>
       </NuxtLink>
     </div>

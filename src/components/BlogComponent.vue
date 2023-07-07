@@ -2,10 +2,10 @@
 const story = await useAsyncStoryblok('blog', { version: 'published' })
 </script>
 <template>
-  <div class="blog">
-    <h2>Nos derniers articles de blog</h2>
+  <section class="blog">
+    <h2 class="blog__title">Nos derniers articles de blog</h2>
     <StoryblokComponent v-if="story" :blok="story.content" />
-  </div>
+  </section>
 </template>
 <style scoped lang="scss">
 .blog {
@@ -20,6 +20,13 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
   @media (min-width: $big-tablet-screen) {
     padding: 0 1rem;
     align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    @media (min-width: $big-tablet-screen) {
+      font-size: 1.5rem;
+    }
   }
 }
 </style>

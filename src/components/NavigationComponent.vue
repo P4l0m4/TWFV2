@@ -42,6 +42,7 @@ nav {
   padding: 0.5rem;
   box-shadow: $shadow;
   position: relative;
+  animation: slide-from-top 2s ease;
 
   @media (min-width: $laptop-screen) {
     padding: 1rem 2rem;
