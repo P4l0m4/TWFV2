@@ -216,6 +216,7 @@ useHead(() => {
         width: 40px;
         height: 40px;
         overflow: hidden;
+        color: $text-color;
 
         &:hover {
           width: 110px;

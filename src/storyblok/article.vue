@@ -142,7 +142,7 @@ function copy() {
 
   &__title {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
     color: $text-color;
     width: 343px;
   }
