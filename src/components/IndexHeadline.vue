@@ -62,7 +62,7 @@ onMounted(() => {
   }
   @media (min-width: $laptop-screen) {
     height: 100vh;
-    margin-top: -10rem;
+    margin-top: -9.5rem;
   }
 
   &__titles {

@@ -50,12 +50,13 @@ useHead(() => {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     padding: 4rem 1rem;
     justify-content: center;
     position: relative;
 
     &__img {
+      z-index: 1;
       width: 108px;
       height: 200px;
       background-size: cover;
@@ -76,14 +77,29 @@ useHead(() => {
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 100%;
-      height: 80px;
+      width: 100vw;
+      height: 400px;
+      background-size: cover;
+      background-image: url('@/assets/images/street sprite.png');
+      animation: street 18s infinite linear;
+
+      @keyframes street {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -2416px 0;
+        }
+      }
     }
 
     &__txt {
+      z-index: 2;
       display: flex;
       gap: 1rem;
       flex-direction: column;
+      color: $primary-color;
+      text-shadow: 0 0 4px black;
 
       &__title {
         font-size: 1.25rem;
