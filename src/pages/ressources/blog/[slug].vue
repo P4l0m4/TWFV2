@@ -177,10 +177,12 @@ useHead(() => {
       height: 300px;
       object-fit: cover;
       border-radius: 0;
+      border-radius: $radius;
 
       @media (min-width: $big-tablet-screen) {
         height: 420px;
         width: 50%;
+        border-radius: 0;
       }
     }
 
@@ -192,7 +194,7 @@ useHead(() => {
       position: relative;
       position: absolute;
       right: 0;
-      top: calc(300px - 40px);
+      top: 372px;
       border-radius: $radius 0 $radius 0;
       transition: max-width 0.2s ease-in-out, width 0.2s ease-in-out;
 
@@ -216,7 +218,7 @@ useHead(() => {
         width: 40px;
         height: 40px;
         overflow: hidden;
-        color: $text-color;
+        color: $text-color !important;
 
         &:hover {
           width: 110px;

@@ -105,6 +105,7 @@ function copy() {
       width: 40px;
       height: 40px;
       overflow: hidden;
+      color: $text-color !important;
 
       &:hover {
         width: 110px;
