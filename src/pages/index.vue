@@ -25,6 +25,7 @@ useHead(() => {
   <div class="index">
     <IndexHeadline />
     <section class="index__story parallax">
+      <div class="index__story__img"></div>
       <div class="index__story__floor"></div>
       <div class="index__story__txt">
         <h2 class="index__story__txt__title">
@@ -35,7 +36,6 @@ useHead(() => {
           C'est aussi une véritable plateforme de conversion, à condition d'en exploiter le potentiel
         </p>
       </div>
-      <div class="index__story__img"></div>
     </section>
 
     <BlogComponent />
@@ -55,11 +55,11 @@ useHead(() => {
     align-items: center;
     gap: 0.5rem;
     padding: 4rem 1rem;
-    justify-content: center;
     position: relative;
 
     @media (min-width: $big-tablet-screen) {
       gap: 2rem;
+      padding: 4rem;
     }
 
     &__img {
@@ -109,6 +109,8 @@ useHead(() => {
       background-color: $primary-color;
       padding: 1rem;
       border-radius: $radius;
+      align-self: stretch;
+      margin: auto;
 
       @media (min-width: $big-tablet-screen) {
         max-width: 400px;
