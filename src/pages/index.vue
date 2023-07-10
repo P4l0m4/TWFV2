@@ -25,14 +25,17 @@ useHead(() => {
   <div class="index">
     <IndexHeadline />
     <section class="index__story parallax">
-      <div class="index__story__img"></div>
       <div class="index__story__floor"></div>
       <div class="index__story__txt">
-        <h2 class="index__story__txt__title">Votre site web est la vitrine de votre entreprise</h2>
+        <h2 class="index__story__txt__title">
+          Votre site web est<br />
+          la vitrine de votre entreprise
+        </h2>
         <p class="index__story__txt__subtitle">
           C'est aussi une véritable plateforme de conversion, à condition d'en exploiter le potentiel
         </p>
       </div>
+      <div class="index__story__img"></div>
     </section>
 
     <BlogComponent />
@@ -50,10 +53,14 @@ useHead(() => {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 0.5rem;
     padding: 4rem 1rem;
     justify-content: center;
     position: relative;
+
+    @media (min-width: $big-tablet-screen) {
+      gap: 2rem;
+    }
 
     &__img {
       z-index: 1;
@@ -98,11 +105,16 @@ useHead(() => {
       display: flex;
       gap: 1rem;
       flex-direction: column;
-      color: $primary-color;
-      text-shadow: 0 0 4px black;
+      max-width: 200px;
+      background-color: $primary-color;
+      padding: 1rem;
+      border-radius: $radius;
+
+      @media (min-width: $big-tablet-screen) {
+        max-width: 400px;
+      }
 
       &__title {
-        font-size: 1.25rem;
         font-weight: 800;
 
         @media (min-width: $big-tablet-screen) {
@@ -111,8 +123,9 @@ useHead(() => {
       }
 
       &__subtitle {
-        font-size: 1rem;
+        font-size: 0.75rem;
         font-weight: 500;
+        text-align: justify;
         @media (min-width: $big-tablet-screen) {
           font-size: 1.25rem;
         }
