@@ -85,6 +85,7 @@ async function submit() {
 
 <style lang="scss" scoped>
 .form {
+  animation: fade 0.4s ease;
   width: clamp(240px, 100%, 450px);
   background-color: $primary-color;
   border: rgba(255, 255, 255, 0.06) solid 1px;
@@ -103,6 +104,7 @@ async function submit() {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    align-items: flex-start;
 
     &__input,
     &__textarea {
