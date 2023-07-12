@@ -24,7 +24,7 @@ useHead(() => {
 <template>
   <div class="index">
     <IndexHeadline />
-    <section class="index__story parallax">
+    <!-- <section class="index__story parallax">
       <div class="index__story__img"></div>
       <div class="index__story__floor"></div>
       <div class="index__story__txt">
@@ -36,7 +36,7 @@ useHead(() => {
           C'est aussi une véritable plateforme de conversion, à condition d'en exploiter le potentiel
         </p>
       </div>
-    </section>
+    </section> -->
 
     <BlogComponent />
   </div>

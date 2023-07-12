@@ -15,7 +15,7 @@ onMounted(() => {
     span.style.display = 'block'
     span.style.transformOrigin = '0 50px'
     span.style.textTransform = 'uppercase'
-    span.style.color = '#333333'
+    span.style.color = 'white'
     span.style.fontWeight = '800'
     span.style.fontSize = '0.75rem'
   }
@@ -44,8 +44,9 @@ onMounted(() => {
 </template>
 <style lang="scss" scoped>
 .headline {
-  background-color: rgb(245, 239, 220);
-  background: linear-gradient(0deg, $base-color 0%, rgb(255, 246, 229) 100%);
+  // background-color: rgb(245, 239, 220);
+  // background: linear-gradient(0deg, $base-color 0%, rgb(255, 246, 229) 100%);
+  background-color: $text-color;
   display: flex;
   gap: 2rem;
   flex-direction: column;
@@ -87,6 +88,8 @@ onMounted(() => {
         max-width: inherit;
         font-size: 1rem;
         font-weight: 500;
+        color: $primary-color;
+
         @media (min-width: $big-tablet-screen) {
           max-width: 84px;
           font-size: 1rem;
@@ -94,17 +97,19 @@ onMounted(() => {
         }
       }
       &__big-title {
-        font-size: 2rem;
-        font-family: 'Titles';
+        font-size: 3rem;
+        font-family: Russo One;
         font-weight: 800;
         text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        color: $primary-color;
 
         @media (min-width: $big-tablet-screen) {
-          font-size: 4rem;
+          font-size: 5rem;
         }
 
         @media (min-width: $laptop-screen) {
-          font-size: 5rem;
+          font-size: 6rem;
         }
       }
 
@@ -126,7 +131,8 @@ onMounted(() => {
           position: relative;
           width: 100px;
           height: 100px;
-          color: $text-color;
+          // color: $text-color;
+          color: $primary-color;
           text-transform: uppercase;
           animation: circle 8s linear infinite;
         }

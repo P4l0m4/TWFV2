@@ -5,6 +5,7 @@ defineProps(['error'])
 <template>
   <div class="error">
     <NavigationComponent />
+    <SkeletonAnimation />
     <div class="error__message">
       <h1>Oooops... erreur {{ error.statusCode }}</h1>
       <h2>Nous n'avons pas trouvé la page que vous cherchez.</h2>
@@ -12,7 +13,8 @@ defineProps(['error'])
         >Retour à la page d'accueil</NuxtLink
       >
     </div>
-    <div class="error__animation"></div>
+
+    <FooterComponent />
   </div>
 </template>
 <style lang="scss" scoped>
