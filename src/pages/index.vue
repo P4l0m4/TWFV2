@@ -89,7 +89,7 @@ useHead(() => {
       width: 100vw;
       height: 400px;
       background-size: cover;
-      background-image: url('@/assets/images/street sprite.png');
+      background-image: url('@/assets/images/street-sprite.png');
       animation: street 18s infinite linear;
 
       @keyframes street {
