@@ -30,31 +30,6 @@ useHead(() => {
 <template>
   <div class="e-commerce">
     <h1 class="e-commerce__title">Nous créons votre site e-commerce sur-mesure</h1>
-    <div class="e-commerce__video">
-      <video class="e-commerce__video__media" src="https://youtu.be/GRnWBIJb_Oo" controls></video>
-    </div>
-    <div class="e-commerce__banner">
-      <span class="e-commerce__banner__x3">x3</span>
-      <p class="e-commerce__banner__txt">
-        Triplez vos <br /><span class="e-commerce__banner__txt__bold">conversions</span> habituelles
-      </p>
-    </div>
-    <div class="e-commerce__graph-headlines">
-      <h3 class="e-commerce__graph-headlines__title">Pourquoi nous ?</h3>
-      <p class="e-commerce__graph-headlines__subtitle">
-        Votre site est optimisé pour vous garantir un bon SEO et une expérience utilisateur agréable.
-      </p>
-    </div>
-    <div class="e-commerce__image-card">
-      <div class="e-commerce__image-card__graph">
-        <img src="@/assets/images/logo.svg" class="e-commerce__image-card__graph__logo" />
-        <img
-          class="e-commerce__image-card__graph__img"
-          src="@/assets/images/graphique.svg"
-          alt="creation site internet"
-        /><img src="@/assets/images/woocommerce.png" class="e-commerce__image-card__graph__logo" />
-      </div>
-    </div>
 
     <div class="e-commerce__arguments">
       <div class="e-commerce__arguments__argument">
@@ -94,6 +69,51 @@ useHead(() => {
         </div>
       </div>
     </div>
+    <div class="e-commerce__video">
+      <video class="e-commerce__video__media" src="https://youtu.be/GRnWBIJb_Oo" controls></video>
+      <div class="e-commerce__video__promise">
+        <div class="e-commerce__video__promise__data">
+          <span class="e-commerce__video__promise__data__title">4H</span>
+          <div class="e-commerce__video__promise__data__description">
+            <p>C'est le temps moyen qu'il nous faut</p>
+            <p>pour vous livrer votre super site e-commerce</p>
+          </div>
+        </div>
+
+        <a class="e-commerce__video__promise__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
+          >Voir une démo</a
+        >
+      </div>
+    </div>
+
+    <div class="e-commerce__banner">
+      <span class="e-commerce__banner__x3">x3</span>
+      <p class="e-commerce__banner__txt">
+        Triplez vos <br /><span class="e-commerce__banner__txt__bold">conversions</span> habituelles
+      </p>
+    </div>
+    <div class="e-commerce__graph">
+      <div class="e-commerce__graph__headlines">
+        <h3 class="e-commerce__graph__headlines__title">Pourquoi nous ?</h3>
+        <p class="e-commerce__graph__headlines__subtitle">
+          Nous savons comment optimiser votre site web pour vous garantir un bon SEO et une expérience utilisateur
+          agréable.
+        </p>
+        <a class="e-commerce__graph__headlines__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
+          >Prenez rendez-vous</a
+        >
+      </div>
+      <div class="e-commerce__graph__image-card">
+        <div class="e-commerce__graph__image-card__graph">
+          <img src="@/assets/images/logo.svg" class="e-commerce__graph__image-card__graph__logo" />
+          <img
+            class="e-commerce__graph__image-card__graph__img"
+            src="@/assets/images/graphique.svg"
+            alt="creation site internet"
+          /><img src="@/assets/images/woocommerce.png" class="e-commerce__graph__image-card__graph__logo" />
+        </div>
+      </div>
+    </div>
 
     <!-- <div class="e-commerce__pourquoi-nous">
       
@@ -105,19 +125,6 @@ useHead(() => {
         </div>
       </div>
     </div> -->
-    <div class="e-commerce__promise">
-      <div class="e-commerce__promise__data">
-        <span class="e-commerce__promise__data__title">4H</span>
-        <div class="e-commerce__promise__data__description">
-          <p>C'est le temps moyen qu'il nous faut</p>
-          <p>pour vous livrer votre super site e-commerce</p>
-        </div>
-      </div>
-
-      <a class="e-commerce__promise__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
-        >Voir une démo</a
-      >
-    </div>
   </div>
   <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
@@ -125,7 +132,7 @@ useHead(() => {
 .e-commerce {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 8rem;
   align-items: center;
 
   &__title {
@@ -139,120 +146,73 @@ useHead(() => {
 
   &__video {
     width: 100%;
-    max-width: 800px;
-    height: 280px;
     padding: 0 1rem;
     display: flex;
+    gap: 1rem;
     justify-content: center;
+    flex-direction: column;
 
-    @media (min-width: $tablet-screen) {
-      height: 340px;
+    @media (min-width: $big-tablet-screen) {
+      gap: 2rem;
+      flex-direction: row;
     }
     @media (min-width: $laptop-screen) {
-      height: 400px;
+      gap: 4rem;
     }
 
     &__media {
       width: 100%;
-      height: 100%;
+      max-width: 830px;
+      height: 280px;
       border-radius: $radius;
       box-shadow: $shadow;
-    }
-  }
-
-  &__banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $text-color;
-    padding: 1rem;
-    width: 100%;
-    gap: 1rem;
-
-    &__x3 {
-      color: $primary-color;
-      font-size: 3rem;
-    }
-    &__txt {
-      color: $primary-color-faded;
-      font-weight: 300;
-
-      &__bold {
-        font-weight: 400;
-        color: $primary-color;
-      }
-    }
-  }
-
-  &__graph-headlines {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    padding: 0 1rem;
-
-    &__title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      padding: 0 1rem;
-      text-align: center;
-      line-height: 40px;
 
       @media (min-width: $big-tablet-screen) {
-        font-size: 2rem;
+        height: 340px;
+        width: 50%;
+      }
+      @media (min-width: $laptop-screen) {
+        height: 400px;
+      }
+      @media (min-width: $desktop-screen) {
+        width: 100%;
       }
     }
-    &__subtitle {
-      text-align: center;
-      @media (min-width: $big-tablet-screen) {
-        font-size: 1.25rem;
-      }
-    }
-  }
 
-  &__image-card {
-    display: flex;
-    flex-direction: column;
-    width: clamp(280px, 100%, 800px);
-    gap: 1rem;
-
-    &__graph {
+    &__promise {
       display: flex;
-      width: 100%;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
       gap: 2rem;
-      align-items: center;
-      flex-direction: column;
+      padding: 2rem;
+      width: 100%;
 
-      @media (min-width: $laptop-screen) {
-        flex-direction: row;
-        gap: 4rem;
+      @media (min-width: $big-tablet-screen) {
+        width: clamp(280px, 100%, 450px);
       }
-      &__logo {
-        width: 300px;
-        height: 100px;
-        object-fit: contain;
-      }
-      &__img {
+
+      &__data {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         width: 100%;
-        height: 300px;
-        object-fit: contain;
-      }
-    }
+        align-items: center;
 
-    &__txt {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem;
-      gap: 0.5rem;
-
-      &__title {
-        font-size: 1.5rem;
-        font-weight: 700;
+        &__title {
+          font-size: 3rem;
+          font-weight: 700;
+        }
+        &__description {
+          font-weight: 400;
+          text-align: center;
+          color: $text-color;
+        }
       }
 
-      &__description {
-        font-weight: 300;
+      &__button {
+        width: 100%;
+        font-weight: 400;
       }
     }
   }
@@ -264,6 +224,9 @@ useHead(() => {
     gap: 1rem;
     padding: 0 1rem;
     width: 100%;
+    @media (min-width: $big-tablet-screen) {
+      gap: 2rem;
+    }
 
     &__argument {
       display: flex;
@@ -273,6 +236,7 @@ useHead(() => {
       border-radius: $radius;
       padding: 1rem;
       box-shadow: $shadow;
+      animation: fade 0.8s ease;
 
       &__illustration {
         width: fit-content;
@@ -308,6 +272,113 @@ useHead(() => {
           &:nth-of-type(1) {
             font-weight: 700;
           }
+        }
+      }
+    }
+  }
+
+  &__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $text-color;
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+
+    &__x3 {
+      color: $primary-color;
+      font-size: 3rem;
+    }
+    &__txt {
+      color: $primary-color-faded;
+      font-weight: 300;
+
+      &__bold {
+        font-weight: 400;
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__graph {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+
+    &__headlines {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      width: 100%;
+
+      @media (min-width: $big-tablet-screen) {
+        width: clamp(280px, 100%, 450px);
+      }
+
+      &__title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: center;
+
+        @media (min-width: $big-tablet-screen) {
+          font-size: 1.5rem;
+        }
+      }
+      &__subtitle {
+        text-align: center;
+        @media (min-width: $big-tablet-screen) {
+          font-size: 1.25rem;
+        }
+      }
+
+      &__button {
+        width: 100%;
+      }
+    }
+
+    &__image-card {
+      display: flex;
+      flex-direction: column;
+      width: clamp(280px, 100%, 800px);
+
+      &__graph {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+        flex-direction: column;
+
+        &__logo {
+          width: 300px;
+          height: 100px;
+          object-fit: contain;
+        }
+        &__img {
+          width: 100%;
+          height: 300px;
+          object-fit: contain;
+        }
+      }
+
+      &__txt {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+
+        &__title {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        &__description {
+          font-weight: 300;
         }
       }
     }
@@ -384,42 +455,6 @@ useHead(() => {
           width: 100%;
         }
       }
-    }
-  }
-
-  &__promise {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    width: clamp(280px, 100%, 460px);
-    background-color: $primary-color;
-    border-radius: $radius;
-    box-shadow: $shadow;
-
-    &__data {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      width: 100%;
-      align-items: center;
-
-      &__title {
-        font-size: 3rem;
-        font-weight: 700;
-      }
-      &__description {
-        font-weight: 400;
-        font-size: 0.75rem;
-        text-align: center;
-        color: $text-color;
-      }
-    }
-
-    &__button {
-      width: 100%;
-      font-weight: 400;
     }
   }
 }
