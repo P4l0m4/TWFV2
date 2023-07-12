@@ -258,17 +258,6 @@ useHead(() => {
       border-radius: $radius;
       padding: 1rem;
       box-shadow: $shadow;
-      animation: tilt 1.2s ease;
-
-      &:nth-of-type(1) {
-        animation-delay: 0.3s;
-      }
-      &:nth-of-type(2) {
-        animation-delay: 0.6s;
-      }
-      &:nth-of-type(3) {
-        animation-delay: 1.2s;
-      }
 
       &__illustration {
         width: fit-content;
