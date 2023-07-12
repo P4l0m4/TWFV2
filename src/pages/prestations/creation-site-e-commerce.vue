@@ -29,7 +29,29 @@ useHead(() => {
 </script>
 <template>
   <div class="e-commerce">
-    <h1 class="e-commerce__title">Nous créons votre site e-commerce sur-mesure</h1>
+    <div class="e-commerce__headlines">
+      <h1 class="e-commerce__headlines__title">Nous créons votre site e-commerce sur-mesure</h1>
+      <h2 class="e-commerce__headlines__subtitle">
+        Pour que votre offre ait la visibilité et le succès qu'elle mérite
+      </h2>
+    </div>
+
+    <div class="e-commerce__video">
+      <video class="e-commerce__video__media" src="https://youtu.be/GRnWBIJb_Oo" controls></video>
+      <div class="e-commerce__video__promise">
+        <div class="e-commerce__video__promise__data">
+          <span class="e-commerce__video__promise__data__title">4H</span>
+          <div class="e-commerce__video__promise__data__description">
+            <p>C'est le temps moyen qu'il nous faut</p>
+            <p>pour vous livrer votre super site e-commerce</p>
+          </div>
+        </div>
+
+        <a class="e-commerce__video__promise__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
+          >Voir une démo</a
+        >
+      </div>
+    </div>
 
     <div class="e-commerce__arguments">
       <div class="e-commerce__arguments__argument">
@@ -67,22 +89,6 @@ useHead(() => {
           <span class="e-commerce__arguments__argument__txt__description">naturel avec votre site</span>
           <span class="e-commerce__arguments__argument__txt__description">dopé au SEO technique</span>
         </div>
-      </div>
-    </div>
-    <div class="e-commerce__video">
-      <video class="e-commerce__video__media" src="https://youtu.be/GRnWBIJb_Oo" controls></video>
-      <div class="e-commerce__video__promise">
-        <div class="e-commerce__video__promise__data">
-          <span class="e-commerce__video__promise__data__title">4H</span>
-          <div class="e-commerce__video__promise__data__description">
-            <p>C'est le temps moyen qu'il nous faut</p>
-            <p>pour vous livrer votre super site e-commerce</p>
-          </div>
-        </div>
-
-        <a class="e-commerce__video__promise__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
-          >Voir une démo</a
-        >
       </div>
     </div>
 
@@ -135,12 +141,28 @@ useHead(() => {
   gap: 8rem;
   align-items: center;
 
-  &__title {
-    font-size: 1.5rem;
-    text-align: center;
+  &__headlines {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 
-    @media (min-width: $big-tablet-screen) {
-      font-size: 2rem;
+    &__title {
+      font-size: 1.5rem;
+      text-align: center;
+
+      @media (min-width: $big-tablet-screen) {
+        font-size: 2rem;
+      }
+    }
+    &__subtitle {
+      text-align: center;
+
+      @media (min-width: $big-tablet-screen) {
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
     }
   }
 

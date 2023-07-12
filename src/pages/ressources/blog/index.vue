@@ -94,7 +94,7 @@ useHead(() => {
   }
 
   &__title {
-    font-weight: 800;
+    font-weight: 800 !important;
     font-size: 1.5rem;
 
     @media (min-width: $big-tablet-screen) {
