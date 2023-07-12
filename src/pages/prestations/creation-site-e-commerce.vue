@@ -236,7 +236,17 @@ useHead(() => {
       border-radius: $radius;
       padding: 1rem;
       box-shadow: $shadow;
-      animation: fade 0.8s ease;
+      animation: tilt 1.2s ease;
+
+      &:nth-of-type(1) {
+        animation-delay: 0.3s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 0.6s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 1.2s;
+      }
 
       &__illustration {
         width: fit-content;
@@ -342,9 +352,11 @@ useHead(() => {
     }
 
     &__image-card {
+      justify-content: center;
+      align-items: center;
       display: flex;
       flex-direction: column;
-      width: clamp(280px, 100%, 800px);
+      width: clamp(280px, 100%, 700px);
 
       &__graph {
         display: flex;

@@ -230,3 +230,11 @@ details > summary::-webkit-details-marker /* Safari */ {
     opacity: 1;
   }
 }
+@keyframes tilt {
+  from {
+    transform: rotate(4deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
