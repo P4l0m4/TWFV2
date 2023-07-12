@@ -2,39 +2,24 @@
 import { reactive, ref } from 'vue'
 import emailjs from '@emailjs/browser'
 import { useVuelidate } from '@vuelidate/core'
-import { required, minLength, maxLength, email, sameAs } from '@vuelidate/validators'
+import { required, email, url } from '@vuelidate/validators'
 
 const state = reactive({
   email: '',
-  name: '',
-  firstName: '',
-  message: '',
-  rgpd: false,
+  url: '',
   isSubmitting: false,
   sent: false,
   HP: false,
 })
 
 const rules = {
-  firstName: {
-    required,
-    maxLength: maxLength(50),
-  },
-  name: {
-    required,
-    maxLength: maxLength(50),
-  },
   email: {
     required,
     email,
   },
-  message: {
+  url: {
     required,
-    minLength: minLength(50),
-    maxLength: maxLength(2000),
-  },
-  rgpd: {
-    sameAs: sameAs(true),
+    url,
   },
 }
 
@@ -51,11 +36,8 @@ async function submit() {
 
     state.sent = true
     state.isSubmitting = false
-    state.name = ''
-    state.firstName = ''
     state.email = ''
-    state.message = ''
-    state.rgpd = false
+    state.url = ''
     v$.value.$reset()
   }
 }
@@ -63,32 +45,6 @@ async function submit() {
 
 <template>
   <form ref="form" class="form" @submit.prevent="submit">
-    <!-- CHAMP NOM -->
-    <div class="form__group" :class="{ 'form__group--error': v$.name.$invalid }">
-      <label class="form__group__label">Nom</label>
-      <input v-model.trim="state.name" class="form__group__input" placeholder="Michel" name="name" />
-
-      <div v-if="v$.name.$dirty && v$.name.required.$invalid" class="form__error">Ce champ est requis</div>
-
-      <div v-if="v$.name.$dirty && v$.name.maxLength.$invalid" class="form__error">
-        Maximum de caractères :
-        {{ v$.name.maxLength.$params.max }}.
-      </div>
-    </div>
-
-    <!-- CHAMP PRENOM -->
-    <div class="form__group" :class="{ 'form__group--error': v$.firstName.$invalid }">
-      <label class="form__group__label">Prénom</label>
-      <input v-model.trim="state.firstName" class="form__group__input" placeholder="Dupont" name="firstName" />
-
-      <div v-if="v$.firstName.$dirty && v$.firstName.required.$invalid" class="form__error">Ce champ est requis</div>
-
-      <div v-if="v$.firstName.$dirty && v$.firstName.maxLength.$invalid" class="form__error">
-        Maximum de caractères :
-        {{ v$.firstName.maxLength.$params.max }}.
-      </div>
-    </div>
-
     <!-- CHAMP EMAIL -->
     <div class="form__group" :class="{ 'form__group--error': v$.email.$dirty }">
       <label class="form__group__label">Email</label>
@@ -101,38 +57,16 @@ async function submit() {
       </div>
     </div>
 
-    <!-- CHAMP MESSAGE -->
-    <div class="form__group" :class="{ 'form__group--error': v$.message.$dirty }">
-      <label class="form__group__label">Message</label>
-      <textarea
-        v-model.trim="state.message"
-        class="form__group__textarea"
-        placeholder="Bonjour..."
-        name="message"
-      ></textarea>
+    <!-- CHAMP URL -->
+    <div class="form__group" :class="{ 'form__group--error': v$.url.$dirty }">
+      <label class="form__group__label">Url</label>
+      <input v-model.trim="state.url" class="form__group__input" placeholder="url de votre site web" name="url" />
 
-      <div v-if="v$.message.$dirty && v$.message.required.$invalid" class="form__error">Ce champ est requis</div>
-      <div v-if="v$.message.$dirty && v$.message.minLength.$invalid" class="form__error">
-        Minimum de caractères :
-        {{ v$.message.minLength.$params.min }}
-      </div>
-      <div v-if="v$.message.$dirty && v$.message.maxLength.$invalid" class="form__error">
-        Minimum de caractères :
-        {{ v$.message.maxLength.$params.max }}
-      </div>
+      <div v-if="v$.url.$dirty && v$.url.required.$invalid" class="form__error">Ce champ est requis</div>
+      <div v-else-if="v$.url.$dirty && v$.url.url.$invalid" class="form__error">Veuillez renseigner un URL valide</div>
     </div>
 
-    <!-- CHAMP RGPD -->
-    <div class="form__group" :class="{ 'form__group--error': v$.rgpd.$dirty }">
-      <div class="form__group__checkbox-container">
-        <input id="rgpd" v-model.trim="state.rgpd" type="checkbox" class="form__group__input" />
-        <label for="rgpd" class="form__group__checkbox-container__text">
-          Vous acceptez que les informations saisies dans ce formulaire soient transmises par mail à Tekila Web Factory.
-        </label>
-      </div>
-      <div v-if="v$.rgpd.$dirty && v$.rgpd.sameAs.$invalid" class="form__error">Ce champ est requis</div>
-    </div>
-
+    <!-- CHAMP HP -->
     <input id="HP" v-model="state.HP" class="HP" type="checkbox" name="not_a_robot" @change="checkIfHP" />
     <label for="HP" class="HP"> Je ne suis pas un robot </label>
 
@@ -145,13 +79,13 @@ async function submit() {
       Envoyer
     </button>
 
-    <p v-if="sent" class="form__error">Message envoyé !</p>
+    <p v-if="state.sent" class="form__error">Merci ! Votre demande a été envoyée</p>
   </form>
 </template>
 
 <style lang="scss" scoped>
 .form {
-  width: clamp(240px, 100%, 384px);
+  width: clamp(240px, 100%, 450px);
   background-color: $primary-color;
   border: rgba(255, 255, 255, 0.06) solid 1px;
   padding: 16px;
@@ -159,7 +93,7 @@ async function submit() {
   display: flex;
   flex-direction: column;
   border-radius: $radius;
-  @media (min-width: $tablet-screen) {
+  @media (min-width: $big-tablet-screen) {
     padding: 24px;
     gap: 24px;
   }
