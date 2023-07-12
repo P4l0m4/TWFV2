@@ -67,8 +67,9 @@ useHead(() => {
       width: 108px;
       height: 200px;
       background-size: cover;
-      background-image: url('@/assets/images/sprite.png');
+      background-image: url('@/assets/images/sprite-sans-mains.png');
       animation: walk 0.8s steps(3) infinite;
+      opacity: 0.8;
 
       @keyframes walk {
         0% {
@@ -81,6 +82,7 @@ useHead(() => {
     }
 
     &__floor {
+      opacity: 0.6;
       position: absolute;
       bottom: 0;
       left: 0;

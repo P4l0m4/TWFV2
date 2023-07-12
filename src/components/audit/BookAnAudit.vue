@@ -145,7 +145,7 @@ async function submit() {
       Envoyer
     </button>
 
-    <p v-if="state.sent" class="form__error">Message envoyé !</p>
+    <p v-if="sent" class="form__error">Message envoyé !</p>
   </form>
 </template>
 
