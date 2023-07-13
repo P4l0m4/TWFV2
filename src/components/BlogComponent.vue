@@ -16,6 +16,7 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  background-color: $base-color;
 
   @media (min-width: $big-tablet-screen) {
     padding: 0 1rem;

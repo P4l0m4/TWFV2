@@ -23,7 +23,7 @@ useHead(() => {
 
 <template>
   <div class="index">
-    <IndexHeadline />
+    <HomeIndexHeadline /> <HomeIndexAnimation />
     <!-- <section class="index__story parallax">
       <div class="index__story__img"></div>
       <div class="index__story__floor"></div>
@@ -48,6 +48,19 @@ useHead(() => {
   flex-direction: column;
   gap: 4rem;
   align-items: center;
+
+  // &__animated {
+  //   width: 100%;
+  //   display: flex;
+  //   gap: 1rem;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   @media (min-width: $big-tablet-screen) {
+  //     gap: 2rem;
+  //     flex-direction: row;
+  //     width: 100%;
+  //   }
+  // }
 
   &__story {
     width: 100%;

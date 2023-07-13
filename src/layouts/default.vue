@@ -50,6 +50,7 @@ setTimeout(() => {
   gap: 2rem;
   align-items: center;
   margin: auto;
+  max-width: 100vw;
 
   @media (min-width: $laptop-screen) {
     padding: 10rem 0 0 0;

@@ -15,9 +15,11 @@ onMounted(() => {
     span.style.display = 'block'
     span.style.transformOrigin = '0 50px'
     span.style.textTransform = 'uppercase'
-    span.style.color = 'white'
+    span.style.color = '#333333'
     span.style.fontWeight = '800'
     span.style.fontSize = '0.75rem'
+    span.textShadow = '0px 0px 10px #f7f7f72c'
+    span.backdropFilter = 'blur(10px)'
   }
 })
 </script>
@@ -46,11 +48,10 @@ onMounted(() => {
 .headline {
   // background-color: rgb(245, 239, 220);
   // background: linear-gradient(0deg, $base-color 0%, rgb(255, 246, 229) 100%);
-  background-color: $text-color;
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
   padding: 1rem;
   width: 100vw;
@@ -60,6 +61,7 @@ onMounted(() => {
   @media (min-width: $big-tablet-screen) {
     height: calc(100vh - 48px);
     gap: 4rem;
+    padding: 1rem 7rem;
   }
   @media (min-width: $laptop-screen) {
     height: 100vh;
@@ -88,7 +90,8 @@ onMounted(() => {
         max-width: inherit;
         font-size: 1rem;
         font-weight: 500;
-        color: $primary-color;
+        color: $text-color;
+        text-shadow: $shadow-white;
 
         @media (min-width: $big-tablet-screen) {
           max-width: 84px;
@@ -97,12 +100,13 @@ onMounted(() => {
         }
       }
       &__big-title {
+        text-shadow: $shadow-white;
         font-size: 3rem;
         font-family: Russo One;
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
-        color: $primary-color;
+        color: $text-color;
 
         @media (min-width: $big-tablet-screen) {
           font-size: 5rem;
@@ -115,6 +119,8 @@ onMounted(() => {
 
       &__circle {
         position: relative;
+        background-color: $base-color;
+        border-radius: 50%;
 
         &::after {
           content: '';
@@ -132,7 +138,7 @@ onMounted(() => {
           width: 100px;
           height: 100px;
           // color: $text-color;
-          color: $primary-color;
+          color: $text-color;
           text-transform: uppercase;
           animation: circle 8s linear infinite;
         }

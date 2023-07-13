@@ -22,6 +22,11 @@ useHead(() => {
           'Apprenez à créer et optimiser votre site web avec nos ressources gratuites. Référencez et augmentez la performance de votre site internet',
       },
     ],
+    script: [
+      {
+        src: 'https://cdn.lordicon.com/bhenfmcm.js',
+      },
+    ],
   }
 })
 </script>
@@ -31,21 +36,48 @@ useHead(() => {
 
     <div class="ressources__cards">
       <NuxtLink class="ressources__cards__card" to="/ressources/blog">
-        <img class="ressources__cards__card__img" src="@/assets/icons/document.svg" alt="image" />
+        <lord-icon
+          class="ressources__cards__card__img"
+          src="https://cdn.lordicon.com/wxnxiano.json"
+          trigger="loop"
+          delay="2000"
+          colors="primary:#333333,secondary:#333333"
+          style="width: 50px; height: 50px"
+        >
+        </lord-icon>
+        <!-- <img class="ressources__cards__card__img" src="@/assets/icons/document.svg" alt="image" /> -->
         <h2 class="ressources__cards__card__title">Blog</h2>
         <p class="ressources__cards__card__txt">
           Découvrez nos derniers articles de blog pour vous aider à comprendre le monde du web et du développement
         </p>
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/portfolio">
-        <img class="ressources__cards__card__img" src="@/assets/icons/dashboard.svg" alt="image" />
+        <lord-icon
+          class="ressources__cards__card__img"
+          src="https://cdn.lordicon.com/mdgrhyca.json"
+          trigger="loop"
+          delay="2000"
+          colors="primary:#333333,secondary:#333333"
+          style="width: 50px; height: 50px"
+        >
+        </lord-icon>
+        <!-- <img class="ressources__cards__card__img" src="@/assets/icons/dashboard.svg" alt="image" /> -->
         <h2 class="ressources__cards__card__title">Portfolio</h2>
         <p class="ressources__cards__card__txt">
           Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt
         </p>
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/tutoriels">
-        <img class="ressources__cards__card__img" src="@/assets/icons/tutorial.svg" alt="image" />
+        <lord-icon
+          class="ressources__cards__card__img"
+          src="https://cdn.lordicon.com/dtgezzsi.json"
+          trigger="loop"
+          delay="2000"
+          colors="primary:#333333,secondary:#333333"
+          style="width: 50px; height: 50px"
+        >
+        </lord-icon>
+        <!-- <img class="ressources__cards__card__img" src="@/assets/icons/tutorial.svg" alt="image" /> -->
         <h2 class="ressources__cards__card__title">Tutoriels (comming soon)</h2>
         <p class="ressources__cards__card__txt">
           Lorem adipisicing aperiam architecto incidunt provident sed tenetur nulla aliquid quam
