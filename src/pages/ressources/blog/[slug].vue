@@ -35,6 +35,33 @@ useHead(() => {
     ],
   }
 })
+
+//JSONLD
+useJsonld(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': window.location.origin + '/ressources/blog/' + articleSlug,
+  },
+  headline: article.title,
+  description: article.description,
+  image: article.headerimage[0].filename,
+  author: {
+    '@type': 'Organization',
+    name: 'Tekila Web Factory',
+    url: 'https://tekilawebfactory.com/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Tekila Web Factory',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://tekilawebfactory.com/_nuxt/logo.8aab4942.svg',
+    },
+  },
+  datePublished: date,
+}))
 </script>
 <template>
   <article class="article">
