@@ -22,7 +22,10 @@ let year = new Date().getFullYear()
     <div class="footer__icons">
       <a class="footer__icons__link" href="#" aria-label="lien vers la page facebook"
         ><img class="footer__icons__link__icon scale-on-hover" src="@/assets/icons/facebook.svg" alt="icon" /></a
-      ><a class="footer__icons__link" href="#" aria-label="lien vers la page linkedin"
+      ><a
+        class="footer__icons__link"
+        href="https://www.linkedin.com/company/tekila-web-factory/about/"
+        aria-label="lien vers la page linkedin"
         ><img class="footer__icons__link__icon scale-on-hover" src="@/assets/icons/linkedin.svg" alt="icon" /></a
       ><a class="footer__icons__link" href="#" aria-label="lien vers la page instagram"
         ><img class="footer__icons__link__icon scale-on-hover" src="@/assets/icons/instagram.svg" alt="icon"

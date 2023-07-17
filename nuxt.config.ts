@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
 
-    // 'nuxt-simple-sitemap',
+    'nuxt-simple-sitemap',
     ['@storyblok/nuxt', { accessToken: 'p4gGIMh6R6U5xPOUYs5oCgtt' }],
     'nuxt-jsonld',
     'dayjs-nuxt',
@@ -28,13 +28,13 @@ export default defineNuxtConfig({
       },
     },
   },
-  // sitemap: {
-  //   sitemaps: true,
-  //   siteUrl: 'https://nuxt3-shopify-template.netlify.app',
-  //   urls: async () => {
-  //     return await getProductPages()
-  //   },
-  // },
+  sitemap: {
+    sitemaps: true,
+    siteUrl: 'https://tekilawebfactory.com',
+    //   urls: async () => {
+    //     return await getProductPages()
+    // },
+  },
   vue: {
     compilerOptions: {
       isCustomElement: tag => ['swiper-container', 'swiper-slide'].includes(tag),
