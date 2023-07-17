@@ -37,6 +37,24 @@ useHead(() => {
 })
 
 //JSONLD
+const breadcrumbs = [
+  {
+    name: 'Accueil',
+    url: window.location.origin,
+  },
+  {
+    name: 'Ressources',
+    url: window.location.origin + '/ressources',
+  },
+  {
+    name: 'Blog',
+    url: window.location.origin + '/ressources/blog',
+  },
+  {
+    name: article.title,
+    url: window.location.href,
+  },
+]
 useJsonld(() => ({
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -118,6 +136,7 @@ useJsonld(() => ({
     </div>
     <BlogComponent />
   </article>
+  <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
 
 <style scoped lang="scss">

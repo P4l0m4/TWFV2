@@ -18,6 +18,23 @@ function toggleTag(tag) {
 
 const articleOfTheDay = story.value.content.bloglist[0]
 
+//JSONLD
+
+const breadcrumbs = [
+  {
+    name: 'Accueil',
+    url: window.location.origin,
+  },
+  {
+    name: 'Ressources',
+    url: window.location.origin + '/ressources',
+  },
+  {
+    name: 'Blog',
+    url: window.location.href,
+  },
+]
+
 useHead(() => {
   return {
     title: 'Le blog Tekila Web Factory',
@@ -72,6 +89,7 @@ useHead(() => {
     </div>
     <NewsComponent />
   </div>
+  <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
 
 <style scoped lang="scss">
