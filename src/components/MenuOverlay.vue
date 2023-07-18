@@ -27,7 +27,7 @@ const emit = defineEmits(['close'])
   backdrop-filter: blur(16px);
   inset: 0;
   background: rgba(0, 0, 0, 0.1);
-  z-index: 2;
+  z-index: 6;
   display: flex;
   justify-content: center;
   align-items: center;

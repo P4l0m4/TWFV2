@@ -23,8 +23,8 @@ useHead(() => {
 
 <template>
   <div class="index">
-    <HomeIndexHeadline />
-    <!-- <HomeIndexSlider /> -->
+    <!-- <HomeIndexHeadline /> -->
+    <HomeIndexSlider />
     <!-- <section class="index__story parallax">
       <div class="index__story__img"></div>
       <div class="index__story__floor"></div>

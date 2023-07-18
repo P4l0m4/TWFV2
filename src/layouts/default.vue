@@ -80,14 +80,14 @@ setTimeout(() => {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 4rem 0 0 0;
+  padding: 2rem 0 0 0;
   gap: 2rem;
   align-items: center;
   margin: auto;
   max-width: 100vw;
 
   @media (min-width: $laptop-screen) {
-    padding: 10rem 0 0 0;
+    padding: 2.6rem 0 0 0;
   }
 
   & main {

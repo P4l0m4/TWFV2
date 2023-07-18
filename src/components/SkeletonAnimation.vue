@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="skeleton-wrapper">
     <div class="skeleton">
       <div class="head">
         <div class="head-hemispheres"></div>
@@ -67,26 +67,17 @@
     </div>
   </div>
 </template>
-<style scoped>
-:root {
-  --color-background: #837391;
-  --color-primary: #d8d1c0;
-  --color-secondary: #a99378;
-  --color-tertiary: #272728;
-  --color-shadow: #695c74;
-  font-size: 0.9vw;
-}
+<style scoped lang="scss">
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*::after,
-*::before {
-  content: '';
-}
+// *::after,
+// *::before {
+//   content: '';
+// }
 
 /* body {
   background: var(--color-background);
@@ -94,7 +85,14 @@
   overflow: hidden;
 } */
 
-.wrapper {
+.skeleton-wrapper {
+  --color-background: #837391;
+  --color-primary: #d8d1c0;
+  --color-secondary: #a99378;
+  --color-tertiary: #272728;
+  --color-shadow: #695c74;
+  font-size: 0.9vw;
+
   display: flex;
   justify-content: center;
   align-items: center;
