@@ -364,13 +364,13 @@ onMounted(() => {
   max-width: 100%;
   height: 100svh;
   z-index: 1;
-  padding: 0 1rem 5rem 0;
+  padding: 0 1rem 4rem 0;
 
   @media (min-width: $tablet-screen) {
     padding: 0 2rem 4rem 0;
   }
   @media (min-width: $big-tablet-screen) {
-    padding: 0 2rem 11rem 0;
+    padding: 0 2rem 8rem 0;
   }
 
   @media (min-width: $laptop-screen) {
