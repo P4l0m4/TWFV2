@@ -5,9 +5,10 @@ defineProps(['error'])
 <template>
   <div class="error">
     <NavigationComponent />
-    <SkeletonAnimation />
+
     <div class="error__message">
       <h1>Oooops... erreur {{ error.statusCode }}</h1>
+      <SkeletonAnimation />
       <h2>Nous n'avons pas trouvé la page que vous cherchez.</h2>
       <NuxtLink to="/" class="button-primary" aria-label="retour à la page d'accueil"
         >Retour à la page d'accueil</NuxtLink
@@ -22,7 +23,6 @@ defineProps(['error'])
   &__message {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;

@@ -1,7 +1,7 @@
 <template>
   <div class="skeleton-wrapper">
     <div class="skeleton">
-      <div class="head">
+      <div class="skeleton-head">
         <div class="head-hemispheres"></div>
         <div class="eye-shadow eye-shadow-left"></div>
         <div class="eye eye-left"></div>
@@ -68,23 +68,6 @@
   </div>
 </template>
 <style scoped lang="scss">
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-
-// *::after,
-// *::before {
-//   content: '';
-// }
-
-/* body {
-  background: var(--color-background);
-  height: 100vh;
-  overflow: hidden;
-} */
-
 .skeleton-wrapper {
   --color-background: #837391;
   --color-primary: #d8d1c0;
@@ -96,19 +79,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 300px;
   width: 100%;
 }
 
 .skeleton {
-  width: 12rem;
-  height: 20rem;
+  width: 160px;
+  height: 300px;
   position: relative;
 }
 
 /* Head */
 
-.head {
+.skeleton-head {
   position: absolute;
   top: 0;
   width: 100%;
@@ -116,7 +99,7 @@
   animation: skeletonJump 0.5s 4s ease-in-out forwards;
 }
 
-.head::before {
+.skeleton-head::before {
   position: absolute;
   top: 0.1rem;
   left: 0;
@@ -635,6 +618,7 @@
   width: 100%;
   height: 1.2rem;
   z-index: -1;
+  display: none;
 }
 
 .shadow::after,

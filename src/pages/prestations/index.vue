@@ -35,53 +35,29 @@ useHead(() => {
 
     <div class="prestations__cards">
       <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-e-commerce">
-        <!-- <img class="prestations__cards__card__img" src="@/assets/icons/shop-big.svg" alt="image" /> -->
-        <lord-icon
-          class="prestations__cards__card__img"
-          src="https://cdn.lordicon.com/slkvcfos.json"
-          trigger="loop"
-          delay="2000"
-          colors="primary:#333333,secondary:#333333"
-          style="width: 50px; height: 50px"
-        >
-        </lord-icon>
+        <img class="prestations__cards__card__img" src="@/assets/icons/shop-big.svg" alt="image" />
+
         <h2 class="prestations__cards__card__title">Création de <br />sites e-commerce</h2>
         <p class="prestations__cards__card__txt">
-          Nous créons votre site internet e-commerce optimisé et clé en main adapté à vos besoins. Nos délais de
-          livraison sont rapides, nos sites web sont performants et toujours bien référencés.
+          Nous créons votre site e-commerce sur-mesure. Nos délais de livraison sont rapides, nos sites web sont
+          performants et toujours bien référencés.
         </p>
       </NuxtLink>
       <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-web">
-        <lord-icon
-          class="prestations__cards__card__img"
-          src="https://cdn.lordicon.com/qhgmphtg.json"
-          trigger="loop"
-          delay="2000"
-          colors="primary:#333333,secondary:#333333"
-          style="width: 50px; height: 50px"
-        >
-        </lord-icon>
+        <img class="prestations__cards__card__img" src="@/assets/icons/site-vitrine.svg" alt="image" />
         <h2 class="prestations__cards__card__title">Création de sites vitrine (comming soon)</h2>
         <p class="prestations__cards__card__txt">
           Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt provident sed tenetur nulla
-          aliquid quam lorem ipsu dolor sit amet.
+          aliquid quam.
         </p>
       </NuxtLink>
       <NuxtLink class="prestations__cards__card" to="/prestations/audit-optimisation-site-web">
-        <!-- <img class="prestations__cards__card__img" src="@/assets/icons/optimisation.svg" alt="image" /> -->
-        <lord-icon
-          class="prestations__cards__card__img"
-          src="https://cdn.lordicon.com/gqdnbnwt.json"
-          trigger="loop"
-          delay="2000"
-          colors="primary:#333333,secondary:#333333"
-          style="width: 50px; height: 50px"
-        >
-        </lord-icon>
+        <img class="prestations__cards__card__img" src="@/assets/icons/optimisation.svg" alt="image" />
+
         <h2 class="prestations__cards__card__title">Audits diagnostic et conseils personnalisés</h2>
         <p class="prestations__cards__card__txt">
-          Nous réalisons gratuitement un audit UX et SEO de votre site web pour vous aider à en tirer le meilleur parti
-          et à le transformer en véritable plateforme de conversion pour vos clients.
+          Nous réalisons gratuitement un audit de votre site web pour vous aider à en tirer le meilleur parti et à le
+          transformer en véritable plateforme de conversion.
         </p>
       </NuxtLink>
     </div>
@@ -115,6 +91,7 @@ useHead(() => {
     &__card {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 1rem;
       background-color: $primary-color;
       border-radius: $radius;
@@ -135,6 +112,7 @@ useHead(() => {
 
       &__img {
         width: fit-content;
+        height: 50px;
         animation: slide-from-bottom 1.6s ease;
 
         &:nth-of-type(2) {

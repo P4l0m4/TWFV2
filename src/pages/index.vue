@@ -23,21 +23,7 @@ useHead(() => {
 
 <template>
   <div class="index">
-    <!-- <HomeIndexHeadline /> -->
     <HomeIndexSlider />
-    <!-- <section class="index__story parallax">
-      <div class="index__story__img"></div>
-      <div class="index__story__floor"></div>
-      <div class="index__story__txt">
-        <h2 class="index__story__txt__title">
-          Votre site web est<br />
-          la vitrine de votre entreprise
-        </h2>
-        <p class="index__story__txt__subtitle">
-          C'est aussi une véritable plateforme de conversion, à condition d'en exploiter le potentiel
-        </p>
-      </div>
-    </section> -->
 
     <BlogComponent />
   </div>
@@ -49,19 +35,6 @@ useHead(() => {
   flex-direction: column;
   gap: 4rem;
   align-items: center;
-
-  // &__animated {
-  //   width: 100%;
-  //   display: flex;
-  //   gap: 1rem;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   @media (min-width: $big-tablet-screen) {
-  //     gap: 2rem;
-  //     flex-direction: row;
-  //     width: 100%;
-  //   }
-  // }
 
   &__story {
     width: 100%;

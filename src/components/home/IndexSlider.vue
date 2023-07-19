@@ -233,19 +233,18 @@ onMounted(() => {
 <template>
   <div class="slider-wrapper">
     <section class="loading">
-      <!-- add karla font -->
       <div>
         <div id="slider">
           <div class="slider-inner">
             <div id="slider-content">
               <div class="meta">Création</div>
-              <h2 id="slide-title">Sites <br />Internet</h2>
+              <h1 id="slide-title">Sites <br />Internet</h1>
               <span data-slide-title="0">Sites <br />Internet</span>
-              <span data-slide-title="1"
-                >Sites <br />
-                E-commerce</span
-              >
-              <span data-slide-title="2">Audits <br />S.E.O.</span>
+              <span data-slide-title="1">
+                Sites <br />
+                E-commerce
+              </span>
+              <span data-slide-title="2">Audits <br />SEO</span>
               <span data-slide-title="3">Web <br />Design</span>
               <div class="meta">SPéCIFICITéS</div>
               <div id="slide-status">Optimisés SEO</div>
@@ -287,6 +286,7 @@ onMounted(() => {
   height: 500px;
   overflow: hidden;
   width: 100%;
+  justify-content: center;
   align-items: center;
 
   @media (min-width: $laptop-screen) {
@@ -298,7 +298,7 @@ onMounted(() => {
   display: flex;
   width: 100%;
   position: relative;
-  @media (min-width: $tablet-screen) {
+  @media (min-width: $big-tablet-screen) {
     padding: 0 2rem;
   }
 
@@ -310,26 +310,22 @@ onMounted(() => {
 }
 
 #slider canvas {
-  max-width: 400px;
-  max-height: 320px;
+  max-width: 375px;
+  max-height: 290px;
   position: absolute;
   right: 0;
-  top: 0;
+  left: 0;
+  top: 4.5rem;
   margin: auto;
-  bottom: 0;
-  z-index: 2;
+  z-index: 0;
 
-  @media (min-width: $tablet-screen) {
-    max-width: 460px;
-    max-height: 370px;
-    top: 0;
-    right: 4rem;
-  }
   @media (min-width: $big-tablet-screen) {
     max-width: 540px;
-    max-height: 400px;
-    right: 4rem;
-    transform: rotate(0deg);
+    max-height: 340px;
+    right: 6rem;
+    top: 0;
+    bottom: 0;
+    left: inherit;
   }
 
   @media (min-width: $laptop-screen) {
@@ -339,66 +335,71 @@ onMounted(() => {
     max-height: 600px;
     top: 0;
   }
+
   @media (min-width: $desktop-screen) {
     right: 6rem;
     max-width: 800px;
     left: inherit;
-    max-height: 680px;
+    max-height: 600px;
     top: 0;
   }
 }
+
 #slider img {
   width: 100%;
-  // max-height: 100%;
-  // height: calc(100vh - 4rem);
-  // max-width: 840px;
-  // position: relative;
-  // z-index: 0;
-  // object-fit: contain;
+  height: 100%;
   visibility: hidden;
 }
 
 .slider-inner {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   max-width: 100%;
-  height: 100vh;
-  z-index: 3;
-  padding: 0 1rem;
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, $base-color 100%);
+  height: 100svh;
+  z-index: 1;
+  padding: 0 1rem 5rem 0;
+
+  @media (min-width: $tablet-screen) {
+    padding: 0 2rem 4rem 0;
+  }
+  @media (min-width: $big-tablet-screen) {
+    padding: 0 2rem 11rem 0;
+  }
 
   @media (min-width: $laptop-screen) {
-    max-width: 800px;
+    padding: 0;
+    max-width: 900px;
     align-items: center;
     height: calc(100vh - 4rem);
     margin: inherit;
     position: inherit;
     inset: inherit;
-    padding: 0;
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, $base-color 60%);
   }
 }
 
 #slider-content {
   width: 100%;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, $base-color 60%);
 
   @media (min-width: $laptop-screen) {
     width: 100%;
     padding: 0 1rem;
   }
 }
-#slider-content h2 {
+#slider-content h1 {
   font-family: 'acta-display', serif;
   font-weight: 400;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   letter-spacing: -1px;
   line-height: 40px;
   margin: 20px 0 32px;
   color: $text-color;
   width: 375px;
   text-shadow: $shadow-white;
+  padding: 0 2rem;
+  white-space: nowrap;
 
   @media (min-width: $tablet-screen) {
     font-size: 3.8rem;
@@ -407,9 +408,10 @@ onMounted(() => {
   }
   @media (min-width: $laptop-screen) {
     margin: 20px 0 60px;
-    font-size: 110px;
+    font-size: 5.8rem;
     line-height: 100px;
     width: 100%;
+    padding: 0;
   }
 }
 
@@ -417,6 +419,7 @@ onMounted(() => {
   display: none;
 }
 #slider-content .meta {
+  padding: 0 2rem;
   width: 100%;
   display: inline-block;
   font-family: 'Arial', sans-serif;
@@ -428,6 +431,7 @@ onMounted(() => {
 
   @media (min-width: $laptop-screen) {
     font-size: 13px;
+    padding: 0;
   }
 }
 #slider-content .meta:after {
@@ -442,6 +446,7 @@ onMounted(() => {
 }
 #slider-content #slide-status {
   margin-top: 10px;
+  padding: 0 2rem;
   font-family: 'acta-display', serif;
   font-weight: 400;
   font-size: 18px;
@@ -449,6 +454,7 @@ onMounted(() => {
 
   @media (min-width: $laptop-screen) {
     font-size: 34px;
+    padding: 0;
   }
 }
 
@@ -456,10 +462,13 @@ onMounted(() => {
   padding: 1rem;
   border-radius: 10%;
   position: absolute;
-  top: 50%;
+  top: 75%;
   transform: translateY(-50%);
-  right: 30px;
-  z-index: 5;
+  right: 2rem;
+  z-index: 4;
+  @media (min-width: $big-tablet-screen) {
+    top: 50%;
+  }
 }
 #pagination button {
   display: block;
