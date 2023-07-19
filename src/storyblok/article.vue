@@ -98,7 +98,7 @@ function copy() {
 
     &__plus {
       display: flex;
-      // padding: 0.5rem;
+      padding: 0.5rem;
       gap: 0.75rem;
       align-items: center;
       cursor: pointer;

@@ -219,7 +219,10 @@ const displacementSlider = function (opts) {
 
 onMounted(() => {
   imagesLoaded(document.querySelectorAll('img'), () => {
-    document.querySelector('section.loading').classList.remove('loading')
+    const section = document.querySelector('section.loading')
+    if (section) {
+      section.classList.remove('loading')
+    }
 
     const el = document.getElementById('slider')
     const imgs = Array.from(el.querySelectorAll('img'))
@@ -311,7 +314,9 @@ onMounted(() => {
 
 #slider canvas {
   max-width: 375px;
+  width: 375px;
   max-height: 290px;
+  height: 290px;
   position: absolute;
   right: 0;
   left: 0;

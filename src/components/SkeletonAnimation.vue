@@ -68,6 +68,11 @@
   </div>
 </template>
 <style scoped lang="scss">
+*,
+:before,
+:after {
+  content: '';
+}
 .skeleton-wrapper {
   --color-background: #837391;
   --color-primary: #d8d1c0;

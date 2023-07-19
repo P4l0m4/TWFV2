@@ -87,7 +87,7 @@ setTimeout(() => {
   max-width: 100vw;
 
   @media (min-width: $laptop-screen) {
-    padding: 2.6rem 0 0 0;
+    padding: 8rem 0 0 0;
   }
 
   & main {
