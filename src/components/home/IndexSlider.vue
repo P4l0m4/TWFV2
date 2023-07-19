@@ -327,6 +327,8 @@ onMounted(() => {
   @media (min-width: $big-tablet-screen) {
     max-width: 540px;
     max-height: 340px;
+    width: 540px;
+    height: 340px;
     right: 6rem;
     top: 0;
     bottom: 0;
@@ -336,16 +338,20 @@ onMounted(() => {
   @media (min-width: $laptop-screen) {
     right: 6rem;
     max-width: 700px;
-    left: inherit;
     max-height: 600px;
+    width: 700px;
+    height: 600px;
+    left: inherit;
     top: 0;
   }
 
   @media (min-width: $desktop-screen) {
     right: 6rem;
     max-width: 800px;
-    left: inherit;
     max-height: 600px;
+    width: 800px;
+    height: 600px;
+    left: inherit;
     top: 0;
   }
 }
