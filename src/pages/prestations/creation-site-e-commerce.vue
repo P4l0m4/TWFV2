@@ -327,6 +327,12 @@ useHead(() => {
     gap: 1rem;
     width: 100%;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $big-tablet-screen) {
+      flex-direction: row;
+    }
 
     &__headlines {
       display: flex;
