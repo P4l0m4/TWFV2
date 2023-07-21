@@ -325,6 +325,7 @@ useHead(() => {
   }
 
   &__graph {
+    padding: 0 1rem;
     display: flex;
     gap: 1rem;
     width: 100%;
