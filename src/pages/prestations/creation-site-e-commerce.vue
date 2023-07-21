@@ -50,7 +50,7 @@ useHead(() => {
           >Voir une démo</a
         >
       </div>
-      <img class="e-commerce__first__media" src="@/assets/images/mockup-purple.jpg" alt="mockup téléphone site web" />
+      <img class="e-commerce__first__media" src="@/assets/images/purple-phone.png" alt="mockup téléphone site web" />
     </div>
 
     <div class="e-commerce__arguments">
@@ -185,10 +185,9 @@ useHead(() => {
     &__media {
       width: 100%;
       max-width: 820px;
-      height: 280px;
+      height: 300px;
       border-radius: $radius;
-      box-shadow: $shadow;
-      object-fit: cover;
+      object-fit: contain;
 
       @media (min-width: $big-tablet-screen) {
         height: 340px;
