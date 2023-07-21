@@ -158,6 +158,8 @@ useHead(() => {
     }
     &__subtitle {
       text-align: center;
+      font-size: 1rem;
+      font-weight: 400;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 1.25rem;
