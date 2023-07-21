@@ -24,7 +24,8 @@ useHead(() => {
 <template>
   <div class="index">
     <HomeIndexSlider />
-
+    <!-- <HomeIndexStory /> -->
+    <HomeIndexTxt />
     <BlogComponent />
   </div>
   <JsonldBreadcrumb :links="breadcrumbs" />
@@ -33,8 +34,11 @@ useHead(() => {
 .index {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 6rem;
   align-items: center;
+  @media (min-width: $big-tablet-screen) {
+    gap: 8rem;
+  }
 
   &__story {
     width: 100%;

@@ -36,21 +36,21 @@ useHead(() => {
       </h2>
     </div>
 
-    <div class="e-commerce__video">
-      <video class="e-commerce__video__media" src="https://youtu.be/GRnWBIJb_Oo" controls></video>
-      <div class="e-commerce__video__promise">
-        <div class="e-commerce__video__promise__data">
-          <span class="e-commerce__video__promise__data__title">4H</span>
-          <div class="e-commerce__video__promise__data__description">
+    <div class="e-commerce__first">
+      <div class="e-commerce__first__promise">
+        <div class="e-commerce__first__promise__data">
+          <span class="e-commerce__first__promise__data__title">4H</span>
+          <div class="e-commerce__first__promise__data__description">
             <p>C'est le temps moyen qu'il nous faut</p>
             <p>pour vous livrer votre super site e-commerce</p>
           </div>
         </div>
 
-        <a class="e-commerce__video__promise__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
+        <a class="e-commerce__first__promise__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
           >Voir une démo</a
         >
       </div>
+      <img class="e-commerce__first__media" src="@/assets/images/mockup-purple.jpg" alt="mockup téléphone site web" />
     </div>
 
     <div class="e-commerce__arguments">
@@ -138,7 +138,7 @@ useHead(() => {
 .e-commerce {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 6rem;
   align-items: center;
 
   &__headlines {
@@ -166,7 +166,7 @@ useHead(() => {
     }
   }
 
-  &__video {
+  &__first {
     width: 100%;
     padding: 0 1rem;
     display: flex;
@@ -184,10 +184,11 @@ useHead(() => {
 
     &__media {
       width: 100%;
-      max-width: 830px;
+      max-width: 820px;
       height: 280px;
       border-radius: $radius;
       box-shadow: $shadow;
+      object-fit: cover;
 
       @media (min-width: $big-tablet-screen) {
         height: 340px;
@@ -352,9 +353,6 @@ useHead(() => {
       }
       &__subtitle {
         text-align: center;
-        @media (min-width: $big-tablet-screen) {
-          font-size: 1.25rem;
-        }
       }
 
       &__button {

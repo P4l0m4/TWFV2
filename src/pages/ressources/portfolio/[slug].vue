@@ -92,6 +92,7 @@ useHead(() => {
 
     & img {
       width: 100%;
+      // max-width: 375px;
       object-fit: contain;
       border-radius: $radius;
     }

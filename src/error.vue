@@ -25,7 +25,7 @@ defineProps(['error'])
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem;
+    padding: 4rem 1rem;
     height: 100vh;
     text-align: center;
 
