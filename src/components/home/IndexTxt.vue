@@ -4,8 +4,6 @@
       <h2 class="index-txt__words__word">SEO WEB & GROWTH</h2>
     </div>
 
-    <img class="index-txt__img" src="@/assets/images/beige-phone.jpg" alt="beige phone mockup" />
-
     <div class="index-txt__card">
       <h2 class="index-txt__card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
       <p class="index-txt__card__description">
@@ -18,14 +16,17 @@
       <h2 class="index-txt__words__word">Audits</h2>
     </NuxtLink>
 
-    <img class="index-txt__img" src="@/assets/images/beige-laptop-double.jpg" alt="beige laptop mockup" />
+    <img class="index-txt__img" src="@/assets/images/grey-phone2.jpg" alt="grey laptop mockup" />
+
+    <img class="index-txt__img" src="@/assets/images/grey-phone4.jpg" alt="grey phone mockup" />
+
+    <img class="index-txt__img" src="@/assets/images/grey-tablet.jpg" alt="grey laptop mockup" />
+
     <div class="index-txt__button-card">
       <h2 class="index-txt__button-card__title">Lorem ipsum dolor sit amet</h2>
       <p class="index-txt__button-card__description">Lorem ipsum dolor sit amet lorem ipsum dolor sit</p>
       <button class="index-txt__button-card__button button-primary">En savoir plus</button>
     </div>
-
-    <img class="index-txt__img" src="@/assets/images/beige-tablet.jpg" alt="beige laptop mockup" />
 
     <div class="index-txt__words">
       <h2 class="index-txt__words__word">Web design</h2>
@@ -36,7 +37,8 @@
       <p class="index-txt__button-card__description">Lorem ipsum dolor sit amet lorem ipsum dolor sit</p>
       <button class="index-txt__button-card__button button-primary">En savoir plus</button>
     </div>
-    <img class="index-txt__img" src="@/assets/images/beige-phone2.jpg" alt="beige laptop mockup" />
+
+    <img class="index-txt__img" src="@/assets/images/grey-phone3.jpg" alt="grey laptop mockup" />
   </section>
 </template>
 
@@ -78,7 +80,7 @@
     &__word {
       text-align: center;
       line-height: 54px;
-      background-image: url('@/assets/images/beige-phone.jpg');
+      background-image: url('@/assets/images/grey-tablet.jpg');
       //   background-repeat: repeat;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
