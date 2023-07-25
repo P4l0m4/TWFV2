@@ -354,6 +354,15 @@ onMounted(() => {
     left: inherit;
     top: 0;
   }
+  @media (min-width: $super-big-screen) {
+    right: -6rem;
+    max-width: 1300px;
+    max-height: 600px;
+    width: 1300px;
+    height: 600px;
+    left: inherit;
+    top: 0;
+  }
 }
 
 #slider img {
@@ -424,6 +433,9 @@ onMounted(() => {
     width: 100%;
     padding: 0;
   }
+  @media (min-width: $super-big-screen) {
+    font-size: 7rem;
+  }
 }
 
 #slider-content span {
@@ -443,6 +455,9 @@ onMounted(() => {
   @media (min-width: $laptop-screen) {
     font-size: 13px;
     padding: 0;
+  }
+  @media (min-width: $super-big-screen) {
+    font-size: 1.25rem;
   }
 }
 #slider-content .meta:after {
@@ -466,6 +481,10 @@ onMounted(() => {
   @media (min-width: $laptop-screen) {
     font-size: 34px;
     padding: 0;
+  }
+
+  @media (min-width: $super-big-screen) {
+    font-size: 2.5rem;
   }
 }
 
