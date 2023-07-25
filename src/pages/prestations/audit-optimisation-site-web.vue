@@ -1,25 +1,6 @@
-<script setup>
-import { ref } from 'vue'
-let isBookAnAuditOpen = ref(false)
-</script>
 <template>
   <section class="things-to-optimize">
-    <div class="things-to-optimize__proposition">
-      <span>Nous vous proposons</span>
-      <h1>Un audit gratuit de votre site web</h1>
-      <div class="things-to-optimize__proposition__buttons">
-        <a
-          class="button-primary"
-          href="https://calendly.com/tekilawebfactory/30min"
-          target="_blank"
-          aria-label="Prenez rendez-vous avec nous"
-          >Prendre RDV avec nous</a
-        >
-        <button class="button-secondary" @click="isBookAnAuditOpen = !isBookAnAuditOpen">Commander un audit</button>
-      </div>
-
-      <AuditBookAnAudit v-if="isBookAnAuditOpen" />
-    </div>
+    <AuditPopUp />
     <div class="things-to-optimize__explanations">
       <h2 class="things-to-optimize__explanations__title">Comment savoir si votre site web est un bon site web ?</h2>
       <span class="things-to-optimize__explanations__subtitle">Deux grands critères à optimiser absolument:</span>

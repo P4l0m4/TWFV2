@@ -16,6 +16,8 @@
       <h2 class="index-txt__words__word">Audits</h2>
     </NuxtLink>
 
+    <AuditPopUp />
+
     <img class="index-txt__img" src="@/assets/images/grey-phone2.jpg" alt="grey laptop mockup" />
 
     <img class="index-txt__img" src="@/assets/images/grey-phone4.jpg" alt="grey phone mockup" />
