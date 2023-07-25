@@ -86,7 +86,7 @@
       //   background-repeat: repeat;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 3.9rem;
+      font-size: 3.8rem;
       text-transform: uppercase;
       font-family: 'Russo One';
       font-weight: 800;
