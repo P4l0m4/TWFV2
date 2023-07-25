@@ -85,17 +85,16 @@ async function submit() {
 
 <style lang="scss" scoped>
 .form {
+  margin-top: 2rem;
   animation: fade 0.4s ease;
-  width: clamp(240px, 100%, 450px);
+  width: clamp(240px, 100%, 500px);
   background-color: $primary-color;
   border: rgba(255, 255, 255, 0.06) solid 1px;
-  padding: 16px;
   gap: 16px;
   display: flex;
   flex-direction: column;
   border-radius: $radius;
   @media (min-width: $big-tablet-screen) {
-    padding: 24px;
     gap: 24px;
   }
 

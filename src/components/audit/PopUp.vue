@@ -57,7 +57,11 @@ let isBookAnAuditOpen = ref(false)
 
       @media (min-width: $tablet-screen) {
         width: fit-content;
+        min-width: 180px;
       }
+    }
+    & .button-secondary {
+      color: $text-color;
     }
   }
 }
