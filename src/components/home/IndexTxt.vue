@@ -9,11 +9,17 @@
         >
           <h2 class="index-txt__part__column__words__word">Audits</h2>
         </NuxtLink>
-        <div class="index-txt__part__column__image-card" alt="grey laptop mockup">
+        <div class="index-txt__part__column__wrapper">
           <AuditPopUp />
+          <img
+            class="index-txt__part__column__wrapper__img"
+            src="@/assets/images/grey-tablet.jpg"
+            alt="image tablette site web"
+          />
         </div>
       </div>
       <div class="index-txt__part__column2">
+        <img class="index-txt__part__column2__img" src="@/assets/images/grey-phone.jpg" alt="site web" />
         <div class="index-txt__part__column2__card">
           <h2 class="index-txt__part__column2__card__title">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -23,7 +29,13 @@
             optio odio veniam similique saepe ipsum! Non veniam sunt maxime u accusamus dolores ab?
           </p>
         </div>
-        <img class="index-txt__part__column2__img" src="@/assets/images/grey-phone.jpg" alt="site web" />
+        <NuxtLink
+          class="index-txt__part__column__words"
+          to="/prestations/audit-optimisatio-site-web"
+          aria-label="audits"
+        >
+          <h2 class="index-txt__part__column__words__word">SEO</h2>
+        </NuxtLink>
       </div>
     </div>
   </section>
@@ -43,20 +55,19 @@
     flex-direction: row;
   }
 
-  @media (min-width: $desktop-screen) {
-    padding: 2rem;
-  }
-
   &__part {
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     gap: 2rem;
     flex-direction: column;
-    padding: 2rem;
 
     @media (min-width: $big-tablet-screen) {
       flex-direction: row;
+    }
+
+    @media (min-width: $super-big-screen) {
+      gap: 4rem;
     }
 
     &__column {
@@ -70,17 +81,32 @@
       @media (min-width: $big-tablet-screen) {
         flex-direction: row;
       }
+      @media (min-width: $super-big-screen) {
+        gap: 4rem;
+      }
 
-      &__image-card {
-        width: clamp(300px, 100%, 700px);
-        height: 100%;
-        border-radius: $radius;
-        background-size: cover;
-        background-position: center;
-        align-items: flex-end;
+      &__wrapper {
         display: flex;
-        padding: 2rem;
-        background-image: url('@/assets/images/grey-phone.jpg');
+        flex-direction: column;
+        gap: 2rem;
+        height: 100%;
+        width: 100%;
+
+        @media (min-width: $super-big-screen) {
+          gap: 4rem;
+        }
+
+        &__img {
+          width: 100%;
+          height: 100%;
+          max-height: 500px;
+          border-radius: $radius;
+          object-fit: cover;
+
+          @media (min-width: $super-big-screen) {
+            max-height: 700px;
+          }
+        }
       }
 
       &__words {
@@ -96,6 +122,9 @@
         @media (min-width: $big-tablet-screen) {
           max-width: 8rem;
           height: fit-content;
+        }
+        @media (min-width: $super-big-screen) {
+          max-width: 10rem;
         }
 
         &__word {
@@ -129,6 +158,10 @@
             line-height: 84px;
             font-size: 5.6rem;
           }
+          @media (min-width: $super-big-screen) {
+            line-height: 100px;
+            font-size: 7rem;
+          }
         }
 
         @keyframes bg {
@@ -147,6 +180,9 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      @media (min-width: $super-big-screen) {
+        gap: 4rem;
+      }
 
       &__card {
         padding: 2rem;

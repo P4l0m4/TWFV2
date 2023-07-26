@@ -23,7 +23,7 @@ let isBookAnAuditOpen = ref(false)
 <style lang="scss" scoped>
 .pop-up {
   display: flex;
-  width: clamp(300px, 100%, 600px);
+  width: clamp(300px, 100%, 700px);
   justify-content: center;
   flex-direction: column;
   align-items: center;
