@@ -13,12 +13,17 @@
           <AuditPopUp />
         </div>
       </div>
-      <div class="index-txt__part__card">
-        <h2 class="index-txt__part__card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <p class="index-txt__part__card__description">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut incidunt blanditiis ratione laudantium quaerat
-          optio odio veniam similique saepe ipsum! Non veniam sunt maxime u accusamus dolores ab?
-        </p>
+      <div class="index-txt__part__column2">
+        <div class="index-txt__part__column2__card">
+          <h2 class="index-txt__part__column2__card__title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p class="index-txt__part__column2__card__description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut incidunt blanditiis ratione laudantium quaerat
+            optio odio veniam similique saepe ipsum! Non veniam sunt maxime u accusamus dolores ab?
+          </p>
+        </div>
+        <img class="index-txt__part__column2__img" src="@/assets/images/grey-phone.jpg" alt="site web" />
       </div>
     </div>
   </section>
@@ -47,12 +52,17 @@
     width: 100vw;
     justify-content: center;
     gap: 2rem;
+    flex-direction: column;
+    padding: 2rem;
+
+    @media (min-width: $big-tablet-screen) {
+      flex-direction: row;
+    }
 
     &__column {
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      align-items: center;
       width: 100%;
       max-width: 824px;
       justify-content: center;
@@ -67,9 +77,9 @@
         border-radius: $radius;
         background-size: cover;
         background-position: center;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-end;
         display: flex;
+        padding: 2rem;
         background-image: url('@/assets/images/grey-phone.jpg');
       }
 
@@ -85,7 +95,7 @@
 
         @media (min-width: $big-tablet-screen) {
           max-width: 8rem;
-          height: 100%;
+          height: fit-content;
         }
 
         &__word {
@@ -133,34 +143,39 @@
       }
     }
 
-    &__card {
-      padding: 2rem;
-      gap: 1rem;
+    &__column2 {
       display: flex;
       flex-direction: column;
-      background-color: $primary-color;
-      border-radius: $radius;
-      overflow: hidden;
-      height: fit-content;
-      max-width: 343px;
-      width: 100%;
+      gap: 2rem;
 
-      &__title {
-        font-size: 1.25rem;
-        font-weight: 600;
+      &__card {
+        padding: 2rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        background-color: $primary-color;
+        border-radius: $radius;
+        overflow: hidden;
+        height: fit-content;
+        max-width: 400px;
+        width: 100%;
+
+        &__title {
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+
+        &__description {
+          text-align: justify;
+        }
       }
 
-      &__description {
-        text-align: justify;
+      &__img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: $radius;
+        object-fit: cover;
       }
-    }
-
-    &__img {
-      max-width: 400px;
-      width: 100%;
-      object-fit: cover;
-      border-radius: $radius;
-      background-color: $primary-color;
     }
   }
 }
