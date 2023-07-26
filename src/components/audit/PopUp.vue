@@ -23,16 +23,16 @@ let isBookAnAuditOpen = ref(false)
 <style lang="scss" scoped>
 .pop-up {
   display: flex;
-  width: 100%;
+  width: clamp(300px, 100%, 600px);
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 0.5rem;
-  margin-top: 2rem;
   background-color: $primary-color;
   padding: 2rem;
   border-radius: $radius;
+  height: fit-content;
 
   & h2 {
     font-size: 1.25rem;
