@@ -82,8 +82,8 @@
     &__word {
       text-align: center;
       line-height: 54px;
+      background-position: center;
       background-image: url('@/assets/images/grey-tablet.jpg');
-      //   background-repeat: repeat;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 3.8rem;
@@ -91,7 +91,7 @@
       font-family: 'Russo One';
       font-weight: 800;
       -webkit-font-smoothing: antialiased;
-      animation: bg 10s alternate-reverse infinite ease;
+      animation: bg 18s alternate-reverse infinite linear;
 
       @media (min-width: $tablet-screen) {
         line-height: 60px;
@@ -112,9 +112,11 @@
     }
     @keyframes bg {
       from {
+        background-position: center right;
       }
+
       to {
-        background-position: bottom right;
+        background-position: center left;
       }
     }
   }
