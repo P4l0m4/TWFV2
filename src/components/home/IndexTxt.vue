@@ -4,7 +4,7 @@
       <div class="index-txt__part__column">
         <NuxtLink
           class="index-txt__part__column__words"
-          to="/prestations/audit-optimisatio-site-web"
+          to="/prestations/audit-optimisation-site-web"
           aria-label="audits"
         >
           <h2 class="index-txt__part__column__words__word">Audits</h2>
@@ -31,7 +31,7 @@
         </div>
         <NuxtLink
           class="index-txt__part__column__words"
-          to="/prestations/audit-optimisatio-site-web"
+          to="/prestations/audit-optimisation-site-web"
           aria-label="audits"
         >
           <h2 class="index-txt__part__column__words__word">SEO</h2>
@@ -59,11 +59,12 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     flex-direction: column;
 
     @media (min-width: $big-tablet-screen) {
       flex-direction: row;
+      gap: 2rem;
     }
 
     @media (min-width: $super-big-screen) {
@@ -73,13 +74,14 @@
     &__column {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
       width: 100%;
       max-width: 824px;
       justify-content: center;
 
       @media (min-width: $big-tablet-screen) {
         flex-direction: row;
+        gap: 2rem;
       }
       @media (min-width: $super-big-screen) {
         gap: 4rem;
@@ -88,7 +90,7 @@
       &__wrapper {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
         height: 100%;
         width: 100%;
 
@@ -179,7 +181,11 @@
     &__column2 {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
+
+      @media (min-width: $big-tablet-screen) {
+        gap: 2rem;
+      }
       @media (min-width: $super-big-screen) {
         gap: 4rem;
       }

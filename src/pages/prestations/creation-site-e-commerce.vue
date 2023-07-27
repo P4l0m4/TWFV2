@@ -1,4 +1,6 @@
 <script setup>
+import { onMounted } from '@vue/composition-api'
+
 const breadcrumbs = [
   {
     name: 'Accueil',
@@ -26,6 +28,19 @@ useHead(() => {
     ],
   }
 })
+
+onMounted(() => {
+  setTimeout(() => {
+    const img = document.querySelectorAll('.e-commerce__first__media-desktop')
+    window.addEventListener('scroll', () => {
+      const value = window.scrollY * -0.5
+
+      img.forEach(element => {
+        element.style.transform = `translateY(${value}px)`
+      })
+    })
+  }, 1400)
+})
 </script>
 <template>
   <div class="e-commerce">
@@ -37,6 +52,16 @@ useHead(() => {
     </div>
 
     <div class="e-commerce__first">
+      <img
+        class="e-commerce__first__media-desktop"
+        src="@/assets/images/purple-phone-left.png"
+        alt="mockup téléphone site web"
+      />
+      <img
+        class="e-commerce__first__media-mobile"
+        src="@/assets/images/purple-phone-left.png"
+        alt="mockup téléphone site web"
+      />
       <div class="e-commerce__first__promise">
         <div class="e-commerce__first__promise__data">
           <span class="e-commerce__first__promise__data__title">4H</span>
@@ -46,11 +71,23 @@ useHead(() => {
           </div>
         </div>
 
-        <a class="e-commerce__first__promise__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
+        <a
+          class="e-commerce__first__promise__button button-primary"
+          href="https://nuxt3-shopify-template.netlify.app"
+          target="_blank"
           >Voir une démo</a
         >
       </div>
-      <img class="e-commerce__first__media" src="@/assets/images/purple-phone.png" alt="mockup téléphone site web" />
+      <img
+        class="e-commerce__first__media-desktop"
+        src="@/assets/images/purple-phone-right.png"
+        alt="mockup téléphone site web"
+      />
+      <img
+        class="e-commerce__first__media-mobile"
+        src="@/assets/images/purple-phone-right.png"
+        alt="mockup téléphone site web"
+      />
     </div>
 
     <div class="e-commerce__arguments">
@@ -181,25 +218,49 @@ useHead(() => {
       flex-direction: row;
     }
     @media (min-width: $laptop-screen) {
-      gap: 4rem;
+      gap: 0rem;
+      transform: translateY(-100px);
     }
 
-    &__media {
+    &__media-desktop {
       width: 100%;
-      max-width: 820px;
+      max-width: 343px;
       height: 300px;
       border-radius: $radius;
-      object-fit: contain;
+      object-fit: cover;
+      animation: apparition 1.4s ease-out;
+      display: none;
 
-      @media (min-width: $big-tablet-screen) {
-        height: 340px;
-        width: 50%;
+      @keyframes apparition {
+        from {
+          transform: translateY(-200px);
+        }
+        to {
+          transform: translateY(0px);
+        }
       }
+
       @media (min-width: $laptop-screen) {
+        display: block;
         height: 400px;
+        width: 500px;
+        max-width: 500px;
       }
       @media (min-width: $desktop-screen) {
         width: 100%;
+        height: 500px;
+        max-width: 600px;
+      }
+    }
+
+    &__media-mobile {
+      width: 100%;
+      max-width: 343px;
+      height: 300px;
+      border-radius: $radius;
+      object-fit: cover;
+      @media (min-width: $laptop-screen) {
+        display: none;
       }
     }
 
@@ -209,7 +270,6 @@ useHead(() => {
       align-items: center;
       justify-content: center;
       gap: 2rem;
-      padding: 2rem;
       width: 100%;
 
       @media (min-width: $big-tablet-screen) {

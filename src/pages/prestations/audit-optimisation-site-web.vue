@@ -1,6 +1,5 @@
 <template>
   <section class="things-to-optimize">
-    <AuditPopUp />
     <div class="things-to-optimize__explanations">
       <h2 class="things-to-optimize__explanations__title">Comment savoir si votre site web est un bon site web ?</h2>
       <span class="things-to-optimize__explanations__subtitle">Deux grands critères à optimiser absolument:</span>
@@ -58,6 +57,7 @@
         </div>
       </div>
     </div>
+    <AuditPopUp />
   </section>
 </template>
 <style scoped lang="scss">

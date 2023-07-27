@@ -65,6 +65,7 @@ useHead(() => {
   &__title {
     font-size: 1.5rem;
     text-align: center;
+    padding: 0 1rem;
 
     @media (min-width: $big-tablet-screen) {
       font-size: 2rem;
@@ -74,9 +75,13 @@ useHead(() => {
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     padding: 0 1rem;
+
+    @media (min-width: $big-tablet-screen) {
+      gap: 2rem;
+    }
 
     &__card {
       display: flex;
