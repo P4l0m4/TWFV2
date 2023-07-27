@@ -258,15 +258,10 @@ onMounted(() => {
             </div>
           </div>
 
-          <img src="@/assets/images/headphones-duo.png" alt="" />
-          <img src="@/assets/images/nike.png" alt="" />
-          <img src="@/assets/images/nuit.png" alt="" />
-          <img src="@/assets/images/biscuit.png" alt="" />
-
-          <!-- <img src="@/assets/images/bear2.jpg" />
-          <img src="@/assets/images/leopard2.jpg" />
-          <img src="@/assets/images/lion2.jpg" />
-          <img src="@/assets/images/tiger2.jpg" /> -->
+          <img src="@/assets/images/headphones-duo.png" alt="mockup site web" />
+          <img src="@/assets/images/nike.png" alt="mockup site web" />
+          <img src="@/assets/images/nuit.png" alt="mockup site web" />
+          <img src="@/assets/images/biscuit.png" alt="mockup site web" />
 
           <div id="pagination">
             <button class="active" data-slide="0"></button>
@@ -547,8 +542,8 @@ onMounted(() => {
 /* Page Loader */
 .loading:before {
   content: '';
-  position: fixed;
-  z-index: 100000;
+  position: absolute;
+  z-index: 4;
   top: 0;
   left: 0;
   width: 100%;
