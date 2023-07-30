@@ -88,7 +88,7 @@ async function submit() {
   margin-top: 2rem;
   animation: fade 0.4s ease;
   width: clamp(240px, 100%, 500px);
-  background-color: $primary-color;
+  background-color: $text-color;
   border: rgba(255, 255, 255, 0.06) solid 1px;
   gap: 16px;
   display: flex;
@@ -107,7 +107,7 @@ async function submit() {
 
     &__input,
     &__textarea {
-      border: 2px solid $text-color;
+      border: 2px solid $primary-color;
       // border-radius: $small-radius;
       height: 44px;
       width: 100%;
@@ -115,10 +115,10 @@ async function submit() {
       padding: 12px;
       color: $text-color;
       // font-weight: $slim-weight;
-      background-color: $primary-color;
+      background-color: $text-color;
 
       &::placeholder {
-        color: $text-color;
+        color: $primary-color;
         // font-weight: $slim-weight;
         opacity: 0.4;
       }
@@ -137,9 +137,9 @@ async function submit() {
 
     &__label {
       // font-weight: $medium-weight;
-      color: $text-color;
+      color: $primary-color;
       position: absolute;
-      background-color: $primary-color;
+      background-color: $text-color;
       padding: 0 6px;
       top: -12px;
       left: 8px;
@@ -160,7 +160,8 @@ async function submit() {
   }
   &__button {
     width: 100%;
-    // background: $text-color;
+    background: $primary-color;
+    color: $text-color;
     cursor: pointer;
 
     // &:hover {
@@ -175,6 +176,7 @@ async function submit() {
   &__error {
     // font-weight: $slim-weight;
     font-size: 12px;
+    color: $primary-color;
   }
 }
 .HP {

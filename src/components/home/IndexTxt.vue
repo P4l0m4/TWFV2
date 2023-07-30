@@ -1,7 +1,7 @@
 <template>
   <section class="index-txt">
     <div class="index-txt__part">
-      <div class="index-txt__part__column">
+      <!-- <div class="index-txt__part__column">
         <NuxtLink
           class="index-txt__part__column__words"
           to="/prestations/audit-optimisation-site-web"
@@ -10,33 +10,17 @@
           <h2 class="index-txt__part__column__words__word">Audits</h2>
         </NuxtLink>
         <div class="index-txt__part__column__wrapper">
-          <AuditPopUp />
+          
           <img
             class="index-txt__part__column__wrapper__img"
             src="@/assets/images/grey-tablet.jpg"
             alt="image tablette site web"
           />
         </div>
-      </div>
-      <div class="index-txt__part__column2">
-        <img class="index-txt__part__column2__img" src="@/assets/images/grey-phone.jpg" alt="site web" />
-        <div class="index-txt__part__column2__card">
-          <h2 class="index-txt__part__column2__card__title">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h2>
-          <p class="index-txt__part__column2__card__description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut incidunt blanditiis ratione laudantium quaerat
-            optio odio veniam similique saepe ipsum! Non veniam sunt maxime u accusamus dolores ab?
-          </p>
-        </div>
-        <NuxtLink
-          class="index-txt__part__column__words"
-          to="/prestations/audit-optimisation-site-web"
-          aria-label="audits"
-        >
-          <h2 class="index-txt__part__column__words__word">SEO</h2>
-        </NuxtLink>
-      </div>
+      </div> -->
+    </div>
+    <div class="index-txt__pop-up">
+      <AuditPopUp />
     </div>
   </section>
 </template>
@@ -44,15 +28,22 @@
 <style lang="scss" scoped>
 .index-txt {
   display: flex;
-  padding: 1rem;
   max-width: 100vw;
   gap: 1rem;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 
   @media (min-width: $big-tablet-screen) {
     gap: 2rem;
-    flex-direction: row;
+  }
+
+  &__pop-up {
+    display: flex;
+    background-color: $text-color;
+    width: 100vw;
+    justify-content: center;
+    padding: 2rem;
   }
 
   &__part {
@@ -175,48 +166,6 @@
             background-position: center left;
           }
         }
-      }
-    }
-
-    &__column2 {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      @media (min-width: $big-tablet-screen) {
-        gap: 2rem;
-      }
-      @media (min-width: $super-big-screen) {
-        gap: 4rem;
-      }
-
-      &__card {
-        padding: 2rem;
-        gap: 1rem;
-        display: flex;
-        flex-direction: column;
-        background-color: $primary-color;
-        border-radius: $radius;
-        overflow: hidden;
-        height: fit-content;
-        max-width: 400px;
-        width: 100%;
-
-        &__title {
-          font-size: 1.25rem;
-          font-weight: 600;
-        }
-
-        &__description {
-          text-align: justify;
-        }
-      }
-
-      &__img {
-        width: 100%;
-        max-width: 400px;
-        border-radius: $radius;
-        object-fit: cover;
       }
     }
   }
