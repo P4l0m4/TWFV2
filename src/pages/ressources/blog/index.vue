@@ -45,6 +45,10 @@ useHead(() => {
         content:
           'Apprenez-en plus sur le développement Web, le Web design et le référencement naturel (SEO) grâce à nos articles de blog',
       },
+      {
+        name: 'robots',
+        constent: 'noindex',
+      },
     ],
   }
 })

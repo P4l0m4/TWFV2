@@ -31,22 +31,28 @@ useHead(() => {
 
     <div class="ressources__cards">
       <NuxtLink class="ressources__cards__card" to="/ressources/blog">
-        <img class="ressources__cards__card__img" src="@/assets/icons/document.svg" alt="image" />
-        <h2 class="ressources__cards__card__title">Blog</h2>
+        <div class="ressources__cards__card__headline">
+          <img class="ressources__cards__card__headline__img" src="@/assets/icons/document.svg" alt="image" />
+          <h2 class="ressources__cards__card__headline__title">Blog</h2>
+        </div>
         <p class="ressources__cards__card__txt">
           Découvrez nos derniers articles de blog pour vous aider à comprendre le monde du web et du développement
         </p>
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/portfolio">
-        <img class="ressources__cards__card__img" src="@/assets/icons/dashboard.svg" alt="image" />
-        <h2 class="ressources__cards__card__title">Portfolio</h2>
+        <div class="ressources__cards__card__headline">
+          <img class="ressources__cards__card__headline__img" src="@/assets/icons/dashboard.svg" alt="image" />
+          <h2 class="ressources__cards__card__headline__title">Portfolio</h2>
+        </div>
         <p class="ressources__cards__card__txt">
           Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt, lorem ipsum dolor sit amet.
         </p>
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/tutoriels">
-        <img class="ressources__cards__card__img" src="@/assets/icons/tutorial.svg" alt="image" />
-        <h2 class="ressources__cards__card__title">Tutoriels (comming soon)</h2>
+        <div class="ressources__cards__card__headline">
+          <img class="ressources__cards__card__headline__img" src="@/assets/icons/tutorial.svg" alt="image" />
+          <h2 class="ressources__cards__card__headline__title">Tutoriels (comming soon)</h2>
+        </div>
         <p class="ressources__cards__card__txt">
           Lorem adipisicing aperiam architecto incidunt provident sed tenetur nulla aliquid quam
         </p>
@@ -93,30 +99,30 @@ useHead(() => {
       box-shadow: $shadow;
       padding: 1rem;
       width: 100%;
-      height: 220px;
-      overflow: hidden;
       transition: transform 0.2s ease-in-out;
+      animation: slide-from-bottom 1.6s ease;
 
       &:hover {
         transform: scale(1.04);
       }
 
-      @media (min-width: $tablet-screen) {
-        width: 280px;
+      @media (min-width: $big-tablet-screen) {
+        width: 400px;
       }
 
-      &__img {
-        width: fit-content;
-        height: 50px;
-        animation: slide-from-bottom 1.6s ease;
+      &__headline {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
 
-        &:nth-of-type(2) {
-          animation-delay: 1s;
+        &__img {
+          width: fit-content;
+          height: 40px;
         }
-      }
 
-      &__title {
-        font-size: 1.4rem;
+        &__title {
+          font-size: 1.4rem;
+        }
       }
     }
   }

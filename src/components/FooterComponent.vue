@@ -13,6 +13,8 @@ let year = new Date().getFullYear()
         >Création de site e-commerce</nuxt-link
       >
       <nuxt-link to="/a-propos" class="footer__document">Contact</nuxt-link>
+      <nuxt-link to="/a-propos" class="footer__document">Mentions légales</nuxt-link>
+      <nuxt-link to="/a-propos" class="footer__document">CGV</nuxt-link>
     </div>
 
     <div class="footer__others">
@@ -51,6 +53,8 @@ let year = new Date().getFullYear()
     display: flex;
     gap: 1rem;
     text-decoration: underline;
+    flex-wrap: wrap;
+    justify-content: center;
 
     & a {
       color: $primary-color;

@@ -32,6 +32,10 @@ useHead(() => {
         name: 'description',
         content: article.description,
       },
+      {
+        name: 'robots',
+        constent: 'noindex',
+      },
     ],
   }
 })
