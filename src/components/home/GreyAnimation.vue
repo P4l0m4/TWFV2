@@ -52,15 +52,17 @@ const elements = story.value.content.elements
   }
   &__slidable {
     display: flex;
-    padding: 1rem 0;
+    padding: 1rem;
     width: 100%;
     overflow-x: scroll;
     gap: 1rem;
+    justify-content: flex-end;
 
     &__space {
       display: flex;
       flex-direction: column;
       transition: transform 0.4s ease;
+
       &:hover {
         transform: scale(1.04);
       }
