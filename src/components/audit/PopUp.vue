@@ -38,7 +38,7 @@ let isBookAnAuditOpen = ref(false)
   }
   & h1 {
     font-size: 1.25rem;
-    font-weight: 800;
+    font-weight: 600;
     color: $primary-color;
 
     @media (min-width: $big-tablet-screen) {
@@ -58,7 +58,6 @@ let isBookAnAuditOpen = ref(false)
     button {
       width: 100%;
       background-color: $primary-color;
-      font-family: 'Custom';
 
       @media (min-width: $tablet-screen) {
         width: fit-content;

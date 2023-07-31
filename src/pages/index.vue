@@ -24,8 +24,11 @@ useHead(() => {
 <template>
   <div class="index">
     <HomeIndexSlider />
-    <!-- <HomeIndexStory /> -->
-    <HomeIndexTxt />
+
+    <div class="index__grey">
+      <AuditPopUp />
+    </div>
+    <HomeGreyAnimation />
     <BlogComponent />
   </div>
   <JsonldBreadcrumb :links="breadcrumbs" />
@@ -38,6 +41,22 @@ useHead(() => {
   align-items: center;
   @media (min-width: $big-tablet-screen) {
     gap: 8rem;
+  }
+
+  &__grey {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $text-color;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    @media (min-width: $big-tablet-screen) {
+      padding: 1rem;
+      gap: 4rem;
+    }
   }
 
   &__story {
