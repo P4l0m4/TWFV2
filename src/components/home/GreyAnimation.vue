@@ -33,8 +33,12 @@ const elements = story.value.content.elements
   width: 100%;
   flex-direction: column;
   background-color: $primary-color;
-  padding: 2rem 1rem;
+  padding: 1rem 0 1rem 1rem;
   align-items: center;
+
+  @media (min-width: $big-tablet-screen) {
+    padding: 2rem 1rem;
+  }
 
   &__title {
     font-size: 1.25rem;
@@ -52,10 +56,14 @@ const elements = story.value.content.elements
   }
   &__slidable {
     display: flex;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
     width: 100%;
     overflow-x: scroll;
     gap: 1rem;
+
+    @media (min-width: $big-tablet-screen) {
+      padding: 1rem;
+    }
 
     &__space {
       display: flex;
