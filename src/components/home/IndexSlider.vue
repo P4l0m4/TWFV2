@@ -281,7 +281,7 @@ onMounted(() => {
 .slider-wrapper {
   display: flex;
   margin-top: -6rem;
-  height: 550px;
+  height: 560px;
   overflow: hidden;
   width: 100%;
   justify-content: center;
@@ -372,7 +372,7 @@ onMounted(() => {
   align-items: flex-end;
   width: 100%;
   max-width: 100%;
-  height: 100svh;
+  height: 100vh;
   z-index: 1;
   padding: 0 1rem 4rem 0;
 
