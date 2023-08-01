@@ -24,6 +24,7 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
 
   &__title {
     font-size: 1.25rem;
+    font-weight: 800;
     @media (min-width: $big-tablet-screen) {
       font-size: 1.5rem;
     }
