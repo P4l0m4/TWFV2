@@ -56,7 +56,6 @@ const elements = story.value.content.elements
     width: 100%;
     overflow-x: scroll;
     gap: 1rem;
-    justify-content: flex-end;
 
     &__space {
       display: flex;
