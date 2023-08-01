@@ -501,8 +501,8 @@ onMounted(() => {
   -moz-appearance: none;
   appearance: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background-color: $text-color;
   border-radius: 100%;
   padding: 0;
