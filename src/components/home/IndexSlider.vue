@@ -372,7 +372,7 @@ onMounted(() => {
   align-items: flex-end;
   width: 100%;
   max-width: 100%;
-  height: 100vh;
+  height: 100svh;
   z-index: 1;
   padding: 0 1rem 4rem 0;
 
