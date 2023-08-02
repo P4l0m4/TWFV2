@@ -32,7 +32,7 @@ const elements = story.value.content.elements
   gap: 2rem;
   width: 100%;
   flex-direction: column;
-  background-color: $primary-color;
+  // background-color: $primary-color;
   padding: 1rem 0 1rem 1rem;
   align-items: center;
 

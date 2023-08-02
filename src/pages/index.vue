@@ -28,7 +28,7 @@ useHead(() => {
     <div class="index__grey">
       <AuditPopUp />
     </div>
-    <HomeGreyAnimation />
+    <HomeSticksAnimation />
     <BlogComponent />
   </div>
   <JsonldBreadcrumb :links="breadcrumbs" />
