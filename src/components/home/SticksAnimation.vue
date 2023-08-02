@@ -83,7 +83,7 @@ const elements = story.value.content.elements
         mask-image: url('@/assets/images/sticks.svg');
         background-size: cover;
         background-position: right;
-        transition: mask-image 0.2s, background-size 0.4s ease, background-position 0.4s ease;
+        transition: background-size 0.4s ease, background-position 0.4s ease;
 
         &:hover {
           background-size: 140%;
