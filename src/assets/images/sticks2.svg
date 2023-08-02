@@ -1,6 +1,7 @@
-<svg width="336" height="344" viewBox="0 0 336 344" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="64" y="32" width="40" height="280" rx="20" fill="black"/>
-<rect x="120" y="32" width="40" height="280" rx="20" fill="black"/>
-<rect x="176" y="32" width="40" height="280" rx="20" fill="black"/>
-<rect x="232" y="32" width="40" height="280" rx="20" fill="black"/>
+<svg width="247" height="281" viewBox="0 0 247 281" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.925781" y="100.023" width="40" height="180" rx="20" fill="black"/>
+<rect x="56.9258" y="8.02344" width="40" height="240" rx="20" fill="black"/>
+<rect x="112.926" y="32.0234" width="40" height="248" rx="20" fill="black"/>
+<rect x="163.926" y="0.0234375" width="40" height="180" rx="20" fill="black"/>
+<rect x="182.252" y="0.730469" width="1" height="90" rx="0.5" transform="rotate(-45 182.252 0.730469)" fill="black"/>
 </svg>

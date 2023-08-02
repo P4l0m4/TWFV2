@@ -83,12 +83,12 @@ const elements = story.value.content.elements
         mask-image: url('@/assets/images/sticks.svg');
         background-size: cover;
         background-position: right;
-        transition: mask-image 0.2s ease-in-out, background-size 0.4s ease, background-position 0.4s ease;
+        transition: mask-image 0.2s, background-size 0.4s ease, background-position 0.4s ease;
 
         &:hover {
-          mask-image: url('@/assets/images/sticks2.svg');
           background-size: 140%;
           background-position: center;
+          mask-image: url('@/assets/images/sticks3.svg');
         }
       }
 
