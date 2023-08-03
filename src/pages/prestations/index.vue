@@ -40,7 +40,7 @@ useHead(() => {
           boutiques en ligne sont performantes et toujours bien référencées.
         </p>
       </NuxtLink>
-      <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-web">
+      <NuxtLink class="prestations__cards__card" to="/prestations/">
         <div class="prestations__cards__card__headline">
           <img class="prestations__cards__card__headline__img" src="@/assets/icons/site-vitrine.svg" alt="image" />
           <h2 class="prestations__cards__card__headline__title">Création de sites vitrine (comming soon)</h2>

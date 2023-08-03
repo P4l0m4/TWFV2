@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import { getBlogPages } from './src/utils/sitemap.js'
+import { getBlogPages, getPortfolioPages } from './src/utils/sitemap.js'
 
 export default defineNuxtConfig({
   ssr: false,
@@ -32,7 +32,9 @@ export default defineNuxtConfig({
     sitemaps: true,
     siteUrl: 'https://tekilawebfactory.com',
     urls: async () => {
-      return await getBlogPages()
+      const blogPages = await getBlogPages()
+      const portfolioPages = await getPortfolioPages()
+      return [...blogPages, ...portfolioPages]
     },
   },
   vue: {

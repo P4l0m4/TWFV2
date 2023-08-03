@@ -48,7 +48,7 @@ useHead(() => {
           Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt, lorem ipsum dolor sit amet.
         </p>
       </NuxtLink>
-      <NuxtLink class="ressources__cards__card" to="/ressources/tutoriels">
+      <NuxtLink class="ressources__cards__card" to="/ressources/">
         <div class="ressources__cards__card__headline">
           <img class="ressources__cards__card__headline__img" src="@/assets/icons/tutorial.svg" alt="image" />
           <h2 class="ressources__cards__card__headline__title">Tutoriels (comming soon)</h2>
