@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-// import { getProductPages } from './src/utils/sitemap.js'
+import { getBlogPages } from './src/utils/sitemap.js'
 
 export default defineNuxtConfig({
   ssr: false,
@@ -31,9 +31,9 @@ export default defineNuxtConfig({
   sitemap: {
     sitemaps: true,
     siteUrl: 'https://tekilawebfactory.com',
-    //   urls: async () => {
-    //     return await getProductPages()
-    // },
+    urls: async () => {
+      return await getBlogPages()
+    },
   },
   vue: {
     compilerOptions: {

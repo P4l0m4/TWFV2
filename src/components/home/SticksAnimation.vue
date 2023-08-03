@@ -37,7 +37,7 @@ const elements = story.value.content.elements
   align-items: center;
 
   @media (min-width: $big-tablet-screen) {
-    padding: 2rem 1rem;
+    padding: 2rem 0 1rem 2rem;
   }
 
   &__title {

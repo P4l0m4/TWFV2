@@ -28,7 +28,6 @@
   "devDependencies": {
     "@storyblok/nuxt": "^5.4.4",
     "dayjs-nuxt": "^1.1.2",
-    "isomorphic-fetch": "^3.0.0",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0"
   }

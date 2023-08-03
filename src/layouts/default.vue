@@ -43,12 +43,6 @@ useJsonld(
     }
   )
 )
-
-let loader = ref(true)
-setTimeout(() => {
-  loader.value = false
-  localStorage.setItem('count', 1)
-}, 2300)
 </script>
 
 <template>
