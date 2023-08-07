@@ -102,7 +102,7 @@ onMounted(() => {
     display: flex;
     gap: 2rem;
     position: absolute;
-    transform: rotate(5deg);
+    transform: rotate(4deg);
     background-color: $text-color;
     padding: 0.5rem;
     align-items: center;
@@ -114,19 +114,20 @@ onMounted(() => {
     height: 40px;
     width: fit-content;
     animation: marquee 60s linear infinite;
+    border: $primary-color 1px solid;
 
     @keyframes marquee {
       from {
       }
       to {
-        transform: rotate(5deg) translateX(-50%);
+        transform: rotate(4deg) translateX(-50%);
       }
     }
     @keyframes marquee-reversed {
       from {
       }
       to {
-        transform: rotate(-5deg) translateX(-50%);
+        transform: rotate(-4deg) translateX(-50%);
       }
     }
 
@@ -134,7 +135,7 @@ onMounted(() => {
       width: fit-content;
       background-color: $primary-color;
       border: $text-color 1px solid;
-      transform: rotate(-5deg);
+      transform: rotate(-4deg);
       flex-direction: row-reverse;
       animation: marquee-reversed 60s linear infinite;
       top: -100%;
