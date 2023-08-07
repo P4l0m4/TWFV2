@@ -1,6 +1,6 @@
 <script setup>
-import { stringToSlug } from '@/utils/slugify.js'
 import { ref } from 'vue'
+import { stringToSlug } from '@/utils/slugify.js'
 
 const route = useRoute()
 const articleSlug = route.params.slug
@@ -10,9 +10,7 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
 const article = story.value.content.bloglist.find(a => stringToSlug(a.title) === articleSlug)
 
 const dayjs = useDayjs()
-const date = dayjs(story.value.content.bloglist.find(a => stringToSlug(a.title) === articleSlug).date.toString())
-  .locale('fr')
-  .format('DD MMMM YYYY')
+const date = dayjs(article.date.toString()).locale('fr').format('DD MMMM YYYY')
 
 const shareWord = ref('Partager')
 function copy() {
@@ -117,8 +115,15 @@ useJsonld(() => ({
           <h2 :id="stringToSlug(section.title)" class="article__wrapper__content__part__title">{{ section.title }}</h2>
           <div class="article__wrapper__content__part__wrapper desktop-only">
             <div class="article__wrapper__content__part__wrapper__paragraphs">
-              <p class="article__wrapper__content__part__wrapper__paragraphs__txt">{{ section.text1 }}</p>
-              <p class="article__wrapper__content__part__wrapper__paragraphs__txt">{{ section.text2 }}</p>
+              <div
+                class="article__wrapper__content__part__wrapper__paragraphs__txt"
+                v-html="renderRichText(section.richtext1)"
+              ></div>
+
+              <div
+                class="article__wrapper__content__part__wrapper__paragraphs__txt"
+                v-html="renderRichText(section.richtext2)"
+              ></div>
             </div>
             <img
               class="article__wrapper__content__part__wrapper__img"
@@ -127,13 +132,19 @@ useJsonld(() => ({
             />
           </div>
           <div class="article__wrapper__content__part__wrapper mobile-only">
-            <p class="article__wrapper__part__wrapper__txt">{{ section.text1 }}</p>
+            <div
+              class="article__wrapper__content__part__wrapper__paragraphs__txt"
+              v-html="renderRichText(section.richtext1)"
+            ></div>
             <img
               class="article__wrapper__part__wrapper__img"
               :src="section.media[0].filename"
               :alt="section.media[0].alt"
             />
-            <p class="article__wrapper__part__wrapper__txt">{{ section.text2 }}</p>
+            <div
+              class="article__wrapper__content__part__wrapper__paragraphs__txt"
+              v-html="renderRichText(section.richtext2)"
+            ></div>
           </div>
         </section>
       </div>
@@ -167,7 +178,7 @@ useJsonld(() => ({
     gap: 2rem;
     flex-direction: column;
     position: relative;
-    padding: 7rem 0 0 0;
+    padding: 1.5rem 0 0 0;
 
     @media (min-width: $big-tablet-screen) {
       flex-direction: row-reverse;
@@ -199,7 +210,7 @@ useJsonld(() => ({
 
       &__title {
         font-weight: 800;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
 
         @media (min-width: $big-tablet-screen) {
           font-size: 2rem;
@@ -208,7 +219,11 @@ useJsonld(() => ({
 
       &__description {
         font-weight: 300;
-        font-size: 1.25rem;
+        font-size: 1rem;
+
+        @media (min-width: $big-tablet-screen) {
+          font-size: 1.25rem;
+        }
       }
 
       &__date {
@@ -244,7 +259,7 @@ useJsonld(() => ({
       position: relative;
       position: absolute;
       right: 0;
-      top: 372px;
+      top: 284px;
       border-radius: $radius 0 $radius 0;
       transition: max-width 0.2s ease-in-out, width 0.2s ease-in-out;
 
@@ -331,9 +346,8 @@ useJsonld(() => ({
       background-color: $primary-color;
       border-radius: 0 0 $radius $radius;
       justify-content: center;
-      padding-top: 4rem;
       height: fit-content;
-      padding: 4rem 1rem 1rem 1rem;
+      padding: 4.5rem 1rem 1rem 1rem;
       box-shadow: $shadow;
 
       @media (min-width: $big-tablet-screen) {
@@ -355,7 +369,10 @@ useJsonld(() => ({
         font-weight: 800;
         font-size: 1.25rem;
         text-align: center;
-
+        display: none;
+        @media (min-width: $tablet-screen) {
+          display: block;
+        }
         @media (min-width: $big-tablet-screen) {
           font-size: 1.5rem;
           text-align: left;
@@ -367,7 +384,6 @@ useJsonld(() => ({
         width: 100%;
         flex-direction: column;
         gap: 0.5rem;
-        align-items: center;
 
         @media (min-width: $big-tablet-screen) {
           gap: 1.5rem;
@@ -413,7 +429,11 @@ useJsonld(() => ({
 
         &__title {
           font-weight: 800;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
+
+          @media (min-width: $big-tablet-screen) {
+            font-size: 1.5rem;
+          }
         }
 
         &__txt {
@@ -440,6 +460,25 @@ useJsonld(() => ({
               flex-direction: column;
               gap: 2rem;
               text-align: justify;
+              font-size: 1rem;
+              font-weight: 300;
+
+              &__txt {
+                font-family: 'Custom';
+                font-weight: 400;
+                & :deep(a) {
+                  color: $secondary-color;
+                  text-decoration: line-through;
+                  text-decoration-color: rgba(43, 221, 234, 0.4);
+                  text-decoration-thickness: 8px;
+                }
+                & :deep(ul) {
+                  list-style: square inside;
+                }
+                & :deep(li) {
+                  list-style: square inside;
+                }
+              }
             }
           }
 
