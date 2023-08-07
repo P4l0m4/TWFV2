@@ -305,6 +305,9 @@ onMounted(() => {
     height: calc(100vh - 4rem);
     max-width: 1500px;
   }
+  @media (min-width: $super-big-screen) {
+    max-width: 1700px;
+  }
 }
 
 #slider canvas {
@@ -351,9 +354,9 @@ onMounted(() => {
   }
   @media (min-width: $super-big-screen) {
     right: -6rem;
-    max-width: 1300px;
+    max-width: 1400px;
     max-height: 600px;
-    width: 1300px;
+    width: 1400px;
     height: 600px;
     left: inherit;
     top: 0;
@@ -392,6 +395,9 @@ onMounted(() => {
     position: inherit;
     inset: inherit;
   }
+  @media (min-width: $super-big-screen) {
+    max-width: 1100px;
+  }
 }
 
 #slider-content {
@@ -429,7 +435,7 @@ onMounted(() => {
     padding: 0;
   }
   @media (min-width: $super-big-screen) {
-    font-size: 7rem;
+    font-size: 8rem;
   }
 }
 
@@ -452,7 +458,7 @@ onMounted(() => {
     padding: 0;
   }
   @media (min-width: $super-big-screen) {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 #slider-content .meta:after {
@@ -479,7 +485,7 @@ onMounted(() => {
   }
 
   @media (min-width: $super-big-screen) {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 

@@ -29,6 +29,7 @@ useHead(() => {
       <AuditPopUp />
     </div>
     <HomeSticksAnimation />
+    <HomeIndexMarquee />
     <BlogComponent />
   </div>
   <JsonldBreadcrumb :links="breadcrumbs" />
