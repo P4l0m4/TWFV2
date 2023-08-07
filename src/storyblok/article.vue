@@ -47,8 +47,8 @@ function copy() {
 .slide {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  min-width: 320px;
+  width: 330px;
+  min-width: 330px;
   height: 428px;
   cursor: pointer;
   overflow: hidden;
@@ -151,7 +151,7 @@ function copy() {
   &__description {
     font-weight: 400;
     color: $text-color;
-    width: 320px;
+    width: 330px;
     text-align: justify;
 
     @media (min-width: $tablet-screen) {
