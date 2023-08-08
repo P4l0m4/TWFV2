@@ -78,8 +78,8 @@ const elements = story.value.content.elements
         gap: 1rem;
         display: flex;
         height: 350px;
-        width: 343px;
-        min-width: 343px;
+        width: 320px;
+        min-width: 320px;
         mask-image: url('@/assets/images/sticks.svg');
         background-size: cover;
         background-position: right;
@@ -89,6 +89,11 @@ const elements = story.value.content.elements
           background-size: 140%;
           background-position: center;
           mask-image: url('@/assets/images/sticks3.svg');
+        }
+
+        @media (min-width: $big-tablet-screen) {
+          width: 360px;
+          min-width: 360px;
         }
       }
 

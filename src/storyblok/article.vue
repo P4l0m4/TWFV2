@@ -47,8 +47,8 @@ function copy() {
 .slide {
   display: flex;
   flex-direction: column;
-  width: 330px;
-  min-width: 330px;
+  width: 320px;
+  min-width: 320px;
   height: 428px;
   cursor: pointer;
   overflow: hidden;
@@ -56,8 +56,8 @@ function copy() {
   border-radius: $radius;
 
   @media (min-width: $big-tablet-screen) {
-    width: 343px;
-    min-width: 343px;
+    width: 360px;
+    min-width: 360px;
   }
   &__wrapper {
     position: relative;
@@ -72,7 +72,7 @@ function copy() {
 
       @media (min-width: $big-tablet-screen) {
         width: 100%;
-        min-width: 343px;
+        min-width: 360px;
         height: 240px;
         min-height: 240px;
       }
@@ -145,18 +145,21 @@ function copy() {
     font-size: 1.25rem;
     font-weight: 600;
     color: $text-color;
-    width: 343px;
+    width: 320px;
+    @media (min-width: $big-tablet-screen) {
+      width: 360px;
+    }
   }
 
   &__description {
     font-weight: 400;
     color: $text-color;
-    width: 330px;
+    width: 320px;
     text-align: justify;
 
-    @media (min-width: $tablet-screen) {
-      width: 343px;
-      min-width: 343px;
+    @media (min-width: $big-tablet-screen) {
+      width: 360px;
+      min-width: 360px;
       height: 240px;
     }
   }

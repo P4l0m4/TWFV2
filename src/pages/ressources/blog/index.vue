@@ -235,7 +235,7 @@ useHead(() => {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 0 0 0 2rem;
+    padding: 0 0 0 1rem;
     align-items: center;
     max-width: 100vw;
 

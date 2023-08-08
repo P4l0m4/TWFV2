@@ -36,7 +36,8 @@ useHead(() => {
           <h2 class="ressources__cards__card__headline__title">Blog</h2>
         </div>
         <p class="ressources__cards__card__txt">
-          Découvrez nos derniers articles de blog pour vous aider à comprendre le monde du web et du développement
+          Découvrez nos derniers articles de blog pour vous aider à comprendre le monde du web et du développement de
+          sites internet
         </p>
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/portfolio">
@@ -45,7 +46,8 @@ useHead(() => {
           <h2 class="ressources__cards__card__headline__title">Portfolio</h2>
         </div>
         <p class="ressources__cards__card__txt">
-          Lorem ipsum dolor sit amet consectetur adipisicing aperiam architecto incidunt, lorem ipsum dolor sit amet.
+          On vous montre nos derniers projets de création de site web, de design et d'optimisation du référencement
+          naturel (SEO)
         </p>
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/">
