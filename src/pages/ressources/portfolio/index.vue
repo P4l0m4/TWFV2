@@ -125,7 +125,7 @@ const breadcrumbs = [
       }
 
       &__subtitle {
-        font-weight: 400;
+        font-weight: 100;
         color: $primary-color;
       }
 

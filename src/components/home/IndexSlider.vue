@@ -200,6 +200,80 @@ const displacementSlider = function (opts) {
           )
         }
       })
+      // setInterval(() => {
+      //   if (!isAnimating) {
+      //     isAnimating = true
+
+      //     document.getElementById('pagination').querySelectorAll('.active')[0].className = ''
+      //     this.className = 'active'
+
+      //     let slideId = parseInt(this.dataset.slide, 10)
+
+      //     mat.uniforms.nextImage.value = sliderImages[slideId]
+      //     mat.uniforms.nextImage.needsUpdate = true
+
+      //     TweenLite.to(mat.uniforms.dispFactor, 1, {
+      //       value: 1,
+      //       ease: 'Expo.easeInOut',
+      //       onComplete: function () {
+      //         mat.uniforms.currentImage.value = sliderImages[slideId]
+      //         mat.uniforms.currentImage.needsUpdate = true
+      //         mat.uniforms.dispFactor.value = 0.0
+      //         isAnimating = false
+      //       },
+      //     })
+
+      //     let slideTitleEl = document.getElementById('slide-title')
+      //     let slideStatusEl = document.getElementById('slide-status')
+      //     let nextSlideTitle = document.querySelectorAll(`[data-slide-title="${slideId}"]`)[0].innerHTML
+      //     let nextSlideStatus = document.querySelectorAll(`[data-slide-status="${slideId}"]`)[0].innerHTML
+
+      //     TweenLite.fromTo(
+      //       slideTitleEl,
+      //       0.5,
+      //       {
+      //         autoAlpha: 1,
+      //         y: 0,
+      //       },
+      //       {
+      //         autoAlpha: 0,
+      //         y: 20,
+      //         ease: 'Expo.easeIn',
+      //         onComplete: function () {
+      //           slideTitleEl.innerHTML = nextSlideTitle
+
+      //           TweenLite.to(slideTitleEl, 0.5, {
+      //             autoAlpha: 1,
+      //             y: 0,
+      //           })
+      //         },
+      //       }
+      //     )
+
+      //     TweenLite.fromTo(
+      //       slideStatusEl,
+      //       0.5,
+      //       {
+      //         autoAlpha: 1,
+      //         y: 0,
+      //       },
+      //       {
+      //         autoAlpha: 0,
+      //         y: 20,
+      //         ease: 'Expo.easeIn',
+      //         onComplete: function () {
+      //           slideStatusEl.innerHTML = nextSlideStatus
+
+      //           TweenLite.to(slideStatusEl, 0.5, {
+      //             autoAlpha: 1,
+      //             y: 0,
+      //             delay: 0.1,
+      //           })
+      //         },
+      //       }
+      //     )
+      //   }
+      // }, 3000)
     })
   }
 
@@ -276,7 +350,6 @@ onMounted(() => {
 </template>
 <style lang="scss">
 @charset "UTF-8";
-@import url('https://use.typekit.net/euz1eqv.css');
 
 .slider-wrapper {
   display: flex;
@@ -410,8 +483,8 @@ onMounted(() => {
   }
 }
 #slider-content h1 {
-  font-family: 'acta-display', serif;
-  font-weight: 400;
+  font-family: 'Titles', serif;
+  font-weight: 500;
   font-size: 2.4rem;
   letter-spacing: -1px;
   line-height: 40px;
@@ -446,7 +519,7 @@ onMounted(() => {
   padding: 0 2rem;
   width: 100%;
   display: inline-block;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 11px;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -474,8 +547,8 @@ onMounted(() => {
 #slider-content #slide-status {
   margin-top: 10px;
   padding: 0 2rem;
-  font-family: 'acta-display', serif;
-  font-weight: 400;
+  font-family: 'Poppins', serif;
+  font-weight: 100;
   font-size: 18px;
   color: $text-color;
 

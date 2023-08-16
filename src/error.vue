@@ -30,7 +30,7 @@ defineProps(['error'])
     text-align: center;
 
     & h2 {
-      font-weight: 400;
+      font-weight: 100;
       font-size: 1rem;
     }
 

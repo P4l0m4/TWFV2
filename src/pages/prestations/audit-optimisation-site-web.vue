@@ -236,12 +236,12 @@
             }
 
             & span {
-              font-weight: 400;
+              font-weight: 100;
               font-size: 0.75rem;
               white-space: nowrap;
             }
             & button {
-              font-weight: 400;
+              font-weight: 100;
               font-size: 0.75rem;
               text-decoration: underline;
               cursor: pointer;

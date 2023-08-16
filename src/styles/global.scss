@@ -1,8 +1,9 @@
 @font-face {
-  font-family: 'Custom';
-  src: url(@/assets/fonts/Quicksand-VariableFont_wght.ttf) format('truetype');
+  font-family: 'Poppins';
+  src: url(@/assets/fonts/Poppins-Regular.otf) format('truetype');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Russo One';
   src: url(@/assets/fonts/RussoOne-Regular.ttf) format('truetype');
@@ -10,7 +11,7 @@
 }
 @font-face {
   font-family: 'Titles';
-  src: url(@/assets/fonts/Ahganirya.ttf) format('truetype');
+  src: url(@/assets/fonts/Acta-Display-Book.ttf) format('truetype');
   font-display: swap;
 }
 
@@ -29,7 +30,7 @@ html {
 
 body {
   background-color: $base-color;
-  font-family: 'Custom', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: $text-color;
 }
 
@@ -104,8 +105,8 @@ input[type='number'] {
   backface-visibility: hidden;
   transform: translateZ(0);
   -webkit-font-smoothing: subpixel-antialiased;
-  font-weight: 400;
-  font-family: 'Custom';
+  font-weight: 200 !important;
+  font-family: 'Poppins' !important;
 
   &:hover {
     transform: scale(1.04);

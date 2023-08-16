@@ -152,7 +152,7 @@ function copy() {
   }
 
   &__description {
-    font-weight: 400;
+    font-weight: 100;
     color: $text-color;
     width: 320px;
     text-align: justify;

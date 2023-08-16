@@ -218,7 +218,7 @@ useJsonld(() => ({
       }
 
       &__description {
-        font-weight: 300;
+        font-weight: 100;
         font-size: 1rem;
 
         @media (min-width: $big-tablet-screen) {
@@ -437,7 +437,7 @@ useJsonld(() => ({
         }
 
         &__txt {
-          font-weight: 400;
+          font-weight: 100;
         }
 
         &__wrapper {
@@ -461,11 +461,11 @@ useJsonld(() => ({
               gap: 2rem;
               text-align: justify;
               font-size: 1rem;
-              font-weight: 300;
+              font-weight: 100;
 
               &__txt {
-                font-family: 'Custom';
-                font-weight: 400;
+                font-family: 'Poppins';
+                font-weight: 100;
                 & :deep(a) {
                   color: $secondary-color;
                   text-decoration: line-through;

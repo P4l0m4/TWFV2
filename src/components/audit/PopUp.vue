@@ -67,11 +67,11 @@ let isBookAnAuditOpen = ref(false)
 
     & .button-primary {
       color: $text-color;
-      font-weight: 400 !important;
+      font-weight: 200;
     }
     & .button-secondary {
       color: $text-color;
-      font-weight: 400 !important;
+      font-weight: 200;
     }
   }
 }

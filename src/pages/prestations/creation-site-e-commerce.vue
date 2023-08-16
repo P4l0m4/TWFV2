@@ -196,11 +196,11 @@ onMounted(() => {
     &__subtitle {
       text-align: center;
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 100;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 1.25rem;
-        font-weight: 400;
+        font-weight: 100;
       }
     }
   }
@@ -288,7 +288,7 @@ onMounted(() => {
           font-weight: 700;
         }
         &__description {
-          font-weight: 400;
+          font-weight: 100;
           text-align: center;
           color: $text-color;
         }
@@ -296,7 +296,7 @@ onMounted(() => {
 
       &__button {
         width: 100%;
-        font-weight: 400;
+        font-weight: 200;
       }
     }
   }
@@ -350,7 +350,7 @@ onMounted(() => {
         gap: 0.25rem;
 
         &__description {
-          font-weight: 400;
+          font-weight: 100;
 
           &:nth-of-type(1) {
             font-weight: 700;
@@ -375,7 +375,7 @@ onMounted(() => {
     }
     &__txt {
       color: $primary-color-faded;
-      font-weight: 300;
+      font-weight: 100;
 
       &__bold {
         font-weight: 400;
@@ -467,7 +467,7 @@ onMounted(() => {
         }
 
         &__description {
-          font-weight: 300;
+          font-weight: 100;
         }
       }
     }

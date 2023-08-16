@@ -50,7 +50,7 @@ const elements = story.value.content.elements
   }
 
   &__subtitle {
-    font-weight: 400;
+    font-weight: 100;
     margin-top: -1rem;
     text-align: center;
   }
@@ -69,6 +69,7 @@ const elements = story.value.content.elements
       display: flex;
       flex-direction: column;
       transition: transform 0.4s ease;
+      gap: 0.5rem;
 
       &:hover {
         transform: scale(1.04);
@@ -103,7 +104,7 @@ const elements = story.value.content.elements
         }
       }
       &__description {
-        font-weight: 400;
+        font-weight: 100;
         width: 100%;
         text-overflow: ellipsis;
       }

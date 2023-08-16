@@ -195,7 +195,7 @@ useHead(() => {
 
         &__description {
           width: 100%;
-          font-weight: 300;
+          font-weight: 100;
           text-align: justify;
         }
 
