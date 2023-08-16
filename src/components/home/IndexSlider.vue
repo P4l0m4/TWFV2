@@ -484,7 +484,7 @@ onMounted(() => {
 }
 #slider-content h1 {
   font-family: 'Titles', serif;
-  font-weight: 500;
+  font-weight: $skinny-thick;
   font-size: 2.4rem;
   letter-spacing: -1px;
   line-height: 40px;
@@ -519,7 +519,7 @@ onMounted(() => {
   padding: 0 2rem;
   width: 100%;
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Custom', sans-serif;
   font-size: 11px;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -547,8 +547,8 @@ onMounted(() => {
 #slider-content #slide-status {
   margin-top: 10px;
   padding: 0 2rem;
-  font-family: 'Poppins', serif;
-  font-weight: 100;
+  font-family: 'Custom', serif;
+  font-weight: 300;
   font-size: 18px;
   color: $text-color;
 

@@ -38,7 +38,7 @@ let isBookAnAuditOpen = ref(false)
   }
   & h1 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: $thick;
     color: $primary-color;
 
     @media (min-width: $big-tablet-screen) {
@@ -57,7 +57,6 @@ let isBookAnAuditOpen = ref(false)
     & a,
     button {
       width: 100%;
-      background-color: $primary-color;
 
       @media (min-width: $tablet-screen) {
         width: fit-content;
@@ -67,11 +66,13 @@ let isBookAnAuditOpen = ref(false)
 
     & .button-primary {
       color: $text-color;
-      font-weight: 200;
+      font-weight: $skinny;
+      background-color: $primary-color;
     }
     & .button-secondary {
-      color: $text-color;
-      font-weight: 200;
+      color: $primary-color;
+      font-weight: $skinny;
+      border: $primary-color solid 2px;
     }
   }
 }

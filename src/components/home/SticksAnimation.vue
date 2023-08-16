@@ -42,7 +42,7 @@ const elements = story.value.content.elements
 
   &__title {
     font-size: 1.25rem;
-    font-weight: 800;
+    font-weight: $overweight;
 
     @media (min-width: $big-tablet-screen) {
       font-size: 1.5rem;
@@ -50,7 +50,7 @@ const elements = story.value.content.elements
   }
 
   &__subtitle {
-    font-weight: 100;
+    font-weight: $skinny;
     margin-top: -1rem;
     text-align: center;
   }
@@ -104,7 +104,7 @@ const elements = story.value.content.elements
         }
       }
       &__description {
-        font-weight: 100;
+        font-weight: $skinny;
         width: 100%;
         text-overflow: ellipsis;
       }

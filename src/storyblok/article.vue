@@ -143,7 +143,7 @@ function copy() {
 
   &__title {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: $thick;
     color: $text-color;
     width: 320px;
     @media (min-width: $big-tablet-screen) {
@@ -152,7 +152,7 @@ function copy() {
   }
 
   &__description {
-    font-weight: 100;
+    font-weight: $skinny;
     color: $text-color;
     width: 320px;
     text-align: justify;

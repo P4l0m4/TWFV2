@@ -56,7 +56,6 @@ let year = new Date().getFullYear()
 
     & a {
       color: $primary-color;
-      font-weight: 100;
     }
   }
 

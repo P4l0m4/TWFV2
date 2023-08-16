@@ -41,10 +41,11 @@ useHead(() => {
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+  padding: 0 1rem;
 
   & h1 {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: $overweight;
 
     @media (min-width: $big-tablet-screen) {
       font-size: 2rem;

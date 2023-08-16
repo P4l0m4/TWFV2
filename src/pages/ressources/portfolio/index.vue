@@ -77,14 +77,14 @@ const breadcrumbs = [
 
     & h1 {
       font-size: 1.5rem;
-      font-weight: 800;
+      font-weight: $overweight;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 2rem;
       }
     }
     & h2 {
-      font-weight: 500;
+      font-weight: $skinny-thick;
       font-size: 1.25rem;
       text-align: center;
 
@@ -120,12 +120,12 @@ const breadcrumbs = [
 
       &__title {
         font-size: 1.25rem;
-        font-weight: 600;
+        font-weight: $thick;
         color: $primary-color;
       }
 
       &__subtitle {
-        font-weight: 100;
+        font-weight: $skinny;
         color: $primary-color;
       }
 

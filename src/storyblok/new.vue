@@ -43,7 +43,7 @@ const date = dayjs(props.blok.date.toString()).locale('fr').format('DD MMMM YYYY
   }
 
   &__description {
-    font-weight: 100;
+    font-weight: $skinny;
     color: $text-color;
     width: 320px;
 
@@ -58,7 +58,7 @@ const date = dayjs(props.blok.date.toString()).locale('fr').format('DD MMMM YYYY
     width: 100%;
     justify-content: flex-end;
     font-size: 0.75rem;
-    font-weight: 100;
+    font-weight: $skinny;
   }
 }
 </style>

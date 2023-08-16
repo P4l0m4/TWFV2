@@ -209,7 +209,7 @@ useJsonld(() => ({
       }
 
       &__title {
-        font-weight: 800;
+        font-weight: $overweight;
         font-size: 1.25rem;
 
         @media (min-width: $big-tablet-screen) {
@@ -218,7 +218,7 @@ useJsonld(() => ({
       }
 
       &__description {
-        font-weight: 100;
+        font-weight: $skinny;
         font-size: 1rem;
 
         @media (min-width: $big-tablet-screen) {
@@ -366,7 +366,7 @@ useJsonld(() => ({
       }
 
       &__title {
-        font-weight: 800;
+        font-weight: $overweight;
         font-size: 1.25rem;
         text-align: center;
         display: none;
@@ -428,7 +428,7 @@ useJsonld(() => ({
         }
 
         &__title {
-          font-weight: 800;
+          font-weight: $overweight;
           font-size: 1.25rem;
 
           @media (min-width: $big-tablet-screen) {
@@ -437,7 +437,7 @@ useJsonld(() => ({
         }
 
         &__txt {
-          font-weight: 100;
+          font-weight: $skinny;
         }
 
         &__wrapper {
@@ -461,11 +461,11 @@ useJsonld(() => ({
               gap: 2rem;
               text-align: justify;
               font-size: 1rem;
-              font-weight: 100;
+              font-weight: $skinny;
 
               &__txt {
-                font-family: 'Poppins';
-                font-weight: 100;
+                font-family: 'Custom';
+                font-weight: $skinny;
                 & :deep(a) {
                   color: $secondary-color;
                   text-decoration: line-through;

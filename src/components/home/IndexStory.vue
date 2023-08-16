@@ -61,12 +61,12 @@
       max-width: 500px;
 
       &__txt {
-        font-weight: 100;
+        font-weight: $skinny;
       }
 
       &__buttons {
         display: flex;
-        gap: 0.5rem;
+        gap: 1rem;
         width: 100%;
         flex-direction: column;
 
@@ -75,8 +75,8 @@
         }
 
         & .button-primary {
-          font-family: 'Poppins';
-          font-weight: 300;
+          font-family: 'Custom';
+          font-weight: $skinny;
         }
       }
     }

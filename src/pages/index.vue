@@ -131,7 +131,7 @@ useHead(() => {
       }
 
       &__title {
-        font-weight: 800;
+        font-weight: $overweight;
 
         @media (min-width: $big-tablet-screen) {
           font-size: 1.5rem;
@@ -140,7 +140,7 @@ useHead(() => {
 
       &__subtitle {
         font-size: 0.75rem;
-        font-weight: 500;
+        font-weight: $skinny-thick;
         text-align: justify;
         @media (min-width: $big-tablet-screen) {
           font-size: 1.25rem;

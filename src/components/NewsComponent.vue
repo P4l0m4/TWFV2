@@ -31,7 +31,7 @@ const story = await useAsyncStoryblok('news', { version: 'published' })
   }
 
   &__title {
-    font-weight: 600;
+    font-weight: $thick;
     font-size: 1.5rem;
     width: 100%;
     text-align: center;

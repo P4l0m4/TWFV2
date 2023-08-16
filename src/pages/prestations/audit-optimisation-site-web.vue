@@ -79,7 +79,7 @@
 
     & h2 {
       font-size: 1.25rem;
-      font-weight: 800;
+      font-weight: $overweight;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 1.5rem;
@@ -114,7 +114,7 @@
     &__title {
       font-size: 1.25rem;
       text-align: center;
-      font-weight: 800;
+      font-weight: $overweight;
       @media (min-width: $big-tablet-screen) {
         font-size: 1.5rem;
       }
@@ -122,7 +122,7 @@
     &__subtitle {
       text-align: center;
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: $skinny-thick;
       @media (min-width: $big-tablet-screen) {
         font-size: 1.25rem;
       }
@@ -172,7 +172,7 @@
 
           &__title {
             font-size: 1rem;
-            font-weight: 800;
+            font-weight: $overweight;
             text-shadow: $shadow;
             @media (min-width: $big-tablet-screen) {
               font-size: 1.25rem;
@@ -236,12 +236,12 @@
             }
 
             & span {
-              font-weight: 100;
+              font-weight: $skinny;
               font-size: 0.75rem;
               white-space: nowrap;
             }
             & button {
-              font-weight: 100;
+              font-weight: $skinny;
               font-size: 0.75rem;
               text-decoration: underline;
               cursor: pointer;

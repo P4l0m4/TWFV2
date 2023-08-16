@@ -116,7 +116,7 @@ useHead(() => {
   }
 
   &__title {
-    font-weight: 800 !important;
+    font-weight: $overweight !important;
     font-size: 1.5rem;
 
     @media (min-width: $big-tablet-screen) {
@@ -138,7 +138,7 @@ useHead(() => {
     }
 
     &__title {
-      font-weight: 500;
+      font-weight: $skinny-thick;
       font-size: 1.25rem;
 
       @media (min-width: $big-tablet-screen) {
@@ -185,7 +185,7 @@ useHead(() => {
 
         &__title {
           width: 100%;
-          font-weight: 500;
+          font-weight: $skinny-thick;
           font-size: 1.5rem;
 
           @media (min-width: $big-tablet-screen) {
@@ -195,7 +195,7 @@ useHead(() => {
 
         &__description {
           width: 100%;
-          font-weight: 100;
+          font-weight: $skinny;
           text-align: justify;
         }
 
@@ -245,7 +245,7 @@ useHead(() => {
     }
 
     &__title {
-      font-weight: 600;
+      font-weight: $thick;
       font-size: 1.25rem;
 
       @media (min-width: $big-tablet-screen) {

@@ -126,6 +126,10 @@ useHead(() => {
           font-size: 1.4rem;
         }
       }
+
+      &__txt {
+        font-weight: $skinny;
+      }
     }
   }
 }

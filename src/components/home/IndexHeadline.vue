@@ -89,21 +89,21 @@ onMounted(() => {
       &__small-title {
         max-width: inherit;
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: $skinny-thick;
         color: $text-color;
         text-shadow: $shadow-white;
 
         @media (min-width: $big-tablet-screen) {
           max-width: 84px;
           font-size: 1rem;
-          font-weight: 600;
+          font-weight: $thick;
         }
       }
       &__big-title {
         text-shadow: $shadow-white;
         font-size: 3rem;
         font-family: Russo One;
-        font-weight: 800;
+        font-weight: $overweight;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
         color: $text-color;
