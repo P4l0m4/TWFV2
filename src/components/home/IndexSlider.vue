@@ -1,7 +1,7 @@
 <script setup>
 import imagesLoaded from 'imagesloaded'
 import * as THREE from 'three'
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 useHead(() => {
   return {
@@ -218,19 +218,15 @@ const displacementSlider = function (opts) {
   animate()
 }
 let interval = null
-let count = 1
+let count = ref(0)
 function autoplay() {
   let pagButtons = Array.from(document.getElementById('pagination').querySelectorAll('button'))
-
   interval = setInterval(() => {
-    if (count <= pagButtons.length - 1) {
-      pagButtons[count].click()
-      count++
-    } else {
-      count = 0
-      pagButtons[count].click()
-      count++
+    count.value++
+    if (count.value === pagButtons.length) {
+      count.value = 0
     }
+    pagButtons[count.value].click()
   }, 4000)
 }
 onMounted(() => {
@@ -286,10 +282,10 @@ onUnmounted(() => {
           <img src="@/assets/images/biscuit.png" alt="mockup site web" />
 
           <div id="pagination">
-            <button class="active" data-slide="0"></button>
-            <button data-slide="1"></button>
-            <button data-slide="2"></button>
-            <button data-slide="3"></button>
+            <button class="active" data-slide="0" @click="count = 0"></button>
+            <button data-slide="1" @click="count = 1"></button>
+            <button data-slide="2" @click="count = 2"></button>
+            <button data-slide="3" @click="count = 3"></button>
           </div>
         </div>
       </div>
