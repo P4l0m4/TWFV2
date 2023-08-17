@@ -48,20 +48,26 @@
       font-size: 2rem;
       font-weight: 700;
       max-width: 500px;
+      text-align: center;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 3rem;
+        text-align: left;
       }
     }
 
     &__side {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
       max-width: 500px;
+      @media (min-width: $big-tablet-screen) {
+        gap: 1rem;
+      }
 
       &__txt {
         font-weight: $skinny;
+        text-align: justify;
       }
 
       &__buttons {

@@ -1,6 +1,7 @@
 <script setup>
 import imagesLoaded from 'imagesloaded'
 import * as THREE from 'three'
+import { onMounted, onUnmounted } from 'vue'
 
 useHead(() => {
   return {
@@ -200,80 +201,6 @@ const displacementSlider = function (opts) {
           )
         }
       })
-      // setInterval(() => {
-      //   if (!isAnimating) {
-      //     isAnimating = true
-
-      //     document.getElementById('pagination').querySelectorAll('.active')[0].className = ''
-      //     this.className = 'active'
-
-      //     let slideId = parseInt(this.dataset.slide, 10)
-
-      //     mat.uniforms.nextImage.value = sliderImages[slideId]
-      //     mat.uniforms.nextImage.needsUpdate = true
-
-      //     TweenLite.to(mat.uniforms.dispFactor, 1, {
-      //       value: 1,
-      //       ease: 'Expo.easeInOut',
-      //       onComplete: function () {
-      //         mat.uniforms.currentImage.value = sliderImages[slideId]
-      //         mat.uniforms.currentImage.needsUpdate = true
-      //         mat.uniforms.dispFactor.value = 0.0
-      //         isAnimating = false
-      //       },
-      //     })
-
-      //     let slideTitleEl = document.getElementById('slide-title')
-      //     let slideStatusEl = document.getElementById('slide-status')
-      //     let nextSlideTitle = document.querySelectorAll(`[data-slide-title="${slideId}"]`)[0].innerHTML
-      //     let nextSlideStatus = document.querySelectorAll(`[data-slide-status="${slideId}"]`)[0].innerHTML
-
-      //     TweenLite.fromTo(
-      //       slideTitleEl,
-      //       0.5,
-      //       {
-      //         autoAlpha: 1,
-      //         y: 0,
-      //       },
-      //       {
-      //         autoAlpha: 0,
-      //         y: 20,
-      //         ease: 'Expo.easeIn',
-      //         onComplete: function () {
-      //           slideTitleEl.innerHTML = nextSlideTitle
-
-      //           TweenLite.to(slideTitleEl, 0.5, {
-      //             autoAlpha: 1,
-      //             y: 0,
-      //           })
-      //         },
-      //       }
-      //     )
-
-      //     TweenLite.fromTo(
-      //       slideStatusEl,
-      //       0.5,
-      //       {
-      //         autoAlpha: 1,
-      //         y: 0,
-      //       },
-      //       {
-      //         autoAlpha: 0,
-      //         y: 20,
-      //         ease: 'Expo.easeIn',
-      //         onComplete: function () {
-      //           slideStatusEl.innerHTML = nextSlideStatus
-
-      //           TweenLite.to(slideStatusEl, 0.5, {
-      //             autoAlpha: 1,
-      //             y: 0,
-      //             delay: 0.1,
-      //           })
-      //         },
-      //       }
-      //     )
-      //   }
-      // }, 3000)
     })
   }
 
@@ -290,7 +217,22 @@ const displacementSlider = function (opts) {
   }
   animate()
 }
+let interval = null
+let count = 1
+function autoplay() {
+  let pagButtons = Array.from(document.getElementById('pagination').querySelectorAll('button'))
 
+  interval = setInterval(() => {
+    if (count <= pagButtons.length - 1) {
+      pagButtons[count].click()
+      count++
+    } else {
+      count = 0
+      pagButtons[count].click()
+      count++
+    }
+  }, 4000)
+}
 onMounted(() => {
   imagesLoaded(document.querySelectorAll('img'), () => {
     const section = document.querySelector('section.loading')
@@ -305,6 +247,12 @@ onMounted(() => {
       images: imgs,
     })
   })
+
+  autoplay()
+})
+
+onUnmounted(() => {
+  clearInterval(interval)
 })
 </script>
 <template>
@@ -525,6 +473,7 @@ onMounted(() => {
   text-transform: uppercase;
   position: relative;
   color: $text-color;
+  font-weight: $skinny-thick;
 
   @media (min-width: $laptop-screen) {
     font-size: 13px;
@@ -548,7 +497,7 @@ onMounted(() => {
   margin-top: 10px;
   padding: 0 2rem;
   font-family: 'Custom', serif;
-  font-weight: 300;
+  font-weight: $skinny;
   font-size: 18px;
   color: $text-color;
 
