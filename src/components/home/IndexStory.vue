@@ -1,5 +1,10 @@
 <template>
   <section class="story">
+    <div class="story__3d">
+      <span class="story__3d__title">Mettez vos produits en valeur </span
+      ><span class="story__3d__subtitle">Nous modélisons vos produits et les integrons à votre site web</span>
+      <iframe src="https://my.spline.design/devicemodelcopy-08fe113792dd065c990899b30d6a1f20/"></iframe>
+    </div>
     <div class="story__headlines">
       <span class="story__headlines__title">Votre site web n'est pas qu'une vitrine</span>
       <div class="story__headlines__side">
@@ -13,13 +18,24 @@
         </div>
       </div>
     </div>
-    <div class="story__pictures">
-      <img class="story__pictures__img" src="@/assets/images/seo.jpg" alt="à quoi sert le seo" />
-      <img class="story__pictures__img" src="@/assets/images/ux.jpg" alt="qu'est ce que l'ux" />
-    </div>
+    <!-- <div class="story__pictures">
+      <div class="story__pictures__img" src="@/assets/images/seo.jpg">
+        <div>Vous souhaitez développer votre propre site e-commerce ?</div>
+      </div>
+      <div class="story__pictures__img" src="@/assets/images/ux.jpg">
+        <div>Vous avez besoin d'un site vitrine</div>
+      </div>
+    </div> -->
   </section>
 </template>
 <style scoped lang="scss">
+iframe {
+  outline: none;
+  border: none;
+  height: 100vh;
+  width: 100vw;
+}
+
 .story {
   display: flex;
   gap: 4rem;
@@ -29,9 +45,30 @@
   padding: 0 1rem;
   @media (min-width: $big-tablet-screen) {
     padding: 0 2rem;
-    gap: 8rem;
+    gap: 12rem;
   }
+  &__3d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+    &__title {
+      font-size: 1.25rem;
+      font-weight: $overweight;
 
+      @media (min-width: $big-tablet-screen) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__subtitle {
+      font-weight: $skinny;
+      margin-top: -1rem;
+      text-align: center;
+    }
+  }
   &__headlines {
     display: flex;
     flex-direction: column;
@@ -90,6 +127,7 @@
 
   &__pictures {
     width: 100%;
+    max-width: 1100px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -101,14 +139,18 @@
     }
 
     &__img {
+      display: flex;
       width: clamp(343px, 100%, 800px);
       border-radius: $radius;
       height: 400px;
-      object-fit: cover;
+      background-size: cover;
+      background-position: center;
       flex: 2;
+      background-image: url('@/assets/images/seo.jpg');
 
       &:nth-of-type(2) {
         flex: 1;
+        background-image: url('@/assets/images/ux.jpg');
       }
     }
   }

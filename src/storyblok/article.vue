@@ -22,7 +22,8 @@ function copy() {
     v-if="props.blok.tag === props.tagSelected || !props.tagSelected"
   >
     <div class="slide__wrapper">
-      <img class="slide__wrapper__img" :src="blok.headerimage[0].filename" :alt="blok.headerimage.alt" />
+      <img class="slide__wrapper__img" :src="blok.headerimage[0].filename" :alt="blok.headerimage[0].alt" />
+
       <div class="slide__share">
         <button class="slide__share__plus" @click.prevent="copy">
           <img class="slide__share__plus__icon" src="@/assets/icons/share.svg" alt="icon" />
