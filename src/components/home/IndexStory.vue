@@ -121,6 +121,10 @@ iframe {
           font-family: 'Custom';
           font-weight: $skinny;
         }
+
+        & .button-secondary {
+          color: $text-color !important;
+        }
       }
     }
   }
