@@ -33,7 +33,7 @@ iframe {
   outline: none;
   border: none;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .story {
@@ -42,21 +42,24 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
+  width: 100%;
+
   @media (min-width: $big-tablet-screen) {
-    padding: 0 2rem;
     gap: 12rem;
   }
   &__3d {
     display: flex;
+
+    width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    padding: 0 1rem;
+
     &__title {
       font-size: 1.25rem;
       font-weight: $overweight;
+      padding: 0 1rem;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 1.5rem;
@@ -67,6 +70,7 @@ iframe {
       font-weight: $skinny;
       margin-top: -1rem;
       text-align: center;
+      padding: 0 1rem;
     }
   }
   &__headlines {
@@ -75,6 +79,7 @@ iframe {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 0 1rem;
 
     @media (min-width: $big-tablet-screen) {
       gap: 4rem;
