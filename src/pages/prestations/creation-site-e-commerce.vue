@@ -146,9 +146,20 @@ function changeSolutionLogo(name) {
           Nous savons comment optimiser votre site web pour vous garantir un bon SEO et une expérience utilisateur
           agréable.
         </p>
-        <a class="e-commerce__graph__headlines__button button-primary" href="https://nuxt3-shopify-template.netlify.app"
-          >Prenez rendez-vous</a
-        >
+        <div class="e-commerce__graph__headlines__buttons">
+          <a
+            class="e-commerce__graph__headlines__buttons__button button-primary"
+            href="https://calendly.com/tekilawebfactory/30min"
+            target="_blank"
+            >Prendre rendez-vous</a
+          >
+          <a
+            class="e-commerce__graph__headlines__buttons__button button-secondary"
+            href="https://nuxt3-shopify-template.netlify.app"
+            target="_blank"
+            >Voir une démo</a
+          >
+        </div>
       </div>
       <div class="e-commerce__graph__image-card">
         <div class="e-commerce__graph__image-card__graph">
@@ -421,12 +432,12 @@ function changeSolutionLogo(name) {
       width: 100%;
 
       @media (min-width: $big-tablet-screen) {
-        width: clamp(280px, 100%, 450px);
+        width: clamp(280px, 100%, 540px);
       }
 
       &__title {
         font-size: 1.25rem;
-        font-weight: 700;
+        font-weight: $overweight;
         text-align: center;
 
         @media (min-width: $big-tablet-screen) {
@@ -436,9 +447,19 @@ function changeSolutionLogo(name) {
       &__subtitle {
         text-align: center;
       }
-
-      &__button {
+      &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         width: 100%;
+
+        @media (min-width: $big-tablet-screen) {
+          flex-direction: row;
+        }
+
+        &__button {
+          width: 100%;
+        }
       }
     }
 
