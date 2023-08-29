@@ -167,7 +167,7 @@ function changeSolutionLogo(name) {
             src="@/assets/images/shopify.svg"
             class="e-commerce__graph__image-card__graph__logo"
           />
-          <E-commerceRadarChart @solution-clicked="changeSolutionLogo" />
+          <EcommerceRadarChart @solution-clicked="changeSolutionLogo" />
         </div>
       </div>
     </div>
