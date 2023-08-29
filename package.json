@@ -23,7 +23,8 @@
     "ress": "^5.0.2",
     "swiper": "^9.0.3",
     "three": "^0.83.0",
-    "vue3-infinite-slide-bar": "^1.0.4"
+    "vue3-infinite-slide-bar": "^1.0.4",
+    "echarts": "^5.4.3"
   },
   "devDependencies": {
     "@storyblok/nuxt": "^5.4.4",

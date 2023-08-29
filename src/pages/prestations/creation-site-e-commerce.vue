@@ -41,6 +41,10 @@ onMounted(() => {
     })
   }, 1400)
 })
+let chosenSolution = ref('Tekila Web Factory')
+function changeSolutionLogo(name) {
+  chosenSolution.value = name
+}
 </script>
 <template>
   <div class="e-commerce">
@@ -148,12 +152,22 @@ onMounted(() => {
       </div>
       <div class="e-commerce__graph__image-card">
         <div class="e-commerce__graph__image-card__graph">
-          <img src="@/assets/images/logo.svg" class="e-commerce__graph__image-card__graph__logo" />
           <img
-            class="e-commerce__graph__image-card__graph__img"
-            src="@/assets/images/graphique.svg"
-            alt="creation site internet"
-          /><img src="@/assets/images/woocommerce.png" class="e-commerce__graph__image-card__graph__logo" />
+            v-if="chosenSolution === 'Tekila Web Factory'"
+            src="@/assets/images/logo.svg"
+            class="e-commerce__graph__image-card__graph__logo"
+          />
+          <img
+            v-if="chosenSolution === 'WooCommerce'"
+            src="@/assets/images/woocommerce.svg"
+            class="e-commerce__graph__image-card__graph__logo"
+          />
+          <img
+            v-if="chosenSolution === 'Shopify seul'"
+            src="@/assets/images/shopify.svg"
+            class="e-commerce__graph__image-card__graph__logo"
+          />
+          <E-commerceRadarChart @solution-clicked="changeSolutionLogo" />
         </div>
       </div>
     </div>
@@ -446,11 +460,6 @@ onMounted(() => {
         &__logo {
           width: 300px;
           height: 100px;
-          object-fit: contain;
-        }
-        &__img {
-          width: 100%;
-          height: 300px;
           object-fit: contain;
         }
       }
