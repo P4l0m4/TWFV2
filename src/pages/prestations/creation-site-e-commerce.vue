@@ -453,7 +453,6 @@ function changeSolutionLogo(name) {
         display: flex;
         width: 100%;
         justify-content: center;
-        gap: 2rem;
         align-items: center;
         flex-direction: column;
 

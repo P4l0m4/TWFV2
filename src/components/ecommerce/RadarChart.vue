@@ -126,12 +126,12 @@ onMounted(() => {
     },
 
     legend: {
-      bottom: 5,
+      bottom: -5,
       data: ['Tekila Web Factory', 'WooCommerce', 'Shopify seul'],
-      itemGap: 20,
+      itemGap: 16,
       textStyle: {
         color: '#333333',
-        fontSize: 14,
+        fontSize: 16,
       },
       selectedMode: 'single',
     },
@@ -146,7 +146,7 @@ onMounted(() => {
         { name: 'Service client', max: 100 },
         { name: 'Performance', max: 100 },
       ],
-      shape: 'circle',
+      shape: 'square',
       splitNumber: 5,
       axisName: {
         color: 'rgb(51, 51, 51)',
@@ -253,6 +253,6 @@ onMounted(() => {
 <style scoped lang="scss">
 div {
   width: 100%;
-  height: 400px;
+  height: 480px;
 }
 </style>
