@@ -446,6 +446,17 @@ useJsonld(() => ({
           gap: 2rem;
           width: 100%;
 
+          &__paragraphs {
+            &__txt {
+              & :deep(a) {
+                color: $secondary-color;
+                text-decoration: line-through;
+                text-decoration-color: rgba(43, 221, 234, 0.4);
+                text-decoration-thickness: 8px;
+              }
+            }
+          }
+
           & img {
             border-radius: $radius;
           }
