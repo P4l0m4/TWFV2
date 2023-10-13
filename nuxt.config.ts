@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   css: ['@/styles/global.scss'],
   modules: [
     '@pinia/nuxt',
-
     'nuxt-simple-sitemap',
     ['@storyblok/nuxt', { accessToken: 'p4gGIMh6R6U5xPOUYs5oCgtt' }],
     'nuxt-jsonld',
