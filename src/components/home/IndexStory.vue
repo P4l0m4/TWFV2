@@ -1,3 +1,7 @@
+<script setup>
+import { ref } from 'vue'
+let isBookAnAuditOpen = ref(false)
+</script>
 <template>
   <section class="story">
     <div class="story__3d">
@@ -13,11 +17,16 @@
           entreprise, à condition de l'optimiser pour en tirer le meilleur parti.
         </p>
         <div class="story__headlines__side__buttons">
-          <button class="button-primary">Faire auditer votre site web</button
-          ><button class="button-secondary">Discuter avec nous</button>
+          <button class="button-primary" @click="isBookAnAuditOpen = !isBookAnAuditOpen">
+            Faire auditer votre site web</button
+          ><a href="https://calendly.com/tekilawebfactory/30min" target="_blank" class="button-secondary"
+            >Discuter avec nous</a
+          >
         </div>
+        <AuditBookAnAudit v-if="isBookAnAuditOpen" />
       </div>
     </div>
+
     <!-- <div class="story__pictures">
       <div class="story__pictures__img" src="@/assets/images/seo.jpg">
         <div>Vous souhaitez développer votre propre site e-commerce ?</div>

@@ -91,6 +91,7 @@ async function submit() {
   background-color: $text-color;
   border: rgba(255, 255, 255, 0.06) solid 1px;
   gap: 16px;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   border-radius: $radius;
