@@ -3,7 +3,7 @@
 import { getBlogPages, getPortfolioPages } from './src/utils/sitemap.js'
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   srcDir: 'src/',
   css: ['@/styles/global.scss'],
   modules: [
@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     ['@storyblok/nuxt', { accessToken: 'p4gGIMh6R6U5xPOUYs5oCgtt' }],
     'nuxt-jsonld',
     'dayjs-nuxt',
+    'nuxt-delay-hydration',
   ],
   dayjs: {
     locales: ['fr'],
@@ -57,5 +58,9 @@ export default defineNuxtConfig({
       ],
       htmlAttrs: { lang: 'fr' },
     },
+  },
+  delayHydration: {
+    mode: 'mounted',
+    debug: process.env.NODE_ENV === 'development',
   },
 })
