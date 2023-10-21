@@ -11,10 +11,10 @@ const isMenuOpen = ref(false)
     /></nuxt-link>
 
     <div class="wrapper">
-      <NuxtLink to="/prestations" class="link desktop-only" aria-label="lien vers les favoris"> Prestations</NuxtLink>
-      <NuxtLink exact to="/ressources" class="link desktop-only" aria-label="lien vers les ressources">
+      <NuxtLink to="/prestations" class="link desktop-only" aria-label="Prestations">Prestations</NuxtLink>
+      <NuxtLink exact to="/ressources" class="link desktop-only" aria-label="Ressources">
         <span class="desktop-only">Ressources</span> </NuxtLink
-      ><NuxtLink to="/a-propos" class="link desktop-only" aria-label="lien vers la page de contact">A propos</NuxtLink>
+      ><NuxtLink to="/a-propos" class="link desktop-only" aria-label="A propos">A propos</NuxtLink>
       <ContactCalendlyComponent class="desktop-only" />
     </div>
     <MenuOverlay :isMenuOpen="isMenuOpen" @close="isMenuOpen = false" /><button
