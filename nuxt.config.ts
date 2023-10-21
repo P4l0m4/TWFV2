@@ -3,7 +3,7 @@
 import { getBlogPages, getPortfolioPages } from './src/utils/sitemap.js'
 
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   srcDir: 'src/',
   css: ['@/styles/global.scss'],
   modules: [
