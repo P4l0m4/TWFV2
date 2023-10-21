@@ -276,10 +276,10 @@ onUnmounted(() => {
             </div>
           </div>
 
-          <img src="@/assets/images/headphones-duo.png" alt="mockup site web" />
-          <img src="@/assets/images/nike.png" alt="mockup site web" />
-          <img src="@/assets/images/nuit.png" alt="mockup site web" />
-          <img src="@/assets/images/biscuit.png" alt="mockup site web" />
+          <img src="@/assets/images/headphones-duo.webp" alt="mockup site web" />
+          <img src="@/assets/images/nike.webp" alt="mockup site web" />
+          <img src="@/assets/images/nuit.webp" alt="mockup site web" />
+          <img src="@/assets/images/biscuit.webp" alt="mockup site web" />
 
           <div id="pagination">
             <button class="active" data-slide="0" @click="count = 0" aria-label="slider button"></button>

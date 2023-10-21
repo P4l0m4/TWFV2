@@ -4,7 +4,9 @@ let year = new Date().getFullYear()
 
 <template>
   <footer class="footer">
-    <nuxt-link to="/"><img src="@/assets/images/logo-light.svg" alt="logo tekila web factory" /></nuxt-link>
+    <nuxt-link to="/" class="footer__logo"
+      ><img class="footer__logo__img" src="@/assets/images/logo-light.svg" alt="logo tekila web factory"
+    /></nuxt-link>
     <div class="footer__site-links">
       <nuxt-link to="/" class="footer__document">Accueil</nuxt-link>
       <nuxt-link to="/ressources/blog" class="footer__document">Blog</nuxt-link>
@@ -46,6 +48,13 @@ let year = new Date().getFullYear()
   font-size: 0.75rem;
   flex-wrap: wrap;
   background-color: $text-color;
+
+  &__logo {
+    &__img {
+      width: 186px;
+      height: 32px;
+    }
+  }
 
   &__site-links {
     display: flex;
