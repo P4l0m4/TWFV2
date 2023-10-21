@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     ['@storyblok/nuxt', { accessToken: 'p4gGIMh6R6U5xPOUYs5oCgtt' }],
     'nuxt-jsonld',
     'dayjs-nuxt',
-    'nuxt-delay-hydration',
   ],
   dayjs: {
     locales: ['fr'],
@@ -58,9 +57,5 @@ export default defineNuxtConfig({
       ],
       htmlAttrs: { lang: 'fr' },
     },
-  },
-  delayHydration: {
-    mode: 'mounted',
-    debug: process.env.NODE_ENV === 'development',
   },
 })

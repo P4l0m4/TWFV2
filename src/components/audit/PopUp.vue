@@ -11,7 +11,7 @@ let isBookAnAuditOpen = ref(false)
         class="button-primary"
         href="https://calendly.com/tekilawebfactory/30min"
         target="_blank"
-        aria-label="Prenez rendez-vous avec nous"
+        aria-label="Prendre RDV"
         >Prendre RDV</a
       >
       <button class="button-secondary" @click="isBookAnAuditOpen = !isBookAnAuditOpen">Commander un audit</button>

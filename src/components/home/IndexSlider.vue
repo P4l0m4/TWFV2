@@ -282,10 +282,10 @@ onUnmounted(() => {
           <img src="@/assets/images/biscuit.png" alt="mockup site web" />
 
           <div id="pagination">
-            <button class="active" data-slide="0" @click="count = 0"></button>
-            <button data-slide="1" @click="count = 1"></button>
-            <button data-slide="2" @click="count = 2"></button>
-            <button data-slide="3" @click="count = 3"></button>
+            <button class="active" data-slide="0" @click="count = 0" aria-label="slider button"></button>
+            <button data-slide="1" @click="count = 1" aria-label="slider button"></button>
+            <button data-slide="2" @click="count = 2" aria-label="slider button"></button>
+            <button data-slide="3" @click="count = 3" aria-label="slider button"></button>
           </div>
         </div>
       </div>

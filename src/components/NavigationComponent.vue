@@ -67,11 +67,17 @@ nav {
     @media (min-width: $laptop-screen) {
       display: none !important;
     }
+
+    & .icon {
+      width: 26px;
+      height: 26px;
+    }
   }
 
   & .logo {
     display: flex;
     width: 200px;
+    height: 45px;
     border-radius: 0;
     padding: 0 0.5rem;
     background-color: $primary-color !important;
