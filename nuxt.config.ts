@@ -53,6 +53,8 @@ export default defineNuxtConfig({
             })(window, document, 'script', 'dataLayer', 'GTM-W8N9CXHL');`,
           body: true,
           defer: true,
+          async: true,
+          lazy: true,
         },
       ],
       htmlAttrs: { lang: 'fr' },
