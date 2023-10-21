@@ -74,24 +74,24 @@ useHead(() => {
       padding: 4rem;
     }
 
-    &__img {
-      z-index: 1;
-      width: 108px;
-      height: 200px;
-      background-size: cover;
-      background-image: url('@/assets/images/sprite-sans-mains.png');
-      animation: walk 0.8s steps(3) infinite;
-      opacity: 0.8;
+    // &__img {
+    //   z-index: 1;
+    //   width: 108px;
+    //   height: 200px;
+    //   background-size: cover;
+    //   background-image: url('@/assets/images/sprite-sans-mains.png');
+    //   animation: walk 0.8s steps(3) infinite;
+    //   opacity: 0.8;
 
-      @keyframes walk {
-        0% {
-          background-position: 0 0;
-        }
-        100% {
-          background-position: -334px 0;
-        }
-      }
-    }
+    //   @keyframes walk {
+    //     0% {
+    //       background-position: 0 0;
+    //     }
+    //     100% {
+    //       background-position: -334px 0;
+    //     }
+    //   }
+    // }
 
     &__floor {
       opacity: 0.6;
