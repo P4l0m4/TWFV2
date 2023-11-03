@@ -4,6 +4,7 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
 <template>
   <section class="blog">
     <h2 class="blog__title">Nos derniers articles de blog</h2>
+    <h3 class="blog__subtitle">Pour en savoir plus sur le Web, le SEO, etc</h3>
     <StoryblokComponent v-if="story" :blok="story.content" />
   </section>
 </template>
@@ -23,11 +24,17 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
   }
 
   &__title {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: $overweight;
     @media (min-width: $big-tablet-screen) {
-      font-size: 1.5rem;
+      font-size: 3rem;
     }
+  }
+  &__subtitle {
+    font-weight: $skinny;
+    margin-top: -1rem;
+    text-align: center;
+    font-size: 1.25rem;
   }
 }
 </style>

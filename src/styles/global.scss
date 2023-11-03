@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Custom';
-  src: url(@/assets/fonts/Quicksand-VariableFont.ttf) format('truetype');
+  src: url(@/assets/fonts/Figtree.ttf) format('truetype');
   font-display: swap;
 }
 
@@ -154,19 +154,19 @@ input[type='number'] {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #1e1e1e;
-  border-radius: 2px;
+  background: #e1e1e1;
+  border-radius: 20px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #1e1e1e;
+  background: white;
   border-radius: 2px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #2b2b2b;
+  background: rgb(237, 237, 237);
 }
 
 //DETAILS

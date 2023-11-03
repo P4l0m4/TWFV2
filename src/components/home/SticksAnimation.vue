@@ -41,11 +41,11 @@ const elements = story.value.content.elements
   }
 
   &__title {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: $overweight;
 
     @media (min-width: $big-tablet-screen) {
-      font-size: 1.5rem;
+      font-size: 3rem;
     }
   }
 
@@ -53,6 +53,7 @@ const elements = story.value.content.elements
     font-weight: $skinny;
     margin-top: -1rem;
     text-align: center;
+    font-size: 1.25rem;
   }
   &__slidable {
     display: flex;

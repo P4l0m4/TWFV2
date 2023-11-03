@@ -29,15 +29,6 @@ let isBookAnAuditOpen = ref(false)
         <AuditBookAnAudit v-if="isBookAnAuditOpen" />
       </div>
     </div>
-
-    <!-- <div class="story__pictures">
-      <div class="story__pictures__img" src="@/assets/images/seo.jpg">
-        <div>Vous souhaitez développer votre propre site e-commerce ?</div>
-      </div>
-      <div class="story__pictures__img" src="@/assets/images/ux.jpg">
-        <div>Vous avez besoin d'un site vitrine</div>
-      </div>
-    </div> -->
   </section>
 </template>
 <style scoped lang="scss">
@@ -61,7 +52,6 @@ iframe {
   }
   &__3d {
     display: flex;
-
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -69,12 +59,14 @@ iframe {
     gap: 2rem;
 
     &__title {
-      font-size: 1.25rem;
+      font-size: 2rem;
       font-weight: $overweight;
       padding: 0 1rem;
+      text-align: center;
+      text-wrap: balance;
 
       @media (min-width: $big-tablet-screen) {
-        font-size: 1.5rem;
+        font-size: 3rem;
       }
     }
 
@@ -83,6 +75,8 @@ iframe {
       margin-top: -1rem;
       text-align: center;
       padding: 0 1rem;
+      text-wrap: balance;
+      font-size: 1.25rem;
     }
   }
   &__headlines {

@@ -64,14 +64,8 @@ useJsonld(
   ></noscript>
   <!-- End Google Tag Manager (noscript) -->
 </template>
-<style scoped lang="scss">
+<style lang="scss">
 //transition
-.v-leave-active {
-  transition: opacity 0.5s ease;
-}
-.v-leave-to {
-  opacity: 0;
-}
 .container {
   display: flex;
   flex-direction: column;

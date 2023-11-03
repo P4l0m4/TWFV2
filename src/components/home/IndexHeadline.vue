@@ -1,158 +1,275 @@
 <script setup>
-import { onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
-const str = 'Prenez rendez-vous avec nous °'
+let currentSlideIndex = ref(0)
+const slides = ref([
+  {
+    title: 'Sites Internet',
+    subtitle: 'Optimisé SEO',
+    img: 'headphones-duo.webp',
+  },
+  {
+    title: 'Sites E-commerce',
+    subtitle: 'Ultra Performants',
+    img: 'nike.webp',
+  },
+  {
+    title: 'Audits SEO',
+    subtitle: 'Totalement gratuits',
+    img: 'biscuit.webp',
+  },
+  {
+    title: 'Web Design',
+    subtitle: 'User Friendly',
+    img: 'nuit.webp',
+  },
+])
 
+const currentSlide = computed(() => slides.value[currentSlideIndex.value])
+
+function handlePaginationClick(n) {
+  currentSlideIndex.value = n
+}
 onMounted(() => {
-  const text = document.getElementById('text')
-  for (let i = 0; i < str.length; i++) {
-    let span = document.createElement('span')
-    span.innerText = str[i]
-    text.appendChild(span)
-    span.style.transform = 'rotate(' + i * 11.7 + 'deg)'
-    span.style.position = 'absolute'
-    span.style.left = '50%'
-    span.style.display = 'block'
-    span.style.transformOrigin = '0 50px'
-    span.style.textTransform = 'uppercase'
-    span.style.color = '#333333'
-    span.style.fontWeight = '800'
-    span.style.fontSize = '0.75rem'
-    span.textShadow = '0px 0px 10px #f7f7f72c'
-    span.backdropFilter = 'blur(10px)'
-  }
+  setInterval(() => {
+    if (currentSlideIndex.value < slides.value.length - 1) {
+      currentSlideIndex.value = currentSlideIndex.value + 1
+    } else {
+      currentSlideIndex.value = 0
+    }
+  }, 3000)
 })
 </script>
 <template>
-  <section class="headline">
-    <div class="headline__titles">
-      <div class="headline__titles__wrapper">
-        <span class="headline__titles__wrapper__small-title">Great companies deserve</span
-        ><span class="headline__titles__wrapper__big-title">Great</span>
+  <section class="slides">
+    <div class="slides__slide">
+      <div class="slides__slide__txt">
+        <span>CREATION</span>
+
+        <Transition name="slide-txt">
+          <h1 class="slides__slide__txt__title" :key="currentSlide.title">
+            {{ currentSlide.title }}
+          </h1>
+        </Transition>
+
+        <span class="slides__slide__txt__specs">SPECIFICITES</span>
+        <Transition name="slide-txt">
+          <h2 class="slides__slide__txt__subtitle" :key="currentSlide.title">
+            {{ currentSlide.subtitle }}
+          </h2>
+        </Transition>
       </div>
-      <div class="headline__titles__wrapper">
-        <span class="headline__titles__wrapper__big-title">Websites</span
-        ><a
-          class="headline__titles__wrapper__circle"
-          href="https://calendly.com/tekilawebfactory/30min"
-          target="_blank"
-          aria-label="Prenez rendez-vous avec nous"
-        >
-          <p id="text"></p>
-        </a>
-      </div>
+
+      <Transition name="slide-fade">
+        <div
+          class="slides__slide__img"
+          :style="`background-image: url('images/${currentSlide.img}')`"
+          :key="currentSlide.img"
+        ></div>
+      </Transition>
     </div>
+    <aside class="slides__pagination">
+      <span
+        v-for="n in slides.length"
+        :key="`slide-pagination-${n}`"
+        class="slides__pagination__dot"
+        :class="{ active: currentSlideIndex === n - 1 }"
+        @click="handlePaginationClick(n - 1)"
+      ></span>
+    </aside>
   </section>
 </template>
-<style lang="scss" scoped>
-.headline {
-  // background-color: rgb(245, 239, 220);
-  // background: linear-gradient(0deg, $base-color 0%, rgb(255, 246, 229) 100%);
+<style scoped lang="scss">
+.slides {
   display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  // align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  width: 100vw;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 2rem;
   margin-top: -4rem;
-  height: 100vh;
 
   @media (min-width: $big-tablet-screen) {
-    height: calc(100vh - 48px);
-    gap: 4rem;
-    padding: 1rem 7rem;
-  }
-  @media (min-width: $laptop-screen) {
-    height: 100vh;
-    margin-top: -9.5rem;
-  }
-
-  &__titles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 2rem;
+    padding: 0 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2rem;
+  }
+  &__slide {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column-reverse;
 
-    &__wrapper {
-      display: flex;
-      align-items: center;
+    @media (min-width: $big-tablet-screen) {
       gap: 2rem;
-      width: 100%;
-      flex-direction: column;
+      flex-direction: row;
+    }
+    &__img {
+      height: 40svh;
+      width: calc(50svh * 1.55);
+      max-width: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-left: 1rem;
 
       @media (min-width: $big-tablet-screen) {
-        gap: 2rem;
-        flex-direction: row;
+        height: 82svh;
+        width: calc(82svh * 1.5);
+        margin-left: 0;
+      }
+    }
+
+    &__txt {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: clamp(300px, 100%, 600px);
+      justify-content: center;
+      padding-left: 1rem;
+
+      & span {
+        font-weight: $skinny;
+        letter-spacing: 0.25rem;
       }
 
-      &__small-title {
-        max-width: inherit;
-        font-size: 1rem;
+      //   &__specs {
+      //     position: relative;
+      //   }
+
+      &__title {
+        font-family: 'Titles', serif;
         font-weight: $skinny-thick;
+        font-size: 3.5rem;
+        letter-spacing: -1px;
+        line-height: 50px;
+        margin: 10px 0 32px;
         color: $text-color;
-        text-shadow: $shadow-white;
+        width: 185px;
+        text-wrap: bottom;
 
-        @media (min-width: $big-tablet-screen) {
-          max-width: 84px;
-          font-size: 1rem;
-          font-weight: $thick;
+        @media (min-width: $tablet-screen) {
+          font-size: 4rem;
+          line-height: 60px;
+        }
+        @media (min-width: $laptop-screen) {
+          margin: 20px 0 60px;
+          font-size: 5.8rem;
+          line-height: 100px;
+          padding: 0;
+          width: 375px;
+        }
+        @media (min-width: $super-big-screen) {
+          font-size: 8rem;
         }
       }
-      &__big-title {
-        text-shadow: $shadow-white;
-        font-size: 3rem;
-        font-family: Russo One;
-        font-weight: $overweight;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        color: $text-color;
-
-        @media (min-width: $big-tablet-screen) {
-          font-size: 5rem;
-        }
+      &__subtitle {
+        font-weight: $skinny;
+        font-size: 1.5rem;
+        // position: absolute;
+        // bottom: 7rem;
+        // left: 0;
 
         @media (min-width: $laptop-screen) {
-          font-size: 6rem;
-        }
-      }
-
-      &__circle {
-        position: relative;
-        background-color: $base-color;
-        border-radius: 50%;
-
-        &::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          margin: auto;
-          background-image: url('@/assets/icons/arrow.svg');
-          width: 20px;
-          height: 20px;
-          transform: rotate(90deg);
+          font-size: 2rem;
+          //   bottom: 4rem;
+          //   left: 4rem;
         }
 
-        & p {
-          position: relative;
-          width: 100px;
-          height: 100px;
-          // color: $text-color;
-          color: $text-color;
-          text-transform: uppercase;
-          animation: circle 8s linear infinite;
-        }
-
-        @keyframes circle {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
+        @media (min-width: $super-big-screen) {
+          font-size: 3rem;
         }
       }
     }
+  }
+
+  &__pagination {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    // margin-top: 120px;
+    // margin-right: 1rem;
+
+    @media (min-width: $big-tablet-screen) {
+      //   margin: 0;
+    }
+
+    &__dot {
+      opacity: 0.3;
+      background-color: $text-color;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      outline: rgba(51, 51, 51, 0.4) solid 1px;
+      outline-offset: 0rem;
+      transition: outline-offset 0.4s, width 0.4s, height 0.4s, opacity 0.4s;
+
+      &:hover {
+        cursor: pointer;
+        outline-offset: 1rem;
+      }
+    }
+  }
+}
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity 0.4s;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+}
+.slide-fade-enter-to,
+.slide-fade-leave-from {
+  opacity: 1;
+}
+
+.slide-fade-leave-active {
+  display: none;
+}
+
+//SLIDE TXT
+.slide-txt-enter-active,
+.slide-txt-leave-active {
+  transition: opacity 0.4s, transform 0.4s;
+}
+.slide-txt-enter-from,
+.slide-txt-leave-to {
+  opacity: 0;
+}
+.slide-txt-enter-to,
+.slide-txt-leave-from {
+  opacity: 1;
+}
+
+.slide-txt-enter-to,
+.slide-txt-leave-from {
+  transform: translateY(0);
+}
+.slide-txt-enter-from,
+.slide-txt-leave-to {
+  transform: translateY(1rem);
+}
+
+.slide-txt-leave-active {
+  display: none;
+}
+
+.active {
+  opacity: 1;
+  outline-offset: 1rem;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 </style>

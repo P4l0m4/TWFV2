@@ -15,7 +15,7 @@ let year = new Date().getFullYear()
         >Création de site e-commerce</nuxt-link
       >
       <nuxt-link to="/a-propos" class="footer__document">Contact</nuxt-link>
-      <a href="@/assets/documents/mentions-legales.pdf" download class="footer__document">Mentions légales</a>
+      <a href="documents/mentions-legales.pdf" class="footer__document" target="_blank">Mentions légales</a>
       <nuxt-link to="/a-propos" class="footer__document">CGV</nuxt-link>
     </div>
 

@@ -23,8 +23,8 @@ useHead(() => {
 
 <template>
   <div class="index">
-    <HomeIndexSlider />
-
+    <!-- <HomeIndexSlider /> -->
+    <HomeIndexHeadline />
     <div class="index__grey">
       <AuditPopUp />
     </div>
