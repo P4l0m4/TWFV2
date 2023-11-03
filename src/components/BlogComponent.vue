@@ -11,7 +11,7 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
 <style scoped lang="scss">
 .blog {
   display: flex;
-  width: 100vw;
+  width: 100%;
   padding: 0 0 0 1rem;
   overflow: scroll;
   flex-direction: column;

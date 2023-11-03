@@ -233,7 +233,7 @@ useHead(() => {
     gap: 2rem;
     padding: 0 0 0 1rem;
     align-items: center;
-    max-width: 100vw;
+    max-width: 100%;
 
     @media (min-width: $big-tablet-screen) {
       padding: 0;
@@ -254,7 +254,7 @@ useHead(() => {
       gap: 0.5rem;
       overflow: scroll;
       width: 100%;
-      max-width: 100vw;
+      max-width: 100%;
 
       &__tag {
         white-space: nowrap;

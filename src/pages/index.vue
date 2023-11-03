@@ -50,7 +50,7 @@ useHead(() => {
     display: flex;
     flex-direction: column;
     background-color: $text-color;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     align-items: center;
     gap: 1rem;

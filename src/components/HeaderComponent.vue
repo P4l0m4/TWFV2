@@ -10,7 +10,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
+  max-width: 2400px;
   position: fixed;
   top: 0;
   z-index: 5;
