@@ -1,7 +1,32 @@
+// @font-face {
+//   font-family: 'Custom';
+//   src: url(@/assets/fonts/Figtree.ttf) format('truetype');
+//   font-display: swap;
+
+// }
 @font-face {
   font-family: 'Custom';
-  src: url(@/assets/fonts/Figtree.ttf) format('truetype');
+  src: url(@/assets/fonts/figtree/Figtree-Regular.ttf) format('truetype');
   font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Custom';
+  src: url(@/assets/fonts/figtree/Figtree-Medium.ttf) format('truetype');
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Custom';
+  src: url(@/assets/fonts/figtree/Figtree-SemiBold.ttf) format('truetype');
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Custom';
+  src: url(@/assets/fonts/figtree/Figtree-Black.ttf) format('truetype');
+  font-display: swap;
+  font-weight: 900;
 }
 
 @font-face {
