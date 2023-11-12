@@ -102,6 +102,7 @@ const elements = story.value.content.elements
       &__title {
         @media (min-width: $big-tablet-screen) {
           font-size: 1.25rem;
+          font-weight: $thick;
         }
       }
       &__description {
