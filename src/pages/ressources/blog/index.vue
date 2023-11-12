@@ -50,7 +50,7 @@ useHead(() => {
 })
 </script>
 <template>
-  <div class="container">
+  <div class="blog-container">
     <div class="blog">
       <h1 class="blog__title">Le blog Tekila Web Factory</h1>
 
@@ -93,30 +93,34 @@ useHead(() => {
 </template>
 
 <style scoped lang="scss">
-.container {
+.blog-container {
   display: flex;
-  gap: 4rem;
-  padding: 0 1rem;
+  gap: 2rem;
+  padding: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 .blog {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  width: clamp(343px, 100%, 800px);
+  gap: 2rem;
+  width: clamp(343px, 100%, 900px);
   align-items: center;
 
   @media (min-width: $big-tablet-screen) {
     align-items: inherit;
+    gap: 4rem;
   }
 
   &__title {
-    font-weight: $overweight !important;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: $overweight;
+    text-align: center;
+    text-wrap: balance;
 
     @media (min-width: $big-tablet-screen) {
-      font-size: 2rem;
+      font-size: 3rem;
+      text-align: left;
     }
   }
 
@@ -126,7 +130,7 @@ useHead(() => {
     width: 100%;
     gap: 2rem;
     align-items: center;
-    max-width: 450px;
+    // max-width: 450px;
 
     @media (min-width: $big-tablet-screen) {
       align-items: flex-start;
@@ -231,12 +235,10 @@ useHead(() => {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 0 0 0 1rem;
     align-items: center;
     max-width: 100%;
 
     @media (min-width: $big-tablet-screen) {
-      padding: 0;
       align-items: flex-start;
     }
 

@@ -74,46 +74,6 @@ useHead(() => {
       padding: 4rem;
     }
 
-    // &__img {
-    //   z-index: 1;
-    //   width: 108px;
-    //   height: 200px;
-    //   background-size: cover;
-    //   background-image: url('@/assets/images/sprite-sans-mains.png');
-    //   animation: walk 0.8s steps(3) infinite;
-    //   opacity: 0.8;
-
-    //   @keyframes walk {
-    //     0% {
-    //       background-position: 0 0;
-    //     }
-    //     100% {
-    //       background-position: -334px 0;
-    //     }
-    //   }
-    // }
-
-    // &__floor {
-    //   opacity: 0.6;
-    //   position: absolute;
-    //   bottom: 0;
-    //   left: 0;
-    //   width: 100vw;
-    //   height: 400px;
-    //   background-size: cover;
-    //   background-image: url('@/assets/images/street-sprite.png');
-    //   animation: street 18s infinite linear;
-
-    //   @keyframes street {
-    //     0% {
-    //       background-position: 0 0;
-    //     }
-    //     100% {
-    //       background-position: -2416px 0;
-    //     }
-    //   }
-    // }
-
     &__txt {
       z-index: 2;
       display: flex;

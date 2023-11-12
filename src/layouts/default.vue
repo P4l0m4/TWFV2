@@ -69,7 +69,7 @@ useJsonld(
 .container {
   display: flex;
   flex-direction: column;
-  padding: 8rem 0 0 0;
+  padding: 3.5rem 0 0 0;
   gap: 2rem;
   align-items: center;
   margin: auto;

@@ -26,7 +26,7 @@ useHead(() => {
 </script>
 <template>
   <section class="prestations">
-    <h1 class="prestations__title">Nos prestations sur-mesure en fonction de vos besoins</h1>
+    <h1 class="prestations__title">Nos prestations sur-mesure</h1>
 
     <div class="prestations__cards">
       <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-e-commerce">
@@ -74,12 +74,13 @@ useHead(() => {
   align-items: center;
 
   &__title {
-    font-size: 1.5rem;
     text-align: center;
     padding: 0 1rem;
+    font-size: 2rem;
+    font-weight: $overweight;
 
     @media (min-width: $big-tablet-screen) {
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
 
@@ -127,6 +128,7 @@ useHead(() => {
 
         &__title {
           font-size: 1.4rem;
+          font-weight: $thick;
         }
       }
     }

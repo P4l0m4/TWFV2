@@ -157,12 +157,14 @@ useJsonld(() => ({
   align-items: center;
   padding: 0 1rem;
   gap: 3rem;
-  width: clamp(343px, 100%, 1200px);
+  // width: clamp(343px, 100%, 90vw);
+  width: 100%;
   margin: auto;
   position: relative;
 
   @media (min-width: $big-tablet-screen) {
     gap: 6rem;
+    padding: 0 4rem;
   }
 
   &__header {
@@ -237,6 +239,7 @@ useJsonld(() => ({
       width: 100%;
       height: 300px;
       object-fit: cover;
+      object-position: center;
       border-radius: 0;
       border-radius: $radius;
 
@@ -336,20 +339,17 @@ useJsonld(() => ({
       gap: 0.75rem;
       width: 100%;
       max-height: 200px;
-      overflow: scroll;
-      position: fixed;
-      inset: 0;
       background-color: $primary-color;
       border-radius: 0 0 $radius $radius;
-      justify-content: center;
       height: fit-content;
-      padding: 4.5rem 1rem 1rem 1rem;
+      padding: 1rem;
       box-shadow: $shadow;
 
       @media (min-width: $big-tablet-screen) {
         max-height: inherit;
         overflow: inherit;
         width: 400px;
+        inset: 0;
         position: sticky;
         gap: 2rem;
         padding: 6rem 2rem;
@@ -364,11 +364,8 @@ useJsonld(() => ({
       &__title {
         font-weight: $overweight;
         font-size: 1.25rem;
-        text-align: center;
-        display: none;
-        @media (min-width: $tablet-screen) {
-          display: block;
-        }
+        // text-align: center;
+
         @media (min-width: $big-tablet-screen) {
           font-size: 1.5rem;
           text-align: left;
@@ -388,10 +385,7 @@ useJsonld(() => ({
 
         &__element {
           list-style: none;
-          font-size: 0.75rem;
-          @media (min-width: $big-tablet-screen) {
-            font-size: 1rem;
-          }
+          font-size: 1rem;
         }
       }
     }

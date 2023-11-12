@@ -27,7 +27,7 @@ useHead(() => {
 </script>
 <template>
   <div class="ressources">
-    <h1 class="ressources__title">Nos ressources à disposition pour vous aider</h1>
+    <h1 class="ressources__title">Nos ressources à votre disposition</h1>
 
     <div class="ressources__cards">
       <NuxtLink class="ressources__cards__card" to="/ressources/blog">
@@ -71,12 +71,15 @@ useHead(() => {
   align-items: center;
 
   &__title {
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
     text-align: center;
     padding: 0 1rem;
 
+    font-size: 2rem;
+    font-weight: $overweight;
+
     @media (min-width: $big-tablet-screen) {
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
 
@@ -124,6 +127,7 @@ useHead(() => {
 
         &__title {
           font-size: 1.4rem;
+          font-weight: $thick;
         }
       }
 

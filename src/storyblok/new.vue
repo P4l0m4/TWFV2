@@ -22,12 +22,12 @@ const date = dayjs(props.blok.date.toString()).locale('fr').format('DD MMMM YYYY
   gap: 1rem;
   flex-direction: column;
 
-  @media (min-width: $big-tablet-screen) {
-    width: 343px;
-  }
-  @media (min-width: $laptop-screen) {
-    width: clamp(343px, 100%, 460px);
-  }
+  // @media (min-width: $big-tablet-screen) {
+  //   width: 343px;
+  // }
+  // @media (min-width: $laptop-screen) {
+  //   width: clamp(343px, 100%, 460px);
+  // }
 
   &__image {
     height: 200px;
@@ -38,20 +38,20 @@ const date = dayjs(props.blok.date.toString()).locale('fr').format('DD MMMM YYYY
 
   &__title {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: $thick;
     width: 100%;
   }
 
-  &__description {
-    font-weight: $skinny;
-    color: $text-color;
-    width: 320px;
+  // &__description {
+  //   font-weight: $skinny;
+  //   color: $text-color;
+  //   // width: 320px;
 
-    @media (min-width: $tablet-screen) {
-      width: 343px;
-      min-width: 343px;
-    }
-  }
+  //   @media (min-width: $tablet-screen) {
+  //     // width: 343px;
+  //     // min-width: 343px;
+  //   }
+  // }
 
   &__date {
     display: flex;

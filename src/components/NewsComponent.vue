@@ -9,7 +9,7 @@ const story = await useAsyncStoryblok('news', { version: 'published' })
 </template>
 <style scoped lang="scss">
 .news-component {
-  max-width: 450px;
+  // max-width: 450px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -24,6 +24,10 @@ const story = await useAsyncStoryblok('news', { version: 'published' })
 
   @media (min-width: $big-tablet-screen) {
     max-width: inherit;
+    flex-wrap: wrap;
+    width: clamp(343px, 100%, 900px);
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   @media (min-width: 1271px) {
@@ -37,10 +41,7 @@ const story = await useAsyncStoryblok('news', { version: 'published' })
     text-align: center;
 
     @media (min-width: $big-tablet-screen) {
-      padding: 0 1rem;
-    }
-
-    @media (min-width: $laptop-screen) {
+      // padding: 0 1rem;
       text-align: left;
     }
   }
