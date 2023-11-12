@@ -49,7 +49,7 @@ function changeSolutionLogo(name) {
 <template>
   <div class="e-commerce">
     <div class="e-commerce__headlines">
-      <h1 class="e-commerce__headlines__title">Nous créons votre site e-commerce sur-mesure</h1>
+      <h1 class="e-commerce__headlines__title">Nous créons votre site e-commerce</h1>
       <h2 class="e-commerce__headlines__subtitle">
         Pour que votre offre ait la visibilité et le succès qu'elle mérite
       </h2>
@@ -202,6 +202,7 @@ function changeSolutionLogo(name) {
   flex-direction: column;
   gap: 6rem;
   align-items: center;
+  padding: 1rem 0;
 
   &__headlines {
     display: flex;
@@ -211,17 +212,21 @@ function changeSolutionLogo(name) {
     gap: 1rem;
 
     &__title {
-      font-size: 1.5rem;
+      // font-size: 1.5rem;
       text-align: center;
+      font-size: 2rem;
+      font-weight: $overweight;
+      text-wrap: balance;
 
       @media (min-width: $big-tablet-screen) {
-        font-size: 2rem;
+        font-size: 3rem;
       }
     }
     &__subtitle {
       text-align: center;
       font-size: 1rem;
       font-weight: $skinny;
+      text-wrap: balance;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 1.25rem;
@@ -340,11 +345,14 @@ function changeSolutionLogo(name) {
     &__argument {
       display: flex;
       width: clamp(280px, 100%, 440px);
-      gap: 1rem;
       background-color: $primary-color;
       border-radius: $radius;
       padding: 1rem;
       box-shadow: $shadow;
+
+      @media (min-width: $big-tablet-screen) {
+        gap: 1rem;
+      }
 
       &__illustration {
         width: fit-content;
@@ -358,10 +366,19 @@ function changeSolutionLogo(name) {
           width: 24px;
           height: 24px;
           margin-bottom: 0.25rem;
+
+          @media (min-width: $big-tablet-screen) {
+            width: 50px;
+            height: 50px;
+          }
         }
         &__data {
           font-weight: $overweight;
-          font-size: 1.25rem;
+          font-size: 1.5rem;
+
+          @media (min-width: $big-tablet-screen) {
+            font-size: 2rem;
+          }
         }
         &__txt {
           font-weight: $skinny;
@@ -375,10 +392,16 @@ function changeSolutionLogo(name) {
         gap: 0.25rem;
 
         &__description {
+          font-size: 1rem;
           font-weight: $skinny;
+          text-wrap: balance;
+
+          @media (min-width: $big-tablet-screen) {
+            font-size: 1.25rem;
+          }
 
           &:nth-of-type(1) {
-            font-weight: 700;
+            font-weight: $overweight;
           }
         }
       }
@@ -396,14 +419,15 @@ function changeSolutionLogo(name) {
 
     &__x3 {
       color: $primary-color;
-      font-size: 3rem;
+      font-size: 6rem;
     }
     &__txt {
       color: $primary-color-faded;
       font-weight: $skinny;
+      font-size: 1.5rem;
 
       &__bold {
-        font-weight: 400;
+        font-weight: $thick;
         color: $primary-color;
       }
     }
@@ -436,16 +460,17 @@ function changeSolutionLogo(name) {
       }
 
       &__title {
-        font-size: 1.25rem;
-        font-weight: $overweight;
         text-align: center;
+        font-size: 2rem;
+        font-weight: $overweight;
 
         @media (min-width: $big-tablet-screen) {
-          font-size: 1.5rem;
+          font-size: 3rem;
         }
       }
       &__subtitle {
         text-align: center;
+        text-wrap: balance;
       }
       &__buttons {
         display: flex;
