@@ -69,6 +69,7 @@ useHead(() => {
   flex-direction: column;
   gap: 4rem;
   align-items: center;
+  padding: 1rem 0;
 
   &__title {
     // font-size: 1.5rem;

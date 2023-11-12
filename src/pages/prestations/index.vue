@@ -72,12 +72,14 @@ useHead(() => {
   flex-direction: column;
   gap: 4rem;
   align-items: center;
+  padding: 1rem 0;
 
   &__title {
     text-align: center;
     padding: 0 1rem;
     font-size: 2rem;
     font-weight: $overweight;
+    text-wrap: balance;
 
     @media (min-width: $big-tablet-screen) {
       font-size: 3rem;
