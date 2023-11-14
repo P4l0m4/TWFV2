@@ -362,7 +362,7 @@ useJsonld(() => ({
       }
 
       &__title {
-        font-weight: $overweight;
+        font-weight: $thick;
         font-size: 1.25rem;
         // text-align: center;
 
@@ -418,7 +418,7 @@ useJsonld(() => ({
         }
 
         &__title {
-          font-weight: $overweight;
+          font-weight: $thick;
           font-size: 1.25rem;
 
           @media (min-width: $big-tablet-screen) {
@@ -468,7 +468,7 @@ useJsonld(() => ({
                 font-family: 'Custom';
                 font-weight: $skinny;
                 & :deep(a) {
-                  color: $secondary-color-faded;
+                  color: $text-color;
                   text-decoration: line-through;
                   text-decoration-color: $secondary-color-faded;
                   text-decoration-thickness: 8px;
@@ -478,6 +478,9 @@ useJsonld(() => ({
                 }
                 & :deep(li) {
                   list-style: square inside;
+                }
+                & :deep(b) {
+                  font-weight: $thick;
                 }
               }
             }

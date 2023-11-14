@@ -98,7 +98,7 @@ iframe {
 
     &__title {
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: $thick;
       max-width: 500px;
       text-align: center;
 

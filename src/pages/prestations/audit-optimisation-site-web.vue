@@ -59,7 +59,28 @@
     </div>
     <AuditPopUp />
   </section>
-  <section class="measures"></section>
+  <!-- <section class="measures">
+    <h2 class="measures__title">Ce que nous mesurons</h2>
+    <h3 class="measures__subtitle">Pour bien auditer votre site web</h3>
+    <div class="measures__measure"> -->
+  <!-- <div class="measures__measure__images">
+        <img
+          class="measures__measure__images__background"
+          src="@/assets/images/ux.webp"
+          alt="illustration ux fond"
+        /><img class="measures__measure__images__img" src="@/assets/images/ux.webp" alt="illustration ux" />
+      </div> -->
+  <!-- <AuditMountainChart />
+      <div class="measures__measure__txt">
+        <h4 class="measures__measure__txt__title">Title of the example</h4>
+        <p class="measures__measure__txt__description">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, impedit quidem est enim incidunt blanditiis
+          amet nostrum totam. Molestiae quibusdam eligendi, quas officia minus similique? Est, voluptate harum. Rem,
+          dicta.
+        </p>
+      </div>
+    </div>
+  </section> -->
 </template>
 <style scoped lang="scss">
 .things-to-optimize {
@@ -68,6 +89,9 @@
   flex-direction: column;
   align-items: center;
   gap: 4rem;
+  @media (min-width: $big-tablet-screen) {
+    padding: 1rem 0;
+  }
 
   &__proposition {
     display: flex;
@@ -158,10 +182,10 @@
         background-position: center;
 
         &:nth-of-type(1) {
-          background-image: url('@/assets/images/ux.jpg');
+          background-image: url('@/assets/images/ux.webp');
         }
         &:nth-of-type(2) {
-          background-image: url('@/assets/images/seo.jpg');
+          background-image: url('@/assets/images/seo.webp');
         }
 
         &__headlines {
@@ -271,4 +295,77 @@
     }
   }
 }
+// .measures {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: 2rem;
+
+//   &__title {
+//     font-size: 2rem;
+//     font-weight: $overweight;
+
+//     @media (min-width: $big-tablet-screen) {
+//       font-size: 3rem;
+//     }
+//   }
+
+//   &__subtitle {
+//     font-size: 1rem;
+//     font-weight: $skinny;
+//     margin-top: -1rem;
+
+//     @media (min-width: $big-tablet-screen) {
+//       font-size: 1.25rem;
+//     }
+//   }
+//   &__measure {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 2rem;
+//     width: 100%;
+//     flex-wrap: wrap;
+
+//     &__images {
+//       width: 343px;
+//       height: 343px;
+//       position: relative;
+
+//       &__background {
+//         position: absolute;
+//         top: 1rem;
+//         right: -1rem;
+//         width: 100%;
+//         height: 100%;
+//         filter: blur(10px);
+//         opacity: 0.4;
+//         border-radius: $radius;
+//       }
+//       &__img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         border-radius: $radius;
+//       }
+//     }
+
+//     &__txt {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 1rem;
+//       max-width: 400px;
+
+//       &__title {
+//         font-size: 1.25rem;
+//         font-weight: $thick;
+//       }
+
+//       // &__description {
+//       //   font-size: 1rem;
+//       //   font-weight: $skinny;
+//       // }
+//     }
+//   }
+// }
 </style>

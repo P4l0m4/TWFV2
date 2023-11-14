@@ -84,6 +84,13 @@ useJsonld(
   & main {
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (min-width: $big-tablet-screen) {
+      gap: 4rem;
+    }
   }
 }
 </style>
