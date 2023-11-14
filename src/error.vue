@@ -29,6 +29,15 @@ defineProps(['error'])
     height: 100vh;
     text-align: center;
 
+    &__h1 {
+      font-size: 2rem;
+      font-weight: $overweight;
+
+      @media (min-width: $big-tablet-screen) {
+        font-size: 3rem;
+      }
+    }
+
     & h2 {
       font-weight: $skinny;
       font-size: 1rem;
