@@ -6,7 +6,7 @@ const elements = story.value.content.elements
 
 <template>
   <section class="x">
-    <h2 class="x__title">Notre portfolio</h2>
+    <h2 class="x__title">Portfolio</h2>
     <h3 class="x__subtitle">Des projets, des sites internet, du design Web</h3>
 
     <div class="x__slidable">
@@ -108,7 +108,6 @@ const elements = story.value.content.elements
       &__description {
         font-weight: $skinny;
         width: 100%;
-        text-overflow: ellipsis;
       }
     }
   }

@@ -11,15 +11,16 @@ $text-color: #333333;
 
 $text-color-faded: rgba(51, 51, 51, 0.8);
 $primary-color-faded: rgba(247, 247, 247, 0.8);
-$secondary-color: #3e2a1a;
-$secondary-color-faded: rgba(62, 42, 26, 0.6);
+$secondary-color: #1eb2bc;
+$secondary-color-faded: rgba($secondary-color, 0.4);
 
 //BORDERS
 $radius: 8px;
 
 //SHADOWS
 $shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);
-$shadow-white: 0px 0px 10px #f7f7f72c;
+$shadow-primary: 0px 0px 10px rgba($primary-color, 0.2);
+$shadow-secondary: 0px 0px 10px rgba($secondary-color, 0.2);
 
 // TYPO
 $line-height: 1.15;

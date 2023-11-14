@@ -439,9 +439,9 @@ useJsonld(() => ({
           &__paragraphs {
             &__txt {
               & :deep(a) {
-                color: $secondary-color;
+                color: $secondary-color-faded;
                 text-decoration: line-through;
-                text-decoration-color: rgba(43, 221, 234, 0.4);
+                text-decoration-color: $secondary-color-faded;
                 text-decoration-thickness: 8px;
               }
             }
@@ -468,9 +468,9 @@ useJsonld(() => ({
                 font-family: 'Custom';
                 font-weight: $skinny;
                 & :deep(a) {
-                  color: $secondary-color;
+                  color: $secondary-color-faded;
                   text-decoration: line-through;
-                  text-decoration-color: rgba(43, 221, 234, 0.4);
+                  text-decoration-color: $secondary-color-faded;
                   text-decoration-thickness: 8px;
                 }
                 & :deep(ul) {

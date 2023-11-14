@@ -30,7 +30,7 @@ useHead(() => {
     </div>
     <HomeIndexStory />
     <HomeSticksAnimation />
-
+    <HomePricingComponent />
     <BlogComponent />
   </div>
   <JsonldBreadcrumb :links="breadcrumbs" />
