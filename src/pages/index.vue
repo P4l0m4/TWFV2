@@ -8,13 +8,12 @@ const breadcrumbs = [
 
 useHead(() => {
   return {
-    title: 'Accueil | Tekila Web Factory',
+    title: 'Tekila Web Factory, createur de sites web',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content:
-          'Développement et optimisation de site web. Référencez et augmentez la performance de votre site internet',
+        content: 'Createur de sites web bien référencés. Développez et augmentez la performance de votre site internet',
       },
     ],
   }
