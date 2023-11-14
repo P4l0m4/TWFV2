@@ -217,11 +217,8 @@
             />Rapport détaillé des améliorations
           </li>
         </ul>
-        <a
-          class="pricing__cards__card__button button-primary"
-          target="_blank"
-          href="https://square.link/u/jHK8RKcm?src=embed"
-          >Demander un devis</a
+        <a class="pricing__cards__card__button button-primary" target="_blank" href="https://square.link/u/rLInhQe1"
+          >Commander maintenant</a
         >
       </div>
     </div>

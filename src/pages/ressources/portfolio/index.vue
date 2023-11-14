@@ -84,7 +84,7 @@ const breadcrumbs = [
       }
     }
     & h2 {
-      font-weight: $skinny-thick;
+      font-weight: $skinny;
       font-size: 1.25rem;
       text-align: center;
 
