@@ -62,7 +62,7 @@
 </template>
 <style scoped lang="scss">
 .things-to-optimize {
-  padding: 0 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +183,7 @@
             font-size: 0.75rem;
             text-shadow: $shadow;
             border-radius: $radius;
-            font-weight: $thin;
+            font-weight: $skinny;
 
             @media (min-width: $big-tablet-screen) {
               font-size: 1rem;
@@ -228,7 +228,7 @@
             gap: 0.75rem;
             align-items: center;
             cursor: pointer;
-            max-width: 120px;
+            max-width: 150px;
             height: 40px;
             overflow: hidden;
             transition: max-width 1s ease;
@@ -239,7 +239,7 @@
 
             & span {
               font-weight: $skinny;
-              font-size: 0.75rem;
+              font-size: 1rem;
               white-space: nowrap;
             }
             & button {
