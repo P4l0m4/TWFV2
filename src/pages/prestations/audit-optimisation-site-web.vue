@@ -1,7 +1,7 @@
 <template>
   <section class="things-to-optimize">
     <div class="things-to-optimize__explanations">
-      <h2 class="things-to-optimize__explanations__title">Comment savoir si votre site web est un bon site web ?</h2>
+      <h2 class="things-to-optimize__explanations__title">Votre site web est-il un bon site web ?</h2>
       <span class="things-to-optimize__explanations__subtitle">Deux grands critères à optimiser absolument:</span>
       <div class="things-to-optimize__explanations__criterias">
         <div class="things-to-optimize__explanations__criterias__card">
@@ -112,11 +112,12 @@
     gap: 1rem;
 
     &__title {
-      font-size: 1.25rem;
       text-align: center;
+      font-size: 2rem;
       font-weight: $overweight;
+
       @media (min-width: $big-tablet-screen) {
-        font-size: 1.5rem;
+        font-size: 3rem;
       }
     }
     &__subtitle {
@@ -172,7 +173,7 @@
 
           &__title {
             font-size: 1rem;
-            font-weight: $overweight;
+            font-weight: $thick;
             text-shadow: $shadow;
             @media (min-width: $big-tablet-screen) {
               font-size: 1.25rem;
@@ -182,6 +183,7 @@
             font-size: 0.75rem;
             text-shadow: $shadow;
             border-radius: $radius;
+            font-weight: $thin;
 
             @media (min-width: $big-tablet-screen) {
               font-size: 1rem;
