@@ -78,6 +78,10 @@ iframe {
       text-wrap: balance;
       font-size: 1.25rem;
     }
+
+    & iframe {
+      max-height: 1000px;
+    }
   }
   &__headlines {
     display: flex;

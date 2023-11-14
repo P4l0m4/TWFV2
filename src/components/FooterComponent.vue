@@ -43,7 +43,7 @@ let year = new Date().getFullYear()
   justify-content: center;
   align-items: center;
   width: 100%;
-  position: relative;
+  max-width: 2400px;
   padding: 2rem 1rem 4rem 1rem;
   font-size: 0.75rem;
   flex-wrap: wrap;

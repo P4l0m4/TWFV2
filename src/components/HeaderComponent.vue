@@ -14,6 +14,7 @@ header {
   max-width: 2400px;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 5;
 }
 </style>

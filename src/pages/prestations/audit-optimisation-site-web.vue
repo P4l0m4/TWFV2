@@ -59,6 +59,7 @@
     </div>
     <AuditPopUp />
   </section>
+  <section class="measures"></section>
 </template>
 <style scoped lang="scss">
 .things-to-optimize {
