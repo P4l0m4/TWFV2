@@ -123,7 +123,7 @@
     &__subtitle {
       text-align: center;
       font-size: 1rem;
-      font-weight: $skinny-thick;
+      font-weight: $skinny;
       @media (min-width: $big-tablet-screen) {
         font-size: 1.25rem;
       }
@@ -172,22 +172,15 @@
           color: $primary-color;
 
           &__title {
-            font-size: 1rem;
+            font-size: 1.25rem;
             font-weight: $thick;
             text-shadow: $shadow;
-            @media (min-width: $big-tablet-screen) {
-              font-size: 1.25rem;
-            }
           }
           &__description {
-            font-size: 0.75rem;
+            font-size: 1rem;
             text-shadow: $shadow;
             border-radius: $radius;
             font-weight: $skinny;
-
-            @media (min-width: $big-tablet-screen) {
-              font-size: 1rem;
-            }
           }
         }
 
