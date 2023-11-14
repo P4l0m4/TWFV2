@@ -1,7 +1,7 @@
 <template>
   <section class="pricing">
     <div class="pricing__headlines">
-      <h2 class="pricing__headlines__title">Pricing</h2>
+      <h2 class="pricing__headlines__title">Tarifs</h2>
       <p class="pricing__headlines__subtitle">Nos offres de base à adapter à vos besoins</p>
     </div>
     <div class="pricing__cards">
