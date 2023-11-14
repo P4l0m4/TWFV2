@@ -2,13 +2,15 @@
   <section class="pricing">
     <div class="pricing__headlines">
       <h2 class="pricing__headlines__title">Pricing</h2>
-      <p class="pricing__headlines__subtitle">Choose the plan that fits your needs</p>
+      <p class="pricing__headlines__subtitle">Nos offres de base à adapter à vos besoins</p>
     </div>
     <div class="pricing__cards">
       <div class="pricing__cards__card">
         <div class="pricing__cards__card__headlines">
           <h3 class="pricing__cards__card__headlines__title">Site vitrine</h3>
-          <h4 class="pricing__cards__card__headlines__subtitle">Choose the plan that fits your needs</h4>
+          <h4 class="pricing__cards__card__headlines__subtitle">
+            Vous souhaitez développer la présence en ligne de votre entreprise
+          </h4>
         </div>
         <span class="pricing__cards__card__price"
           ><span class="pricing__cards__card__price__from">A partir de</span> 2000 €</span
@@ -26,21 +28,42 @@
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Maquettage
+            />Hébergement inclus
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Développement rapide
+            />5 pages de votre choix
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Lorem ipsum
+            />Maquettage des pages principales
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-dark.svg"
+              alt="icone check"
+            />Optimisation de la performance
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-dark.svg"
+              alt="icone check"
+            />Blog intégré clé en main
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-dark.svg"
+              alt="icone check"
+            />Livraison en 2 semaines max
           </li>
         </ul>
         <a
@@ -52,11 +75,13 @@
       </div>
       <div class="pricing__cards__card">
         <div class="pricing__cards__card__headlines">
-          <h3 class="pricing__cards__card__headlines__title">Site vitrine</h3>
-          <h4 class="pricing__cards__card__headlines__subtitle">Choose the plan that fits your needs</h4>
+          <h3 class="pricing__cards__card__headlines__title">Site E-commerce</h3>
+          <h4 class="pricing__cards__card__headlines__subtitle">
+            Vous souhaitez vendre vos produits ou services sur internet
+          </h4>
         </div>
         <span class="pricing__cards__card__price"
-          ><span class="pricing__cards__card__price__from">A partir de</span> 2000 €</span
+          ><span class="pricing__cards__card__price__from">A partir de</span> 5000 €</span
         >
         <ul class="pricing__cards__card__features">
           <li class="pricing__cards__card__features__feature">
@@ -71,21 +96,57 @@
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-light.svg"
               alt="icone check"
-            />Maquettage
+            />Hébergement inclus
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-light.svg"
               alt="icone check"
-            />Développement rapide
+            />Récolte des avis clients
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-light.svg"
               alt="icone check"
-            />Lorem ipsum
+            />Livraison en 2 semaines max
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-light.svg"
+              alt="icone check"
+            />Maquettage des pages principales
+          </li>
+
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-light.svg"
+              alt="icone check"
+            />Ajout des 20 premiers produits
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-light.svg"
+              alt="icone check"
+            />Gestion des produits et stocks
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-light.svg"
+              alt="icone check"
+            />Gestion des commandes
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-light.svg"
+              alt="icone check"
+            />Promotions et codes de réduction
           </li>
         </ul>
         <a
@@ -97,11 +158,13 @@
       </div>
       <div class="pricing__cards__card">
         <div class="pricing__cards__card__headlines">
-          <h3 class="pricing__cards__card__headlines__title">Site vitrine</h3>
-          <h4 class="pricing__cards__card__headlines__subtitle">Choose the plan that fits your needs</h4>
+          <h3 class="pricing__cards__card__headlines__title">SEO & performance</h3>
+          <h4 class="pricing__cards__card__headlines__subtitle">
+            Vous possédez déjà un site internet que vous souhaitez améliorer
+          </h4>
         </div>
         <span class="pricing__cards__card__price"
-          ><span class="pricing__cards__card__price__from">A partir de</span> 2000 €</span
+          ><span class="pricing__cards__card__price__from">A partir de</span> 300 €</span
         >
         <ul class="pricing__cards__card__features">
           <li class="pricing__cards__card__features__feature">
@@ -109,28 +172,49 @@
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Optimisation SEO
+            />Audit SEO initial
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Maquettage
+            />Livret de préconisations
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Développement rapide
+            />Audit de performance initial
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Lorem ipsum
+            />SEO (technique & contenu)
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-dark.svg"
+              alt="icone check"
+            />Amélioration de la rapidité du site
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-dark.svg"
+              alt="icone check"
+            />Suivi statistique (3 mois)
+          </li>
+          <li class="pricing__cards__card__features__feature">
+            <img
+              class="pricing__cards__card__features__feature__check"
+              src="@/assets/icons/check-circle-dark.svg"
+              alt="icone check"
+            />Rapport détaillé des améliorations
           </li>
         </ul>
         <a
@@ -196,6 +280,7 @@
       border-radius: $radius;
       background-color: $primary-color;
       width: 100%;
+      max-width: 360px;
 
       &:nth-of-type(2) {
         background-color: $secondary-color;
