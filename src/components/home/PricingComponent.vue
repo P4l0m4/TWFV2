@@ -5,7 +5,11 @@
       <p class="pricing__headlines__subtitle">Nos offres de base à adapter à vos besoins</p>
     </div>
     <div class="pricing__cards">
-      <div class="pricing__cards__card">
+      <NuxtLink
+        class="pricing__cards__card scale-on-hover"
+        target="_blank"
+        to="https://square.link/u/jHK8RKcm?src=embed"
+      >
         <div class="pricing__cards__card__headlines">
           <h3 class="pricing__cards__card__headlines__title">Site vitrine</h3>
           <h4 class="pricing__cards__card__headlines__subtitle">
@@ -66,14 +70,13 @@
             />Livraison en 2 semaines max
           </li>
         </ul>
-        <a
-          class="pricing__cards__card__button button-primary"
-          target="_blank"
-          href="https://square.link/u/jHK8RKcm?src=embed"
-          >Demander un devis</a
-        >
-      </div>
-      <div class="pricing__cards__card">
+        <button class="pricing__cards__card__button button-primary">Demander un devis</button>
+      </NuxtLink>
+      <NuxtLink
+        class="pricing__cards__card scale-on-hover"
+        target="_blank"
+        to="https://square.link/u/jHK8RKcm?src=embed"
+      >
         <div class="pricing__cards__card__headlines">
           <h3 class="pricing__cards__card__headlines__title">Site E-commerce</h3>
           <h4 class="pricing__cards__card__headlines__subtitle">
@@ -149,14 +152,14 @@
             />Promotions et codes de réduction
           </li>
         </ul>
-        <a
-          class="pricing__cards__card__button button-primary blue"
-          target="_blank"
-          href="https://square.link/u/jHK8RKcm?src=embed"
-          >Demander un devis</a
-        >
-      </div>
-      <div class="pricing__cards__card">
+        <button class="pricing__cards__card__button button-primary blue">Demander un devis</button>
+      </NuxtLink>
+      <NuxtLink
+        class="pricing__cards__card scale-on-hover"
+        target="_blank"
+        to="https://square.link/u/rLInhQe1"
+        aria-label="commander une optimisation seo et performance"
+      >
         <div class="pricing__cards__card__headlines">
           <h3 class="pricing__cards__card__headlines__title">SEO & performance</h3>
           <h4 class="pricing__cards__card__headlines__subtitle">
@@ -217,10 +220,8 @@
             />Rapport détaillé des améliorations
           </li>
         </ul>
-        <a class="pricing__cards__card__button button-primary" target="_blank" href="https://square.link/u/rLInhQe1"
-          >Commander maintenant</a
-        >
-      </div>
+        <button class="pricing__cards__card__button button-primary">Commander maintenant</button>
+      </NuxtLink>
     </div>
   </section>
 </template>
