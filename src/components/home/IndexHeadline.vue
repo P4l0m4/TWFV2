@@ -122,6 +122,7 @@ onMounted(() => {
         height: 82svh;
         width: calc(82svh * 1.5);
         margin-left: 0;
+        max-width: 800px;
       }
     }
 
