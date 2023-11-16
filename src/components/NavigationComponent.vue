@@ -34,13 +34,13 @@ const isMenuOpen = ref(false)
 
 nav {
   width: 100%;
+  max-width: 2400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background-color: $primary-color;
+
   padding: 0.5rem;
-  box-shadow: $shadow;
   position: relative;
   animation: slide-from-top 1s ease;
 

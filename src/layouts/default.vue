@@ -73,7 +73,6 @@ useJsonld(
   gap: 2rem;
   align-items: center;
   margin: auto;
-  max-width: 2400px;
   @media (min-width: $big-tablet-screen) {
     padding: 5rem 0 0 0;
   }
