@@ -88,6 +88,7 @@ onMounted(() => {
   width: 100%;
   padding: 0 2rem;
   margin-top: -4rem;
+  max-width: 2000px;
 
   @media (min-width: $big-tablet-screen) {
     gap: 2rem;

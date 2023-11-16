@@ -37,6 +37,7 @@ iframe {
   border: none;
   height: 100vh;
   width: 100%;
+  max-width: 2000px;
 }
 
 .story {
