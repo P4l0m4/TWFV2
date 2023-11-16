@@ -35,6 +35,7 @@ const elements = story.value.content.elements
   // background-color: $primary-color;
   padding: 1rem 0 1rem 1rem;
   align-items: center;
+  max-width: 2000px;
 
   @media (min-width: $big-tablet-screen) {
     padding: 2rem 0 1rem 2rem;
