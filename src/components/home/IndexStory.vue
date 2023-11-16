@@ -91,6 +91,9 @@ iframe {
     align-items: center;
     gap: 2rem;
     padding: 0 1rem;
+    background-color: $secondary-color;
+    width: 100%;
+    padding: 2rem;
 
     @media (min-width: $big-tablet-screen) {
       gap: 4rem;
@@ -102,6 +105,7 @@ iframe {
       font-weight: $thick;
       max-width: 500px;
       text-align: center;
+      color: $primary-color;
 
       @media (min-width: $big-tablet-screen) {
         font-size: 3rem;
@@ -121,6 +125,8 @@ iframe {
       &__txt {
         font-weight: $skinny;
         text-align: justify;
+        color: $primary-color;
+        font-size: 1.25rem;
       }
 
       &__buttons {
@@ -136,10 +142,13 @@ iframe {
         & .button-primary {
           font-family: 'Custom';
           font-weight: $skinny;
+          background-color: $primary-color !important;
+          color: $secondary-color !important;
         }
 
         & .button-secondary {
-          color: $text-color !important;
+          color: $primary-color !important;
+          border: $primary-color solid 2px !important;
         }
       }
     }
