@@ -36,58 +36,16 @@ function scroll(coordinates) {
           <p class="x__slider__slidable__space__description">{{ element.subtitle }}</p>
         </NuxtLink>
       </div>
-      <span class="left-arrow" @click="scroll(-300)">
+      <span class="x__slider__slidable__left-arrow" @click="scroll(-300)">
         <img src="@/assets/icons/next.svg" alt="arrow-left" />
       </span>
-      <span class="right-arrow" @click="scroll(300)">
+      <span class="x__slider__slidable__right-arrow" @click="scroll(300)">
         <img src="@/assets/icons/next.svg" alt="arrow-left" />
       </span>
     </div>
   </section>
 </template>
 <style lang="scss" scoped>
-.left-arrow,
-.right-arrow {
-  display: none;
-  @media (min-width: $laptop-screen) {
-    display: flex;
-    justify-content: center;
-    background-color: $primary-color;
-    padding: 1rem;
-    border-radius: 50%;
-    position: absolute;
-    height: fit-content;
-    transition: padding 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
-    opacity: 0.4;
-
-    &:hover {
-      cursor: pointer;
-      padding: 1.2rem;
-    }
-
-    img {
-      width: 20px;
-      height: 20px;
-    }
-  }
-}
-.left-arrow {
-  left: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-.right-arrow {
-  transform: rotate(180deg);
-  right: 2rem;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-
-  @media (min-width: $super-big-screen) {
-    right: 0;
-  }
-}
 .x {
   display: flex;
   gap: 2rem;
@@ -123,8 +81,8 @@ function scroll(coordinates) {
     width: 100%;
 
     &:hover {
-      .left-arrow,
-      .right-arrow {
+      .x__slider__slidable__left-arrow,
+      .x__slider__slidable__right-arrow {
         opacity: 1;
         box-shadow: $shadow;
       }
@@ -135,6 +93,7 @@ function scroll(coordinates) {
       width: 100%;
       overflow-x: scroll;
       gap: 1rem;
+      scroll-behavior: smooth;
 
       @media (min-width: $big-tablet-screen) {
         padding: 1rem;
@@ -182,6 +141,46 @@ function scroll(coordinates) {
         &__description {
           font-weight: $skinny;
           width: 100%;
+        }
+      }
+
+      &__left-arrow,
+      &__right-arrow {
+        display: none;
+        @media (min-width: $laptop-screen) {
+          display: flex;
+          justify-content: center;
+          background-color: $primary-color;
+          padding: 1rem;
+          border-radius: 50%;
+          position: absolute;
+          height: fit-content;
+          transition: padding 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+          opacity: 0.4;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+
+          &:hover {
+            cursor: pointer;
+            padding: 1.2rem;
+          }
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      &__left-arrow {
+        left: 0;
+      }
+      &__right-arrow {
+        transform: rotate(180deg);
+        right: 2rem;
+
+        @media (min-width: $super-big-screen) {
+          right: 0;
         }
       }
     }
