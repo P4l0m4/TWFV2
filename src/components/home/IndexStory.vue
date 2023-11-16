@@ -5,7 +5,7 @@ let isBookAnAuditOpen = ref(false)
 <template>
   <section class="story">
     <div class="story__3d">
-      <span class="story__3d__title">Mettez vos produits en valeur </span
+      <span class="story__3d__title">Mettez vos produits en valeur</span
       ><span class="story__3d__subtitle">Nous modélisons vos produits et les integrons à votre site web</span>
       <iframe
         src="https://my.spline.design/devicemodelcopy-08fe113792dd065c990899b30d6a1f20/"

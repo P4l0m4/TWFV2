@@ -144,8 +144,7 @@ onMounted(() => {
       //   }
 
       &__title {
-        font-family: 'Titles', serif;
-        font-weight: $skinny-thick;
+        font-weight: $thick;
         font-size: 3.5rem;
         letter-spacing: -1px;
         line-height: 50px;
