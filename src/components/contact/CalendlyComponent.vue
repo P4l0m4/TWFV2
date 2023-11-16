@@ -7,5 +7,7 @@
 <style lang="scss" scoped>
 .calendly {
   margin-left: 1rem;
+  background-color: $secondary-color;
+  box-shadow: $shadow-secondary;
 }
 </style>

@@ -98,6 +98,7 @@ iframe {
     @media (min-width: $big-tablet-screen) {
       gap: 4rem;
       flex-direction: row;
+      padding: 4rem;
     }
 
     &__title {

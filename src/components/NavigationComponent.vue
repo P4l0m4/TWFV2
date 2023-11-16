@@ -39,7 +39,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-
   padding: 0.5rem;
   position: relative;
   animation: slide-from-top 1s ease;
