@@ -49,7 +49,7 @@ function changeSolutionLogo(name) {
 <template>
   <div class="e-commerce">
     <div class="e-commerce__headlines">
-      <h1 class="e-commerce__headlines__title">Nous créons votre site e-commerce</h1>
+      <h1 class="e-commerce__headlines__title titles">Nous créons votre site e-commerce</h1>
       <h2 class="e-commerce__headlines__subtitle">
         Pour que votre offre ait la visibilité et le succès qu'elle mérite
       </h2>
@@ -68,7 +68,7 @@ function changeSolutionLogo(name) {
       />
       <div class="e-commerce__first__promise">
         <div class="e-commerce__first__promise__data">
-          <span class="e-commerce__first__promise__data__title">4H</span>
+          <span class="e-commerce__first__promise__data__title titles">4H</span>
           <div class="e-commerce__first__promise__data__description">
             <p>C'est le temps moyen qu'il nous faut</p>
             <p>pour vous livrer votre super site e-commerce</p>
@@ -141,7 +141,7 @@ function changeSolutionLogo(name) {
     </div>
     <div class="e-commerce__graph">
       <div class="e-commerce__graph__headlines">
-        <h3 class="e-commerce__graph__headlines__title">Pourquoi nous ?</h3>
+        <h3 class="e-commerce__graph__headlines__title titles">Pourquoi nous ?</h3>
         <p class="e-commerce__graph__headlines__subtitle">
           Nous savons comment optimiser votre site web pour vous garantir un bon SEO et une expérience utilisateur
           agréable.
@@ -214,13 +214,13 @@ function changeSolutionLogo(name) {
     &__title {
       // font-size: 1.5rem;
       text-align: center;
-      font-size: 2rem;
-      font-weight: $overweight;
+      // font-size: 2rem;
+      // font-weight: $overweight;
       text-wrap: balance;
 
-      @media (min-width: $big-tablet-screen) {
-        font-size: 3rem;
-      }
+      // @media (min-width: $big-tablet-screen) {
+      //   font-size: 3rem;
+      // }
     }
     &__subtitle {
       text-align: center;
@@ -314,8 +314,8 @@ function changeSolutionLogo(name) {
         align-items: center;
 
         &__title {
-          font-size: 3rem;
-          font-weight: 700;
+          // font-size: 3rem;
+          // font-weight: 700;
         }
         &__description {
           font-weight: $skinny;
@@ -401,7 +401,7 @@ function changeSolutionLogo(name) {
           }
 
           &:nth-of-type(1) {
-            font-weight: $overweight;
+            font-weight: $thick;
           }
         }
       }
@@ -534,10 +534,10 @@ function changeSolutionLogo(name) {
     width: clamp(343px, 100%, 800px);
     text-align: center;
 
-    &__title {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
+    // &__title {
+    //   font-size: 1.5rem;
+    //   font-weight: 700;
+    // }
 
     &__wrapper {
       display: flex;

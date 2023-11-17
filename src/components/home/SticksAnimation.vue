@@ -18,7 +18,7 @@ function scroll(coordinates) {
 
 <template>
   <section class="x">
-    <h2 class="x__title">Portfolio</h2>
+    <h2 class="x__title titles">Portfolio</h2>
     <h3 class="x__subtitle">Des projets, des sites internet, du design Web</h3>
     <div class="x__slider">
       <div class="x__slider__slidable">
@@ -36,10 +36,10 @@ function scroll(coordinates) {
           <p class="x__slider__slidable__space__description">{{ element.subtitle }}</p>
         </NuxtLink>
       </div>
-      <span class="x__slider__slidable__left-arrow" @click="scroll(-300)">
+      <span class="x__slider__slidable__left-arrow not-selectable" @click="scroll(-300)">
         <img src="@/assets/icons/next.svg" alt="arrow-left" />
       </span>
-      <span class="x__slider__slidable__right-arrow" @click="scroll(300)">
+      <span class="x__slider__slidable__right-arrow not-selectable" @click="scroll(300)">
         <img src="@/assets/icons/next.svg" alt="arrow-left" />
       </span>
     </div>
@@ -60,12 +60,12 @@ function scroll(coordinates) {
   }
 
   &__title {
-    font-size: 2rem;
-    font-weight: $overweight;
+    // font-size: 2rem;
+    // font-weight: $overweight;
 
-    @media (min-width: $big-tablet-screen) {
-      font-size: 3rem;
-    }
+    // @media (min-width: $big-tablet-screen) {
+    //   font-size: 3rem;
+    // }
   }
 
   &__subtitle {

@@ -28,3 +28,10 @@ $skinny: 400;
 $skinny-thick: 500;
 $thick: 600;
 $overweight: 900;
+
+//GOLDEN NUMBER
+$golden-number: 1.618;
+
+//FONT SIZES
+$subtitles: calc(1rem * $golden-number);
+$titles: calc($subtitles * $golden-number);

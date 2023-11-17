@@ -27,13 +27,13 @@ useHead(() => {
 </script>
 <template>
   <div class="ressources">
-    <h1 class="ressources__title">Nos ressources à votre disposition</h1>
+    <h1 class="ressources__title titles">Nos ressources à votre disposition</h1>
 
     <div class="ressources__cards">
       <NuxtLink class="ressources__cards__card" to="/ressources/blog">
         <div class="ressources__cards__card__headline">
           <img class="ressources__cards__card__headline__img" src="@/assets/icons/document.svg" alt="image" />
-          <h2 class="ressources__cards__card__headline__title">Blog</h2>
+          <h2 class="ressources__cards__card__headline__title subtitles">Blog</h2>
         </div>
         <p class="ressources__cards__card__txt">
           Découvrez nos derniers articles de blog pour vous aider à comprendre le monde du web et du développement de
@@ -43,7 +43,7 @@ useHead(() => {
       <NuxtLink class="ressources__cards__card" to="/ressources/portfolio">
         <div class="ressources__cards__card__headline">
           <img class="ressources__cards__card__headline__img" src="@/assets/icons/dashboard.svg" alt="image" />
-          <h2 class="ressources__cards__card__headline__title">Portfolio</h2>
+          <h2 class="ressources__cards__card__headline__title subtitles">Portfolio</h2>
         </div>
         <p class="ressources__cards__card__txt">
           On vous montre nos derniers projets de création de site web, de design et d'optimisation du référencement
@@ -53,7 +53,7 @@ useHead(() => {
       <NuxtLink class="ressources__cards__card" to="/ressources/">
         <div class="ressources__cards__card__headline">
           <img class="ressources__cards__card__headline__img" src="@/assets/icons/tutorial.svg" alt="image" />
-          <h2 class="ressources__cards__card__headline__title">Tutoriels (comming soon)</h2>
+          <h2 class="ressources__cards__card__headline__title subtitles">Tutoriels (comming soon)</h2>
         </div>
         <p class="ressources__cards__card__txt">
           Lorem adipisicing aperiam architecto incidunt provident sed tenetur nulla aliquid quam
@@ -76,12 +76,12 @@ useHead(() => {
     text-align: center;
     padding: 0 1rem;
 
-    font-size: 2rem;
-    font-weight: $overweight;
+    // font-size: 2rem;
+    // font-weight: $overweight;
 
-    @media (min-width: $big-tablet-screen) {
-      font-size: 3rem;
-    }
+    // @media (min-width: $big-tablet-screen) {
+    //   font-size: 3rem;
+    // }
   }
 
   &__cards {
@@ -126,10 +126,10 @@ useHead(() => {
           height: 40px;
         }
 
-        &__title {
-          font-size: 1.4rem;
-          font-weight: $thick;
-        }
+        // &__title {
+        //   font-size: 1.4rem;
+        //   font-weight: $thick;
+        // }
       }
 
       &__txt {

@@ -3,7 +3,7 @@ const story = await useAsyncStoryblok('news', { version: 'published' })
 </script>
 <template>
   <div class="news-component">
-    <span class="news-component__title">Nos dernières actualités</span>
+    <span class="news-component__title subtitles">Nos dernières actualités</span>
     <StoryblokComponent v-if="story" :blok="story.content" />
   </div>
 </template>
@@ -35,8 +35,8 @@ const story = await useAsyncStoryblok('news', { version: 'published' })
   }
 
   &__title {
-    font-weight: $thick;
-    font-size: 1.5rem;
+    // font-weight: $thick;
+    // font-size: 1.5rem;
     width: 100%;
     text-align: center;
 

@@ -26,14 +26,14 @@ useHead(() => {
 </script>
 <template>
   <section class="prestations">
-    <h1 class="prestations__title">Nos prestations sur-mesure</h1>
+    <h1 class="prestations__title titles">Nos prestations sur-mesure</h1>
 
     <div class="prestations__cards">
       <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-e-commerce">
         <div class="prestations__cards__card__headline">
           <img class="prestations__cards__card__headline__img" src="@/assets/icons/shop-big.svg" alt="image" />
 
-          <h2 class="prestations__cards__card__headline__title">Création de <br />sites e-commerce</h2>
+          <h2 class="prestations__cards__card__headline__title subtitles">Création de <br />sites e-commerce</h2>
         </div>
         <p class="prestations__cards__card__txt">
           Nous créons votre site e-commerce sur-mesure. Nous vous garantissons des délais de livraison rapides; nos
@@ -43,7 +43,7 @@ useHead(() => {
       <NuxtLink class="prestations__cards__card" to="/prestations/">
         <div class="prestations__cards__card__headline">
           <img class="prestations__cards__card__headline__img" src="@/assets/icons/site-vitrine.svg" alt="image" />
-          <h2 class="prestations__cards__card__headline__title">Création de sites vitrine (comming soon)</h2>
+          <h2 class="prestations__cards__card__headline__title subtitles">Création de sites vitrine (comming soon)</h2>
         </div>
         <p class="prestations__cards__card__txt">
           Nous créons votre site vitrine sur-mesure. Nous vous garantissons des délais de livraison rapides, un site web
@@ -54,7 +54,9 @@ useHead(() => {
         <div class="prestations__cards__card__headline">
           <img class="prestations__cards__card__headline__img" src="@/assets/icons/optimisation.svg" alt="image" />
 
-          <h2 class="prestations__cards__card__headline__title">Audits diagnostic et conseils personnalisés</h2>
+          <h2 class="prestations__cards__card__headline__title subtitles">
+            Audits diagnostic et conseils personnalisés
+          </h2>
         </div>
         <p class="prestations__cards__card__txt">
           Nous réalisons gratuitement un audit de votre site web pour vous aider à en tirer le meilleur parti et à le
@@ -77,13 +79,13 @@ useHead(() => {
   &__title {
     text-align: center;
     padding: 0 1rem;
-    font-size: 2rem;
-    font-weight: $overweight;
+    // font-size: 2rem;
+    // font-weight: $overweight;
     text-wrap: balance;
 
-    @media (min-width: $big-tablet-screen) {
-      font-size: 3rem;
-    }
+    // @media (min-width: $big-tablet-screen) {
+    //   font-size: 3rem;
+    // }
   }
 
   &__cards {
@@ -128,10 +130,10 @@ useHead(() => {
           height: 40px;
         }
 
-        &__title {
-          font-size: 1.4rem;
-          font-weight: $thick;
-        }
+        // &__title {
+        //   font-size: 1.4rem;
+        //   font-weight: $thick;
+        // }
       }
     }
   }

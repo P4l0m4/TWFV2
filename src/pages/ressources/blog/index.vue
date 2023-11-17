@@ -52,10 +52,10 @@ useHead(() => {
 <template>
   <div class="blog-container">
     <div class="blog">
-      <h1 class="blog__title">Le blog Tekila Web Factory</h1>
+      <h1 class="blog__title titles">Le blog Tekila Web Factory</h1>
 
       <section class="blog__article-of-the-day">
-        <span class="blog__article-of-the-day__title">Article du jour</span>
+        <span class="blog__article-of-the-day__title subtitles">Article du jour</span>
         <NuxtLink
           :to="'/ressources/blog/' + stringToSlug(articleOfTheDay.title)"
           class="blog__article-of-the-day__article"
@@ -63,7 +63,7 @@ useHead(() => {
           <img class="blog__article-of-the-day__article__img" :src="articleOfTheDay.headerimage[0].filename" />
 
           <div class="blog__article-of-the-day__article__txt">
-            <h2 class="blog__article-of-the-day__article__txt__title">{{ articleOfTheDay.title }}</h2>
+            <h2 class="blog__article-of-the-day__article__txt__title subtitles">{{ articleOfTheDay.title }}</h2>
             <p class="blog__article-of-the-day__article__txt__description">{{ articleOfTheDay.description }}</p>
 
             <button class="blog__article-of-the-day__article__txt__button button-primary">Lire l'article</button>
@@ -72,7 +72,7 @@ useHead(() => {
       </section>
 
       <section class="blog__subject">
-        <span class="blog__subject__title">Tri par sujet</span>
+        <span class="blog__subject__title subtitles">Tri par sujet</span>
         <div class="blog__subject__tags">
           <button
             v-for="tag in uniqueTags"
@@ -113,13 +113,13 @@ useHead(() => {
   }
 
   &__title {
-    font-size: 2rem;
-    font-weight: $overweight;
+    // font-size: 2rem;
+    // font-weight: $overweight;
     text-align: center;
     text-wrap: balance;
 
     @media (min-width: $big-tablet-screen) {
-      font-size: 3rem;
+      // font-size: 3rem;
       text-align: left;
     }
   }
@@ -138,12 +138,12 @@ useHead(() => {
     }
 
     &__title {
-      font-weight: $skinny-thick;
-      font-size: 1.25rem;
+      // font-weight: $skinny-thick;
+      // font-size: 1.25rem;
 
-      @media (min-width: $big-tablet-screen) {
-        font-size: 1.5rem;
-      }
+      // @media (min-width: $big-tablet-screen) {
+      //   font-size: 1.5rem;
+      // }
     }
 
     &__article {
@@ -185,12 +185,12 @@ useHead(() => {
 
         &__title {
           width: 100%;
-          font-weight: $skinny-thick;
-          font-size: 1.5rem;
+          // font-weight: $skinny-thick;
+          // font-size: 1.5rem;
 
-          @media (min-width: $big-tablet-screen) {
-            font-size: 2rem;
-          }
+          // @media (min-width: $big-tablet-screen) {
+          //   font-size: 2rem;
+          // }
         }
 
         &__description {
@@ -243,12 +243,12 @@ useHead(() => {
     }
 
     &__title {
-      font-weight: $thick;
-      font-size: 1.25rem;
+      // font-weight: $thick;
+      // font-size: 1.25rem;
 
-      @media (min-width: $big-tablet-screen) {
-        font-size: 1.5rem;
-      }
+      // @media (min-width: $big-tablet-screen) {
+      //   font-size: 1.5rem;
+      // }
     }
 
     &__tags {

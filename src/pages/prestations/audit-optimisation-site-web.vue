@@ -1,8 +1,10 @@
 <template>
   <section class="things-to-optimize">
     <div class="things-to-optimize__explanations">
-      <h2 class="things-to-optimize__explanations__title">Votre site web est-il un bon site web ?</h2>
-      <span class="things-to-optimize__explanations__subtitle">Deux grands critères à optimiser absolument:</span>
+      <h1 class="things-to-optimize__explanations__title titles">Votre site web est-il un bon site web ?</h1>
+      <span class="things-to-optimize__explanations__subtitle subtitles"
+        >Deux grands critères à optimiser absolument:</span
+      >
       <div class="things-to-optimize__explanations__criterias">
         <div class="things-to-optimize__explanations__criterias__card">
           <div class="things-to-optimize__explanations__criterias__card__headlines">
@@ -103,12 +105,12 @@
     gap: 0.5rem;
 
     & h2 {
-      font-size: 1.25rem;
-      font-weight: $overweight;
+      // font-size: 1.25rem;
+      // font-weight: $overweight;
 
-      @media (min-width: $big-tablet-screen) {
-        font-size: 1.5rem;
-      }
+      // @media (min-width: $big-tablet-screen) {
+      //   font-size: 1.5rem;
+      // }
     }
 
     &__buttons {
@@ -138,20 +140,20 @@
 
     &__title {
       text-align: center;
-      font-size: 2rem;
-      font-weight: $overweight;
+      // font-size: 2rem;
+      // font-weight: $overweight;
 
-      @media (min-width: $big-tablet-screen) {
-        font-size: 3rem;
-      }
+      // @media (min-width: $big-tablet-screen) {
+      //   font-size: 3rem;
+      // }
     }
     &__subtitle {
       text-align: center;
-      font-size: 1rem;
-      font-weight: $skinny;
-      @media (min-width: $big-tablet-screen) {
-        font-size: 1.25rem;
-      }
+      // font-size: 1rem;
+      // font-weight: $skinny;
+      // @media (min-width: $big-tablet-screen) {
+      //   font-size: 1.25rem;
+      // }
     }
 
     &__criterias {

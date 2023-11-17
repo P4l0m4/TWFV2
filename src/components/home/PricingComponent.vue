@@ -1,7 +1,7 @@
 <template>
   <section class="pricing">
     <div class="pricing__headlines">
-      <h2 class="pricing__headlines__title">Tarifs</h2>
+      <h2 class="pricing__headlines__title titles">Tarifs</h2>
       <p class="pricing__headlines__subtitle">Nos offres de base à adapter à vos besoins</p>
     </div>
     <div class="pricing__cards">
@@ -245,12 +245,12 @@
     gap: 1rem;
 
     &__title {
-      font-size: 2rem;
-      font-weight: $overweight;
+      // font-size: 2rem;
+      // font-weight: $overweight;
 
-      @media (min-width: $big-tablet-screen) {
-        font-size: 3rem;
-      }
+      // @media (min-width: $big-tablet-screen) {
+      //   font-size: 3rem;
+      // }
     }
     &__subtitle {
       font-size: 1.25rem;
