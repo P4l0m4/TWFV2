@@ -6,7 +6,7 @@ const date = dayjs(props.blok.date.toString()).locale('fr').format('DD MMMM YYYY
 </script>
 <template>
   <NuxtLink class="new" :to="props.blok.buttonlink.url" rel="nofollow">
-    <img class="new__image" :src="props.blok.image[0].filename" :alt="props.blok.image[0].alt" />
+    <img loading="lazy" class="new__image" :src="props.blok.image[0].filename" :alt="props.blok.image[0].alt" />
     <h3 class="new__title">{{ props.blok.title }}</h3>
     <p class="new__description">{{ props.blok.subtitle }}</p>
     <span class="new__date">{{ date }}</span>

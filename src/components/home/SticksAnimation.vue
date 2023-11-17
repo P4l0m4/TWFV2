@@ -29,6 +29,7 @@ function scroll(coordinates) {
           :key="element"
         >
           <span
+            loading="lazy"
             class="x__slider__slidable__space__img"
             :style="'background-image: url(' + element.headerimage[0].filename + ')'"
           ></span>

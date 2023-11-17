@@ -28,7 +28,7 @@ useHead(() => {
   </section>
   <section class="portfolio-gallery">
     <div class="portfolio-gallery__img" v-for="image in element.gallery" :key="image">
-      <img v-if="image.filename" :src="image.filename" :alt="image.alt" />
+      <img loading="lazy" v-if="image.filename" :src="image.filename" :alt="image.alt" />
     </div>
     <a class="portfolio-gallery__button button-primary" :href="element.link.url">Voir le projet</a>
   </section>
