@@ -5,10 +5,10 @@ const props = defineProps({ blok: Object })
 //ARROWS SYSTEM
 let slidable = null
 onMounted(() => {
-  slidable = document.querySelector('.ews__wrapper')
+  slidable = document.querySelector('.news__wrapper')
 })
 function scroll(coordinates) {
-  slidable.scrollLeft += coordinates
+  slidable.scrollTop += coordinates
 }
 </script>
 <template>
@@ -31,7 +31,7 @@ function scroll(coordinates) {
   // flex-wrap: wrap;
   width: 100%;
   gap: 2rem;
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
 
   &:hover {
