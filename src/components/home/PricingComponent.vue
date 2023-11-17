@@ -270,7 +270,7 @@
     }
 
     &__card {
-      box-shadow: $shadow-secondary;
+      box-shadow: $shadow;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -283,6 +283,7 @@
       &:nth-of-type(2) {
         background-color: $secondary-color;
         color: $primary-color;
+        box-shadow: $shadow-secondary;
       }
 
       @media (min-width: $big-tablet-screen) {
