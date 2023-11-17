@@ -23,8 +23,8 @@ useHead(() => {
 </script>
 <template>
   <section class="portfolio-headline">
-    <h1>{{ element.title }}</h1>
-    <p>{{ element.description }}</p>
+    <h1 class="titles">{{ element.title }}</h1>
+    <p class="subtitles">{{ element.description }}</p>
   </section>
   <section class="portfolio-gallery">
     <div class="portfolio-gallery__img" v-for="image in element.gallery" :key="image">
@@ -43,17 +43,17 @@ useHead(() => {
   margin-top: 2rem;
   padding: 0 1rem;
 
-  & h1 {
-    font-size: 1.5rem;
-    font-weight: $overweight;
+  // & h1 {
+  //   font-size: 1.5rem;
+  //   font-weight: $overweight;
 
-    @media (min-width: $big-tablet-screen) {
-      font-size: 2rem;
-    }
-  }
+  //   @media (min-width: $big-tablet-screen) {
+  //     font-size: 2rem;
+  //   }
+  // }
 
   & p {
-    max-width: 700px;
+    max-width: 1000px;
     text-align: center;
   }
 }

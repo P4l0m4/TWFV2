@@ -19,7 +19,7 @@ function scroll(coordinates) {
 <template>
   <section class="x">
     <h2 class="x__title titles">Portfolio</h2>
-    <h3 class="x__subtitle">Des projets, des sites internet, du design Web</h3>
+    <h3 class="x__subtitle subtitles">Des projets, des sites internet, du design Web</h3>
     <div class="x__slider">
       <div class="x__slider__slidable">
         <NuxtLink
@@ -69,10 +69,10 @@ function scroll(coordinates) {
   }
 
   &__subtitle {
-    font-weight: $skinny;
+    // font-weight: $skinny;
     margin-top: -1rem;
     text-align: center;
-    font-size: 1.25rem;
+    // font-size: 1.25rem;
   }
   &__slider {
     position: relative;

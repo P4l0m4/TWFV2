@@ -50,7 +50,7 @@ function changeSolutionLogo(name) {
   <div class="e-commerce">
     <div class="e-commerce__headlines">
       <h1 class="e-commerce__headlines__title titles">Nous créons votre site e-commerce</h1>
-      <h2 class="e-commerce__headlines__subtitle">
+      <h2 class="e-commerce__headlines__subtitle subtitles">
         Pour que votre offre ait la visibilité et le succès qu'elle mérite
       </h2>
     </div>
@@ -224,14 +224,14 @@ function changeSolutionLogo(name) {
     }
     &__subtitle {
       text-align: center;
-      font-size: 1rem;
-      font-weight: $skinny;
+      // font-size: 1rem;
+      // font-weight: $skinny;
       text-wrap: balance;
 
-      @media (min-width: $big-tablet-screen) {
-        font-size: 1.25rem;
-        font-weight: $skinny;
-      }
+      // @media (min-width: $big-tablet-screen) {
+      //   font-size: 1.25rem;
+      //   font-weight: $skinny;
+      // }
     }
   }
 

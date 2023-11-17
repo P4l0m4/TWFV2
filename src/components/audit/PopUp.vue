@@ -5,7 +5,7 @@ let isBookAnAuditOpen = ref(false)
 <template>
   <div class="pop-up">
     <span>Nous vous proposons</span>
-    <h1>Un audit gratuit de votre site web</h1>
+    <h1 class="subtitles">Un audit gratuit de votre site web</h1>
     <div class="pop-up__buttons">
       <a
         class="button-primary"
@@ -37,13 +37,13 @@ let isBookAnAuditOpen = ref(false)
     color: $primary-color;
   }
   & h1 {
-    font-size: 1.25rem;
-    font-weight: $thick;
+    // font-size: 1.25rem;
+    // font-weight: $thick;
     color: $primary-color;
 
-    @media (min-width: $big-tablet-screen) {
-      font-size: 1.5rem;
-    }
+    // @media (min-width: $big-tablet-screen) {
+    //   font-size: 1.5rem;
+    // }
   }
 
   &__buttons {

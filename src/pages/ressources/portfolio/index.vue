@@ -36,8 +36,8 @@ const breadcrumbs = [
 <template>
   <section class="portfolio">
     <div class="portfolio__titles">
-      <h1>Notre portfolio</h1>
-      <h2>Des projets, des sites internet, du design Web</h2>
+      <h1 class="titles">Notre portfolio</h1>
+      <h2 class="subtitles">Des projets, des sites internet, du design Web</h2>
     </div>
     <div class="portfolio__elements">
       <NuxtLink
@@ -75,22 +75,22 @@ const breadcrumbs = [
     gap: 1rem;
     align-items: center;
 
-    & h1 {
-      font-size: 2rem;
-      font-weight: $overweight;
+    // & h1 {
+    //   font-size: 2rem;
+    //   font-weight: $overweight;
 
-      @media (min-width: $big-tablet-screen) {
-        font-size: 3rem;
-      }
-    }
+    //   @media (min-width: $big-tablet-screen) {
+    //     font-size: 3rem;
+    //   }
+    // }
     & h2 {
-      font-weight: $skinny;
-      font-size: 1.25rem;
+      // font-weight: $skinny;
+      // font-size: 1.25rem;
       text-align: center;
 
-      @media (min-width: $big-tablet-screen) {
-        font-size: 1.5rem;
-      }
+      // @media (min-width: $big-tablet-screen) {
+      //   font-size: 1.5rem;
+      // }
     }
   }
 

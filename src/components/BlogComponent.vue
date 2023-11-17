@@ -4,7 +4,7 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
 <template>
   <section class="blog">
     <h2 class="blog__title titles">Blog</h2>
-    <h3 class="blog__subtitle">Pour en savoir plus sur la creation de sites web</h3>
+    <h3 class="blog__subtitle subtitles">Pour en savoir plus sur la creation de sites web</h3>
     <StoryblokComponent v-if="story" :blok="story.content" />
   </section>
 </template>
@@ -39,10 +39,10 @@ const story = await useAsyncStoryblok('blog', { version: 'published' })
   &__subtitle {
     margin-left: -1rem;
     text-wrap: balance;
-    font-weight: $skinny;
+    // font-weight: $skinny;
     margin-top: -1rem;
     text-align: center;
-    font-size: 1.25rem;
+    // font-size: 1.25rem;
 
     @media (min-width: $big-tablet-screen) {
       margin-left: inherit;

@@ -84,8 +84,8 @@ useJsonld(() => ({
     <section class="article__header">
       <img class="article__header__img" :src="article.headerimage[0].filename" :alt="article.headerimage[0].alt" />
       <div class="article__header__txt">
-        <h1 class="article__header__txt__title">{{ article.title }}</h1>
-        <p class="article__header__txt__description">{{ article.description }}</p>
+        <h1 class="article__header__txt__title titles">{{ article.title }}</h1>
+        <p class="article__header__txt__description subtitles">{{ article.description }}</p>
         <span class="article__header__txt__date">{{ date }}</span>
       </div>
       <div class="article__header__share">
@@ -99,7 +99,7 @@ useJsonld(() => ({
     </section>
     <div class="article__wrapper">
       <aside class="article__wrapper__aside">
-        <span class="article__wrapper__aside__title">Sommaire</span>
+        <span class="article__wrapper__aside__title subtitles">Sommaire</span>
         <ul class="article__wrapper__aside__list">
           <li class="article__wrapper__aside__list__element" v-for="section in article.sections" :key="section">
             <a :href="'#' + stringToSlug(section.title)">{{ section.title }}</a>
@@ -108,7 +108,9 @@ useJsonld(() => ({
       </aside>
       <div class="article__wrapper__content">
         <section class="article__wrapper__content__part" v-for="section in article.sections" :key="section">
-          <h2 :id="stringToSlug(section.title)" class="article__wrapper__content__part__title">{{ section.title }}</h2>
+          <h2 :id="stringToSlug(section.title)" class="article__wrapper__content__part__title titles">
+            {{ section.title }}
+          </h2>
           <div class="article__wrapper__content__part__wrapper desktop-only">
             <div class="article__wrapper__content__part__wrapper__paragraphs">
               <div
@@ -207,21 +209,21 @@ useJsonld(() => ({
       }
 
       &__title {
-        font-weight: $overweight;
-        font-size: 1.25rem;
+        // font-weight: $overweight;
+        // font-size: 1.25rem;
 
-        @media (min-width: $big-tablet-screen) {
-          font-size: 2rem;
-        }
+        // @media (min-width: $big-tablet-screen) {
+        //   font-size: 2rem;
+        // }
       }
 
       &__description {
-        font-weight: $skinny;
-        font-size: 1rem;
+        // font-weight: $skinny;
+        // font-size: 1rem;
 
-        @media (min-width: $big-tablet-screen) {
-          font-size: 1.25rem;
-        }
+        // @media (min-width: $big-tablet-screen) {
+        //   font-size: 1.25rem;
+        // }
       }
 
       &__date {
@@ -362,12 +364,12 @@ useJsonld(() => ({
       }
 
       &__title {
-        font-weight: $thick;
-        font-size: 1.25rem;
+        // font-weight: $thick;
+        // font-size: 1.25rem;
         // text-align: center;
 
         @media (min-width: $big-tablet-screen) {
-          font-size: 1.5rem;
+          // font-size: 1.5rem;
           text-align: left;
         }
       }
@@ -418,12 +420,12 @@ useJsonld(() => ({
         }
 
         &__title {
-          font-weight: $thick;
-          font-size: 1.25rem;
+          // font-weight: $thick;
+          // font-size: 1.25rem;
 
-          @media (min-width: $big-tablet-screen) {
-            font-size: 1.5rem;
-          }
+          // @media (min-width: $big-tablet-screen) {
+          //   font-size: 1.5rem;
+          // }
         }
 
         &__txt {

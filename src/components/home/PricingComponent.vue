@@ -2,7 +2,7 @@
   <section class="pricing">
     <div class="pricing__headlines">
       <h2 class="pricing__headlines__title titles">Tarifs</h2>
-      <p class="pricing__headlines__subtitle">Nos offres de base à adapter à vos besoins</p>
+      <p class="pricing__headlines__subtitle subtitles">Nos offres de base à adapter à vos besoins</p>
     </div>
     <div class="pricing__cards">
       <NuxtLink
@@ -252,10 +252,10 @@
       //   font-size: 3rem;
       // }
     }
-    &__subtitle {
-      font-size: 1.25rem;
-      font-weight: $skinny;
-    }
+    // &__subtitle {
+    //   font-size: 1.25rem;
+    //   font-weight: $skinny;
+    // }
   }
 
   &__cards {

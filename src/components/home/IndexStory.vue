@@ -6,14 +6,14 @@ let isBookAnAuditOpen = ref(false)
   <section class="story">
     <div class="story__3d">
       <span class="story__3d__title titles">Mettez vos produits en valeur</span
-      ><span class="story__3d__subtitle">Nous modélisons vos produits et les integrons à votre site web</span>
+      ><span class="story__3d__subtitle subtitles">Nous modélisons vos produits et les integrons à votre site web</span>
       <iframe
         src="https://my.spline.design/devicemodelcopy-08fe113792dd065c990899b30d6a1f20/"
         title="produit modélisé en 3d"
       ></iframe>
     </div>
     <div class="story__headlines">
-      <span class="story__headlines__title titles">Votre site web n'est pas qu'une vitrine</span>
+      <span class="story__headlines__title">Votre site web n'est pas qu'une vitrine</span>
       <div class="story__headlines__side">
         <p class="story__headlines__side__txt">
           Votre site web a du potentiel ! Il peut devenir une véritable plateforme de conversion qui profite à votre
@@ -72,12 +72,12 @@ iframe {
     }
 
     &__subtitle {
-      font-weight: $skinny;
+      // font-weight: $skinny;
       margin-top: -1rem;
       text-align: center;
       padding: 0 1rem;
       text-wrap: balance;
-      font-size: 1.25rem;
+      // font-size: 1.25rem;
     }
 
     & iframe {
