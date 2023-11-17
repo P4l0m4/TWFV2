@@ -17,7 +17,7 @@
           </h4>
         </div>
         <span class="pricing__cards__card__price"
-          ><span class="pricing__cards__card__price__from">A partir de</span> 2000 €</span
+          ><span class="pricing__cards__card__price__from">A partir de</span> 2400 €</span
         >
         <ul class="pricing__cards__card__features">
           <li class="pricing__cards__card__features__feature">

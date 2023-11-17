@@ -75,10 +75,10 @@ nav {
 
   & .logo {
     display: flex;
-    width: 200px;
+    // width: 200px;
     height: 45px;
     border-radius: 0;
-    padding: 0 0.5rem;
+    // padding: 0 0.5rem;
     background-color: $primary-color !important;
   }
 

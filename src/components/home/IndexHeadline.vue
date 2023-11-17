@@ -6,7 +6,7 @@ const slides = ref([
   {
     title: 'Sites Internet',
     subtitle: 'Optimisé SEO',
-    img: 'headphones-duo.webp',
+    img: 'headphones.webp',
   },
   {
     title: 'Sites E-commerce',
@@ -16,7 +16,7 @@ const slides = ref([
   {
     title: 'Audits SEO',
     subtitle: 'Totalement gratuits',
-    img: 'biscuit.webp',
+    img: 'biscuits.webp',
   },
   {
     title: 'Web Design',
@@ -92,7 +92,7 @@ onMounted(() => {
 
   @media (min-width: $big-tablet-screen) {
     gap: 2rem;
-    padding: 0 4rem;
+    padding: 0 6rem 0 4rem;
     align-items: center;
     justify-content: center;
     margin-top: -2rem;
