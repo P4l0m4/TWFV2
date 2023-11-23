@@ -182,7 +182,7 @@ useJsonld(() => ({
 
     @media (min-width: $big-tablet-screen) {
       flex-direction: row-reverse;
-      background-image: url('/assets/images/gradient-background.svg');
+      background-image: url('@/assets/images/gradient-background.svg');
       background-size: 60%;
       background-repeat: no-repeat;
       gap: 0;

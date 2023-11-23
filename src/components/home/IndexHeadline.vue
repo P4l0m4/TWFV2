@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
 
 let currentSlideIndex = ref(0)
@@ -27,7 +27,7 @@ const slides = ref([
 
 const currentSlide = computed(() => slides.value[currentSlideIndex.value])
 
-function handlePaginationClick(n) {
+function handlePaginationClick(n: number) {
   currentSlideIndex.value = n
 }
 onMounted(() => {

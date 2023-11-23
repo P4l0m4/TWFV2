@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { reactive, ref } from 'vue'
 import emailjs from '@emailjs/browser'
 import { useVuelidate } from '@vuelidate/core'
@@ -39,10 +39,10 @@ const rules = {
 }
 
 const v$ = useVuelidate(rules, state)
-const form = ref(null)
+const form: any = ref(null)
 
 async function submit() {
-  const valid = await v$.value.$validate()
+  const valid: any = await v$.value.$validate()
 
   if (valid) {
     if (state.HP === false) {

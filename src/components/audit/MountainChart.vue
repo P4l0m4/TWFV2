@@ -1,5 +1,5 @@
-<script setup>
-import { onMounted, ref } from 'vue'
+<script setup lang="ts">
+import { onMounted } from 'vue'
 import * as echarts from 'echarts'
 
 var ROOT_PATH = 'https://echarts.apache.org/examples'
@@ -13,10 +13,10 @@ onMounted(() => {
     .then(_rawData => run(_rawData))
     .catch(error => console.error('Error fetching data:', error))
 
-  function run(_rawData) {
+  function run(_rawData: any) {
     const countries = ['Finland', 'France', 'Germany', 'Iceland', 'Norway', 'Poland', 'Russia', 'United Kingdom']
-    const datasetWithFilters = []
-    const seriesList = []
+    const datasetWithFilters: any = []
+    const seriesList: any = []
     countries.forEach(country => {
       var datasetId = 'dataset_' + country
       datasetWithFilters.push({
@@ -39,7 +39,7 @@ onMounted(() => {
         name: country,
         endLabel: {
           show: true,
-          formatter: function (params) {
+          formatter: function (params: any) {
             return params.value[3] + ': ' + params.value[0]
           },
         },

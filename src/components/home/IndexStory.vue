@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 let isBookAnAuditOpen = ref(false)
 </script>

@@ -24,7 +24,7 @@ useHead(() => {
   <div class="index">
     <!-- <HomeIndexSlider /> -->
     <HomeIndexHeadline />
-    <div class="index__grey">
+    <div class="index__banner">
       <AuditPopUp />
     </div>
     <HomeIndexStory />
@@ -46,11 +46,11 @@ useHead(() => {
     padding: 0;
   }
 
-  &__grey {
+  &__banner {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: $text-color;
+    background-color: $secondary-color;
     width: 100%;
     justify-content: center;
     align-items: center;

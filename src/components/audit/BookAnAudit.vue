@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { reactive, ref } from 'vue'
 import emailjs from '@emailjs/browser'
 import { useVuelidate } from '@vuelidate/core'
@@ -24,7 +24,7 @@ const rules = {
 }
 
 const v$ = useVuelidate(rules, state)
-const form = ref(null)
+const form: Ref<any> = ref()
 
 async function submit() {
   const valid = await v$.value.$validate()
@@ -67,7 +67,7 @@ async function submit() {
     </div>
 
     <!-- CHAMP HP -->
-    <input id="HP" v-model="state.HP" class="HP" type="checkbox" name="not_a_robot" @change="checkIfHP" />
+    <input id="HP" v-model="state.HP" class="HP" type="checkbox" name="not_a_robot" />
     <label for="HP" class="HP"> Je ne suis pas un robot </label>
 
     <button
@@ -88,15 +88,14 @@ async function submit() {
   margin-top: 2rem;
   animation: fade 0.4s ease;
   width: clamp(240px, 100%, 500px);
-  background-color: $text-color;
-  border: rgba(255, 255, 255, 0.06) solid 1px;
-  gap: 16px;
+  background-color: $secondary-color;
+  gap: 1rem;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   border-radius: $radius;
   @media (min-width: $big-tablet-screen) {
-    gap: 24px;
+    gap: 1.5rem;
   }
 
   &__group {
@@ -112,11 +111,11 @@ async function submit() {
       // border-radius: $small-radius;
       height: 44px;
       width: 100%;
-      caret-color: $text-color;
+      caret-color: $text-color-alt;
       padding: 12px;
-      color: $text-color;
+      color: $text-color-alt;
       // font-weight: $slim-weight;
-      background-color: $text-color;
+      background-color: $secondary-color;
 
       &::placeholder {
         color: $primary-color;
@@ -140,7 +139,7 @@ async function submit() {
       // font-weight: $medium-weight;
       color: $primary-color;
       position: absolute;
-      background-color: $text-color;
+      background-color: $secondary-color;
       padding: 0 6px;
       top: -12px;
       left: 8px;
@@ -162,7 +161,7 @@ async function submit() {
   &__button {
     width: 100%;
     background: $primary-color;
-    color: $text-color;
+    color: $secondary-color;
     cursor: pointer;
 
     // &:hover {

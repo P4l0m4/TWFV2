@@ -1,6 +1,6 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
-let isBookAnAuditOpen = ref(false)
+let isBookAnAuditOpen: Ref<boolean> = ref(false)
 </script>
 <template>
   <div class="pop-up">
@@ -30,7 +30,7 @@ let isBookAnAuditOpen = ref(false)
   align-items: center;
   text-align: center;
   gap: 0.5rem;
-  background-color: $text-color;
+  background-color: $secondary-color;
   padding: 2rem;
   height: fit-content;
   & span {
@@ -65,7 +65,7 @@ let isBookAnAuditOpen = ref(false)
     }
 
     & .button-primary {
-      color: $text-color;
+      color: $secondary-color;
       font-weight: $skinny;
       background-color: $primary-color;
     }

@@ -1,18 +1,16 @@
-<script setup>
-import { onMounted } from 'vue'
+<script setup lang="ts">
+import { ref } from 'vue'
 import { stringToSlug } from '@/utils/slugify.js'
 const story = await useAsyncStoryblok('portfolio', { version: 'published' })
 
 const elements = story.value.content.elements
 
-let slidable = null
+let slidable = ref<HTMLDivElement>()
 
-onMounted(() => {
-  slidable = document.querySelector('.x__slider__slidable')
-})
-
-function scroll(coordinates) {
-  slidable.scrollLeft += coordinates
+function scroll(coordinates: number) {
+  if (slidable.value?.scrollLeft) {
+    slidable.value.scrollLeft += coordinates
+  }
 }
 </script>
 
@@ -21,7 +19,7 @@ function scroll(coordinates) {
     <h2 class="x__title titles">Portfolio</h2>
     <h3 class="x__subtitle subtitles">Des projets, des sites internet, du design Web</h3>
     <div class="x__slider">
-      <div class="x__slider__slidable">
+      <div class="x__slider__slidable" ref="slidable">
         <NuxtLink
           :to="'/ressources/portfolio/' + stringToSlug(element.title)"
           class="x__slider__slidable__space"

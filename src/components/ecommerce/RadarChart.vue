@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import * as echarts from 'echarts'
 
@@ -12,7 +12,7 @@ onMounted(() => {
 
   // Schema:
   // date,AQIindex,PM2.5,PM10,CO,NO2,SO2
-  const dataBJ = [
+  const dataBJ: [number[]] = [
     [90, 90, 90, 85, 99, 50, 99, 85],
     // [25, 11, 21, 0.65, 34, 9, 2],
     // [56, 7, 63, 0.3, 14, 5, 3],
@@ -223,7 +223,7 @@ onMounted(() => {
   let solutions = option.legend.data
   let solutionsIndex = ref(0)
 
-  myChart.on('legendselectchanged', function (params) {
+  myChart.on('legendselectchanged', function (params: any) {
     emit('solution-clicked', params.name)
 
     const index = solutions.findIndex(solution => solution === params.name)
