@@ -60,7 +60,7 @@ onMounted(() => {
           également une véritable plateforme de conversion, à condition d'en tirer le meilleur parti
         </p>
       </div>
-      <img class="index-txt__part__img" src="@/assets/images/seo.jpg" />
+      <img class="index-txt__part__img" src="@/assets/images/seo.webp" />
     </div>
   </section>
 </template>

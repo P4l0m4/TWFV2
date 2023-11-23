@@ -176,11 +176,11 @@ iframe {
       background-size: cover;
       background-position: center;
       flex: 2;
-      background-image: url('@/assets/images/seo.jpg');
+      background-image: url('@/assets/images/seo.webp');
 
       &:nth-of-type(2) {
         flex: 1;
-        background-image: url('@/assets/images/ux.jpg');
+        background-image: url('@/assets/images/ux.webp');
       }
     }
   }
