@@ -48,6 +48,7 @@ onMounted(() => {
         data-item-custom3-name="J'ai besoin d'une charte graphique"
         data-item-custom3-type="checkbox"
         data-item-custom4-name="Adresse mail à laquelle vous souhaitez recevoir le devis"
+        data-item-custom4-required="true"
         data-item-url="https://twf-v2.netlify.app/"
       >
         <div class="pricing__cards__card__headlines">
@@ -128,6 +129,7 @@ onMounted(() => {
         data-item-custom3-name="J'ai besoin d'une charte graphique"
         data-item-custom3-type="checkbox"
         data-item-custom4-name="Adresse mail à laquelle vous souhaitez recevoir le devis"
+        data-item-custom4-required="true"
         data-item-url="https://twf-v2.netlify.app/"
       >
         <div class="pricing__cards__card__headlines">
@@ -217,7 +219,9 @@ onMounted(() => {
         data-item-name="SEO & Performance"
         data-item-custom1-name="URL de votre site internet"
         data-item-custom2-name="Adresse mail à laquelle vous souhaitez être contacté(e)"
+        data-item-custom2-required="true"
         data-item-custom3-name="Numéro auquel vous souhaitez être contacté(e) (uniquement en cas de problème, nous privilégions le contact par mail)"
+        data-item-custom3-required="true"
         data-item-url="https://twf-v2.netlify.app/"
       >
         <div class="pricing__cards__card__headlines">
