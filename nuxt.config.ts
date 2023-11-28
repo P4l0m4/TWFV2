@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     '@nuxtjs/snipcart',
   ],
   snipcart: {
-    publicApiKey: 'MDdlNTQ5YzctZTc3Yy00N2I1LWFiOTAtYTU1NmVhMGJkNTVlNjM4MzY3NjMwMjY3Njg3OTc4',
+    publicApiKey: 'MmY3M2M1NDUtY2FjZi00MDA1LWIwZDgtOWI4MDMyMjRlMGVlNjM4MzY3NjMwMjY3Njg3OTc4',
   },
 
   dayjs: {
