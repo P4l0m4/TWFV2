@@ -35,8 +35,8 @@ onMounted(() => {
     <div class="pricing__cards">
       <div
         class="pricing__cards__card scale-on-hover snipcart-add-item"
-        data-item-id="devis-vitrine"
-        data-item-price="10.00"
+        :data-item-id="'devis-vitrine'"
+        :data-item-price="10.0"
         data-item-description="Devis personnalisé pour votre projet de site vitrine"
         data-item-image="/images/devis-freelance.webp"
         data-item-name="Devis vitrine"
