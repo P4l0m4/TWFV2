@@ -111,7 +111,7 @@ onMounted(() => {
             />Livraison en 2 semaines max
           </li>
         </ul>
-        <button class="pricing__cards__card__button button-primary snipcart-add-item">Demander un devis</button>
+        <button class="pricing__cards__card__button button-primary">Demander un devis</button>
       </div>
       <div
         class="pricing__cards__card scale-on-hover snipcart-add-item"
