@@ -48,7 +48,6 @@ onMounted(() => {
         data-item-custom3-name="J'ai besoin d'une charte graphique"
         data-item-custom3-type="checkbox"
         data-item-custom4-name="Adresse mail à laquelle vous souhaitez recevoir le devis"
-        data-item-url="https://tekilawebfactory.com"
       >
         <div class="pricing__cards__card__headlines">
           <h3 class="pricing__cards__card__headlines__title">Site vitrine</h3>
@@ -128,7 +127,6 @@ onMounted(() => {
         data-item-custom3-name="J'ai besoin d'une charte graphique"
         data-item-custom3-type="checkbox"
         data-item-custom4-name="Adresse mail à laquelle vous souhaitez recevoir le devis"
-        data-item-url="https://tekilawebfactory.com"
       >
         <div class="pricing__cards__card__headlines">
           <h3 class="pricing__cards__card__headlines__title">Site E-commerce</h3>
@@ -218,7 +216,6 @@ onMounted(() => {
         data-item-custom1-name="URL de votre site internet"
         data-item-custom2-name="Adresse mail à laquelle vous souhaitez être contacté(e)"
         data-item-custom3-name="Numéro auquel vous souhaitez être contacté(e) (uniquement en cas de problème, nous privilégions le contact par mail)"
-        data-item-url="https://tekilawebfactory.com"
       >
         <div class="pricing__cards__card__headlines">
           <h3 class="pricing__cards__card__headlines__title">SEO & Performance</h3>
