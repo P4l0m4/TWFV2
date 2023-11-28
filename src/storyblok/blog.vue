@@ -1,14 +1,14 @@
-<script setup>
-import { onMounted } from 'vue'
-const props = defineProps({ blok: Object, tagSelected: String })
+<script setup lang="ts">
+import { onMounted, ref } from 'vue'
+const props: any = defineProps({ blok: Object, tagSelected: String })
 
 //ARROWS SYSTEM
-let slidable = null
+let slidable = ref()
 onMounted(() => {
-  slidable = document.querySelector('.wrapper__slidable')
+  slidable.value = document.querySelector('.wrapper__slidable')
 })
-function scroll(coordinates) {
-  slidable.scrollLeft += coordinates
+function scroll(coordinates: number) {
+  slidable.value.scrollLeft += coordinates
 }
 </script>
 <template>

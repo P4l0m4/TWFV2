@@ -1,3 +1,31 @@
+<script setup>
+import { onMounted } from 'vue'
+useJsonld(() => ({
+  '@context': 'https://schema.org/',
+  '@type': 'Product',
+  name: 'Site vitrine',
+  image: '',
+  description:
+    'Optimisation SEO, Hébergement inclus, 5 pages de votre choix, Maquettage des pages principales, Optimisation de la performance, Blog intégré clé en mains, Livraison en 2 semaines max',
+  brand: {
+    '@type': 'Brand',
+    name: 'Tekila Web Factory',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    bestRating: '5',
+    worstRating: '5',
+    ratingCount: '10',
+  },
+}))
+
+onMounted(() => {
+  useSnipcart().setCurrency('eur')
+  useSnipcart().setLanguage('fr')
+})
+</script>
+
 <template>
   <section class="pricing">
     <div class="pricing__headlines">
@@ -5,10 +33,22 @@
       <p class="pricing__headlines__subtitle subtitles">Nos offres de base à adapter à vos besoins</p>
     </div>
     <div class="pricing__cards">
-      <NuxtLink
-        class="pricing__cards__card scale-on-hover"
-        target="_blank"
-        to="https://square.link/u/jHK8RKcm?src=embed"
+      <div
+        class="pricing__cards__card scale-on-hover snipcart-add-item"
+        data-item-id="devis-vitrine"
+        data-item-price="10"
+        data-item-description="Devis personnalisé pour votre projet de site vitrine"
+        data-item-image="/images/devis-freelance.webp"
+        data-item-name="Devis vitrine"
+        data-item-custom1-name="Dites nous-en plus sur votre projet"
+        data-item-custom1-type="textarea"
+        data-item-custom1-placeholder="Besoins, fonctionnalités, etc"
+        data-item-custom2-name="Nombre de pages (hors pages de blog)"
+        data-item-custom2-options="Moins de 5|Entre 5 et 10|Entre 10 et 20|Plus de 20"
+        data-item-custom3-name="J'ai besoin d'une charte graphique"
+        data-item-custom3-type="checkbox"
+        data-item-custom4-name="Adresse mail à laquelle vous souhaitez recevoir le devis"
+        data-item-url="https://tekilawebfactory.com"
       >
         <div class="pricing__cards__card__headlines">
           <h3 class="pricing__cards__card__headlines__title">Site vitrine</h3>
@@ -17,7 +57,8 @@
           </h4>
         </div>
         <span class="pricing__cards__card__price"
-          ><span class="pricing__cards__card__price__from">A partir de</span> 2400 €</span
+          ><span class="pricing__cards__card__price__from">A partir de</span> 2400 €
+          <span class="pricing__cards__card__price__from">TTC</span></span
         >
         <ul class="pricing__cards__card__features">
           <li class="pricing__cards__card__features__feature">
@@ -71,11 +112,23 @@
           </li>
         </ul>
         <button class="pricing__cards__card__button button-primary">Demander un devis</button>
-      </NuxtLink>
-      <NuxtLink
-        class="pricing__cards__card scale-on-hover"
-        target="_blank"
-        to="https://square.link/u/jHK8RKcm?src=embed"
+      </div>
+      <div
+        class="pricing__cards__card scale-on-hover snipcart-add-item"
+        data-item-id="devis-e-commerce"
+        data-item-price="10"
+        data-item-description="Devis personnalisé pour votre projet de site e-commerce"
+        data-item-image="/images/devis-freelance.webp"
+        data-item-name="Devis e-commerce"
+        data-item-custom1-name="Dites nous-en plus sur votre projet"
+        data-item-custom1-type="textarea"
+        data-item-custom1-placeholder="Besoin, fonctionnalités, etc"
+        data-item-custom2-name="Nombre de pages (hors pages de blog)"
+        data-item-custom2-options="Moins de 5|Entre 5 et 10|Entre 10 et 20|Plus de 20"
+        data-item-custom3-name="J'ai besoin d'une charte graphique"
+        data-item-custom3-type="checkbox"
+        data-item-custom4-name="Adresse mail à laquelle vous souhaitez recevoir le devis"
+        data-item-url="https://tekilawebfactory.com"
       >
         <div class="pricing__cards__card__headlines">
           <h3 class="pricing__cards__card__headlines__title">Site E-commerce</h3>
@@ -84,7 +137,8 @@
           </h4>
         </div>
         <span class="pricing__cards__card__price"
-          ><span class="pricing__cards__card__price__from">A partir de</span> 6000 €</span
+          ><span class="pricing__cards__card__price__from">A partir de</span> 6000 €
+          <span class="pricing__cards__card__price__from">TTC</span></span
         >
         <ul class="pricing__cards__card__features">
           <li class="pricing__cards__card__features__feature">
@@ -153,21 +207,28 @@
           </li>
         </ul>
         <button class="pricing__cards__card__button button-primary blue">Demander un devis</button>
-      </NuxtLink>
-      <NuxtLink
-        class="pricing__cards__card scale-on-hover"
-        target="_blank"
-        to="https://square.link/u/rLInhQe1"
-        aria-label="commander une optimisation seo et performance"
+      </div>
+      <div
+        class="pricing__cards__card scale-on-hover snipcart-add-item"
+        data-item-id="seo"
+        data-item-price="360"
+        data-item-description="Optimisation SEO, Hébergement inclus, 5 pages de votre choix, Maquettage des pages principales, Optimisation de la performance, Blog intégré clé en mains, Livraison en 2 semaines max"
+        data-item-image="/images/seooo.webp"
+        data-item-name="SEO & Performance"
+        data-item-custom1-name="URL de votre site internet"
+        data-item-custom2-name="Adresse mail à laquelle vous souhaitez être contacté(e)"
+        data-item-custom3-name="Numéro auquel vous souhaitez être contacté(e) (uniquement en cas de problème, nous privilégions le contact par mail)"
+        data-item-url="https://tekilawebfactory.com"
       >
         <div class="pricing__cards__card__headlines">
-          <h3 class="pricing__cards__card__headlines__title">SEO & performance</h3>
+          <h3 class="pricing__cards__card__headlines__title">SEO & Performance</h3>
           <h4 class="pricing__cards__card__headlines__subtitle">
             Vous possédez déjà un site internet que vous souhaitez améliorer
           </h4>
         </div>
         <span class="pricing__cards__card__price"
-          ><span class="pricing__cards__card__price__from">A partir de</span> 300 €</span
+          ><span class="pricing__cards__card__price__from">A partir de</span> 360 €
+          <span class="pricing__cards__card__price__from">TTC</span></span
         >
         <ul class="pricing__cards__card__features">
           <li class="pricing__cards__card__features__feature">
@@ -221,10 +282,11 @@
           </li>
         </ul>
         <button class="pricing__cards__card__button button-primary">Commander maintenant</button>
-      </NuxtLink>
+      </div>
     </div>
   </section>
 </template>
+
 <style scoped lang="scss">
 .pricing {
   display: flex;
@@ -279,6 +341,7 @@
       background-color: $primary-color;
       width: 100%;
       max-width: 360px;
+      cursor: pointer;
 
       &:nth-of-type(2) {
         background-color: $secondary-color;

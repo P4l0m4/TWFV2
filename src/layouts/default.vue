@@ -16,7 +16,7 @@ useJsonld(
       name: 'Tekila Web Factory',
       alternateName: 'TWF',
       url: 'https://tekilawebfactory.com/',
-      logo: 'https://tekilawebfactory.com/_nuxt/logo.8aab4942.svg',
+      logo: 'https://tekilawebfactory.com/_nuxt/logo.0e42c76d.svg',
       contactPoint: [
         {
           '@type': 'ContactPoint',

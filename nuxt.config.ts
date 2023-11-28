@@ -12,7 +12,12 @@ export default defineNuxtConfig({
     ['@storyblok/nuxt', { accessToken: 'p4gGIMh6R6U5xPOUYs5oCgtt' }],
     'nuxt-jsonld',
     'dayjs-nuxt',
+    '@nuxtjs/snipcart',
   ],
+  snipcart: {
+    publicApiKey: 'MDdlNTQ5YzctZTc3Yy00N2I1LWFiOTAtYTU1NmVhMGJkNTVlNjM4MzY3NjMwMjY3Njg3OTc4',
+  },
+
   dayjs: {
     locales: ['fr'],
     defaultLocale: 'fr',
@@ -51,10 +56,9 @@ export default defineNuxtConfig({
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window, document, 'script', 'dataLayer', 'GTM-W8N9CXHL');`,
-          body: true,
+
           defer: true,
           async: true,
-          lazy: true,
         },
       ],
       htmlAttrs: { lang: 'fr' },

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   links: {
     type: Array,
@@ -9,7 +9,7 @@ const props = defineProps({
 useJsonld(() => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: props.links.map((item, index) => ({
+  itemListElement: props.links.map((item: any, index: any) => ({
     '@type': 'ListItem',
     position: index + 1,
     name: item.name,

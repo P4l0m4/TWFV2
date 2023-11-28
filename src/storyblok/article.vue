@@ -1,10 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import { stringToSlug } from '@/utils/slugify.js'
 import { ref } from 'vue'
 
-const dayjs = useDayjs()
-const props = defineProps({ blok: Object, tagSelected: String })
-const date = dayjs(props.blok.date.toString()).locale('fr').format('DD MMMM YYYY')
+const dayjs: any = useDayjs()
+
+const props: any = defineProps({ blok: Object, tagSelected: String })
+const date: any = dayjs(props.blok.date.toString()).locale('fr').format('DD MMMM YYYY')
 
 const shareWord = ref('Partager')
 function copy() {

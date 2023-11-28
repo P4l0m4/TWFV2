@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { stringToSlug } from '@/utils/slugify.js'
 const story = await useAsyncStoryblok('portfolio', { version: 'published' })
 
