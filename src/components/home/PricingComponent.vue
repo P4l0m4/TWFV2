@@ -36,7 +36,7 @@ onMounted(() => {
       <div
         class="pricing__cards__card scale-on-hover snipcart-add-item"
         data-item-id="devis-vitrine"
-        data-item-price="10"
+        data-item-price="10.00"
         data-item-description="Devis personnalisé pour votre projet de site vitrine"
         data-item-image="/images/devis-freelance.webp"
         data-item-name="Devis vitrine"
@@ -116,7 +116,7 @@ onMounted(() => {
       <div
         class="pricing__cards__card scale-on-hover snipcart-add-item"
         data-item-id="devis-e-commerce"
-        data-item-price="10"
+        data-item-price="10.00"
         data-item-description="Devis personnalisé pour votre projet de site e-commerce"
         data-item-image="/images/devis-freelance.webp"
         data-item-name="Devis e-commerce"
@@ -211,7 +211,7 @@ onMounted(() => {
       <div
         class="pricing__cards__card scale-on-hover snipcart-add-item"
         data-item-id="seo"
-        data-item-price="360"
+        data-item-price="360.00"
         data-item-description="Optimisation SEO, Hébergement inclus, 5 pages de votre choix, Maquettage des pages principales, Optimisation de la performance, Blog intégré clé en mains, Livraison en 2 semaines max"
         data-item-image="/images/seooo.webp"
         data-item-name="SEO & Performance"
