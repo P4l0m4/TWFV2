@@ -9,13 +9,13 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     'nuxt-simple-sitemap',
-    ['@storyblok/nuxt', { accessToken: 'p4gGIMh6R6U5xPOUYs5oCgtt' }],
+    ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_KEY }],
     'nuxt-jsonld',
     'dayjs-nuxt',
     '@nuxtjs/snipcart',
   ],
   snipcart: {
-    publicApiKey: 'MmY3M2M1NDUtY2FjZi00MDA1LWIwZDgtOWI4MDMyMjRlMGVlNjM4MzY3NjMwMjY3Njg3OTc4',
+    publicApiKey: process.env.SNIPCART_KEY,
   },
 
   dayjs: {
