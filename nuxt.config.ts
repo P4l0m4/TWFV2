@@ -60,6 +60,11 @@ export default defineNuxtConfig({
           defer: true,
           async: true,
         },
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=AW-355120123',
+          innerHTML: `window.dataLayer = window.dataLayer || []; function gtag(){ dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-355120123')`,
+          async: true,
+        },
       ],
       htmlAttrs: { lang: 'fr' },
     },
