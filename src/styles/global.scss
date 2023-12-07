@@ -246,7 +246,7 @@ details > summary::-webkit-details-marker /* Safari */ {
 }
 @keyframes slide-from-top {
   from {
-    transform: translateY(-75px);
+    transform: translateY(-3rem);
   }
   to {
     transform: translateY(0px);

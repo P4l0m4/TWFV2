@@ -116,6 +116,7 @@ async function submit() {
       color: $text-color-alt;
       // font-weight: $slim-weight;
       background-color: $secondary-color;
+      animation: slide-from-top 0.4s ease-in-out;
 
       &::placeholder {
         color: $primary-color;
@@ -143,6 +144,7 @@ async function submit() {
       padding: 0 6px;
       top: -12px;
       left: 8px;
+      animation: slide-from-top 0.4s ease-in-out;
     }
     &__checkbox-container {
       color: $text-color;
@@ -163,6 +165,7 @@ async function submit() {
     background: $primary-color;
     color: $secondary-color;
     cursor: pointer;
+    animation: slide-from-top 0.4s ease-in-out;
 
     // &:hover {
     //   background: linear-gradient(
