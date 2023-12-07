@@ -20,9 +20,63 @@ useJsonld(() => ({
   },
 }))
 
+import { gsap } from 'gsap'
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
 onMounted(() => {
   useSnipcart().setCurrency('eur')
   useSnipcart().setLanguage('fr')
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.slide',
+      start: '0% 70%',
+      end: '30% center',
+      scrub: true,
+      markers: false,
+    },
+  })
+  tl.from('.slide-left', {
+    x: -400,
+    duration: 2,
+    opacity: 0,
+  })
+  tl.to('.slide-left', {
+    x: 0,
+    duration: 2,
+    opacity: 1,
+  })
+  tl.from('.slide-right', {
+    x: 400,
+    duration: 2,
+    opacity: 0,
+  })
+  tl.to('.slide-right', {
+    x: 0,
+    duration: 2,
+    opacity: 1,
+  })
+  // gsap.utils.document.querySelectorAll('.').forEach(element => {
+  //   gsap.fromTo(
+  //     element,
+  //     { opacity: 0, y: 50 }, // Initial state (hidden and slightly below)
+  //     {
+  //       opacity: 1,
+  //       y: 0,
+  //       duration: 1,
+  //       scrollTrigger: {
+  //         trigger: element,
+  //         start: 'top 80%', // Adjust as needed based on when you want the animation to start
+  //         end: 'center center',
+  //         scrub: true,
+  //         markers: false, // Set to false in production
+  //       },
+  //     }
+  //   )
+  // })
 })
 </script>
 
@@ -34,7 +88,7 @@ onMounted(() => {
     </div>
     <div class="pricing__cards">
       <div
-        class="pricing__cards__card scale-on-hover snipcart-add-item"
+        class="pricing__cards__card slide slide-left scale-on-hover snipcart-add-item"
         data-item-id="devis-vitrine"
         data-item-price="10.0"
         data-item-description="Devis personnalisé pour votre projet de site vitrine"
@@ -211,7 +265,7 @@ onMounted(() => {
         <button class="pricing__cards__card__button button-primary blue">Demander un devis</button>
       </div>
       <div
-        class="pricing__cards__card scale-on-hover snipcart-add-item"
+        class="pricing__cards__card scale-on-hover slide slide-right snipcart-add-item"
         data-item-id="seo"
         data-item-price="360.00"
         data-item-description="Optimisation SEO, Hébergement inclus, 5 pages de votre choix, Maquettage des pages principales, Optimisation de la performance, Blog intégré clé en mains, Livraison en 2 semaines max"
@@ -311,17 +365,10 @@ onMounted(() => {
     gap: 1rem;
 
     &__title {
-      // font-size: 2rem;
-      // font-weight: $overweight;
-
-      // @media (min-width: $big-tablet-screen) {
-      //   font-size: 3rem;
-      // }
     }
-    // &__subtitle {
-    //   font-size: 1.25rem;
-    //   font-weight: $skinny;
-    // }
+    &__subtitle {
+      text-align: center;
+    }
   }
 
   &__cards {

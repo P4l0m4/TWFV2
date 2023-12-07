@@ -289,6 +289,7 @@ function changeSolutionLogo(name) {
       height: 300px;
       border-radius: $radius;
       object-fit: cover;
+      display: none;
       @media (min-width: $laptop-screen) {
         display: none;
       }
