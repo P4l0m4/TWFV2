@@ -30,31 +30,40 @@ onMounted(() => {
   useSnipcart().setCurrency('eur')
   useSnipcart().setLanguage('fr')
 
-  const tl = gsap.timeline({
+  const tlLeft = gsap.timeline({
     scrollTrigger: {
       trigger: '.slide',
       start: '0% 70%',
-      end: '30% center',
+      end: '20% center',
       scrub: true,
       markers: false,
     },
   })
-  tl.from('.slide-left', {
+  const tlRight = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.slide',
+      start: '0% 70%',
+      end: '20% center',
+      scrub: true,
+      markers: false,
+    },
+  })
+  tlLeft.from('.slide-left', {
     x: -400,
     duration: 2,
     opacity: 0,
   })
-  tl.to('.slide-left', {
+  tlLeft.to('.slide-left', {
     x: 0,
     duration: 2,
     opacity: 1,
   })
-  tl.from('.slide-right', {
+  tlRight.from('.slide-right', {
     x: 400,
     duration: 2,
     opacity: 0,
   })
-  tl.to('.slide-right', {
+  tlRight.to('.slide-right', {
     x: 0,
     duration: 2,
     opacity: 1,
