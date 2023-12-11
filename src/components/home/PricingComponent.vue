@@ -30,44 +30,48 @@ onMounted(() => {
   useSnipcart().setCurrency('eur')
   useSnipcart().setLanguage('fr')
 
-  const tlLeft = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.slide',
-      start: '0% 70%',
-      end: '20% center',
-      scrub: true,
-      markers: false,
-    },
-  })
-  const tlRight = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.slide',
-      start: '0% 70%',
-      end: '20% center',
-      scrub: true,
-      markers: false,
-    },
-  })
-  tlLeft.from('.slide-left', {
-    x: -400,
-    duration: 2,
-    opacity: 0,
-  })
-  tlLeft.to('.slide-left', {
-    x: 0,
-    duration: 2,
-    opacity: 1,
-  })
-  tlRight.from('.slide-right', {
-    x: 400,
-    duration: 2,
-    opacity: 0,
-  })
-  tlRight.to('.slide-right', {
-    x: 0,
-    duration: 2,
-    opacity: 1,
-  })
+  //GSAP
+  if (window.innerWidth > 768) {
+    const tlLeft = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.slide',
+        start: '0% 70%',
+        end: '20% center',
+        scrub: true,
+        markers: false,
+      },
+    })
+    const tlRight = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.slide',
+        start: '0% 70%',
+        end: '20% center',
+        scrub: true,
+        markers: false,
+      },
+    })
+    tlLeft.from('.slide-left', {
+      x: -400,
+      duration: 2,
+      opacity: 0,
+    })
+    tlLeft.to('.slide-left', {
+      x: 0,
+      duration: 2,
+      opacity: 1,
+    })
+    tlRight.from('.slide-right', {
+      x: 400,
+      duration: 2,
+      opacity: 0,
+    })
+    tlRight.to('.slide-right', {
+      x: 0,
+      duration: 2,
+      opacity: 1,
+    })
+  }
+
   // gsap.utils.document.querySelectorAll('.').forEach(element => {
   //   gsap.fromTo(
   //     element,
