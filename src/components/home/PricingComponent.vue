@@ -134,7 +134,7 @@ onMounted(() => {
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Optimisation SEO
+            />Optimisation SEO et performance
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
@@ -157,19 +157,13 @@ onMounted(() => {
               alt="icone check"
             />Maquettage des pages principales
           </li>
+
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Optimisation de la performance
-          </li>
-          <li class="pricing__cards__card__features__feature">
-            <img
-              class="pricing__cards__card__features__feature__check"
-              src="@/assets/icons/check-circle-dark.svg"
-              alt="icone check"
-            />Blog intégré clé en main
+            />Blog clé en main
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
@@ -180,6 +174,12 @@ onMounted(() => {
           </li>
         </ul>
         <button class="pricing__cards__card__button button-primary">Demander un devis</button>
+        <NuxtLink
+          class="pricing__cards__card__link button-tertiary"
+          to="/prestations/creation-site-web#modules"
+          @click.stop
+          >Voir les fonctionnalités complémentaires</NuxtLink
+        >
       </div>
       <div
         class="pricing__cards__card scale-on-hover snipcart-add-item"
@@ -405,7 +405,7 @@ onMounted(() => {
       background-color: $primary-color;
       width: 100%;
       max-width: 360px;
-      cursor: pointer;
+      cursor: pointer !important;
 
       &:nth-of-type(2) {
         background-color: $secondary-color;
@@ -480,6 +480,10 @@ onMounted(() => {
           background-color: $primary-color;
           color: $primary-color;
         }
+      }
+      &__link {
+        margin-top: -1rem;
+        text-align: center;
       }
     }
   }

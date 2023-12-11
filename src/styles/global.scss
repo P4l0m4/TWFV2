@@ -151,11 +151,23 @@ input[type='number'] {
   }
 }
 
+.button-tertiary {
+  font-size: $small-text;
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  color: $secondary-color;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .scale-on-hover {
   transition: transform 0.2s ease-in-out;
 
   &:hover {
-    transform: scale(1.04);
+    transform: scale(1.04) !important;
   }
 }
 

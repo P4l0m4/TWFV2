@@ -40,10 +40,10 @@ useHead(() => {
           boutiques en ligne sont performantes et toujours bien référencées.
         </p>
       </NuxtLink>
-      <NuxtLink class="prestations__cards__card" to="/prestations/">
+      <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-web">
         <div class="prestations__cards__card__headline">
           <img class="prestations__cards__card__headline__img" src="@/assets/icons/site-vitrine.svg" alt="image" />
-          <h2 class="prestations__cards__card__headline__title subtitles">Création de sites vitrine (comming soon)</h2>
+          <h2 class="prestations__cards__card__headline__title subtitles">Création de sites vitrine</h2>
         </div>
         <p class="prestations__cards__card__txt">
           Nous créons votre site vitrine sur-mesure. Nous vous garantissons des délais de livraison rapides, un site web
