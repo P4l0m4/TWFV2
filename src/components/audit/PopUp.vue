@@ -4,8 +4,8 @@ let isBookAnAuditOpen: Ref<boolean> = ref(false)
 </script>
 <template>
   <div class="pop-up">
-    <span>Nous vous proposons</span>
-    <h1 class="subtitles">Un audit gratuit de votre site web</h1>
+    <h1 class="subtitles">Faites auditer gratuitement votre site web</h1>
+    <span>Découvrez comment il peut attirer plus de clients pour votre entreprise</span>
     <div class="pop-up__buttons">
       <a
         class="button-primary"
@@ -21,6 +21,9 @@ let isBookAnAuditOpen: Ref<boolean> = ref(false)
   </div>
 </template>
 <style lang="scss" scoped>
+.subtitles {
+  text-wrap: balance;
+}
 .pop-up {
   display: flex;
   // width: clamp(300px, 100%, 820px);
@@ -49,17 +52,22 @@ let isBookAnAuditOpen: Ref<boolean> = ref(false)
   &__buttons {
     margin-top: 2rem;
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
     justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: $tablet-screen) {
+      flex-direction: row;
+      max-width: 500px;
+    }
 
     & a,
     button {
       width: 100%;
 
       @media (min-width: $tablet-screen) {
-        width: fit-content;
+        width: 100%;
         min-width: 180px;
       }
     }

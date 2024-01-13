@@ -1,9 +1,3 @@
-// @font-face {
-//   font-family: 'Custom';
-//   src: url(@/assets/fonts/Figtree.ttf) format('truetype');
-//   font-display: swap;
-
-// }
 @font-face {
   font-family: 'Custom';
   src: url(@/assets/fonts/figtree/Figtree-Regular.ttf) format('truetype');
@@ -24,9 +18,9 @@
 }
 @font-face {
   font-family: 'Custom';
-  src: url(@/assets/fonts/figtree/Figtree-Black.ttf) format('truetype');
+  src: url(@/assets/fonts/figtree/Figtree-Bold.ttf) format('truetype');
   font-display: swap;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 *,
@@ -40,12 +34,14 @@
 html {
   scroll-behavior: smooth;
   line-height: $line-height;
+  overflow-x: hidden;
 }
 
 body {
   background-color: $base-color;
   font-family: 'Custom', sans-serif;
   color: $text-color;
+  overflow-x: hidden;
 }
 
 a {
@@ -211,14 +207,37 @@ details > summary::-webkit-details-marker /* Safari */ {
   -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
   user-select: none; /* Propriété standard */
 }
+.big-titles {
+  font-size: calc($big-titles - 0.5rem);
+  font-weight: $overweight;
+  text-transform: uppercase;
+  line-height: $line-height-titles;
+
+  @media (min-width: $big-tablet-screen) {
+    font-size: $big-titles;
+    line-height: calc($line-height-titles * 1.2);
+  }
+}
 
 .titles {
-  font-size: $titles;
+  font-size: calc($titles - 0.5rem);
   font-weight: $overweight;
+  text-transform: uppercase;
+  line-height: $line-height-titles;
+
+  @media (min-width: $big-tablet-screen) {
+    font-size: $titles;
+  }
 }
 .subtitles {
-  font-size: $subtitles;
+  font-size: calc($subtitles - 0.5rem);
   font-weight: $skinny-thick;
+  line-height: calc($line-height-subtitles - 0.5rem);
+
+  @media (min-width: $big-tablet-screen) {
+    font-size: $subtitles;
+    line-height: $line-height-subtitles;
+  }
 }
 
 //ANIMATIONS

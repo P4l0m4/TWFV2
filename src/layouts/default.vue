@@ -2,47 +2,44 @@
 // import { register } from 'swiper/element/bundle'
 
 // register()
-useJsonld(
-  () => (
+useJsonld(() => ({
+  '@context': 'https://schema.org/',
+  '@type': 'WebSite',
+  name: 'Tekila Web Factory',
+  url: 'https://tekilawebfactory.com/',
+}))
+
+useJsonld(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Tekila Web Factory',
+  alternateName: 'TWF',
+  url: 'https://tekilawebfactory.com/',
+  logo: 'https://tekilawebfactory.com/_nuxt/logo.0e42c76d.svg',
+  contactPoint: [
     {
-      '@context': 'https://schema.org/',
-      '@type': 'WebSite',
-      name: 'Tekila Web Factory',
-      url: 'https://tekilawebfactory.com/',
+      '@type': 'ContactPoint',
+      telephone: '0695155301',
+      contactType: 'technical support',
+      contactOption: 'TollFree',
+      areaServed: ['FR', 'CH'],
+      availableLanguage: ['en', 'fr', 'es'],
     },
     {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Tekila Web Factory',
-      alternateName: 'TWF',
-      url: 'https://tekilawebfactory.com/',
-      logo: 'https://tekilawebfactory.com/_nuxt/logo.0e42c76d.svg',
-      contactPoint: [
-        {
-          '@type': 'ContactPoint',
-          telephone: '0695155301',
-          contactType: 'technical support',
-          contactOption: 'TollFree',
-          areaServed: ['FR', 'CH'],
-          availableLanguage: ['en', 'fr', 'es'],
-        },
-        {
-          '@type': 'ContactPoint',
-          telephone: '0670503593',
-          contactType: 'billing support',
-          contactOption: 'TollFree',
-          areaServed: ['FR', 'CH'],
-          availableLanguage: ['en', 'fr'],
-        },
-      ],
-      sameAs: [
-        'https://www.linkedin.com/company/tekila-web-factory/about/',
-        'https://github.com/P4l0m4',
-        'https://tekilawebfactory.com/',
-      ],
-    }
-  )
-)
+      '@type': 'ContactPoint',
+      telephone: '0670503593',
+      contactType: 'billing support',
+      contactOption: 'TollFree',
+      areaServed: ['FR', 'CH'],
+      availableLanguage: ['en', 'fr'],
+    },
+  ],
+  sameAs: [
+    'https://www.linkedin.com/company/tekila-web-factory/about/',
+    'https://github.com/P4l0m4',
+    'https://tekilawebfactory.com/',
+  ],
+}))
 </script>
 
 <template>

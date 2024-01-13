@@ -121,7 +121,7 @@ onMounted(() => {
       text: '',
       left: 'center',
       textStyle: {
-        color: '#333333',
+        color: '#202020',
       },
     },
 
@@ -130,7 +130,7 @@ onMounted(() => {
       data: ['Tekila Web Factory', 'WooCommerce', 'Shopify seul'],
       itemGap: 16,
       textStyle: {
-        color: '#333333',
+        color: '#202020',
         fontSize: 16,
       },
       selectedMode: 'single',

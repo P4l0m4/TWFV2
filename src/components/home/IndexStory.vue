@@ -13,7 +13,7 @@ let isBookAnAuditOpen = ref(false)
       ></iframe>
     </div>
     <div class="story__headlines">
-      <span class="story__headlines__title">Votre site web n'est pas qu'une vitrine</span>
+      <span class="story__headlines__title titles">Votre site web n'est pas qu'une vitrine</span>
       <div class="story__headlines__side">
         <p class="story__headlines__side__txt">
           Votre site web a du potentiel ! Il peut devenir une véritable plateforme de conversion qui profite à votre
@@ -60,15 +60,9 @@ iframe {
     gap: 2rem;
 
     &__title {
-      // font-size: 2rem;
-      // font-weight: $overweight;
       padding: 0 1rem;
       text-align: center;
       text-wrap: balance;
-
-      // @media (min-width: $big-tablet-screen) {
-      //   font-size: 3rem;
-      // }
     }
 
     &__subtitle {
@@ -102,14 +96,11 @@ iframe {
     }
 
     &__title {
-      font-size: 2rem;
-      font-weight: $thick;
       max-width: 500px;
       text-align: center;
       color: $primary-color;
 
       @media (min-width: $big-tablet-screen) {
-        font-size: 3rem;
         text-align: left;
       }
     }

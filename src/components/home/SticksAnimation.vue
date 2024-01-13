@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { stringToSlug } from '@/utils/slugify.js'
 const story = await useAsyncStoryblok('portfolio', { version: 'published' })
 
 const elements = story.value.content.elements
 
-let slidable = ref<HTMLDivElement>()
+const slidable = ref<HTMLDivElement>()
 
 function scroll(coordinates: number) {
-  if (slidable.value?.scrollLeft) {
-    slidable.value.scrollLeft += coordinates
-  }
+  slidable.value.scrollLeft += coordinates
 }
 </script>
 

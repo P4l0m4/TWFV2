@@ -24,6 +24,9 @@ useHead(() => {
   <div class="index">
     <!-- <HomeIndexSlider /> -->
     <HomeIndexHeadline />
+    <video autoplay="true" muted loop>
+      <source src="@/assets/videos/website.mp4" type="video/mp4" />
+    </video>
     <div class="index__banner">
       <AuditPopUp />
     </div>
@@ -35,6 +38,14 @@ useHead(() => {
   <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
 <style scoped lang="scss">
+video {
+  width: clamp(100px, 100%, 1100px);
+  height: 200px;
+
+  @media (min-width: $big-tablet-screen) {
+    height: 600px;
+  }
+}
 .index {
   display: flex;
   flex-direction: column;

@@ -1,276 +1,240 @@
-<script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+<script setup>
+import { onMounted, ref } from 'vue'
 
-let currentSlideIndex = ref(0)
-const slides = ref([
-  {
-    title: 'Sites Internet',
-    subtitle: 'Optimisé SEO',
-    img: 'headphones.webp',
-  },
-  {
-    title: 'Sites E-commerce',
-    subtitle: 'Ultra Performants',
-    img: 'nike.webp',
-  },
-  {
-    title: 'Audits SEO',
-    subtitle: 'Totalement gratuits',
-    img: 'biscuits.webp',
-  },
-  {
-    title: 'Web Design',
-    subtitle: 'User Friendly',
-    img: 'nuit.webp',
-  },
-])
-
-const currentSlide = computed(() => slides.value[currentSlideIndex.value])
-
-function handlePaginationClick(n: number) {
-  currentSlideIndex.value = n
-}
-onMounted(() => {
-  setInterval(() => {
-    if (currentSlideIndex.value < slides.value.length - 1) {
-      currentSlideIndex.value = currentSlideIndex.value + 1
-    } else {
-      currentSlideIndex.value = 0
-    }
-  }, 3000)
-})
+onMounted(() => {})
 </script>
 <template>
-  <section class="slides">
-    <div class="slides__slide">
-      <div class="slides__slide__txt">
-        <span>CREATION</span>
+  <section class="headlines">
+    <div class="headlines__container">
+      <div class="headlines__container__txt">
+        <h1 class="headlines__container__txt__title big-titles">
+          <span class="headlines__container__txt__title--normal">Créons un </span>site web<span
+            class="headlines__container__txt__title--normal"
+          >
+            au service de</span
+          >
+          votre entreprise
+        </h1>
+        <h2 class="headlines__container__txt__subtitle subtitles">
+          Vous êtes invisible pour des centaines de clients potentiels, soyez là où ils vous cherchent !
+        </h2>
 
-        <Transition name="slide-txt">
-          <h1 class="slides__slide__txt__title" :key="currentSlide.title">
-            {{ currentSlide.title }}
-          </h1>
-        </Transition>
-
-        <span class="slides__slide__txt__specs">SPECIFICITES</span>
-        <Transition name="slide-txt">
-          <h2 class="slides__slide__txt__subtitle" :key="currentSlide.title">
-            {{ currentSlide.subtitle }}
-          </h2>
-        </Transition>
+        <div class="headlines__container__buttons">
+          <button class="headlines__container__buttons__button button-primary">Prendre RDV avec nous</button
+          ><button class="headlines__container__buttons__button button-secondary">Auditer votre site web</button>
+        </div>
       </div>
-
-      <Transition name="slide-fade">
-        <div
-          class="slides__slide__img"
-          :style="`background-image: url('images/${currentSlide.img}')`"
-          :key="currentSlide.img"
-        ></div>
-      </Transition>
+      <div class="headlines__container__images">
+        <img class="headlines__container__images__img" src="@/assets/images/wash.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/beauty.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/monstera.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/biscuits.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/nike.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/wash.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/beauty.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/monstera.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/biscuits.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/nike.webp" alt="bannière site web" />
+      </div>
+      <div class="headlines__container__images">
+        <img class="headlines__container__images__img" src="@/assets/images/wash.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/beauty.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/monstera.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/biscuits.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/nike.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/wash.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/beauty.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/monstera.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/biscuits.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/nike.webp" alt="bannière site web" />
+      </div>
+      <div class="headlines__container__images">
+        <img class="headlines__container__images__img" src="@/assets/images/wash.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/beauty.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/monstera.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/biscuits.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/nike.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/sample.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/wash.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/beauty.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/monstera.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/biscuits.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/nike.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/sample.webp" alt="bannière site web" />
+      </div>
+      <div class="headlines__container__images">
+        <img class="headlines__container__images__img" src="@/assets/images/wash.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/beauty.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/monstera.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/biscuits.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/nike.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/sample.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/wash.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/beauty.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/monstera.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/biscuits.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/nike.webp" alt="bannière site web" />
+        <img class="headlines__container__images__img" src="@/assets/images/sample.webp" alt="bannière site web" />
+      </div>
     </div>
-    <aside class="slides__pagination">
-      <span
-        v-for="n in slides.length"
-        :key="`slide-pagination-${n}`"
-        class="slides__pagination__dot"
-        :class="{ active: currentSlideIndex === n - 1 }"
-        @click="handlePaginationClick(n - 1)"
-      ></span>
-    </aside>
   </section>
 </template>
-<style scoped lang="scss">
-.slides {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-  align-items: flex-end;
+<style lang="scss" scoped>
+.headlines {
+  margin-top: -6rem;
+  height: 100vh;
   width: 100%;
-  padding: 0 2rem;
-  margin-top: -4rem;
-  max-width: 2000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 
-  @media (min-width: $big-tablet-screen) {
-    gap: 2rem;
-    padding: 0 6rem 0 4rem;
-    align-items: center;
-    justify-content: center;
-    margin-top: -2rem;
-  }
-  &__slide {
+  &__container {
+    z-index: 2;
     display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
+    padding: 1rem;
+    height: 100vh;
     width: 100%;
-    flex-direction: column-reverse;
+    gap: 2rem;
+    overflow: hidden;
+    position: relative;
 
     @media (min-width: $big-tablet-screen) {
-      gap: 2rem;
-      flex-direction: row;
+      padding: 2rem;
     }
-    &__img {
-      height: 40svh;
-      width: calc(50svh * 1.55);
-      max-width: 100%;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      margin-left: 1rem;
 
-      @media (min-width: $big-tablet-screen) {
-        height: 82svh;
-        width: calc(82svh * 1.5);
-        margin-left: 0;
-        max-width: 800px;
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
     }
 
     &__txt {
       display: flex;
-      flex-direction: column;
       gap: 1rem;
-      width: clamp(300px, 100%, 600px);
+      flex-direction: column;
       justify-content: center;
-      padding-left: 1rem;
 
-      & span {
-        font-weight: $skinny;
-        letter-spacing: 0.25rem;
+      @media (min-width: $big-tablet-screen) {
+        gap: 2rem;
       }
 
-      //   &__specs {
-      //     position: relative;
-      //   }
-
       &__title {
-        font-weight: $thick;
-        font-size: 3.5rem;
-        letter-spacing: -1px;
-        line-height: 50px;
-        margin: 10px 0 32px;
-        color: $text-color;
-        width: 185px;
-        text-wrap: bottom;
+        font-size: 2.5rem;
+        text-shadow: 0px 0px 1px $base-color;
+        text-wrap: balance;
+        max-width: 750px;
+        -webkit-text-fill-color: $text-color;
+        -webkit-text-stroke: 2px $text-color;
+        &--normal {
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke: 2px $text-color;
+        }
 
-        @media (min-width: $tablet-screen) {
-          font-size: 4rem;
-          line-height: 60px;
-        }
-        @media (min-width: $laptop-screen) {
-          margin: 20px 0 60px;
-          font-size: 5.8rem;
-          line-height: 100px;
-          padding: 0;
-          width: 375px;
-        }
-        @media (min-width: $super-big-screen) {
-          font-size: 8rem;
+        @media (min-width: $big-tablet-screen) {
+          font-size: $big-titles;
         }
       }
       &__subtitle {
-        font-weight: $skinny;
-        font-size: 1.5rem;
-        // position: absolute;
-        // bottom: 7rem;
-        // left: 0;
+        max-width: 700px;
+        text-shadow: 1px 1px 1px $base-color;
+      }
+    }
 
-        @media (min-width: $laptop-screen) {
-          font-size: 2rem;
-          //   bottom: 4rem;
-          //   left: 4rem;
+    &__images {
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(343px, 1fr));
+      width: 380px;
+      gap: 2rem;
+      z-index: -1;
+      left: 1rem;
+      right: 40px;
+      top: -50%;
+      bottom: 0;
+      animation: up 26s infinite linear alternate;
+      opacity: 0.6;
+      @media (min-width: $big-tablet-screen) {
+        width: 700px;
+        gap: 4rem;
+        left: inherit;
+        opacity: 1;
+      }
+
+      &:nth-of-type(2) {
+        left: 1rem;
+        top: calc(-50% - 20px);
+        opacity: 0.1;
+        z-index: -2;
+
+        @media (min-width: $big-tablet-screen) {
+          right: 0;
+          left: inherit;
         }
+      }
+      &:nth-of-type(3) {
+        left: inherit;
+        top: 0;
+        right: -210px;
+        z-index: -1;
+        animation: up 16s infinite linear alternate;
 
-        @media (min-width: $super-big-screen) {
-          font-size: 3rem;
+        @media (min-width: $big-tablet-screen) {
+          right: -320px;
+          left: inherit;
+        }
+      }
+      &:nth-of-type(4) {
+        left: inherit;
+        right: -250px;
+        top: -20px;
+        opacity: 0.1;
+        z-index: -2;
+        animation: up 16s infinite linear alternate;
+        @media (min-width: $big-tablet-screen) {
+          right: -360px;
+        }
+      }
+
+      &__img {
+        width: 150px;
+        object-fit: contain;
+
+        @media (min-width: $big-tablet-screen) {
+          width: 343px;
+        }
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      max-width: 700px;
+
+      @media (min-width: $big-tablet-screen) {
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      &__button {
+        width: 100%;
+
+        &:nth-of-type(2) {
+          text-shadow: 1px 1px 1px $base-color;
         }
       }
     }
   }
+}
 
-  &__pagination {
-    display: flex;
-    gap: 3rem;
-    flex-direction: column;
-    // margin-top: 120px;
-    // margin-right: 1rem;
-
-    @media (min-width: $big-tablet-screen) {
-      //   margin: 0;
-    }
-
-    &__dot {
-      opacity: 0.3;
-      background-color: $text-color;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      outline: rgba(51, 51, 51, 0.4) solid 1px;
-      outline-offset: 0rem;
-      transition: outline-offset 0.4s, width 0.4s, height 0.4s, opacity 0.4s;
-
-      &:hover {
-        cursor: pointer;
-        outline-offset: 1rem;
-      }
-    }
+@keyframes up {
+  0% {
+    transform: translateY(0);
   }
-}
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: opacity 0.4s;
-}
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  opacity: 0;
-}
-.slide-fade-enter-to,
-.slide-fade-leave-from {
-  opacity: 1;
-}
 
-.slide-fade-leave-active {
-  display: none;
-}
-
-//SLIDE TXT
-.slide-txt-enter-active,
-.slide-txt-leave-active {
-  transition: opacity 0.4s, transform 0.4s;
-}
-.slide-txt-enter-from,
-.slide-txt-leave-to {
-  opacity: 0;
-}
-.slide-txt-enter-to,
-.slide-txt-leave-from {
-  opacity: 1;
-}
-
-.slide-txt-enter-to,
-.slide-txt-leave-from {
-  transform: translateY(0);
-}
-.slide-txt-enter-from,
-.slide-txt-leave-to {
-  transform: translateY(1rem);
-}
-
-.slide-txt-leave-active {
-  display: none;
-}
-
-.active {
-  opacity: 1;
-  outline-offset: 1rem;
-}
-
-@keyframes slide {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+  100% {
+    transform: translateY(-100%);
   }
 }
 </style>
