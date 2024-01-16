@@ -7,10 +7,18 @@ let isBookAnAuditOpen = ref(false)
     <div class="story__3d">
       <span class="story__3d__title titles">Mettez vos produits en valeur</span
       ><span class="story__3d__subtitle subtitles">Nous modélisons vos produits et les integrons à votre site web</span>
-      <iframe
-        src="https://my.spline.design/devicemodelcopy-08fe113792dd065c990899b30d6a1f20/"
-        title="produit modélisé en 3d"
-      ></iframe>
+      <div class="story__3d__iframes">
+        <iframe
+          class="story__3d__iframes__big"
+          src="https://tackysound.netlify.app/"
+          title="produit modélisé en 3d"
+        ></iframe>
+        <iframe
+          class="story__3d__iframes__small"
+          src="https://tackysound.netlify.app/"
+          title="produit modélisé en 3d"
+        ></iframe>
+      </div>
     </div>
     <div class="story__headlines">
       <span class="story__headlines__title titles">Votre site web n'est pas qu'une vitrine</span>
@@ -74,8 +82,31 @@ iframe {
       // font-size: 1.25rem;
     }
 
-    & iframe {
+    &__iframes {
       max-height: 1200px;
+      height: 90svh;
+      padding: 1rem;
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+
+      &__big {
+        height: 100%;
+        width: 100%;
+        display: none;
+        @media (min-width: $laptop-screen) {
+          display: block;
+        }
+      }
+
+      &__small {
+        height: 100%;
+        width: 100%;
+
+        @media (min-width: $laptop-screen) {
+          width: 390px;
+        }
+      }
     }
   }
   &__headlines {

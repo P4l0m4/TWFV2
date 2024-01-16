@@ -223,10 +223,11 @@ details > summary::-webkit-details-marker /* Safari */ {
   font-size: calc($titles - 0.5rem);
   font-weight: $overweight;
   text-transform: uppercase;
-  line-height: $line-height-titles;
+  line-height: $line-height-subtitles;
 
   @media (min-width: $big-tablet-screen) {
     font-size: $titles;
+    line-height: $line-height-titles;
   }
 }
 .subtitles {
