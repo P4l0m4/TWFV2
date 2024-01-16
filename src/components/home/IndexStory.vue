@@ -9,13 +9,9 @@ let isBookAnAuditOpen = ref(false)
       ><span class="story__3d__subtitle subtitles">Nous modélisons vos produits et les integrons à votre site web</span>
       <div class="story__3d__iframes">
         <iframe
-          class="story__3d__iframes__big"
+          class="story__3d__iframes__iframe"
           src="https://tackysound.netlify.app/"
-          title="produit modélisé en 3d"
-        ></iframe>
-        <iframe
-          class="story__3d__iframes__small"
-          src="https://tackysound.netlify.app/"
+          scrolling="no"
           title="produit modélisé en 3d"
         ></iframe>
       </div>
@@ -90,22 +86,9 @@ iframe {
       display: flex;
       gap: 1rem;
 
-      &__big {
+      &__iframe {
         height: 100%;
         width: 100%;
-        display: none;
-        @media (min-width: $laptop-screen) {
-          display: block;
-        }
-      }
-
-      &__small {
-        height: 100%;
-        width: 100%;
-
-        @media (min-width: $laptop-screen) {
-          width: 390px;
-        }
       }
     }
   }
