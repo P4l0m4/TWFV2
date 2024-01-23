@@ -225,7 +225,7 @@ details > summary::-webkit-details-marker /* Safari */ {
   text-transform: uppercase;
   line-height: $line-height-subtitles;
 
-  @media (min-width: $big-tablet-screen) {
+  @media (min-width: $desktop-screen) {
     font-size: $titles;
     line-height: $line-height-titles;
   }
@@ -235,7 +235,7 @@ details > summary::-webkit-details-marker /* Safari */ {
   font-weight: $skinny-thick;
   line-height: calc($line-height-subtitles - 0.5rem);
 
-  @media (min-width: $big-tablet-screen) {
+  @media (min-width: $desktop-screen) {
     font-size: $subtitles;
     line-height: $line-height-subtitles;
   }

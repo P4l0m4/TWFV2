@@ -246,7 +246,8 @@ useJsonld(() => ({
       border-radius: $radius;
 
       @media (min-width: $big-tablet-screen) {
-        height: 420px;
+        height: 100%;
+        max-height: 512px;
         width: 50%;
         border-radius: 0;
       }
