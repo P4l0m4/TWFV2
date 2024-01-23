@@ -114,6 +114,7 @@ onMounted(() => {})
       gap: 1rem;
       flex-direction: column;
       justify-content: center;
+      z-index: 1;
 
       @media (min-width: $big-tablet-screen) {
         gap: 2rem;
