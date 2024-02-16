@@ -28,7 +28,7 @@ $line-height: 1.15;
 $skinny: 400;
 $skinny-thick: 500;
 $thick: 600;
-$overweight: 700;
+$overweight: 800;
 
 //GOLDEN NUMBER
 $golden-number: 1.618;
@@ -38,9 +38,9 @@ $small-text: 0.75rem;
 $base-text: 1rem;
 $subtitles: calc($base-text * $golden-number);
 $titles: calc($subtitles * $golden-number);
-$big-titles: calc($titles * $golden-number);
 
 // TYPO
-$line-height: 1.5rem;
-$line-height-subtitles: calc($line-height * $golden-number);
-$line-height-titles: calc($line-height-subtitles * $golden-number);
+// $line-height: 1.5rem;
+// $line-height-subtitles: calc($line-height * $golden-number);
+// $line-height-titles: calc($line-height-subtitles * $golden-number);
+// $line-height-big-titles: 4vw;

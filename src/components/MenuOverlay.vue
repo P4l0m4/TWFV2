@@ -8,10 +8,10 @@ const emit = defineEmits(['close'])
       <NuxtLink class="menu__grid__link" to="/" exact
         ><img src="@/assets/icons/home.svg" alt="icone" /><span>Accueil</span></NuxtLink
       ><NuxtLink class="menu__grid__link" to="/prestations" exact
-        ><img src="@/assets/icons/heart.svg" alt="icone" /><span>Prestations</span></NuxtLink
+        ><img src="@/assets/icons/shop.svg" alt="icone" /><span>Prestations</span></NuxtLink
       >
       <NuxtLink class="menu__grid__link" to="/ressources" exact
-        ><img src="@/assets/icons/shop.svg" alt="icone" /><span>Ressources</span></NuxtLink
+        ><img src="@/assets/icons/heart.svg" alt="icone" /><span>Ressources</span></NuxtLink
       ><NuxtLink class="menu__grid__link" to="/a-propos" exact
         ><img src="@/assets/icons/mail.svg" alt="icone" /><span>A propos</span></NuxtLink
       >

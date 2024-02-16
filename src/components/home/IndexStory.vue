@@ -3,47 +3,43 @@ import { ref } from 'vue'
 let isBookAnAuditOpen = ref(false)
 </script>
 <template>
-  <section class="story">
-    <div class="story__3d">
-      <span class="story__3d__title titles">Mettez vos produits en valeur</span
-      ><span class="story__3d__subtitle subtitles">Nous modélisons vos produits et les integrons à votre site web</span>
-      <div class="story__3d__iframes">
-        <iframe
-          class="story__3d__iframes__iframe"
-          src="https://tackysound.netlify.app/"
-          scrolling="no"
-          title="produit modélisé en 3d"
-        ></iframe>
-      </div>
-    </div>
-    <div class="story__headlines">
-      <span class="story__headlines__title titles">Votre site web n'est pas qu'une vitrine</span>
-      <div class="story__headlines__side">
-        <p class="story__headlines__side__txt">
-          Votre site web a du potentiel ! Il peut devenir une véritable plateforme de conversion qui profite à votre
-          entreprise, à condition de l'optimiser pour en tirer le meilleur parti.
-        </p>
-        <div class="story__headlines__side__buttons">
-          <button class="button-primary" @click="isBookAnAuditOpen = !isBookAnAuditOpen">
-            Faire auditer votre site web</button
-          ><a href="https://calendly.com/tekilawebfactory/30min" target="_blank" class="button-secondary"
-            >Discuter avec nous</a
-          >
-        </div>
-        <AuditBookAnAudit v-if="isBookAnAuditOpen" />
-      </div>
-    </div>
-  </section>
+  <div class="story">
+    <Container>
+      <div class="story__3d">
+        <span class="story__3d__title titles">Mettez vos produits en valeur</span
+        ><span class="story__3d__subtitle subtitles"
+          >Nous modélisons vos produits et les integrons à votre site web</span
+        >
+        <div class="story__3d__iframes">
+          <iframe
+            class="story__3d__iframes__iframe"
+            src="https://tackysound.netlify.app/"
+            scrolling="no"
+            title="produit modélisé en 3d"
+          ></iframe>
+        </div></div
+    ></Container>
+    <Container>
+      <div class="story__headlines">
+        <span class="story__headlines__title titles">Votre site web n'est pas qu'une vitrine</span>
+        <div class="story__headlines__side">
+          <p class="story__headlines__side__txt">
+            Votre site web a du potentiel ! Il peut devenir une véritable plateforme de conversion qui profite à votre
+            entreprise, à condition de l'optimiser pour en tirer le meilleur parti.
+          </p>
+          <div class="story__headlines__side__buttons">
+            <button class="button-primary" @click="isBookAnAuditOpen = !isBookAnAuditOpen">
+              Faire auditer votre site web</button
+            ><a href="https://calendly.com/tekilawebfactory/30min" target="_blank" class="button-secondary"
+              >Discuter avec nous</a
+            >
+          </div>
+          <AuditBookAnAudit v-if="isBookAnAuditOpen" />
+        </div></div
+    ></Container>
+  </div>
 </template>
 <style scoped lang="scss">
-iframe {
-  outline: none;
-  border: none;
-  height: 100vh;
-  width: 100%;
-  max-width: 2000px;
-}
-
 .story {
   display: flex;
   gap: 4rem;

@@ -5,42 +5,46 @@ const story = await useAsyncStoryblok('portfolio', { version: 'published' })
 
 const elements = story.value.content.elements
 
-const slidable = ref<HTMLDivElement>()
+const slidable = ref<HTMLDivElement | undefined>()
 
 function scroll(coordinates: number) {
-  slidable.value.scrollLeft += coordinates
+  if (slidable.value) {
+    slidable.value.scrollLeft += coordinates
+  }
 }
 </script>
 
 <template>
-  <section class="x">
-    <h2 class="x__title titles">Portfolio</h2>
-    <h3 class="x__subtitle subtitles">Des projets, des sites internet, du design Web</h3>
-    <div class="x__slider">
-      <div class="x__slider__slidable" ref="slidable">
-        <NuxtLink
-          :to="'/ressources/portfolio/' + stringToSlug(element.title)"
-          class="x__slider__slidable__space"
-          v-for="element in elements"
-          :key="element"
-        >
-          <span
-            loading="lazy"
-            class="x__slider__slidable__space__img"
-            :style="'background-image: url(' + element.headerimage[0].filename + ')'"
-          ></span>
-          <h3 class="x__slider__slidable__space__title">{{ element.title }}</h3>
-          <p class="x__slider__slidable__space__description">{{ element.subtitle }}</p>
-        </NuxtLink>
+  <Container>
+    <section class="x">
+      <h2 class="x__title titles">Portfolio</h2>
+      <h3 class="x__subtitle subtitles">Des projets, des sites internet, du design Web</h3>
+      <div class="x__slider">
+        <div class="x__slider__slidable" ref="slidable">
+          <NuxtLink
+            :to="'/ressources/portfolio/' + stringToSlug(element.title)"
+            class="x__slider__slidable__space"
+            v-for="element in elements"
+            :key="element"
+          >
+            <span
+              loading="lazy"
+              class="x__slider__slidable__space__img"
+              :style="'background-image: url(' + element.headerimage[0].filename + ')'"
+            ></span>
+            <h3 class="x__slider__slidable__space__title">{{ element.title }}</h3>
+            <p class="x__slider__slidable__space__description">{{ element.subtitle }}</p>
+          </NuxtLink>
+        </div>
+        <span class="x__slider__slidable__left-arrow not-selectable" @click="scroll(-300)">
+          <img src="@/assets/icons/next.svg" alt="arrow-left" />
+        </span>
+        <span class="x__slider__slidable__right-arrow not-selectable" @click="scroll(300)">
+          <img src="@/assets/icons/next.svg" alt="arrow-left" />
+        </span>
       </div>
-      <span class="x__slider__slidable__left-arrow not-selectable" @click="scroll(-300)">
-        <img src="@/assets/icons/next.svg" alt="arrow-left" />
-      </span>
-      <span class="x__slider__slidable__right-arrow not-selectable" @click="scroll(300)">
-        <img src="@/assets/icons/next.svg" alt="arrow-left" />
-      </span>
-    </div>
-  </section>
+    </section>
+  </Container>
 </template>
 <style lang="scss" scoped>
 .x {
@@ -48,28 +52,12 @@ function scroll(coordinates: number) {
   gap: 2rem;
   width: 100%;
   flex-direction: column;
-  padding: 1rem 0 1rem 1rem;
   align-items: center;
   max-width: 2000px;
 
-  @media (min-width: $big-tablet-screen) {
-    padding: 2rem 0 1rem 2rem;
-  }
-
-  &__title {
-    // font-size: 2rem;
-    // font-weight: $overweight;
-
-    // @media (min-width: $big-tablet-screen) {
-    //   font-size: 3rem;
-    // }
-  }
-
   &__subtitle {
-    // font-weight: $skinny;
     margin-top: -1rem;
     text-align: center;
-    // font-size: 1.25rem;
   }
   &__slider {
     position: relative;

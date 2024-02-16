@@ -29,11 +29,59 @@ useHead(() => {
     <h1 class="prestations__title titles">Nos prestations sur-mesure</h1>
 
     <div class="prestations__cards">
+      <NuxtLink class="prestations__cards__card" to="/prestations/modelisation-3d">
+        <div class="prestations__cards__card__headline">
+          <img
+            class="prestations__cards__card__headline__img"
+            src="@/assets/icons/3d.svg"
+            alt="icone modelisation 3d site web"
+          />
+
+          <h2 class="prestations__cards__card__headline__title subtitles">Modélisation 3D</h2>
+        </div>
+        <p class="prestations__cards__card__txt">
+          Nous réalisons des modèles 3D de vos produits pour donner vie à vos projets. Ils peuvent ensuite être utilisés
+          pour vos configurateurs 3D, visites virtuelles, etc. Et être intégrés à votre site web.
+        </p>
+      </NuxtLink>
+      <NuxtLink class="prestations__cards__card" to="/prestations/configurateurs-3d">
+        <div class="prestations__cards__card__headline">
+          <img
+            class="prestations__cards__card__headline__img"
+            src="@/assets/icons/configurator.svg"
+            alt="icone configurateur 3d site web"
+          />
+
+          <h2 class="prestations__cards__card__headline__title subtitles">Configurateurs 3D</h2>
+        </div>
+        <p class="prestations__cards__card__txt">
+          Nous développons des configurateurs 3D responsive et intégrables à votre site web pour vos produits
+          personnalisables.
+        </p> </NuxtLink
+      ><NuxtLink class="prestations__cards__card" to="/prestations/integration-3d">
+        <div class="prestations__cards__card__headline">
+          <img
+            class="prestations__cards__card__headline__img"
+            src="@/assets/icons/3d-integration.svg"
+            alt="icone integration 3d site web"
+          />
+
+          <h2 class="prestations__cards__card__headline__title subtitles">Intégration 3D</h2>
+        </div>
+        <p class="prestations__cards__card__txt">
+          Nous intégrons vos modèles 3D à votre site web de façon à préserver la fluidité et la responsivité de votre
+          site internet.
+        </p>
+      </NuxtLink>
       <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-e-commerce">
         <div class="prestations__cards__card__headline">
-          <img class="prestations__cards__card__headline__img" src="@/assets/icons/shop-big.svg" alt="image" />
+          <img
+            class="prestations__cards__card__headline__img"
+            src="@/assets/icons/storefront.svg"
+            alt="icone creation site e commerce"
+          />
 
-          <h2 class="prestations__cards__card__headline__title subtitles">Création de <br />sites e-commerce</h2>
+          <h2 class="prestations__cards__card__headline__title subtitles">Sites e-commerce</h2>
         </div>
         <p class="prestations__cards__card__txt">
           Nous créons votre site e-commerce sur-mesure. Nous vous garantissons des délais de livraison rapides; nos
@@ -42,7 +90,11 @@ useHead(() => {
       </NuxtLink>
       <NuxtLink class="prestations__cards__card" to="/prestations/creation-site-web">
         <div class="prestations__cards__card__headline">
-          <img class="prestations__cards__card__headline__img" src="@/assets/icons/site-vitrine.svg" alt="image" />
+          <img
+            class="prestations__cards__card__headline__img"
+            src="@/assets/icons/computer.svg"
+            alt="icone creation site web vitrine"
+          />
           <h2 class="prestations__cards__card__headline__title subtitles">Création de sites vitrine</h2>
         </div>
         <p class="prestations__cards__card__txt">
@@ -52,11 +104,9 @@ useHead(() => {
       </NuxtLink>
       <NuxtLink class="prestations__cards__card" to="/prestations/audit-optimisation-site-web">
         <div class="prestations__cards__card__headline">
-          <img class="prestations__cards__card__headline__img" src="@/assets/icons/optimisation.svg" alt="image" />
+          <img class="prestations__cards__card__headline__img" src="@/assets/icons/seo.svg" alt="icone site vitrine" />
 
-          <h2 class="prestations__cards__card__headline__title subtitles">
-            Audits diagnostic et conseils personnalisés
-          </h2>
+          <h2 class="prestations__cards__card__headline__title subtitles">Audits et conseils</h2>
         </div>
         <p class="prestations__cards__card__txt">
           Nous réalisons gratuitement un audit de votre site web pour vous aider à en tirer le meilleur parti et à le
@@ -78,14 +128,14 @@ useHead(() => {
 
   &__title {
     text-align: center;
-    padding: 0 1rem;
+    padding: 1rem;
     // font-size: 2rem;
     // font-weight: $overweight;
     text-wrap: balance;
 
-    // @media (min-width: $big-tablet-screen) {
-    //   font-size: 3rem;
-    // }
+    @media (min-width: $big-tablet-screen) {
+      padding: 0 1rem;
+    }
   }
 
   &__cards {

@@ -193,7 +193,9 @@ function changeSolutionLogo(name) {
         </div>
       </div>
     </div> -->
+    <PricingComponent />
   </div>
+
   <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
 <style scoped lang="scss">

@@ -20,76 +20,9 @@ useJsonld(() => ({
   },
 }))
 
-import { gsap } from 'gsap'
-
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
-
 onMounted(() => {
   useSnipcart().setCurrency('eur')
   useSnipcart().setLanguage('fr')
-
-  //GSAP
-  if (window.innerWidth > 768) {
-    const tlLeft = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.slide',
-        start: '0% 70%',
-        end: '20% center',
-        scrub: true,
-        markers: false,
-      },
-    })
-    const tlRight = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.slide',
-        start: '0% 70%',
-        end: '20% center',
-        scrub: true,
-        markers: false,
-      },
-    })
-    tlLeft.from('.slide-left', {
-      x: -400,
-      duration: 2,
-      opacity: 0,
-    })
-    tlLeft.to('.slide-left', {
-      x: 0,
-      duration: 2,
-      opacity: 1,
-    })
-    tlRight.from('.slide-right', {
-      x: 400,
-      duration: 2,
-      opacity: 0,
-    })
-    tlRight.to('.slide-right', {
-      x: 0,
-      duration: 2,
-      opacity: 1,
-    })
-  }
-
-  // gsap.utils.document.querySelectorAll('.').forEach(element => {
-  //   gsap.fromTo(
-  //     element,
-  //     { opacity: 0, y: 50 }, // Initial state (hidden and slightly below)
-  //     {
-  //       opacity: 1,
-  //       y: 0,
-  //       duration: 1,
-  //       scrollTrigger: {
-  //         trigger: element,
-  //         start: 'top 80%', // Adjust as needed based on when you want the animation to start
-  //         end: 'center center',
-  //         scrub: true,
-  //         markers: false, // Set to false in production
-  //       },
-  //     }
-  //   )
-  // })
 })
 </script>
 
@@ -97,35 +30,40 @@ onMounted(() => {
   <section class="pricing">
     <div class="pricing__headlines">
       <h2 class="pricing__headlines__title titles">Tarifs</h2>
-      <p class="pricing__headlines__subtitle subtitles">Nos offres de base à adapter à vos besoins</p>
+      <p class="pricing__headlines__subtitle subtitles">
+        Modélisation et intégration 3D, développement de configurateurs 3D
+      </p>
     </div>
     <div class="pricing__cards">
       <div
         class="pricing__cards__card slide slide-left scale-on-hover snipcart-add-item"
-        data-item-id="devis-vitrine"
+        data-item-id="devis-modelisation-3d"
         data-item-price="10.0"
-        data-item-description="Devis personnalisé pour votre projet de site vitrine"
+        data-item-description="Devis personnalisé pour votre projet de modélisation 3D"
         data-item-image="/images/devis-freelance.webp"
-        data-item-name="Devis vitrine"
+        data-item-name="Devis modélisation 3D"
         data-item-custom1-name="Dites nous-en plus sur votre projet"
         data-item-custom1-type="textarea"
-        data-item-custom1-placeholder="Besoins, fonctionnalités, etc"
-        data-item-custom2-name="Nombre de pages (hors pages de blog)"
-        data-item-custom2-options="Moins de 5|Entre 5 et 10|Entre 10 et 20|Plus de 20"
-        data-item-custom3-name="J'ai besoin d'une charte graphique"
+        data-item-custom1-placeholder="Besoins, niveau de réalisme, etc"
+        data-item-custom1-required="true"
+        data-item-custom2-name="Supports pour réaliser la modélisation"
+        data-item-custom2-options="Simples photos sous plusieurs angles|Plans 2D avec dimentions détailées|Plans architecturaux"
+        data-item-custom3-name="Les modèles 3D doivent être texturés"
         data-item-custom3-type="checkbox"
         data-item-custom4-name="Adresse mail à laquelle vous souhaitez recevoir le devis"
         data-item-custom4-required="true"
+        data-item-custom5-name="Numéro auquel vous souhaitez être contacté(e) (uniquement en cas de problème, nous privilégions le contact par mail)"
+        data-item-custom5-required="true"
         data-item-url="https://twf-v2.netlify.app/"
       >
         <div class="pricing__cards__card__headlines">
-          <h3 class="pricing__cards__card__headlines__title">Site vitrine</h3>
+          <h3 class="pricing__cards__card__headlines__title">Modélisation 3D</h3>
           <h4 class="pricing__cards__card__headlines__subtitle">
-            Vous souhaitez développer la présence en ligne de votre entreprise
+            Vous souhaitez obtenir des modèles 3D de vos produits
           </h4>
         </div>
         <span class="pricing__cards__card__price"
-          ><span class="pricing__cards__card__price__from">A partir de</span> 2400 €
+          ><span class="pricing__cards__card__price__from">A partir de</span> 400 €
           <span class="pricing__cards__card__price__from">TTC</span></span
         >
         <ul class="pricing__cards__card__features">
@@ -134,28 +72,28 @@ onMounted(() => {
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Optimisation SEO et performance
+            />Modélisation à partir de photos
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Hébergement inclus
+            />Modélisation à partir de plans 2D
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />5 pages de votre choix
+            />Modélisation architecturale
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Maquettage des pages principales
+            />Texturage et optimisation
           </li>
 
           <li class="pricing__cards__card__features__feature">
@@ -163,7 +101,7 @@ onMounted(() => {
               class="pricing__cards__card__features__feature__check"
               src="@/assets/icons/check-circle-dark.svg"
               alt="icone check"
-            />Blog clé en main
+            />Rendu réaliste ou minimaliste
           </li>
           <li class="pricing__cards__card__features__feature">
             <img
@@ -183,30 +121,35 @@ onMounted(() => {
       </div>
       <div
         class="pricing__cards__card scale-on-hover snipcart-add-item"
-        data-item-id="devis-e-commerce"
+        data-item-id="devis-configurateur-3d"
         data-item-price="10.00"
-        data-item-description="Devis personnalisé pour votre projet de site e-commerce"
+        data-item-description="Devis personnalisé pour le développement de votre configurateur 3D"
         data-item-image="/images/devis-freelance.webp"
-        data-item-name="Devis e-commerce"
+        data-item-name="Devis configurateur 3D"
         data-item-custom1-name="Dites nous-en plus sur votre projet"
         data-item-custom1-type="textarea"
         data-item-custom1-placeholder="Besoin, fonctionnalités, etc"
-        data-item-custom2-name="Nombre de pages (hors pages de blog)"
-        data-item-custom2-options="Moins de 5|Entre 5 et 10|Entre 10 et 20|Plus de 20"
-        data-item-custom3-name="J'ai besoin d'une charte graphique"
-        data-item-custom3-type="checkbox"
-        data-item-custom4-name="Adresse mail à laquelle vous souhaitez recevoir le devis"
-        data-item-custom4-required="true"
+        data-item-custom1-required="true"
+        data-item-custom2-name="Quantité de produits à intégrer au configurateur"
+        data-item-custom2-options="1|Entre 1 et 5|Plus de 5"
+        data-item-custom3-name="Options de personnalisation par produit"
+        data-item-custom3-options="1|Entre 1 et 5|Plus de 5"
+        data-item-custom4-name="Le configurateur doit être intégré à un site web existant"
+        data-item-custom4-type="checkbox"
+        data-item-custom5-name="Adresse mail à laquelle vous souhaitez recevoir le devis"
+        data-item-custom5-required="true"
+        data-item-custom6-name="Numéro auquel vous souhaitez être contacté(e) (uniquement en cas de problème, nous privilégions le contact par mail)"
+        data-item-custom6-required="true"
         data-item-url="https://twf-v2.netlify.app/"
       >
         <div class="pricing__cards__card__headlines">
-          <h3 class="pricing__cards__card__headlines__title">Site E-commerce</h3>
+          <h3 class="pricing__cards__card__headlines__title">Configurateurs 3D</h3>
           <h4 class="pricing__cards__card__headlines__subtitle">
-            Vous souhaitez vendre vos produits ou services sur internet
+            Pour permettre à vos clients de personnaliser leurs produits de façon réaliste et immersive
           </h4>
         </div>
         <span class="pricing__cards__card__price"
-          ><span class="pricing__cards__card__price__from">A partir de</span> 6000 €
+          ><span class="pricing__cards__card__price__from">A partir de</span> 14000 €
           <span class="pricing__cards__card__price__from">TTC</span></span
         >
         <ul class="pricing__cards__card__features">
@@ -279,26 +222,30 @@ onMounted(() => {
       </div>
       <div
         class="pricing__cards__card scale-on-hover slide slide-right snipcart-add-item"
-        data-item-id="seo"
-        data-item-price="360.00"
-        data-item-description="Optimisation SEO, Hébergement inclus, 5 pages de votre choix, Maquettage des pages principales, Optimisation de la performance, Blog intégré clé en mains, Livraison en 2 semaines max"
-        data-item-image="/images/seooo.webp"
-        data-item-name="SEO & Performance"
+        data-item-id="intégration-3d"
+        data-item-price="10.00"
+        data-item-description="Devis personnalisé pour l'intégration de modèles 3D à votre site web"
+        data-item-image="/images/devis-freelance.webp"
+        data-item-name="Devis intégration 3D"
         data-item-custom1-name="URL de votre site internet"
-        data-item-custom2-name="Adresse mail à laquelle vous souhaitez être contacté(e)"
+        data-item-custom2-name="Dites nous-en plus sur votre projet"
+        data-item-custom2-type="textarea"
+        data-item-custom2-placeholder="Besoin, fonctionnalités, etc"
         data-item-custom2-required="true"
-        data-item-custom3-name="Numéro auquel vous souhaitez être contacté(e) (uniquement en cas de problème, nous privilégions le contact par mail)"
+        data-item-custom3-name="Adresse mail à laquelle vous souhaitez être contacté(e)"
         data-item-custom3-required="true"
+        data-item-custom4-name="Numéro auquel vous souhaitez être contacté(e) (uniquement en cas de problème, nous privilégions le contact par mail)"
+        data-item-custom4-required="true"
         data-item-url="https://twf-v2.netlify.app/"
       >
         <div class="pricing__cards__card__headlines">
-          <h3 class="pricing__cards__card__headlines__title">SEO & Performance</h3>
+          <h3 class="pricing__cards__card__headlines__title">Intégration 3D</h3>
           <h4 class="pricing__cards__card__headlines__subtitle">
-            Vous possédez déjà un site internet que vous souhaitez améliorer
+            Vous souhaitez intégrer des modèles 3D à votre site internet
           </h4>
         </div>
         <span class="pricing__cards__card__price"
-          ><span class="pricing__cards__card__price__from">A partir de</span> 360 €
+          ><span class="pricing__cards__card__price__from">A partir de</span> 220 €
           <span class="pricing__cards__card__price__from">TTC</span></span
         >
         <ul class="pricing__cards__card__features">
@@ -352,7 +299,7 @@ onMounted(() => {
             />Rapport détaillé des améliorations
           </li>
         </ul>
-        <button class="pricing__cards__card__button button-primary">Commander maintenant</button>
+        <button class="pricing__cards__card__button button-primary">Demander un devis</button>
       </div>
     </div>
   </section>
@@ -482,8 +429,12 @@ onMounted(() => {
         }
       }
       &__link {
-        margin-top: -1rem;
+        margin-top: -0.5rem;
         text-align: center;
+
+        @media (min-width: $big-tablet-screen) {
+          margin-top: -1rem;
+        }
       }
     }
   }

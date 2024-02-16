@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 const breadcrumbs = [
   {
     name: 'Accueil',
@@ -21,40 +23,29 @@ useHead(() => {
 </script>
 
 <template>
-  <div class="index">
-    <!-- <HomeIndexSlider /> -->
-    <HomeIndexHeadline />
-    <video autoplay="true" muted loop>
-      <source src="@/assets/videos/website.mp4" type="video/mp4" />
-    </video>
-    <div class="index__banner">
-      <AuditPopUp />
-    </div>
+  <section class="index">
+    <HomeHero />
+
+    <Container>
+      <div class="index__banner">
+        <AuditPopUp /></div
+    ></Container>
     <HomeIndexStory />
-    <HomeSticksAnimation />
-    <HomePricingComponent />
+    <PortfolioSlider />
+    <PricingComponent />
     <BlogComponent />
-  </div>
+  </section>
   <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
 <style scoped lang="scss">
-video {
-  width: clamp(100px, 100%, 1100px);
-  height: 200px;
-
-  @media (min-width: $big-tablet-screen) {
-    height: 600px;
-  }
-}
 .index {
   display: flex;
   flex-direction: column;
   gap: 6rem;
   align-items: center;
-  padding: 5rem 0;
+  padding: 2rem 0;
   @media (min-width: $big-tablet-screen) {
     gap: 8rem;
-    padding: 0;
   }
 
   &__banner {
@@ -68,7 +59,6 @@ video {
     gap: 1rem;
 
     @media (min-width: $big-tablet-screen) {
-      padding: 1rem;
       gap: 4rem;
     }
   }

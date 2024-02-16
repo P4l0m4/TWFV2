@@ -43,12 +43,10 @@ useJsonld(() => ({
 </script>
 
 <template>
-  <div class="container">
-    <!-- <Transition><LoaderAnimation v-if="loader" /></Transition> -->
-    <HeaderComponent />
-    <main><slot /></main>
-    <FooterComponent />
-  </div>
+  <HeaderComponent />
+  <main><slot /></main>
+  <FooterComponent />
+
   <!-- Google Tag Manager (noscript) -->
   <noscript
     ><iframe
@@ -61,32 +59,24 @@ useJsonld(() => ({
   ></noscript>
   <!-- End Google Tag Manager (noscript) -->
 </template>
-<style lang="scss">
-//transition
-.container {
+<style lang="scss" scoped>
+main {
   display: flex;
   flex-direction: column;
-  padding: 3.5rem 0 0 0;
   gap: 2rem;
-  align-items: center;
-  margin: auto;
+  padding-top: 84px;
+  min-height: 100svh;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
   @media (min-width: $big-tablet-screen) {
-    padding: 5rem 0 0 0;
-  }
-  @media (min-width: $laptop-screen) {
-    padding: 8rem 0 0 0;
+    gap: 4rem;
+    padding-top: 76px;
   }
 
-  & main {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    @media (min-width: $big-tablet-screen) {
-      gap: 4rem;
-    }
+  & ::-webkit-scrollbar {
+    width: 8px;
+    display: none !important;
   }
 }
 </style>

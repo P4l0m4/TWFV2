@@ -13,13 +13,13 @@ const breadcrumbs = [
 
 useHead(() => {
   return {
-    title: 'Ressources gratuites autour de la création de site web',
+    title: 'Blog, portfolio et tutoriels autour de la création de sites internet et de la modélisation 3D pour le Web',
     meta: [
       {
         hid: 'description',
         name: 'description',
         content:
-          'Apprenez à créer et optimiser votre site web avec nos ressources gratuites. Référencez et augmentez la performance de votre site internet',
+          'Mieux comprendre le monde du web et du développement de sites internet, du design, du SEO et de la modélisation 3D pour le Web',
       },
     ],
   }
@@ -32,7 +32,7 @@ useHead(() => {
     <div class="ressources__cards">
       <NuxtLink class="ressources__cards__card" to="/ressources/blog">
         <div class="ressources__cards__card__headline">
-          <img class="ressources__cards__card__headline__img" src="@/assets/icons/document.svg" alt="image" />
+          <img class="ressources__cards__card__headline__img" src="@/assets/icons/blog.svg" alt="image" />
           <h2 class="ressources__cards__card__headline__title subtitles">Blog</h2>
         </div>
         <p class="ressources__cards__card__txt">
@@ -42,7 +42,7 @@ useHead(() => {
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/portfolio">
         <div class="ressources__cards__card__headline">
-          <img class="ressources__cards__card__headline__img" src="@/assets/icons/dashboard.svg" alt="image" />
+          <img class="ressources__cards__card__headline__img" src="@/assets/icons/portfolio.svg" alt="image" />
           <h2 class="ressources__cards__card__headline__title subtitles">Portfolio</h2>
         </div>
         <p class="ressources__cards__card__txt">
@@ -52,7 +52,7 @@ useHead(() => {
       </NuxtLink>
       <NuxtLink class="ressources__cards__card" to="/ressources/">
         <div class="ressources__cards__card__headline">
-          <img class="ressources__cards__card__headline__img" src="@/assets/icons/tutorial.svg" alt="image" />
+          <img class="ressources__cards__card__headline__img" src="@/assets/icons/school.svg" alt="image" />
           <h2 class="ressources__cards__card__headline__title subtitles">Tutoriels (comming soon)</h2>
         </div>
         <p class="ressources__cards__card__txt">
@@ -74,14 +74,14 @@ useHead(() => {
   &__title {
     // font-size: 1.5rem;
     text-align: center;
-    padding: 0 1rem;
+    padding: 1rem;
 
     // font-size: 2rem;
     // font-weight: $overweight;
 
-    // @media (min-width: $big-tablet-screen) {
-    //   font-size: 3rem;
-    // }
+    @media (min-width: $big-tablet-screen) {
+      padding: 0 1rem;
+    }
   }
 
   &__cards {

@@ -11,7 +11,8 @@ const isMenuOpen = ref(false)
     /></nuxt-link>
 
     <div class="wrapper">
-      <NuxtLink to="/prestations" class="link desktop-only" aria-label="Prestations">Prestations</NuxtLink>
+      <NuxtLink to="/prestations" class="link desktop-only" aria-label="Prestations">Prestations</NuxtLink
+      ><NuxtLink to="/tarifs" class="link desktop-only" aria-label="Tarifs">Tarifs</NuxtLink>
       <NuxtLink exact to="/ressources" class="link desktop-only" aria-label="Ressources">
         <span class="desktop-only">Ressources</span> </NuxtLink
       ><NuxtLink to="/a-propos" class="link desktop-only" aria-label="A propos">A propos</NuxtLink>

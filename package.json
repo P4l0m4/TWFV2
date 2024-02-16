@@ -28,6 +28,7 @@
     "vue3-infinite-slide-bar": "^1.0.4"
   },
   "devDependencies": {
+    "three": "^0.158.0",
     "@nuxtjs/snipcart": "^2.0.2",
     "@storyblok/nuxt": "^5.4.4",
     "dayjs-nuxt": "^1.1.2",

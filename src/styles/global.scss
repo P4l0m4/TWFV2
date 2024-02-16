@@ -22,6 +22,12 @@
   font-display: swap;
   font-weight: 700;
 }
+@font-face {
+  font-family: 'Cooper Hewitt', sans-serif;
+  src: url(@/assets/fonts/Cooper-Hewitt-Heavy.otf) format('opentype');
+  font-display: swap;
+  font-weight: 800;
+}
 
 *,
 :before,
@@ -33,7 +39,7 @@
 
 html {
   scroll-behavior: smooth;
-  line-height: $line-height;
+  // line-height: $line-height;
   overflow-x: hidden;
 }
 
@@ -108,9 +114,10 @@ input[type='number'] {
   padding: 0.75rem 1.75rem;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
   cursor: pointer;
   border-radius: calc($radius * 4);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease;
   // text-shadow: black 0px 0px 1px;
   backface-visibility: hidden;
   transform: translateZ(0);
@@ -119,7 +126,7 @@ input[type='number'] {
   font-family: 'Custom' !important;
 
   &:hover {
-    transform: scale(1.04);
+    transform: scale(1.02);
   }
 }
 .button-primary {
@@ -207,38 +214,20 @@ details > summary::-webkit-details-marker /* Safari */ {
   -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
   user-select: none; /* Propriété standard */
 }
-.big-titles {
-  font-size: calc($big-titles - 0.5rem);
-  font-weight: $overweight;
-  text-transform: uppercase;
-  line-height: $line-height-titles;
-
-  @media (min-width: $big-tablet-screen) {
-    font-size: $big-titles;
-    line-height: calc($line-height-titles * 1.2);
-  }
-}
 
 .titles {
   font-size: calc($titles - 0.5rem);
   font-weight: $overweight;
   text-transform: uppercase;
-  line-height: $line-height-subtitles;
+  font-family: 'Cooper Hewitt', sans-serif;
 
-  @media (min-width: $desktop-screen) {
+  @media (min-width: $big-tablet-screen) {
     font-size: $titles;
-    line-height: $line-height-titles;
   }
 }
 .subtitles {
-  font-size: calc($subtitles - 0.5rem);
+  font-size: $subtitles;
   font-weight: $skinny-thick;
-  line-height: calc($line-height-subtitles - 0.5rem);
-
-  @media (min-width: $desktop-screen) {
-    font-size: $subtitles;
-    line-height: $line-height-subtitles;
-  }
 }
 
 //ANIMATIONS
@@ -301,4 +290,17 @@ details > summary::-webkit-details-marker /* Safari */ {
   to {
     transform: rotate(0deg);
   }
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
