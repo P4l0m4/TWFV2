@@ -3,8 +3,6 @@ const props = defineProps({
   content: Object,
 })
 
-console.log(props.content)
-
 const firstTwoFeatures = props.content.content.features.slice(0, 2)
 const lastTwoFeatures = props.content.content.features.slice(2, 4)
 </script>
@@ -48,11 +46,7 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
       aria-label="voir une démo"
     >
       <button class="feature__image__button button-secondary">Voir une démo</button>
-      <img
-        class="feature__image__img"
-        :src="props.content.content.demoImage.filename"
-        :alt="props.content.content.demoImage.alt"
-      />
+      <img class="feature__image__img" :src="feature.featureImage.filename" :alt="feature.featureImage.filename.alt" />
     </NuxtLink>
   </div>
 
@@ -80,11 +74,7 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
       aria-label="voir une démo"
     >
       <button class="feature__image__button button-secondary">Voir une démo</button>
-      <img
-        class="feature__image__img"
-        :src="props.content.content.demoImage.filename"
-        :alt="props.content.content.demoImage.alt"
-      />
+      <img class="feature__image__img" :src="feature.featureImage.filename" :alt="feature.featureImage.alt" />
     </NuxtLink>
   </div>
 </template>
