@@ -7,76 +7,91 @@ const firstTwoFeatures = props.content.content.features.slice(0, 2)
 const lastTwoFeatures = props.content.content.features.slice(2, 4)
 </script>
 <template>
-  <div class="header">
-    <div class="header__headlines">
-      <h1 class="header__headlines__title titles">{{ props.content.content.title }}</h1>
-      <h2 class="header__headlines__subtitle subtitles">{{ props.content.content.subtitle }}</h2>
+  <Container>
+    <div class="header">
+      <div class="header__headlines">
+        <h1 class="header__headlines__title titles">{{ props.content.content.title }}</h1>
+        <h2 class="header__headlines__subtitle subtitles">{{ props.content.content.subtitle }}</h2>
+        <NuxtLink
+          class="header__headlines__button button-primary"
+          :to="props.content.content.buttonLink.url"
+          :target="props.content.content.buttonLink.target"
+          >{{ props.content.content.buttonText }}</NuxtLink
+        >
+      </div>
       <NuxtLink
-        class="header__headlines__button button-primary"
-        :to="props.content.content.buttonLink.url"
-        :target="props.content.content.buttonLink.target"
-        >{{ props.content.content.buttonText }}</NuxtLink
+        class="header__image"
+        :to="props.content.content.demoLink.url"
+        target="_blank"
+        aria-label="voir une démo"
       >
+        <button class="header__image__button button-secondary">Voir une démo</button>
+        <img
+          class="header__image__img"
+          :src="props.content.content.demoImage.filename"
+          :alt="props.content.content.demoImage.alt"
+        />
+      </NuxtLink>
     </div>
-    <NuxtLink class="header__image" :to="props.content.content.demoLink.url" target="_blank" aria-label="voir une démo">
-      <button class="header__image__button button-secondary">Voir une démo</button>
-      <img
-        class="header__image__img"
-        :src="props.content.content.demoImage.filename"
-        :alt="props.content.content.demoImage.alt"
-      />
-    </NuxtLink>
-  </div>
-
-  <div class="feature" v-for="feature in firstTwoFeatures" :key="feature._uid">
-    <div class="feature__txt">
-      <h3 class="feature__txt__title subtitles">{{ feature.featureTitle }}</h3>
-      <h4 class="feature__txt__subtitle">{{ feature.featureSubtitle }}</h4>
+  </Container>
+  <Container>
+    <div class="feature" v-for="feature in firstTwoFeatures" :key="feature._uid">
+      <div class="feature__txt">
+        <h3 class="feature__txt__title subtitles">{{ feature.featureTitle }}</h3>
+        <h4 class="feature__txt__subtitle">{{ feature.featureSubtitle }}</h4>
+        <NuxtLink
+          class="feature__txt__button button-primary"
+          :to="feature.buttonLink.url"
+          :target="feature.buttonLink.target"
+          >{{ feature.buttonText }}</NuxtLink
+        >
+      </div>
       <NuxtLink
-        class="feature__txt__button button-primary"
-        :to="feature.buttonLink.url"
-        :target="feature.buttonLink.target"
-        >{{ feature.buttonText }}</NuxtLink
+        class="feature__image"
+        :to="props.content.content.demoLink.url"
+        target="_blank"
+        aria-label="voir une démo"
       >
-    </div>
-    <NuxtLink
-      class="feature__image"
-      :to="props.content.content.demoLink.url"
-      target="_blank"
-      aria-label="voir une démo"
-    >
-      <button class="feature__image__button button-secondary">Voir une démo</button>
-      <img class="feature__image__img" :src="feature.featureImage.filename" :alt="feature.featureImage.filename.alt" />
-    </NuxtLink>
-  </div>
+        <button class="feature__image__button button-secondary">Voir une démo</button>
+        <img
+          class="feature__image__img"
+          :src="feature.featureImage.filename"
+          :alt="feature.featureImage.filename.alt"
+        />
+      </NuxtLink></div
+  ></Container>
 
-  <iframe
-    class="iframe"
-    :src="props.content.content.demoLink.url"
-    :title="props.content.content.demoLink.title"
-  ></iframe>
+  <Container>
+    <iframe
+      class="iframe"
+      :src="props.content.content.demoLink.url"
+      :title="props.content.content.demoLink.title"
+    ></iframe>
+  </Container>
 
-  <div class="feature" v-for="feature in lastTwoFeatures" :key="feature._uid">
-    <div class="feature__txt">
-      <h3 class="feature__txt__title subtitles">{{ feature.featureTitle }}</h3>
-      <h4 class="feature__txt__subtitle">{{ feature.featureSubtitle }}</h4>
+  <Container>
+    <div class="feature" v-for="feature in lastTwoFeatures" :key="feature._uid">
+      <div class="feature__txt">
+        <h3 class="feature__txt__title subtitles">{{ feature.featureTitle }}</h3>
+        <h4 class="feature__txt__subtitle">{{ feature.featureSubtitle }}</h4>
+        <NuxtLink
+          class="feature__txt__button button-primary"
+          :to="feature.buttonLink.url"
+          :target="feature.buttonLink.target"
+          >{{ feature.buttonText }}</NuxtLink
+        >
+      </div>
       <NuxtLink
-        class="feature__txt__button button-primary"
-        :to="feature.buttonLink.url"
-        :target="feature.buttonLink.target"
-        >{{ feature.buttonText }}</NuxtLink
+        class="feature__image"
+        :to="props.content.content.demoLink.url"
+        target="_blank"
+        aria-label="voir une démo"
       >
+        <button class="feature__image__button button-secondary">Voir une démo</button>
+        <img class="feature__image__img" :src="feature.featureImage.filename" :alt="feature.featureImage.alt" />
+      </NuxtLink>
     </div>
-    <NuxtLink
-      class="feature__image"
-      :to="props.content.content.demoLink.url"
-      target="_blank"
-      aria-label="voir une démo"
-    >
-      <button class="feature__image__button button-secondary">Voir une démo</button>
-      <img class="feature__image__img" :src="feature.featureImage.filename" :alt="feature.featureImage.alt" />
-    </NuxtLink>
-  </div>
+  </Container>
 </template>
 <style lang="scss" scoped>
 .header {
