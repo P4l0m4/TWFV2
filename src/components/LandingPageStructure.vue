@@ -154,7 +154,7 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
       position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       z-index: -1;
     }
   }
@@ -228,7 +228,7 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
       position: absolute;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       z-index: -1;
     }
   }
