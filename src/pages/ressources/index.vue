@@ -13,7 +13,7 @@ const breadcrumbs = [
 
 useHead(() => {
   return {
-    title: 'Blog, portfolio et tutoriels autour de la création de sites internet et de la modélisation 3D pour le Web',
+    title: 'Blog, portfolio et cours autour de la création de sites internet et de la modélisation 3D pour le Web',
     meta: [
       {
         hid: 'description',
@@ -26,7 +26,7 @@ useHead(() => {
 })
 </script>
 <template>
-  <div class="ressources">
+  <section class="ressources">
     <h1 class="ressources__title titles">Nos ressources à votre disposition</h1>
 
     <div class="ressources__cards">
@@ -50,17 +50,18 @@ useHead(() => {
           naturel (SEO)
         </p>
       </NuxtLink>
-      <NuxtLink class="ressources__cards__card" to="/ressources/">
+      <NuxtLink class="ressources__cards__card" to="/cours">
         <div class="ressources__cards__card__headline">
           <img class="ressources__cards__card__headline__img" src="@/assets/icons/school.svg" alt="image" />
-          <h2 class="ressources__cards__card__headline__title subtitles">Tutoriels (comming soon)</h2>
+          <h2 class="ressources__cards__card__headline__title subtitles">Cours</h2>
         </div>
         <p class="ressources__cards__card__txt">
-          Lorem adipisicing aperiam architecto incidunt provident sed tenetur nulla aliquid quam
+          Mini cours autour de la modélisation 3D, du développement web et du SEO pour vous aider à mieux appréhender le
+          web
         </p>
       </NuxtLink>
     </div>
-  </div>
+  </section>
   <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
 <style scoped lang="scss">
