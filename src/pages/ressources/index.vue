@@ -50,7 +50,7 @@ useHead(() => {
           naturel (SEO)
         </p>
       </NuxtLink>
-      <NuxtLink class="ressources__cards__card" to="/cours">
+      <NuxtLink class="ressources__cards__card" to="/ressources/cours">
         <div class="ressources__cards__card__headline">
           <img class="ressources__cards__card__headline__img" src="@/assets/icons/school.svg" alt="image" />
           <h2 class="ressources__cards__card__headline__title subtitles">Cours</h2>
