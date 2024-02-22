@@ -161,6 +161,7 @@ function search() {
       &__title {
         width: calc(100% - 160px);
         text-wrap: balance;
+        text-shadow: $shadow-text;
       }
 
       &__bottom-section {
@@ -173,6 +174,7 @@ function search() {
           display: flex;
           align-items: center;
           gap: 0.25rem;
+          white-space: nowrap;
 
           &__img {
             width: 24px;

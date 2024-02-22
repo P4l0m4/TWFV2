@@ -12,11 +12,12 @@
   scroll-margin-top: 5rem;
   margin: auto;
   animation: fading 0.4s;
-  gap: 4rem;
+  gap: 2rem;
 
   @media (min-width: $big-tablet-screen) {
     width: 90%;
     padding: 2rem;
+    gap: 4rem;
   }
   @media (min-width: $super-big-screen) {
     width: 100%;
