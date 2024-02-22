@@ -33,3 +33,15 @@ export async function getPortfolioPages() {
     priority: 0.9,
   }))
 }
+
+export async function getCoursesPages() {
+  const { data } = await Storyblok.get('cdn/stories/classes', {})
+
+  const courses = data.story.content.classesList
+
+  return courses.map(course => ({
+    loc: `/ressources/cours/${stringToSlug(course.name)}`,
+    changefreq: 'daily',
+    priority: 0.9,
+  }))
+}
