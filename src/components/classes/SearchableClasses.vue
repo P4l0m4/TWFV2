@@ -62,7 +62,7 @@ function search() {
               class="search-section__list__class__bottom-section__time__img"
               src="@/assets/icons/time.svg"
               alt="icone durée"
-            />{{ course.duration }}</time
+            />{{ course.duration }} minutes</time
           >
           <div class="search-section__list__class__bottom-section__level">
             <span

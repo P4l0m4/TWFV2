@@ -5,6 +5,58 @@ const route = useRoute()
 const courseSlug = route.params.slug
 
 const course = story.value.content.classesList.find(c => stringToSlug(c.name) === courseSlug)
+
+const breadcrumbs = [
+  {
+    name: 'Accueil',
+    url: window.location.origin,
+  },
+  {
+    name: 'Ressources',
+    url: window.location.origin + '/ressources',
+  },
+  {
+    name: 'Blog',
+    url: window.location.origin + '/ressources/blog',
+  },
+  {
+    name: course.name,
+    url: window.location.href,
+  },
+]
+
+useJsonld(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name: course.name,
+  description: course.description,
+
+  hasCourseInstance: [
+    {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      courseWorkload: `PT${course.duration}M`,
+      instructor: {
+        '@type': 'Person',
+        name: 'Tekila Web Factory',
+        url: window.location.origin,
+      },
+    },
+  ],
+  offers: {
+    '@type': 'Offer',
+    category: course.module,
+    price: '0',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    url: window.location.href,
+  },
+  provider: {
+    '@type': 'Organization',
+    name: 'Tekila Web Factory',
+    sameAs: window.location.origin,
+  },
+}))
 </script>
 <template>
   <section class="course">
@@ -18,7 +70,8 @@ const course = story.value.content.classesList.find(c => stringToSlug(c.name) ==
           <time class="course__header__tags__time"
             ><img class="course__header__tags__time__img" src="@/assets/icons/time.svg" alt="icone durée" />{{
               course.duration
-            }}</time
+            }}
+            minutes</time
           >
           <div class="course__header__tags__level">
             <span
@@ -39,6 +92,7 @@ const course = story.value.content.classesList.find(c => stringToSlug(c.name) ==
       <ClassesAllClasses :story="story" />
     </Container>
   </section>
+  <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
 <style lang="scss" scoped>
 .course {
