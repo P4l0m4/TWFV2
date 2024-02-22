@@ -5,7 +5,18 @@ const route = useRoute()
 const courseSlug = route.params.slug
 
 const course = story.value.content.classesList.find(c => stringToSlug(c.name) === courseSlug)
-
+useHead(() => {
+  return {
+    title: course.name,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: course.description,
+      },
+    ],
+  }
+})
 const breadcrumbs = [
   {
     name: 'Accueil',
@@ -16,8 +27,8 @@ const breadcrumbs = [
     url: window.location.origin + '/ressources',
   },
   {
-    name: 'Blog',
-    url: window.location.origin + '/ressources/blog',
+    name: 'Cours',
+    url: window.location.origin + '/ressources/cours',
   },
   {
     name: course.name,
