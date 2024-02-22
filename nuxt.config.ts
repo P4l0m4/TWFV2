@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import { getBlogPages, getPortfolioPages } from './src/utils/sitemap.js'
+import { getBlogPages, getPortfolioPages, getCoursesPages } from './src/utils/sitemap.js'
 
 export default defineNuxtConfig({
   ssr: false,
@@ -38,7 +38,8 @@ export default defineNuxtConfig({
     urls: async () => {
       const blogPages = await getBlogPages()
       const portfolioPages = await getPortfolioPages()
-      return [...blogPages, ...portfolioPages]
+      const coursesPages = await getCoursesPages()
+      return [...blogPages, ...portfolioPages, ...coursesPages]
     },
   },
   vue: {
