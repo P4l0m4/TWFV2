@@ -86,13 +86,13 @@
 </template>
 <style scoped lang="scss">
 .things-to-optimize {
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
   @media (min-width: $big-tablet-screen) {
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
 
   &__proposition {

@@ -43,7 +43,7 @@ useHead(() => {
   flex-direction: column;
   gap: 6rem;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   @media (min-width: $big-tablet-screen) {
     gap: 8rem;
     padding: 1rem 2rem;

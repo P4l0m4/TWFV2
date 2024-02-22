@@ -104,6 +104,7 @@ useHead(() => {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 2rem 0;
   width: clamp(343px, 100%, 900px);
   align-items: center;
 

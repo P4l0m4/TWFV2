@@ -64,7 +64,7 @@ const breadcrumbs = [
 .portfolio {
   display: flex;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   gap: 2rem;
   align-items: center;
   flex-direction: column;
@@ -75,22 +75,8 @@ const breadcrumbs = [
     gap: 1rem;
     align-items: center;
 
-    // & h1 {
-    //   font-size: 2rem;
-    //   font-weight: $overweight;
-
-    //   @media (min-width: $big-tablet-screen) {
-    //     font-size: 3rem;
-    //   }
-    // }
     & h2 {
-      // font-weight: $skinny;
-      // font-size: 1.25rem;
       text-align: center;
-
-      // @media (min-width: $big-tablet-screen) {
-      //   font-size: 1.5rem;
-      // }
     }
   }
 
@@ -100,6 +86,7 @@ const breadcrumbs = [
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    margin-top: 2rem;
 
     &__element {
       display: flex;

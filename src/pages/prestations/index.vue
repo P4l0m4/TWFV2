@@ -124,7 +124,7 @@ useHead(() => {
   flex-direction: column;
   gap: 4rem;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
 
   &__title {
     text-align: center;
