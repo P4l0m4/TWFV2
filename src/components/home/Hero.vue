@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { onMounted, ref } from 'vue'
-
+let isBookAnAuditOpen = ref(false)
 const video = ref()
 const showVideo = ref(false)
 let exposedGltf = null
@@ -38,7 +38,7 @@ onMounted(() => {
   scene.add(ambientLight)
 
   //blue POINTLIGHT
-  const pointLight = new THREE.PointLight(0x1eb2bc, 4)
+  const pointLight = new THREE.PointLight(0x1eb2bc, 5)
 
   scene.add(pointLight)
 
@@ -192,9 +192,17 @@ onMounted(() => {
       <h3 class="hero__txt subtitles">Créons un site web au service de votre entreprise</h3>
 
       <div class="hero__buttons">
-        <button class="hero__buttons__button button-primary">Prendre RDV avec nous</button
-        ><button class="hero__buttons__button button-secondary">Auditer votre site web</button>
+        <NuxtLink
+          class="hero__buttons__button button-primary"
+          href="https://calendly.com/tekilawebfactory/30min"
+          target="_blank"
+          aria-label="Prendre RDV"
+          >Prendre RDV avec nous</NuxtLink
+        ><button class="hero__buttons__button button-secondary" @click="isBookAnAuditOpen = !isBookAnAuditOpen">
+          Auditer votre site web
+        </button>
       </div>
+      <AuditBookAnAudit v-if="isBookAnAuditOpen" />
     </section>
     <canvas class="webgl"></canvas>
     <video autoplay="true" muted ref="video" v-if="showVideo">

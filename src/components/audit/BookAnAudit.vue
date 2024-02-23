@@ -76,7 +76,7 @@ async function submit() {
       :disabled="state.isSubmitting"
       aria-label="envoyer le formulaire"
     >
-      Envoyer
+      Recevoir mon audit gratuit
     </button>
 
     <p v-if="state.sent" class="form__error">Merci ! Votre demande a été envoyée</p>
@@ -85,6 +85,7 @@ async function submit() {
 
 <style lang="scss" scoped>
 .form {
+  pointer-events: all;
   margin-top: 2rem;
   animation: fade 0.4s ease;
   width: clamp(240px, 100%, 500px);
@@ -107,6 +108,8 @@ async function submit() {
 
     &__input,
     &__textarea {
+      font-family: 'Custom';
+      font-size: $base-text;
       border: 2px solid $primary-color;
       // border-radius: $small-radius;
       height: 44px;
