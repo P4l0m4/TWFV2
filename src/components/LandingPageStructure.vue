@@ -252,24 +252,22 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
   display: flex;
   gap: 1rem;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
 
   @media (min-width: $big-tablet-screen) {
     gap: 2rem;
   }
 
   &__offer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
+    display: flex;
     gap: 1rem;
     background-color: $primary-color;
     padding: 1rem;
     border-radius: $radius;
     box-shadow: $shadow;
-    place-items: center;
-
-    @media (min-width: $big-tablet-screen) {
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    }
+    align-items: center;
+    flex-direction: column;
 
     &__title {
       text-align: center;
