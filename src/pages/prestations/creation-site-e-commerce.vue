@@ -214,26 +214,12 @@ function changeSolutionLogo(name) {
     gap: 1rem;
 
     &__title {
-      // font-size: 1.5rem;
       text-align: center;
-      // font-size: 2rem;
-      // font-weight: $overweight;
       text-wrap: balance;
-
-      // @media (min-width: $big-tablet-screen) {
-      //   font-size: 3rem;
-      // }
     }
     &__subtitle {
       text-align: center;
-      // font-size: 1rem;
-      // font-weight: $skinny;
       text-wrap: balance;
-
-      // @media (min-width: $big-tablet-screen) {
-      //   font-size: 1.25rem;
-      //   font-weight: $skinny;
-      // }
     }
   }
 

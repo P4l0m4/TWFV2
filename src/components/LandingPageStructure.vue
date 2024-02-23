@@ -64,13 +64,16 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
   <Container>
     <div class="offers">
       <div class="offers__offer" v-for="offer in props.content.content.offers" :key="offer._uid">
-        <h4 class="offers__offer__title subtitles">{{ offer.title }}</h4>
-        <NuxtLink
-          class="offers__offer__button button-primary"
-          :to="offer.buttonLink.url"
-          :target="offer.buttonLink.target"
-          >{{ offer.buttonText }}</NuxtLink
-        >
+        <div class="offers__offer__illustration">
+          <img class="offers__offer__illustration__img" :src="offer.icon.filename" :alt="offer.icon.alt" />
+          <span class="offers__offer__illustration__data">{{ offer.textUnderIcon1 }}</span>
+          <span class="offers__offer__illustration__txt">{{ offer.textUnderIcon2 }}</span>
+        </div>
+        <div class="offers__offer__txt">
+          <span class="offers__offer__txt__description">{{ offer.firstSentence }}</span>
+          <span class="offers__offer__txt__description">{{ offer.secondSentence }}</span>
+          <span class="offers__offer__txt__description">{{ offer.thirdSentence }}</span>
+        </div>
       </div>
     </div>
   </Container>
@@ -252,29 +255,80 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
   display: flex;
   gap: 1rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
+  flex-direction: column;
 
   @media (min-width: $big-tablet-screen) {
     gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__offer {
     display: flex;
-    gap: 1rem;
     background-color: $primary-color;
-    padding: 1rem;
     border-radius: $radius;
+    padding: 1rem;
     box-shadow: $shadow;
-    align-items: center;
-    flex-direction: column;
 
-    &__title {
-      text-align: center;
+    @media (min-width: $big-tablet-screen) {
+      gap: 1rem;
     }
 
-    &__button {
-      max-width: 300px;
+    &__illustration {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 1rem;
+
+      &__img {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 0.25rem;
+
+        @media (min-width: $big-tablet-screen) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &__data {
+        font-weight: $overweight;
+        font-size: 1.5rem;
+        white-space: nowrap;
+
+        @media (min-width: $big-tablet-screen) {
+          font-size: 2rem;
+        }
+      }
+      &__txt {
+        font-weight: $skinny;
+        font-size: 1rem;
+        white-space: nowrap;
+      }
+    }
+    &__txt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.25rem;
+      white-space: nowrap;
+
+      &__description {
+        font-size: 1rem;
+        font-weight: $skinny;
+        text-wrap: balance;
+        white-space: nowrap;
+
+        @media (min-width: $big-tablet-screen) {
+          font-size: 1.2rem;
+        }
+
+        &:nth-of-type(1) {
+          font-weight: $thick;
+        }
+      }
     }
   }
 }
