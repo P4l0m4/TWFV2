@@ -62,6 +62,20 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
   ></Container>
 
   <Container>
+    <div class="offers">
+      <div class="offers__offer" v-for="offer in props.content.content.offers" :key="offer._uid">
+        <h4 class="offers__offer__title subtitles">{{ offer.title }}</h4>
+        <NuxtLink
+          class="offers__offer__button button-primary"
+          :to="offer.buttonLink.url"
+          :target="offer.buttonLink.target"
+          >{{ offer.buttonText }}</NuxtLink
+        >
+      </div>
+    </div>
+  </Container>
+
+  <Container>
     <iframe
       class="iframe"
       :src="props.content.content.demoLink.url"
@@ -234,6 +248,38 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
   }
 }
 
+.offers {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+
+  @media (min-width: $big-tablet-screen) {
+    gap: 2rem;
+  }
+
+  &__offer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
+    gap: 1rem;
+    background-color: $primary-color;
+    padding: 1rem;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    place-items: center;
+
+    @media (min-width: $big-tablet-screen) {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__button {
+      max-width: 300px;
+    }
+  }
+}
 .iframe {
   height: 100vh;
   width: 100%;
