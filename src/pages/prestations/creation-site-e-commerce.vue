@@ -126,7 +126,7 @@ function changeSolutionLogo(name) {
           <span class="e-commerce__arguments__argument__illustration__txt">Sur Google</span>
         </div>
         <div class="e-commerce__arguments__argument__txt">
-          <span class="e-commerce__arguments__argument__txt__description">Générez plus de traffic</span>
+          <span class="e-commerce__arguments__argument__txt__description">Générez plus de trafic</span>
           <span class="e-commerce__arguments__argument__txt__description">naturel avec votre site</span>
           <span class="e-commerce__arguments__argument__txt__description">dopé au SEO technique</span>
         </div>
