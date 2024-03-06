@@ -94,9 +94,9 @@ useJsonld(() => ({
           </div>
         </div>
       </div>
-
-      <article class="course__article" v-html="renderRichText(course.text)" v-if="course.text"></article>
       <iframe class="course__video" :src="course.videoLink.url" v-if="course.videoLink.url" allowfullscreen></iframe>
+      <article class="course__article" v-html="renderRichText(course.text)" v-if="course.text"></article>
+
       <iframe class="course__quizz" :src="course.quizzLink.url" v-if="course.quizzLink.url" allowfullscreen></iframe
     ></Container>
     <Container>
@@ -228,6 +228,7 @@ useJsonld(() => ({
       font-size: $base-text;
       font-weight: $skinny;
       color: $text-color-alt;
+      background-color: $text-color;
     }
     &:deep(img) {
       width: 100%;
