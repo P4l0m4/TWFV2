@@ -74,6 +74,7 @@ const props = defineProps({
     height: 360px;
     color: $text-color-alt;
     position: relative;
+    width: 100%;
 
     &__title {
       width: calc(100% - 160px);

@@ -209,13 +209,25 @@ useJsonld(() => ({
     &:deep(b) {
       font-weight: $overweight;
     }
+    &:deep(a) {
+      color: $secondary-color-faded;
+      text-decoration: line-through;
+      text-decoration-color: $secondary-color-faded;
+      text-decoration-thickness: 8px;
+      color: $text-color;
+    }
+    &:deep(pre) {
+      background-color: $text-color;
+      padding: 1rem;
+      width: 100%;
+      border-radius: $radius;
+    }
     &:deep(code) {
+      width: 100%;
+      white-space: pre-wrap;
       font-size: $base-text;
       font-weight: $skinny;
-      background-color: $text-color;
       color: $text-color-alt;
-      padding: 1rem;
-      border-radius: $radius;
     }
     &:deep(img) {
       width: 100%;
@@ -224,7 +236,7 @@ useJsonld(() => ({
       border-radius: $radius;
 
       @media (min-width: $big-tablet-screen) {
-        height: 60vh;
+        height: 80vh;
       }
     }
   }

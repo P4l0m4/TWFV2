@@ -155,6 +155,7 @@ function search() {
       background-size: cover;
       background-position: center;
       height: 360px;
+      width: 100%;
       color: $text-color-alt;
       position: relative;
 

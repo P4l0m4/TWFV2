@@ -446,6 +446,7 @@ useJsonld(() => ({
                 text-decoration: line-through;
                 text-decoration-color: $secondary-color-faded;
                 text-decoration-thickness: 8px;
+                color: $text-color;
               }
             }
           }

@@ -270,6 +270,7 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
     border-radius: $radius;
     padding: 1rem;
     box-shadow: $shadow;
+    height: fit-content;
 
     @media (min-width: $big-tablet-screen) {
       gap: 1rem;
