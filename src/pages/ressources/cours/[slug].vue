@@ -205,6 +205,10 @@ useJsonld(() => ({
     &:deep(p) {
       font-size: $base-text;
       font-weight: $skinny;
+
+      @media (min-width: $big-tablet-screen) {
+        font-size: calc($base-text * 1.2);
+      }
     }
     &:deep(b) {
       font-weight: $overweight;

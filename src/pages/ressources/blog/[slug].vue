@@ -80,75 +80,75 @@ useJsonld(() => ({
 }))
 </script>
 <template>
-  <article class="article">
-    <section class="article__header">
-      <img class="article__header__img" :src="article.headerimage[0].filename" :alt="article.headerimage[0].alt" />
-      <div class="article__header__txt">
-        <h1 class="article__header__txt__title titles">{{ article.title }}</h1>
-        <p class="article__header__txt__description subtitles">{{ article.description }}</p>
-        <span class="article__header__txt__date">{{ date }}</span>
-      </div>
-      <div class="article__header__share">
-        <button class="article__header__share__plus" @click.prevent="copy">
-          <img class="article__header__share__plus__icon" src="@/assets/icons/share.svg" alt="icon" />
-          {{ shareWord }}
-        </button>
-        <div class="article__header__share__corner-left"></div>
-        <div class="article__header__share__corner-right"></div>
-      </div>
-    </section>
-    <div class="article__wrapper">
-      <aside class="article__wrapper__aside">
-        <span class="article__wrapper__aside__title subtitles">Sommaire</span>
-        <ul class="article__wrapper__aside__list">
-          <li class="article__wrapper__aside__list__element" v-for="section in article.sections" :key="section">
-            <a :href="'#' + stringToSlug(section.title)">{{ section.title }}</a>
-          </li>
-        </ul>
-      </aside>
-      <div class="article__wrapper__content">
-        <section class="article__wrapper__content__part" v-for="section in article.sections" :key="section">
-          <h2 :id="stringToSlug(section.title)" class="article__wrapper__content__part__title titles">
-            {{ section.title }}
-          </h2>
-          <div class="article__wrapper__content__part__wrapper desktop-only">
-            <div class="article__wrapper__content__part__wrapper__paragraphs">
+  <Container>
+    <article class="article">
+      <section class="article__header">
+        <img class="article__header__img" :src="article.headerimage[0].filename" :alt="article.headerimage[0].alt" />
+        <div class="article__header__txt">
+          <h1 class="article__header__txt__title titles">{{ article.title }}</h1>
+          <p class="article__header__txt__description subtitles">{{ article.description }}</p>
+          <span class="article__header__txt__date">{{ date }}</span>
+        </div>
+        <div class="article__header__share">
+          <button class="article__header__share__plus" @click.prevent="copy">
+            <img class="article__header__share__plus__icon" src="@/assets/icons/share.svg" alt="icon" />
+            {{ shareWord }}
+          </button>
+          <div class="article__header__share__corner-left"></div>
+          <div class="article__header__share__corner-right"></div>
+        </div>
+      </section>
+      <div class="article__wrapper">
+        <aside class="article__wrapper__aside">
+          <span class="article__wrapper__aside__title subtitles">Sommaire</span>
+          <ul class="article__wrapper__aside__list">
+            <li class="article__wrapper__aside__list__element" v-for="section in article.sections" :key="section">
+              <a :href="'#' + stringToSlug(section.title)">{{ section.title }}</a>
+            </li>
+          </ul>
+        </aside>
+        <div class="article__wrapper__content">
+          <section class="article__wrapper__content__part" v-for="section in article.sections" :key="section">
+            <h2 :id="stringToSlug(section.title)" class="article__wrapper__content__part__title subtitles">
+              {{ section.title }}
+            </h2>
+            <div class="article__wrapper__content__part__wrapper desktop-only">
+              <div class="article__wrapper__content__part__wrapper__paragraphs">
+                <div
+                  class="article__wrapper__content__part__wrapper__paragraphs__txt"
+                  v-html="renderRichText(section.richtext1)"
+                ></div>
+
+                <div
+                  class="article__wrapper__content__part__wrapper__paragraphs__txt"
+                  v-html="renderRichText(section.richtext2)"
+                ></div>
+              </div>
+              <img
+                class="article__wrapper__content__part__wrapper__img"
+                :src="section.media[0].filename"
+                :alt="section.media[0].alt"
+              />
+            </div>
+            <div class="article__wrapper__content__part__wrapper mobile-only">
               <div
                 class="article__wrapper__content__part__wrapper__paragraphs__txt"
                 v-html="renderRichText(section.richtext1)"
               ></div>
-
+              <img
+                class="article__wrapper__part__wrapper__img"
+                :src="section.media[0].filename"
+                :alt="section.media[0].alt"
+              />
               <div
                 class="article__wrapper__content__part__wrapper__paragraphs__txt"
                 v-html="renderRichText(section.richtext2)"
               ></div>
             </div>
-            <img
-              class="article__wrapper__content__part__wrapper__img"
-              :src="section.media[0].filename"
-              :alt="section.media[0].alt"
-            />
-          </div>
-          <div class="article__wrapper__content__part__wrapper mobile-only">
-            <div
-              class="article__wrapper__content__part__wrapper__paragraphs__txt"
-              v-html="renderRichText(section.richtext1)"
-            ></div>
-            <img
-              class="article__wrapper__part__wrapper__img"
-              :src="section.media[0].filename"
-              :alt="section.media[0].alt"
-            />
-            <div
-              class="article__wrapper__content__part__wrapper__paragraphs__txt"
-              v-html="renderRichText(section.richtext2)"
-            ></div>
-          </div>
-        </section>
-      </div>
-    </div>
-    <BlogComponent />
-  </article>
+          </section>
+        </div>
+      </div></article></Container
+  ><BlogComponent />
   <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
 
@@ -157,16 +157,15 @@ useJsonld(() => ({
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
+  // padding: 0 1rem;
   gap: 3rem;
-  // width: clamp(343px, 100%, 90vw);
   width: 100%;
   margin: auto;
   position: relative;
 
   @media (min-width: $big-tablet-screen) {
     gap: 6rem;
-    padding: 0 4rem;
+    // padding: 0 4rem;
   }
 
   &__header {
@@ -206,24 +205,6 @@ useJsonld(() => ({
         color: $primary-color;
         width: 50%;
         padding: 3rem 2rem 2rem 2rem;
-      }
-
-      &__title {
-        // font-weight: $overweight;
-        // font-size: 1.25rem;
-
-        // @media (min-width: $big-tablet-screen) {
-        //   font-size: 2rem;
-        // }
-      }
-
-      &__description {
-        // font-weight: $skinny;
-        // font-size: 1rem;
-
-        // @media (min-width: $big-tablet-screen) {
-        //   font-size: 1.25rem;
-        // }
       }
 
       &__date {
@@ -328,9 +309,9 @@ useJsonld(() => ({
     width: 100%;
     flex-direction: column;
 
-    @media (min-width: $big-tablet-screen) {
-      flex-direction: row;
-    }
+    // @media (min-width: $big-tablet-screen) {
+    //   flex-direction: row;
+    // }
 
     @media (min-width: $laptop-screen) {
       gap: 4rem;
@@ -349,19 +330,7 @@ useJsonld(() => ({
       box-shadow: $shadow;
 
       @media (min-width: $big-tablet-screen) {
-        max-height: inherit;
-        overflow: inherit;
-        width: 400px;
-        inset: 0;
-        position: sticky;
-        gap: 2rem;
-        padding: 6rem 2rem;
-        justify-content: flex-start;
-        background-color: $base-color;
-        border-radius: none;
-        height: 500px;
-        box-shadow: none;
-        border-top: 2px solid rgba(0, 0, 0, 0.06);
+        display: none;
       }
 
       &__title {
@@ -420,15 +389,6 @@ useJsonld(() => ({
           }
         }
 
-        &__title {
-          // font-weight: $thick;
-          // font-size: 1.25rem;
-
-          // @media (min-width: $big-tablet-screen) {
-          //   font-size: 1.5rem;
-          // }
-        }
-
         &__txt {
           font-weight: $skinny;
         }
@@ -441,6 +401,9 @@ useJsonld(() => ({
 
           &__paragraphs {
             &__txt {
+              @media (min-width: $big-tablet-screen) {
+                font-size: calc($base-text * 1.2);
+              }
               & :deep(a) {
                 color: $secondary-color-faded;
                 text-decoration: line-through;
