@@ -94,7 +94,13 @@ useJsonld(() => ({
           </div>
         </div>
       </div>
-      <iframe class="course__video" :src="course.videoLink.url" v-if="course.videoLink.url" allowfullscreen></iframe>
+      <iframe
+        class="course__video"
+        :src="course.videoLink.url"
+        v-if="course.videoLink.url"
+        allowfullscreen
+        title="youtube video player"
+      ></iframe>
       <article class="course__article" v-html="renderRichText(course.text)" v-if="course.text"></article>
 
       <iframe class="course__quizz" :src="course.quizzLink.url" v-if="course.quizzLink.url" allowfullscreen></iframe
