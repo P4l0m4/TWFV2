@@ -50,7 +50,7 @@ function search() {
       <NuxtLink
         class="search-section__list__class"
         :to="`/ressources/cours/${stringToSlug(course.name)}`"
-        v-for="course in story.content.classesList"
+        v-for="course in matchingCourses"
         :key="course._uid"
         :style="`background-image: url(${course.banner.filename});`"
       >
