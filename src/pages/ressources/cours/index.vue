@@ -38,9 +38,8 @@ useHead(() => {
     </div>
     <Container>
       <ClassesSearchableClasses :story="story" />
-
-      <ClassesAllClasses :story="story" />
     </Container>
+    <Container><ClassesAllClasses :story="story" /></Container>
   </section>
   <JsonldBreadcrumb :links="breadcrumbs" />
 </template>
