@@ -228,6 +228,7 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
     transition: background-image 0.3s ease;
 
     &:hover {
