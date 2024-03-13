@@ -232,8 +232,6 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
     transition: background-image 0.3s ease;
 
     &:hover {
-      background-image: linear-gradient(40deg, rgba($text-color, 0.6), rgba(0, 0, 0, 0));
-
       & > .feature__image__button {
         opacity: 1;
       }
@@ -243,6 +241,8 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
       color: $primary-color;
       border-color: $primary-color;
       opacity: 0;
+      text-shadow: $shadow;
+      backdrop-filter: blur(5px);
       transition: opacity 0.3s ease;
     }
 
