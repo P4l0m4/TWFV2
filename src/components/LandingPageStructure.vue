@@ -182,11 +182,15 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
   gap: 1rem;
   width: 100%;
   flex-direction: column;
+  background-color: $primary-color;
+  border-radius: $radius;
+  padding: 1rem;
 
   @media (min-width: $big-tablet-screen) {
     gap: 2rem;
     justify-content: space-between;
     flex-direction: row;
+    padding: 2rem;
 
     &:nth-of-type(even) {
       flex-direction: row-reverse;
