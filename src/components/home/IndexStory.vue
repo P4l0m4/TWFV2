@@ -77,7 +77,6 @@ let isBookAnAuditOpen = ref(false)
     &__iframes {
       max-height: 1200px;
       height: 90svh;
-      padding: 1rem;
       width: 100%;
       display: flex;
       gap: 1rem;

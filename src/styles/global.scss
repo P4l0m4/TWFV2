@@ -148,6 +148,7 @@ input[type='number'] {
 .button-secondary {
   background-color: transparent;
   border: $text-color solid 2px;
+  color: $text-color;
 
   &:hover {
     transform: scale(1.04);
