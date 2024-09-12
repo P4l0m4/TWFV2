@@ -61,7 +61,7 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
       </NuxtLink></div
   ></Container>
 
-  <Container>
+  <!-- <Container>
     <div class="offers">
       <div class="offers__offer" v-for="offer in props.content.content.offers" :key="offer._uid">
         <div class="offers__offer__illustration">
@@ -76,7 +76,7 @@ const lastTwoFeatures = props.content.content.features.slice(2, 4)
         </div>
       </div>
     </div>
-  </Container>
+  </Container> -->
 
   <Container>
     <iframe
