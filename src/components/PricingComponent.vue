@@ -84,8 +84,9 @@ onMounted(() => {
         </p>
       </div>
       <div class="pricing__cards">
+        <!-- removed the snipcart-add-item class -->
         <div
-          class="pricing__cards__card slide slide-left scale-on-hover snipcart-add-item"
+          class="pricing__cards__card slide slide-left scale-on-hover"
           data-item-id="devis-vitrine"
           data-item-price="10.0"
           data-item-description="Devis personnalisé pour votre projet de site vitrine"
@@ -109,7 +110,7 @@ onMounted(() => {
             </h4>
           </div>
           <span class="pricing__cards__card__price"
-            ><span class="pricing__cards__card__price__from">A partir de</span> 2400 €
+            ><span class="pricing__cards__card__price__from">A partir de</span> 2800 €
             <span class="pricing__cards__card__price__from">TTC</span></span
           >
           <ul class="pricing__cards__card__features">
@@ -157,7 +158,7 @@ onMounted(() => {
               />Optimisation SEO et performance
             </li>
           </ul>
-          <button class="pricing__cards__card__button button-primary">Demander un devis</button>
+          <a href="tel:0695155301" class="pricing__cards__card__button button-primary">Appelez nous au 0695155301</a>
           <NuxtLink
             class="pricing__cards__card__link button-tertiary"
             to="/prestations/creation-site-web#modules"
@@ -165,8 +166,9 @@ onMounted(() => {
             >Voir les fonctionnalités complémentaires</NuxtLink
           >
         </div>
+        <!-- removed the snipcart-add-item class -->
         <div
-          class="pricing__cards__card scale-on-hover snipcart-add-item"
+          class="pricing__cards__card scale-on-hover"
           data-item-id="devis-e-commerce"
           data-item-price="10.00"
           data-item-description="Devis personnalisé pour votre projet de site e-commerce"
@@ -220,7 +222,7 @@ onMounted(() => {
                 class="pricing__cards__card__features__feature__check"
                 src="@/assets/icons/check-circle-light.svg"
                 alt="icone check"
-              />Livraison en 2 semaines max
+              />Livraison en 1 mois
             </li>
             <li class="pricing__cards__card__features__feature">
               <img
@@ -259,10 +261,13 @@ onMounted(() => {
               />Promotions et codes de réduction
             </li>
           </ul>
-          <button class="pricing__cards__card__button button-primary blue">Demander un devis</button>
+          <a href="tel:0695155301" class="pricing__cards__card__button button-primary blue"
+            >Appelez nous au 0695155301</a
+          >
         </div>
+        <!-- removed the snipcart-add-item class -->
         <div
-          class="pricing__cards__card scale-on-hover slide slide-right snipcart-add-item"
+          class="pricing__cards__card scale-on-hover slide slide-right"
           data-item-id="seo"
           data-item-price="360.00"
           data-item-description="Optimisation SEO, Hébergement inclus, 5 pages de votre choix, Maquettage des pages principales, Optimisation de la performance, Blog intégré clé en mains, Livraison en 2 semaines max"
@@ -336,7 +341,7 @@ onMounted(() => {
               />Rapport détaillé des améliorations
             </li>
           </ul>
-          <button class="pricing__cards__card__button button-primary">Commander maintenant</button>
+          <a href="tel:0695155301" class="pricing__cards__card__button button-primary">Appelez nous au 0695155301</a>
         </div>
       </div>
     </div>

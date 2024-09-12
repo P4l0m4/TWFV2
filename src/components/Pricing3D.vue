@@ -35,8 +35,9 @@ onMounted(() => {
       </p>
     </div>
     <div class="pricing__cards">
+      <!-- removed the snipcart-add-item class -->
       <div
-        class="pricing__cards__card slide slide-left scale-on-hover snipcart-add-item"
+        class="pricing__cards__card slide slide-left scale-on-hover"
         data-item-id="devis-modelisation-3d"
         data-item-price="10.0"
         data-item-description="Devis personnalisé pour votre projet de modélisation 3D"
@@ -111,7 +112,7 @@ onMounted(() => {
             />Livraison en 2 semaines max
           </li>
         </ul>
-        <button class="pricing__cards__card__button button-primary">Demander un devis</button>
+        <a href="tel:0695155301" class="pricing__cards__card__button button-primary">Appelez nous au 0695155301</a>
         <NuxtLink
           class="pricing__cards__card__link button-tertiary"
           to="/prestations/creation-site-web#modules"
@@ -119,8 +120,9 @@ onMounted(() => {
           >Voir les fonctionnalités complémentaires</NuxtLink
         >
       </div>
+      <!-- removed the snipcart-add-item class -->
       <div
-        class="pricing__cards__card scale-on-hover snipcart-add-item"
+        class="pricing__cards__card scale-on-hover"
         data-item-id="devis-configurateur-3d"
         data-item-price="10.00"
         data-item-description="Devis personnalisé pour le développement de votre configurateur 3D"
@@ -218,10 +220,11 @@ onMounted(() => {
             />Promotions et codes de réduction
           </li>
         </ul>
-        <button class="pricing__cards__card__button button-primary blue">Demander un devis</button>
+        <a href="tel:0695155301" class="pricing__cards__card__button button-primary blue">Appelez nous au 0695155301</a>
       </div>
+      <!-- removed the snipcart-add-item class -->
       <div
-        class="pricing__cards__card scale-on-hover slide slide-right snipcart-add-item"
+        class="pricing__cards__card scale-on-hover slide slide-right"
         data-item-id="intégration-3d"
         data-item-price="10.00"
         data-item-description="Devis personnalisé pour l'intégration de modèles 3D à votre site web"
@@ -299,7 +302,7 @@ onMounted(() => {
             />Rapport détaillé des améliorations
           </li>
         </ul>
-        <button class="pricing__cards__card__button button-primary">Demander un devis</button>
+        <a href="tel:0695155301" class="pricing__cards__card__button button-primary">Appelez nous au 0695155301</a>
       </div>
     </div>
   </section>
