@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# This website is available on https://twf-v2.netlify.app
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+⚠️ It is obsolete and has been replaced by V3
 
 ## Setup
 
